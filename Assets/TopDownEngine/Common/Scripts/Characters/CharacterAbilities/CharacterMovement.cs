@@ -183,8 +183,8 @@ namespace MoreMountains.TopDownEngine
 
 			if (InputAuthorized)
 			{
-				_horizontalMovement = _horizontalInput;
-				_verticalMovement = _verticalInput;
+				_horizontalMovement = -_verticalInput;
+				_verticalMovement = _horizontalInput ;
 			}
 			else
 			{
