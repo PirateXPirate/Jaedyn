@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using MoreMountains.TopDownEngine;
 
 public class ClickToCloseScript : MonoBehaviour
 {
@@ -11,13 +12,22 @@ public class ClickToCloseScript : MonoBehaviour
 
     public AudioClip fxClick;
 
+    public GameManager gameManager;
+
     void Start()
     {
-        gameObject.SetActive(false);
+       
     }
-
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            gameObject.SetActive(false);
+            LevelManager.Instance.Players[0].LinkedInputManager.InputDetectionActive = true;
+        }
+    }
     public void SetupStory(string msg) {
-        txtStory.text = msg;
+      //  txtStory.text = msg;
         gameObject.SetActive(true);
     }
 
