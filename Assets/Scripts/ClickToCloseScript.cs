@@ -24,6 +24,8 @@ public class ClickToCloseScript : MonoBehaviour
         {
             gameObject.SetActive(false);
             LevelManager.Instance.Players[0].LinkedInputManager.InputDetectionActive = true;
+            LevelManager.Instance.Players[0].GetComponent<CharacterMovement>().enabled = true;
+            LevelManager.Instance.Players[0].GetComponent<TopDownController3D>().enabled = true;
         }
     }
     public void SetupStory(string msg) {

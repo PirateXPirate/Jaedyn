@@ -25,7 +25,8 @@ public class TutorialMarker : MonoBehaviour
                 Character character = other.GetComponent<Character>();
                 character.LinkedInputManager.InputDetectionActive = false;
                 MMAnimatorExtensions.UpdateAnimatorBoolIfExists(character.GetComponentInChildren<Animator>(), "Walking", false);
-              
+                character.GetComponent<CharacterMovement>().enabled = false;
+                character.GetComponent<TopDownController3D>().enabled = false;
 
                 ShowPopup();
             }
@@ -36,7 +37,6 @@ public class TutorialMarker : MonoBehaviour
 
     private void ShowPopup()
     {
-        Debug.Log("DDDD");
         popupFrame.SetActive(true);
         titleTextField.text = titleText;
         detailTextField.text = detailText;
