@@ -16,8 +16,8 @@ public class JDHealth : Health
         base.UpdateHealthBar(show);
         if (_character.CharacterType == Character.CharacterTypes.Player)
         {
-            characterHealthUIManager.SetHP(Mathf.FloorToInt(CurrentHealth));
-            onRecieveAttack?.Invoke(Mathf.FloorToInt(CurrentHealth));
+            characterHealthUIManager.SetHP(Mathf.FloorToInt(MasterHealth.CurrentHealth));
+            onRecieveAttack?.Invoke(Mathf.FloorToInt(MasterHealth.CurrentHealth));
         }
             
     }

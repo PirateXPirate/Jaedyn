@@ -14,7 +14,7 @@ public class ClickToCloseScript : MonoBehaviour
 
     public GameManager gameManager;
 
-    [SerializeField] private GameObject ActivateObject;
+    public GameObject ActivateObject;
     void Start()
     {
        

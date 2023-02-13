@@ -30,7 +30,6 @@ public class DummyAttackListener : MonoBehaviour
 
     private void onRecieveAttack(int currenthealth)
     {
-        Debug.Log(currenthealth);
         if (currenthealth == 80)
         {
             dummyBrain.ResetBrain();
