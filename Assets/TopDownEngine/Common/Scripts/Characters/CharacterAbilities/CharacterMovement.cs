@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using MoreMountains.Tools;
 using System.Collections.Generic;
+using Suriyun.MCS;
 
 namespace MoreMountains.TopDownEngine
 {	
@@ -104,6 +105,8 @@ namespace MoreMountains.TopDownEngine
 		protected int _walkingAnimationParameter;
 		protected int _idleAnimationParameter;
 
+
+		private UniversalButton inputMove;
 		/// <summary>
 		/// On Initialization, we set our movement speed to WalkSpeed.
 		/// </summary>
@@ -111,6 +114,7 @@ namespace MoreMountains.TopDownEngine
 		{
 			base.Initialization ();
 			ResetAbility();
+			inputMove = GetComponent<Character>().DPadController;
 		}
 
 		/// <summary>
@@ -174,17 +178,31 @@ namespace MoreMountains.TopDownEngine
 		/// Called at the very start of the ability's cycle, and intended to be overridden, looks for input and calls
 		/// methods if conditions are met
 		/// </summary>
+		///   protected Vector3 cachedInput;
+		///   
+		protected Vector3 cachedInput;
+		public bool lerpStopping = false;
 		protected override void HandleInput()
 		{
-			if (ScriptDrivenInput)
+			if (inputMove.isFingerDown)
+			{
+				cachedInput = inputMove.directionXZ;
+				//transform.forward = cachedInput;
+			}
+			else
+			{
+				cachedInput = Vector3.zero;
+			}
+				if (ScriptDrivenInput)
 			{
 				return;
 			}
 
 			if (InputAuthorized)
 			{
-				_horizontalMovement = -_verticalInput;
-				_verticalMovement = _horizontalInput ;
+				
+				_horizontalMovement = -cachedInput.z;
+				_verticalMovement = cachedInput.x;
 			}
 			else
 			{

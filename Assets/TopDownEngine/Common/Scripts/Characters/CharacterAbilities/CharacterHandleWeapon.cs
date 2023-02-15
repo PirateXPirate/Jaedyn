@@ -3,6 +3,7 @@ using System.Collections;
 using MoreMountains.Tools;
 using MoreMountains.Feedbacks;
 using System.Collections.Generic;
+using Suriyun.MCS;
 
 namespace MoreMountains.TopDownEngine
 {
@@ -121,6 +122,7 @@ namespace MoreMountains.TopDownEngine
 		protected CharacterGridMovement _characterGridMovement;
 		protected List<WeaponModel> _weaponModels;
 
+
 		/// <summary>
 		/// Sets the weapon attachment
 		/// </summary>
@@ -237,9 +239,10 @@ namespace MoreMountains.TopDownEngine
 			
 			if (inputAuthorized && ((_inputManager.ShootButton.State.CurrentState == MMInput.ButtonStates.ButtonDown) || (_inputManager.ShootAxis == MMInput.ButtonStates.ButtonDown)))
 			{
+				Debug.Log("FDSDSD");
 				ShootStart();
 			}
-
+			
 			bool buttonPressed =
 				(_inputManager.ShootButton.State.CurrentState == MMInput.ButtonStates.ButtonPressed) ||
 				(_inputManager.ShootAxis == MMInput.ButtonStates.ButtonPressed); 

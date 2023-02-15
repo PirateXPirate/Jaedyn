@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using MoreMountains.Tools;
 using MoreMountains.Feedbacks;
+using Suriyun.MCS;
 
 namespace MoreMountains.TopDownEngine
 {
@@ -67,7 +68,7 @@ namespace MoreMountains.TopDownEngine
 		protected int _jumpingAnimationParameter;
 		protected int _doubleJumpingAnimationParameter;
 		protected int _hitTheGroundAnimationParameter;
-
+		private UniversalButton skillButton;
 		/// <summary>
 		/// On init we grab other components
 		/// </summary>
@@ -82,6 +83,7 @@ namespace MoreMountains.TopDownEngine
 			_initialNumberOfJumps = NumberOfJumps;
 		}
 
+		
 		/// <summary>
 		/// Watches for input and triggers a jump if needed
 		/// </summary>
@@ -102,6 +104,7 @@ namespace MoreMountains.TopDownEngine
 			{               
 				_buttonReleased = true;                               
 			}
+			
 		}
 
 		/// <summary>

@@ -10,11 +10,11 @@ public class PowerUpUIManager : MonoBehaviour
     [SerializeField] Text ResistanceText;
     public void SetHPItemQuantity(int quantity)
     {
-        HPText.text = quantity.ToString();
+        HPText.text = "x " + quantity.ToString();
     }
 
     public void SetResistanceItemQuantity(int quantity)
     {
-        ResistanceText.text = quantity.ToString();
+        ResistanceText.text = "x " + quantity.ToString();
     }
 }
