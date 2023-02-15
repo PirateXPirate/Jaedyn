@@ -4,25 +4,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillFly : SkillActivator
+public class LeoSkill : SkillActivator
 {
-    Transform target;
-   
+    Transform targetObject;
+    Transform targetPosition;
+    CharacterOrientation3D rotation;
+    
     protected override void Perform()
     {
         if (inPoint)
         {
             base.Perform();
             movement.ScriptDrivenInput = true;
-            transform.DOMove(target.position, 1).SetEase(Ease.Linear).OnComplete(Complete);
+            targetObject.DOMove(targetPosition.position, 1).SetEase(Ease.Linear).OnComplete(Complete);
             LevelManager.Instance.Players[0].LinkedInputManager.InputDetectionActive = false;
-            //LevelManager.Instance.Players[0].GetComponent<CharacterMovement>().enabled = false;
-          //  LevelManager.Instance.Players[0].GetComponent<TopDownController3D>().enabled = false;
-           // LevelManager.Instance.Players[0].GetComponent<CharacterOrientation3D>().enabled = false;
-            LevelManager.Instance.Players[0].GetComponent<Collider>().enabled = false;
-           // transform.DOLookAt(target.position, 1);
+            LevelManager.Instance.Players[0].GetComponent<CharacterMovement>().enabled = false;
+            LevelManager.Instance.Players[0].GetComponent<TopDownController3D>().enabled = false;
+            LevelManager.Instance.Players[0].GetComponent<CharacterOrientation3D>().enabled = false;
+            targetObject.transform.position = new Vector3(targetObject.position.x, transform.position.y, targetObject.position.z);
+            transform.DOLookAt(targetObject.position, .5f);
+           
             inPoint = false;
-
         }
     }
     void Complete()
@@ -37,19 +39,14 @@ public class SkillFly : SkillActivator
     protected override void OnTriggerEnter(Collider other)
     {
         base.OnTriggerEnter(other);
-       
+
         if (other.tag.Equals("SkillPosition"))
         {
             inPoint = true;
-            if (other.GetComponent<Warp>() == null) return;
-            target = other.GetComponent<Warp>().Target;
-
+            if (other.GetComponent<MoveObject>() == null) return;
+            targetObject = other.GetComponent<MoveObject>().Target;
+            targetPosition = other.GetComponent<MoveObject>().TargetPosition;
+            other.GetComponent<Collider>().enabled = false;
         }
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log(collision.gameObject.name);
-    }
-
 }

@@ -23,6 +23,8 @@ public class ClickToCloseScript : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            if (fxClick)
+                Utils.soundManager.PlayFX(fxClick);
             gameObject.SetActive(false);
             LevelManager.Instance.Players[0].LinkedInputManager.InputDetectionActive = true;
             LevelManager.Instance.Players[0].GetComponent<CharacterMovement>().enabled = true;

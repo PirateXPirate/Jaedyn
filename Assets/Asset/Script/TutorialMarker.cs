@@ -15,28 +15,31 @@ public class TutorialMarker : MonoBehaviour
     [SerializeField] private string titleText;
     [SerializeField] private string detailText;
 
+    public AudioClip PopupSoundClip;
+
+    public AudioClip TriggerSoundClip;
+
+    public bool Activated = false;
+
     bool isShowed = false;
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag.Equals("Player"))
         {
+            return;
             if (!isShowed)
             {
-                Character character = other.GetComponent<Character>();
-                character.LinkedInputManager.InputDetectionActive = false;
-                MMAnimatorExtensions.UpdateAnimatorBoolIfExists(character.GetComponentInChildren<Animator>(), "Walking", false);
-                character.GetComponent<CharacterMovement>().enabled = false;
-                character.GetComponent<TopDownController3D>().enabled = false;
-
-                ShowPopup();
+             //   ShowPopup();
             }
          
         }
        
     }
 
-    private void ShowPopup()
+    public void ShowPopup()
     {
+        if (PopupSoundClip)
+            Utils.soundManager.PlayFX(PopupSoundClip);
         popupFrame.SetActive(true);
         titleTextField.text = titleText;
         detailTextField.text = detailText;

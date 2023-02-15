@@ -7,15 +7,16 @@ using UnityEngine;
 public class SkillActivator : MonoBehaviour
 {
     protected bool inPoint = false;
-    void Start()
+    protected  CharacterMovement movement;
+    protected virtual  void Start()
     {
-        
+        movement = GetComponent<CharacterMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (InputManager.Instance.InteractButton.State.CurrentState == MoreMountains.Tools.MMInput.ButtonStates.ButtonPressed)
+        if (InputManager.Instance.InteractButton.State.CurrentState == MoreMountains.Tools.MMInput.ButtonStates.ButtonDown)
         {
             Perform();
         }
@@ -37,7 +38,6 @@ public class SkillActivator : MonoBehaviour
     {
         if (other.tag.Equals("SkillPosition"))
         {
-            Debug.Log("Out");
             inPoint = false;
         }
     }

@@ -12,6 +12,7 @@ public class ShowPopUpListener : MonoBehaviour, MMEventListener<TopDownEngineEve
     [SerializeField] private TextMeshProUGUI detailTextField;
     [SerializeField] private string titleText;
     [SerializeField] private string detailText;
+    public AudioClip PopupSoundClip;
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag.Equals("Player"))
@@ -43,6 +44,9 @@ public class ShowPopUpListener : MonoBehaviour, MMEventListener<TopDownEngineEve
 
     private void ShowPopup()
     {
+        if (PopupSoundClip)
+            Utils.soundManager.PlayFX(PopupSoundClip);
+
         gameObject.SetActive(false);
         this.MMEventStopListening<TopDownEngineEvent>();
         popupFrame.SetActive(true);

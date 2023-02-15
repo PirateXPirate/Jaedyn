@@ -21,6 +21,7 @@ public class UseItemListener : MonoBehaviour
     [SerializeField] private string detailText;
 
     [SerializeField] private GameObject resetBotObject;
+    public AudioClip PopupSoundClip;
     void Start()
     {
         powerUpManager.onUseHPPotion += onUseHP;
@@ -52,6 +53,8 @@ public class UseItemListener : MonoBehaviour
 
     private void ShowPopup()
     {
+        if (PopupSoundClip)
+            Utils.soundManager.PlayFX(PopupSoundClip);
         gameObject.SetActive(false);
         popupFrame.SetActive(true);
         titleTextField.text = titleText;

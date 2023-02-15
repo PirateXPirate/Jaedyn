@@ -20,7 +20,7 @@ public class DummyAttackListener : MonoBehaviour
     [SerializeField] private string detailText;
 
     [SerializeField] private GameObject activateObject;
-
+    public AudioClip PopupSoundClip;
     bool ishow = false;
     void Start()
     {
@@ -49,6 +49,8 @@ public class DummyAttackListener : MonoBehaviour
     }
     private void ShowPopup()
     {
+        if (PopupSoundClip)
+            Utils.soundManager.PlayFX(PopupSoundClip);
         popupFrame.SetActive(true);
         titleTextField.text = titleText;
         detailTextField.text = detailText;
