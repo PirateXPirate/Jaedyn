@@ -8465,6 +8465,7 @@ MonoBehaviour:
   WalkParticles: []
   TouchTheGroundParticles: []
   TouchTheGroundSfx: []
+  lerpStopping: 0
 --- !u!114 &411255198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8700,6 +8701,7 @@ MonoBehaviour:
   AdditionalAbilityNodes: []
   CharacterBrain: {fileID: 0}
   OptimizeForMobile: 1
+  DPadController: {fileID: 0}
 --- !u!114 &411255206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9945,6 +9947,7 @@ MonoBehaviour:
   WalkParticles: []
   TouchTheGroundParticles: []
   TouchTheGroundSfx: []
+  lerpStopping: 0
 --- !u!114 &433183451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10176,6 +10179,7 @@ MonoBehaviour:
   AdditionalAbilityNodes: []
   CharacterBrain: {fileID: 0}
   OptimizeForMobile: 1
+  DPadController: {fileID: 0}
 --- !u!54 &433183457
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19228,6 +19232,7 @@ MonoBehaviour:
   WalkParticles: []
   TouchTheGroundParticles: []
   TouchTheGroundSfx: []
+  lerpStopping: 0
 --- !u!114 &865189721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19459,6 +19464,7 @@ MonoBehaviour:
   AdditionalAbilityNodes: []
   CharacterBrain: {fileID: 0}
   OptimizeForMobile: 1
+  DPadController: {fileID: 0}
 --- !u!54 &865189727
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -38516,6 +38522,12 @@ MonoBehaviour:
   CurrentIndex: 0
   CommonHealth: 0
   CharacterSwitchVFX: {fileID: 0}
+  ActionButtonImage: {fileID: 0}
+  SkillButtonImage: {fileID: 0}
+  SwitchCharButtonImage: {fileID: 0}
+  ActionSpriteSet: []
+  SkillSpriteSet: []
+  CharSpriteSet: []
 --- !u!1001 &1568678958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42473,52 +42485,52 @@ PrefabInstance:
     - target: {fileID: 6383333260013203554, guid: 07eb7471fee62924eb5665784bda9d2f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.13
+      value: -0.12963867
       objectReference: {fileID: 0}
     - target: {fileID: 6383333260013203554, guid: 07eb7471fee62924eb5665784bda9d2f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.14
+      value: -1.1397705
       objectReference: {fileID: 0}
     - target: {fileID: 6383333260013203554, guid: 07eb7471fee62924eb5665784bda9d2f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.5
+      value: -11.516174
       objectReference: {fileID: 0}
     - target: {fileID: 6383333260013203554, guid: 07eb7471fee62924eb5665784bda9d2f,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70652866
+      value: 0.71453416
       objectReference: {fileID: 0}
     - target: {fileID: 6383333260013203554, guid: 07eb7471fee62924eb5665784bda9d2f,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.70652854
+      value: -0.6985544
       objectReference: {fileID: 0}
     - target: {fileID: 6383333260013203554, guid: 07eb7471fee62924eb5665784bda9d2f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.028590128
+      value: 0.026578292
       objectReference: {fileID: 0}
     - target: {fileID: 6383333260013203554, guid: 07eb7471fee62924eb5665784bda9d2f,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.028590132
+      value: 0.027502391
       objectReference: {fileID: 0}
     - target: {fileID: 6383333260013203554, guid: 07eb7471fee62924eb5665784bda9d2f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -88.703
       objectReference: {fileID: 0}
     - target: {fileID: 6383333260013203554, guid: 07eb7471fee62924eb5665784bda9d2f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -1.118
       objectReference: {fileID: 0}
     - target: {fileID: 6383333260013203554, guid: 07eb7471fee62924eb5665784bda9d2f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 5.501
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07eb7471fee62924eb5665784bda9d2f, type: 3}
@@ -51671,6 +51683,7 @@ MonoBehaviour:
   WalkParticles: []
   TouchTheGroundParticles: []
   TouchTheGroundSfx: []
+  lerpStopping: 0
 --- !u!114 &2069920391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51902,6 +51915,7 @@ MonoBehaviour:
   AdditionalAbilityNodes: []
   CharacterBrain: {fileID: 0}
   OptimizeForMobile: 1
+  DPadController: {fileID: 0}
 --- !u!114 &2069920397
 MonoBehaviour:
   m_ObjectHideFlags: 0
