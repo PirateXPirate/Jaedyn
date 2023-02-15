@@ -142,6 +142,7 @@ namespace MoreMountains.TopDownEngine
 
 
 		public UniversalButton DPadController;
+	
 		/// <summary>
 		/// Initializes this instance of the character
 		/// </summary>

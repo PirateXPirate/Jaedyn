@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using MoreMountains.Tools;
+using UnityEngine.UI;
 
 namespace MoreMountains.TopDownEngine
 {
@@ -41,6 +42,14 @@ namespace MoreMountains.TopDownEngine
 		protected ParticleSystem _instantiatedVFX;
 		protected InputManager _inputManager;
 		protected TopDownEngineEvent _switchEvent = new TopDownEngineEvent(TopDownEngineEventTypes.CharacterSwitch, null);
+
+		[SerializeField] Image ActionButtonImage;
+		[SerializeField] Image SkillButtonImage;
+		[SerializeField] Image SwitchCharButtonImage;
+
+		[SerializeField] Sprite[] ActionSpriteSet;
+		[SerializeField] Sprite[] SkillSpriteSet;
+		[SerializeField] Sprite[] CharSpriteSet;
 
 		/// <summary>
 		/// On Awake we grab our input manager and instantiate our characters and VFX
@@ -119,6 +128,7 @@ namespace MoreMountains.TopDownEngine
 				{
 					CurrentIndex = 0;
 				}
+				SetUI(CurrentIndex);
 			}
 
 			// we disable the old main character, and enable the new one
@@ -154,5 +164,12 @@ namespace MoreMountains.TopDownEngine
 			MMEventManager.TriggerEvent(_switchEvent);
 			MMCameraEvent.Trigger(MMCameraEventTypes.RefreshAutoFocus, LevelManager.Instance.Players[0], null);
 		}
-	}
+
+        private void SetUI(int currentIndex)
+        {
+			ActionButtonImage.sprite = ActionSpriteSet[currentIndex];
+			SkillButtonImage.sprite = SkillSpriteSet[currentIndex];
+			SwitchCharButtonImage.sprite = CharSpriteSet[currentIndex];
+		}
+    }
 }
