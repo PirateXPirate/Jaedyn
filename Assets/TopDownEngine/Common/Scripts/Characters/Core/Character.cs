@@ -4,6 +4,7 @@ using MoreMountains.Tools;
 using System.Collections.Generic;
 using System;
 using Random = UnityEngine.Random;
+using Suriyun.MCS;
 
 namespace MoreMountains.TopDownEngine
 {
@@ -139,6 +140,8 @@ namespace MoreMountains.TopDownEngine
 		protected CharacterStates.CharacterConditions _lastState;
 
 
+
+		public UniversalButton DPadController;
 		/// <summary>
 		/// Initializes this instance of the character
 		/// </summary>
