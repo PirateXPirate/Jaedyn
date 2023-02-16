@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8714175
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3370,7 +3370,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &294409543
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12318,7 +12318,6 @@ GameObject:
   - component: {fileID: 1123778759}
   - component: {fileID: 1123778760}
   - component: {fileID: 1123778761}
-  - component: {fileID: 1123778762}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -12396,18 +12395,6 @@ MonoBehaviour:
   hardLevel9: {fileID: 1531549649}
   playButton: {fileID: 8714178}
   blockPlayButton: {fileID: 294409544}
---- !u!114 &1123778762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1123778758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64cbe216103954d4798ae072b46a4fd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1129868339
 GameObject:
   m_ObjectHideFlags: 0
