@@ -122,6 +122,9 @@ namespace MoreMountains.TopDownEngine
 		protected CharacterGridMovement _characterGridMovement;
 		protected List<WeaponModel> _weaponModels;
 
+		[SerializeField] protected SkillUiManager skillUiManager;
+		[SerializeField] protected float coolDown;
+
 
 		/// <summary>
 		/// Sets the weapon attachment
@@ -312,7 +315,8 @@ namespace MoreMountains.TopDownEngine
 			{
 				return;
 			}
-		
+			if(skillUiManager)
+			skillUiManager.SetActionCooldown(coolDown);
 			//  if we've decided to buffer input, and if the weapon is in use right now
 			if (BufferInput && (CurrentWeapon.WeaponState.CurrentState != Weapon.WeaponStates.WeaponIdle))
 			{

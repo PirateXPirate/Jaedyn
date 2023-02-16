@@ -8,6 +8,9 @@ public class SkillActivator : MonoBehaviour
 {
     protected bool inPoint = false;
     protected  CharacterMovement movement;
+
+    [SerializeField] protected SkillUiManager skillUiManager;
+    [SerializeField] protected float coolDown;
     protected virtual  void Start()
     {
         movement = GetComponent<CharacterMovement>();
@@ -24,7 +27,8 @@ public class SkillActivator : MonoBehaviour
 
     protected virtual void Perform()
     {
-       
+      
+
     }
 
     protected virtual void OnTriggerEnter(Collider other)

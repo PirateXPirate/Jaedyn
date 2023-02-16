@@ -13,6 +13,7 @@ public class LeoSkill : SkillActivator
     
     protected override void Perform()
     {
+        skillUiManager.SetSkillCooldown(coolDown);
         if (inPoint)
         {
             base.Perform();

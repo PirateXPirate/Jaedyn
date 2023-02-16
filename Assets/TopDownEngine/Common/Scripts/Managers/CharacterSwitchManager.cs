@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using MoreMountains.Tools;
 using UnityEngine.UI;
+using Suriyun.MCS;
+using System.Collections;
 
 namespace MoreMountains.TopDownEngine
 {
@@ -46,11 +48,15 @@ namespace MoreMountains.TopDownEngine
 		[SerializeField] Image ActionButtonImage;
 		[SerializeField] Image SkillButtonImage;
 		[SerializeField] Image SwitchCharButtonImage;
+		[SerializeField] Image SwitchCharOverlayImage;
 
 		[SerializeField] Sprite[] ActionSpriteSet;
 		[SerializeField] Sprite[] SkillSpriteSet;
 		[SerializeField] Sprite[] CharSpriteSet;
 
+		public float CoolDown;
+		bool isCountdown = false;
+		float countingNumber = 0;
 		/// <summary>
 		/// On Awake we grab our input manager and instantiate our characters and VFX
 		/// </summary>
@@ -104,12 +110,32 @@ namespace MoreMountains.TopDownEngine
 			{
 				SwitchCharacter();
 			}
+
+			if (isCountdown)
+			{
+				float tik =( 1 / CoolDown) * countingNumber;
+				countingNumber += Time.deltaTime;
+				SwitchCharOverlayImage.fillAmount = tik;
+				if (SwitchCharOverlayImage.fillAmount >= 1)
+				{
+					Stopcount();
+				}
+			}
 		}
 
-		/// <summary>
-		/// Switches to the next character in the list
-		/// </summary>
-		protected virtual void SwitchCharacter()
+        private void Stopcount()
+        {
+			SwitchCharOverlayImage.GetComponentInParent<UniversalButton>().SetActiveState(true);
+			isCountdown = false;
+			countingNumber = 0;
+
+
+		}
+
+        /// <summary>
+        /// Switches to the next character in the list
+        /// </summary>
+        protected virtual void SwitchCharacter()
 		{
 			if (_instantiatedCharacters.Length <= 1)
 			{
@@ -170,6 +196,12 @@ namespace MoreMountains.TopDownEngine
 			ActionButtonImage.sprite = ActionSpriteSet[currentIndex];
 			SkillButtonImage.sprite = SkillSpriteSet[currentIndex];
 			SwitchCharButtonImage.sprite = CharSpriteSet[currentIndex];
+			SwitchCharOverlayImage.sprite = CharSpriteSet[currentIndex];
+			SwitchCharOverlayImage.fillAmount = 0;
+			SwitchCharOverlayImage.GetComponentInParent<UniversalButton>().SetActiveState(false);
+			isCountdown = true;
 		}
+
+      
     }
 }
