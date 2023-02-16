@@ -9,7 +9,10 @@ public class TouchInputManager : MonoBehaviour
 	{
 		InputManager.Instance.JumpButtonDown();
 	}
-
+	public virtual void PressJumpUp()
+	{
+		InputManager.Instance.JumpButtonUp();
+	}
 	public virtual void PressActionDown()
 	{
 		InputManager.Instance.ShootButtonDown();
@@ -22,8 +25,6 @@ public class TouchInputManager : MonoBehaviour
 
 	public virtual void PressFunctionDown()
 	{
-
-		Debug.Log("DDD");
 		InputManager.Instance.CrouchButtonDown();
 	}
 

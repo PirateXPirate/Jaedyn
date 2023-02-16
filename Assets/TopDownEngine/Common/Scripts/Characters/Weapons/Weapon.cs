@@ -379,6 +379,7 @@ namespace MoreMountains.TopDownEngine
 		{
 			TriggerWeaponStartFeedback();
 			WeaponState.ChangeState(WeaponStates.WeaponStart);
+			
 			if ((_characterMovement != null) && (ModifyMovementWhileAttacking))
 			{
 				_movementMultiplierStorage = _characterMovement.MovementSpeedMultiplier;
@@ -386,6 +387,7 @@ namespace MoreMountains.TopDownEngine
 			}
 			if (_comboWeapon != null)
 			{
+				
 				_comboWeapon.WeaponStarted(this);
 			}
 			if (PreventAllMovementWhileInUse && (_characterMovement != null) && (_controller != null))
@@ -424,7 +426,6 @@ namespace MoreMountains.TopDownEngine
 			if (WeaponState == null) { return; }
 			
 			UpdateAnimator();
-
 			switch (WeaponState.CurrentState)
 			{
 				case WeaponStates.WeaponIdle:
@@ -432,6 +433,7 @@ namespace MoreMountains.TopDownEngine
 					break;
 
 				case WeaponStates.WeaponStart:
+					
 					CaseWeaponStart();
 					break;
 
@@ -493,6 +495,7 @@ namespace MoreMountains.TopDownEngine
 			}
 			else
 			{
+				
 				StartCoroutine(ShootRequestCo());
 			}
 		}

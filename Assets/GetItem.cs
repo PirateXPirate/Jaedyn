@@ -6,8 +6,8 @@ using UnityEngine;
 public class GetItem : MonoBehaviour
 {
     [SerializeField] private KeyManager keyManager;
-    int hpPotionQuantity = 0;
-    int resistancePotionQuantity = 0;
+    [SerializeField] private PowerUpManager powerManager;
+
     [SerializeField] ItemType itemType;
     public AudioClip SoundClip;
     public enum ItemType
@@ -36,6 +36,12 @@ public class GetItem : MonoBehaviour
                 break;
             case ItemType.Lock:
                 keyManager.GetLock();
+                break;
+            case ItemType.HpPotion:
+                powerManager.AddHpPotion(1);
+                break;
+            case ItemType.ResistancePotion:
+                powerManager.AddResistancePotion(1);
                 break;
         }
        

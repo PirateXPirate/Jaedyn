@@ -239,7 +239,6 @@ namespace MoreMountains.TopDownEngine
 			
 			if (inputAuthorized && ((_inputManager.ShootButton.State.CurrentState == MMInput.ButtonStates.ButtonDown) || (_inputManager.ShootAxis == MMInput.ButtonStates.ButtonDown)))
 			{
-				Debug.Log("FDSDSD");
 				ShootStart();
 			}
 			
@@ -305,6 +304,7 @@ namespace MoreMountains.TopDownEngine
 		/// </summary>
 		public virtual void ShootStart()
 		{
+		
 			// if the Shoot action is enabled in the permissions, we continue, if not we do nothing.  If the player is dead we do nothing.
 			if (!AbilityAuthorized
 			    || (CurrentWeapon == null)
@@ -312,7 +312,7 @@ namespace MoreMountains.TopDownEngine
 			{
 				return;
 			}
-
+		
 			//  if we've decided to buffer input, and if the weapon is in use right now
 			if (BufferInput && (CurrentWeapon.WeaponState.CurrentState != Weapon.WeaponStates.WeaponIdle))
 			{

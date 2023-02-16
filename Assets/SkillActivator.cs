@@ -14,9 +14,9 @@ public class SkillActivator : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
-        if (InputManager.Instance.InteractButton.State.CurrentState == MoreMountains.Tools.MMInput.ButtonStates.ButtonDown)
+        if (InputManager.Instance.JumpButton.State.CurrentState == MoreMountains.Tools.MMInput.ButtonStates.ButtonDown)
         {
             Perform();
         }

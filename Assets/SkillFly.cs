@@ -16,9 +16,9 @@ public class SkillFly : SkillActivator
             movement.ScriptDrivenInput = true;
             transform.DOMove(target.position, 1).SetEase(Ease.Linear).OnComplete(Complete);
             LevelManager.Instance.Players[0].LinkedInputManager.InputDetectionActive = false;
-            //LevelManager.Instance.Players[0].GetComponent<CharacterMovement>().enabled = false;
-          //  LevelManager.Instance.Players[0].GetComponent<TopDownController3D>().enabled = false;
-           // LevelManager.Instance.Players[0].GetComponent<CharacterOrientation3D>().enabled = false;
+            LevelManager.Instance.Players[0].GetComponent<CharacterMovement>().enabled = false;
+            LevelManager.Instance.Players[0].GetComponent<TopDownController3D>().enabled = false;
+            LevelManager.Instance.Players[0].GetComponent<CharacterOrientation3D>().enabled = false;
             LevelManager.Instance.Players[0].GetComponent<Collider>().enabled = false;
            // transform.DOLookAt(target.position, 1);
             inPoint = false;

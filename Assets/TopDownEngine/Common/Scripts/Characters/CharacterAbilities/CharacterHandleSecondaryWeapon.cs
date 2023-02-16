@@ -35,18 +35,19 @@ namespace MoreMountains.TopDownEngine
 				inputAuthorized = CurrentWeapon.InputAuthorized;
 			}
 			
-			if (inputAuthorized && ((_inputManager.SecondaryShootButton.State.CurrentState == MMInput.ButtonStates.ButtonDown) || (_inputManager.SecondaryShootAxis == MMInput.ButtonStates.ButtonDown)))
+			if (inputAuthorized && ((_inputManager.JumpButton.State.CurrentState == MMInput.ButtonStates.ButtonDown) || (_inputManager.SecondaryShootAxis == MMInput.ButtonStates.ButtonDown)))
 			{
 				ShootStart();
 			}
 			
 			bool buttonPressed =
-				(_inputManager.SecondaryShootButton.State.CurrentState == MMInput.ButtonStates.ButtonPressed) ||
+				(_inputManager.JumpButton.State.CurrentState == MMInput.ButtonStates.ButtonPressed) ||
 				(_inputManager.SecondaryShootAxis == MMInput.ButtonStates.ButtonPressed); 
             
 			if (inputAuthorized && ContinuousPress && (CurrentWeapon.TriggerMode == Weapon.TriggerModes.Auto) && buttonPressed)
 			{
 				ShootStart();
+				Debug.Log(CurrentWeapon.WeaponName);
 			}
 
 			if (_inputManager.ReloadButton.State.CurrentState == MMInput.ButtonStates.ButtonDown)
@@ -54,13 +55,13 @@ namespace MoreMountains.TopDownEngine
 				Reload();
 			}
 
-			if (inputAuthorized && ((_inputManager.SecondaryShootButton.State.CurrentState == MMInput.ButtonStates.ButtonUp) || (_inputManager.SecondaryShootAxis == MMInput.ButtonStates.ButtonUp)))
+			if (inputAuthorized && ((_inputManager.JumpButton.State.CurrentState == MMInput.ButtonStates.ButtonUp) || (_inputManager.SecondaryShootAxis == MMInput.ButtonStates.ButtonUp)))
 			{
 				ShootStop();
 			}
 			
 			if ((CurrentWeapon.WeaponState.CurrentState == Weapon.WeaponStates.WeaponDelayBetweenUses)
-			    && ((_inputManager.SecondaryShootAxis == MMInput.ButtonStates.Off) && (_inputManager.SecondaryShootButton.State.CurrentState == MMInput.ButtonStates.Off))
+			    && ((_inputManager.SecondaryShootAxis == MMInput.ButtonStates.Off) && (_inputManager.JumpButton.State.CurrentState == MMInput.ButtonStates.Off))
 			    && !(UseSecondaryAxisThresholdToShoot && (_inputManager.SecondaryMovement.magnitude > _inputManager.Threshold.magnitude)))
 			{
 				CurrentWeapon.WeaponInputStop();
