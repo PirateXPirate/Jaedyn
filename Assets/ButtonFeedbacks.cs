@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ButtonFeedbacks : MonoBehaviour
 {
-    
+    PopupManager PopupManager;
 
     [Header("EasyMode Level")]
     [SerializeField] Button tutorial;
@@ -33,11 +33,14 @@ public class ButtonFeedbacks : MonoBehaviour
     [Header("Play Button")]
     public Button playButton;
     public Button blockPlayButton;
+    public Button unLockButton;
 
     void Awake()
     {
         SetListenner();
+        PopupManager = gameObject.GetComponent<PopupManager>();
     }
+
     void SetListenner()
     {
         tutorial.onClick.AddListener(TutorialButton);
@@ -60,6 +63,19 @@ public class ButtonFeedbacks : MonoBehaviour
         hardLevel7.onClick.AddListener(HardLevel7Button);
         hardLevel8.onClick.AddListener(HardLevel8Button);
         hardLevel9.onClick.AddListener(HardLevel9Button);
+
+        blockPlayButton.onClick.AddListener(BlockPlayButton);
+        unLockButton.onClick.AddListener(UnLockButton);
+    }
+
+    public void BlockPlayButton()
+    {
+        PopupManager.OpenPopUp(PopupManager.levelLockedPopUp);
+    }
+ 
+    public void UnLockButton()
+    {
+        PopupManager.OpenPopUp(PopupManager.unLockedPopup);
     }
 
     #region -Easy mode event button-
@@ -226,12 +242,15 @@ public class ButtonFeedbacks : MonoBehaviour
         {
             blockPlayButton.gameObject.SetActive(true);
             playButton.gameObject.SetActive(false);
+            unLockButton.gameObject.SetActive(true);
         }
         else
         {
             blockPlayButton.gameObject.SetActive(false);
             playButton.gameObject.SetActive(true);
+            unLockButton.gameObject.SetActive(false);
         }
             
     }
+
 }

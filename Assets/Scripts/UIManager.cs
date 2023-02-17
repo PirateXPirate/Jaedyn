@@ -4,7 +4,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
-    ButtonFeedbacks _ButtonFeedBacks;
+    ButtonFeedbacks ButtonFeedBacks;
+    PopupManager PopupManager;
 
     [Header("Button")]
     [SerializeField] private Button easyModeButton;
@@ -12,11 +13,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Button playButton;
     [SerializeField] private Button homeButton;
     [SerializeField] private Button shopButton;
-    [SerializeField] private Button unlockButton;
 
     [Header("UI")]
-    [SerializeField] GameObject easyModeUi;
-    [SerializeField] GameObject hardModeUi;
+    [SerializeField] private GameObject easyModeUi;
+    [SerializeField] private GameObject hardModeUi;
 
     [Header("Popup")]
 
@@ -26,7 +26,8 @@ public class UIManager : MonoBehaviour
     void Awake()
     {
         LevelData.LoadLevelStateData();
-        _ButtonFeedBacks = gameObject.GetComponent<ButtonFeedbacks>();
+        ButtonFeedBacks = gameObject.GetComponent<ButtonFeedbacks>();
+        PopupManager = gameObject.GetComponent<PopupManager>();
         SetButtonListener();
     }
 
@@ -63,9 +64,9 @@ public class UIManager : MonoBehaviour
         {
             hardModeUi.SetActive(true);
             easyModeUi.SetActive(false);
-            _ButtonFeedBacks.ResetAllSize();
-            _ButtonFeedBacks.blockPlayButton.gameObject.SetActive(true);
-            _ButtonFeedBacks.playButton.gameObject.SetActive(false);
+            ButtonFeedBacks.ResetAllSize();
+            ButtonFeedBacks.blockPlayButton.gameObject.SetActive(true);
+            ButtonFeedBacks.playButton.gameObject.SetActive(false);
             easyModeButton.onClick.AddListener(EasyMode);
             hardModeButton.onClick.RemoveListener(HardMode);
         }
@@ -73,6 +74,7 @@ public class UIManager : MonoBehaviour
         else
         {
             Debug.Log("Show Popup HardModeLock");
+            PopupManager.OpenPopUp(PopupManager.hardModeLockedPopUp);
         }
     }
 
@@ -87,9 +89,9 @@ public class UIManager : MonoBehaviour
         Debug.Log("EasyMode Button is Press!!");
         hardModeUi.SetActive(false);
         easyModeUi.SetActive(true);
-        _ButtonFeedBacks.ResetAllSize();
-        _ButtonFeedBacks.blockPlayButton.gameObject.SetActive(true);
-        _ButtonFeedBacks.playButton.gameObject.SetActive(false);
+        ButtonFeedBacks.ResetAllSize();
+        ButtonFeedBacks.blockPlayButton.gameObject.SetActive(true);
+        ButtonFeedBacks.playButton.gameObject.SetActive(false);
         easyModeButton.onClick.RemoveListener(EasyMode);
         hardModeButton.onClick.AddListener(HardMode);
     }
@@ -230,13 +232,13 @@ public class UIManager : MonoBehaviour
 
     void SetCompleteTutorial()
     {
-        if (LevelData.isTutorialComplete || isHardmodePlayable)
+        if (LevelData.isTutorialComplete)
         {
             var map = easyModeUi.transform.Find($"LevelTutorial");
             map.transform.Find("BG_Brown").gameObject.SetActive(false);
             map.transform.Find("BG_Pass").gameObject.SetActive(true);
         }
     }
-    #endregion //
+    #endregion 
 
 }
