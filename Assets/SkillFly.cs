@@ -21,7 +21,7 @@ public class SkillFly : SkillActivator
             LevelManager.Instance.Players[0].GetComponent<TopDownController3D>().enabled = false;
             LevelManager.Instance.Players[0].GetComponent<CharacterOrientation3D>().enabled = false;
             LevelManager.Instance.Players[0].GetComponent<Collider>().enabled = false;
-           // transform.DOLookAt(target.position, 1);
+            transform.DOLookAt(target.position, 1);
             inPoint = false;
 
         }
@@ -37,9 +37,9 @@ public class SkillFly : SkillActivator
     }
     protected override void OnTriggerEnter(Collider other)
     {
-        base.OnTriggerEnter(other);
+       // base.OnTriggerEnter(other);
        
-        if (other.tag.Equals("SkillPosition"))
+        if (other.tag.Equals("Fly"))
         {
             inPoint = true;
             if (other.GetComponent<Warp>() == null) return;
@@ -48,9 +48,14 @@ public class SkillFly : SkillActivator
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    protected override void OnTriggerExit(Collider other)
     {
-        Debug.Log(collision.gameObject.name);
+        base.OnTriggerExit(other);
+
+        if (other.tag.Equals("Fly"))
+        {
+            inPoint = false;
+        }
     }
 
 }

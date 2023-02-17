@@ -38,9 +38,15 @@ public class GetItem : MonoBehaviour
                 keyManager.GetLock();
                 break;
             case ItemType.HpPotion:
+                LevelManager.Instance.Players[0].LinkedInputManager.InputDetectionActive = false;
+                LevelManager.Instance.Players[0].GetComponent<CharacterMovement>().enabled = false;
+                LevelManager.Instance.Players[0].GetComponent<TopDownController3D>().enabled = false;
                 powerManager.AddHpPotion(1);
                 break;
             case ItemType.ResistancePotion:
+                LevelManager.Instance.Players[0].LinkedInputManager.InputDetectionActive = false;
+                LevelManager.Instance.Players[0].GetComponent<CharacterMovement>().enabled = false;
+                LevelManager.Instance.Players[0].GetComponent<TopDownController3D>().enabled = false;
                 powerManager.AddResistancePotion(1);
                 break;
         }

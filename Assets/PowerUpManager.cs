@@ -43,8 +43,8 @@ public class PowerUpManager : MonoBehaviour
         {
             onUseHPPotion?.Invoke();
             hpPotionQuantity -= 1;
-            if (playerHealth.CurrentHealth + 10 < playerHealth.MaximumHealth)
-                playerHealth.CurrentHealth += 10;
+            if (playerHealth.CurrentHealth + 20 < playerHealth.MaximumHealth)
+                playerHealth.CurrentHealth += 20;
             else
                 playerHealth.CurrentHealth = playerHealth.MaximumHealth;
             playerHealth.UpdateHealthBar(false);

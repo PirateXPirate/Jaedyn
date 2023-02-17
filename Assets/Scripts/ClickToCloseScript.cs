@@ -30,7 +30,11 @@ public class ClickToCloseScript : MonoBehaviour
             LevelManager.Instance.Players[0].GetComponent<CharacterMovement>().enabled = true;
             LevelManager.Instance.Players[0].GetComponent<TopDownController3D>().enabled = true;
             if (ActivateObject)
+            {
                 ActivateObject.SetActive(true);
+                ActivateObject = null;
+            }
+              
         }
     }
     public void SetupStory(string msg) {

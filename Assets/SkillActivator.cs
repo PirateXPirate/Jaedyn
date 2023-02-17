@@ -38,7 +38,7 @@ public class SkillActivator : MonoBehaviour
             inPoint = true;
         }
     }
-    private void OnTriggerExit(Collider other)
+    protected virtual void OnTriggerExit(Collider other)
     {
         if (other.tag.Equals("SkillPosition"))
         {
