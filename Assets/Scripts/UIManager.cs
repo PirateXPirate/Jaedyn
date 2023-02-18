@@ -2,10 +2,13 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
+
 public class UIManager : MonoBehaviour
 {
     ButtonFeedbacks ButtonFeedBacks;
     PopupManager PopupManager;
+    FadeController FadeController;
 
     [Header("Button")]
     [SerializeField] private Button easyModeButton;
@@ -18,8 +21,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject easyModeUi;
     [SerializeField] private GameObject hardModeUi;
 
-    [Header("Popup")]
-
     public bool isHardmodePlayable;
     public string sceneToPlay = "";
 
@@ -28,11 +29,13 @@ public class UIManager : MonoBehaviour
         LevelData.LoadLevelStateData();
         ButtonFeedBacks = gameObject.GetComponent<ButtonFeedbacks>();
         PopupManager = gameObject.GetComponent<PopupManager>();
+        FadeController = gameObject.GetComponent<FadeController>();
         SetButtonListener();
     }
 
     void Start()
     {
+        easyModeButton.interactable = false;
         SetUpUi();
         SetCompleteTutorial();
     }
@@ -45,18 +48,23 @@ public class UIManager : MonoBehaviour
 
     void SetButtonListener()
     {
-        easyModeButton.onClick.AddListener(EasyMode);
         hardModeButton.onClick.AddListener(HardMode);
-        playButton.onClick.AddListener(PlayButton);
-        homeButton.onClick.AddListener(HomeButton);
+        easyModeButton.onClick.AddListener(EasyMode);
+        playButton.onClick.AddListener(() => StartCoroutine(PlayButton()));
+        homeButton.onClick.AddListener(() => StartCoroutine(HomeButton()));
         shopButton.onClick.AddListener(ShopButton);
     }
 
-    void PlayButton()
+    IEnumerator PlayButton()
     {
-        if (sceneToPlay == "") { return; }
-        Debug.Log($"Go to {sceneToPlay} scene");
-        SceneManager.LoadSceneAsync(sceneToPlay, LoadSceneMode.Single);
+        float fadingTime = 1.5f;
+        if (sceneToPlay == "") { yield break; }
+
+        Debug.Log($"Going to {sceneToPlay} scene");
+        FadeController.isGotoMapScenePressed = true;
+        yield return new WaitForSeconds(fadingTime);
+        SceneManager.LoadScene(sceneToPlay);
+        yield return null;
     }
     void HardMode()
     {
@@ -67,8 +75,8 @@ public class UIManager : MonoBehaviour
             ButtonFeedBacks.ResetAllSize();
             ButtonFeedBacks.blockPlayButton.gameObject.SetActive(true);
             ButtonFeedBacks.playButton.gameObject.SetActive(false);
-            easyModeButton.onClick.AddListener(EasyMode);
-            hardModeButton.onClick.RemoveListener(HardMode);
+            hardModeButton.interactable = false;
+            easyModeButton.interactable = true;
         }
 
         else
@@ -80,29 +88,35 @@ public class UIManager : MonoBehaviour
 
     bool IsHardModePlayable()
     {
-        //TODO if Unlocked Hard mode
+        //TODO Check if Hard mode is Unlocked
         return isHardmodePlayable;
     }
 
     void EasyMode()
     {
-        Debug.Log("EasyMode Button is Press!!");
         hardModeUi.SetActive(false);
         easyModeUi.SetActive(true);
         ButtonFeedBacks.ResetAllSize();
         ButtonFeedBacks.blockPlayButton.gameObject.SetActive(true);
         ButtonFeedBacks.playButton.gameObject.SetActive(false);
-        easyModeButton.onClick.RemoveListener(EasyMode);
-        hardModeButton.onClick.AddListener(HardMode);
+        hardModeButton.interactable = true;
+        easyModeButton.interactable = false;
     }
 
-    void HomeButton()
+    IEnumerator HomeButton()
     {
-        Debug.Log("HomeButton is Press!!");
+        float fadingTime = 1.5f;
+
+        FadeController.isGotoMapScenePressed = true;
+        yield return new WaitForSeconds(fadingTime);
+        SceneManager.LoadScene("MainMenuScene");
+        yield return null;
     }
 
     void ShopButton()
     {
+        //TODO FadeIn
+        //TODO LoadScene ShopScene
         Debug.Log("ShopButton is Press!!");
     }
 
@@ -175,33 +189,33 @@ public class UIManager : MonoBehaviour
     }
 
     #region -SetActive UI-
-    void LevelState0(Transform map)
+    void CloseAllSymbol(Transform map)
     {
         map.transform.Find("BG_Brown").gameObject.SetActive(false);
         map.transform.Find("BG_Pass").gameObject.SetActive(false);
-        map.transform.Find("BG_Lock").gameObject.SetActive(true);
-        map.transform.Find("Lock").gameObject.SetActive(true);
+        map.transform.Find("BG_Lock").gameObject.SetActive(false);
+        map.transform.Find("Lock").gameObject.SetActive(false);
         map.transform.Find("Star").gameObject.SetActive(false);
         map.transform.Find("StarYellow").gameObject.SetActive(false);
+    }
+    void LevelState0(Transform map)
+    {
+        CloseAllSymbol(map);
+        map.transform.Find("BG_Lock").gameObject.SetActive(true);
+        map.transform.Find("Lock").gameObject.SetActive(true);
     }
 
     void LevelState1(Transform map)
     {
-        map.transform.Find("BG_Brown").gameObject.SetActive(false);
+        CloseAllSymbol(map);
         map.transform.Find("BG_Pass").gameObject.SetActive(true);
-        map.transform.Find("BG_Lock").gameObject.SetActive(false);
-        map.transform.Find("Lock").gameObject.SetActive(false);
         map.transform.Find("Star").gameObject.SetActive(true);
-        map.transform.Find("StarYellow").gameObject.SetActive(false);
     }
 
     void LevelState2(Transform map)
     {
-        map.transform.Find("BG_Brown").gameObject.SetActive(false);
+        CloseAllSymbol(map);
         map.transform.Find("BG_Pass").gameObject.SetActive(true);
-        map.transform.Find("BG_Lock").gameObject.SetActive(false);
-        map.transform.Find("Lock").gameObject.SetActive(false);
-        map.transform.Find("Star").gameObject.SetActive(false);
         map.transform.Find("StarYellow").gameObject.SetActive(true);
     }
 
@@ -209,25 +223,17 @@ public class UIManager : MonoBehaviour
     {
         if (!LevelData.isTutorialComplete) { return; }
         var map = easyModeUi.transform.Find($"easyLevel{levelIndex}");
-
+        CloseAllSymbol(map);
         map.transform.Find("BG_Brown").gameObject.SetActive(true);
-        map.transform.Find("BG_Pass").gameObject.SetActive(false);
-        map.transform.Find("BG_Lock").gameObject.SetActive(false);
-        map.transform.Find("Lock").gameObject.SetActive(false);
         map.transform.Find("Star").gameObject.SetActive(true);
-        map.transform.Find("StarYellow").gameObject.SetActive(false);
     }
     void SetBrownPanelHard(int levelIndex) 
     { 
         if (!LevelData.isTutorialComplete) { return; }
         var map = hardModeUi.transform.Find($"hardLevel{levelIndex}");
-
+        CloseAllSymbol(map);
         map.transform.Find("BG_Brown").gameObject.SetActive(true);
-        map.transform.Find("BG_Pass").gameObject.SetActive(false);
-        map.transform.Find("BG_Lock").gameObject.SetActive(false);
-        map.transform.Find("Lock").gameObject.SetActive(false);
         map.transform.Find("Star").gameObject.SetActive(true);
-        map.transform.Find("StarYellow").gameObject.SetActive(false);
     }
 
     void SetCompleteTutorial()

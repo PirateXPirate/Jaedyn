@@ -534,8 +534,8 @@ RectTransform:
   m_GameObject: {fileID: 273519221}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1959132284}
   m_Father: {fileID: 417098465}
@@ -543,8 +543,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1077, y: 529.99994}
-  m_SizeDelta: {x: 165, y: 162}
+  m_AnchoredPosition: {x: 1097.2, y: 465}
+  m_SizeDelta: {x: 115.5, y: 113.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &273519223
 MonoBehaviour:
@@ -676,7 +676,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 83}
+  m_AnchoredPosition: {x: 0, y: 106}
   m_SizeDelta: {x: 2360, y: 1222}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &417098466
@@ -811,7 +811,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -82.99999}
+  m_AnchoredPosition: {x: 0, y: -127}
   m_SizeDelta: {x: 2360, y: 1056}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &699928016
@@ -1411,6 +1411,7 @@ MonoBehaviour:
   dialogGroupForFade: {fileID: 417098466}
   isPlayButtonPressed: 0
   isGotoMapScenePressed: 0
+  isFlashSceneAllowed: 1
 --- !u!114 &1180105170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2187,7 +2188,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -643, y: -38}
+  m_AnchoredPosition: {x: -610, y: -38}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1959132285

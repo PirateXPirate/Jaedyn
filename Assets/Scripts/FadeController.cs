@@ -18,6 +18,7 @@ public class FadeController : MonoBehaviour
     public CanvasGroup dialogGroupForFade;
     public bool isPlayButtonPressed;
     public bool isGotoMapScenePressed;
+    public bool isFlashSceneAllowed;
 
 
 
@@ -44,9 +45,17 @@ public class FadeController : MonoBehaviour
     IEnumerator FadeIntro()
     {
         StartCoroutine(FadeIn(fadeCanvas, fadeDuration));
-        yield return new WaitForSeconds(fadeDuration + FLASH_SCENE_TIME);
-        StartCoroutine(FadeOut(fadeButton, buttonFadeDuration));
-        yield return new WaitForSeconds(buttonFadeDuration);
+        yield return new WaitForSeconds(fadeDuration);
+
+        if (isFlashSceneAllowed)
+        yield return new WaitForSeconds(FLASH_SCENE_TIME);
+
+        if (fadeButton != null) 
+        {
+            StartCoroutine(FadeOut(fadeButton, buttonFadeDuration));
+            yield return new WaitForSeconds(buttonFadeDuration);
+        }
+
         fadeCanvas.gameObject.SetActive(false);
         yield return null;
     }

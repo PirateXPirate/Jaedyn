@@ -14,12 +14,16 @@ public static class LevelData
     {
         PlayerPrefs.SetInt("isTutorialComplete", 1);
     }
-
+    
+    /// <summary>
+    /// Use this method when player completed any level to save state of that level or Use this method when player use key to unlock any level
+    /// </summary>
     /// <param name="mode">easy or hard</param>
     /// <param name="levelState">0 = locked, 1 = cleared without picture, 2 = cleared with picture(Perfect clear)</param>
     public static void SaveLevelStateData(string mode, int levelIndex, int levelState)
     {
-        if (levelIndex <= 0) { Debug.LogError("levelIndex must be more than 0"); return; }
+        if (levelIndex <= 0 || levelIndex > TOTAL_LEVEL) { Debug.LogError($"levelIndex must be between 1 and {TOTAL_LEVEL}"); return; }
+        if (levelState <= 0 || levelState > 2) { Debug.LogError($"levelState must be between 0 and 2"); return; }
 
         if (mode == "easy" || mode == "hard")
         {

@@ -205,7 +205,7 @@ public class ButtonFeedbacks : MonoBehaviour
 
     void SizeExpand(Button button)
     {
-        button.transform.localScale = new Vector3(1.7f, 1.7f, 1.7f);
+        button.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
     }
 
     public void ResetAllSize()
@@ -233,7 +233,7 @@ public class ButtonFeedbacks : MonoBehaviour
     }
     void SizeReSet(Button button)
     {
-        button.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+        button.transform.localScale = new Vector3(1.3f, 1.3f, 1.3f);
     }
 
     void StateChecker(Button parent)
