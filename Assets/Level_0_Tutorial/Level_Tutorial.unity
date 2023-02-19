@@ -2243,9 +2243,9 @@ MonoBehaviour:
   popupFrame: {fileID: 1997603130}
   titleTextField: {fileID: 1161717548}
   detailTextField: {fileID: 1161717547}
-  titleText: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23 \u0E39
-    \u0E49 Tutorial \u0E19\u0E01\u0E2E \u0E39 \u0E01"
-  detailText: "\u0E01\u0E14\u0E1B\u0E38\u0E48 \u0E21 1 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25\u0E40\u0E27\u0E17\u0E22\u0E4C\u0E21\u0E19\u0E15\u0E4C\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E17\u0E4D\u0E32\u0E25\u0E32\u0E22\u0E40\u0E16\u0E32\u0E27\u0E31\u0E25\u0E22\u0E4C"
+  titleText: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23\u0E39\u0E49
+    Tutorial \u0E19\u0E01\u0E2E\u0E39\u0E01"
+  detailText: "\u0E01\u0E14\u0E1B\u0E38\u0E48\u0E21 1 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25\u0E40\u0E27\u0E17\u0E22\u0E4C\u0E21\u0E19\u0E15\u0E4C\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E17\u0E4D\u0E32\u0E25\u0E32\u0E22\u0E40\u0E16\u0E32\u0E27\u0E31\u0E25\u0E22\u0E4C"
   PopupSoundClip: {fileID: 8300000, guid: 02b91cebc5e6b475d8f3571ef7dc0c28, type: 3}
 --- !u!135 &111663158
 SphereCollider:
@@ -10191,12 +10191,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
+      propertyPath: titleText
+      value: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23\u0E39\u0E49 
+        Tutorial \u0E40\u0E2A\u0E37\u0E2D\u0E14\u0E32\u0E27"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
+        type: 3}
       propertyPath: detailText
       value: "\u0E01\u0E14\u0E1B\u0E38\u0E48 \u0E21 1 \u0E2A\u0E2D\u0E07\u0E04\u0E23\u0E31\u0E49\u0E07
-        \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25\u0E01\u0E23\u0E30\u0E42\u0E14\u0E14\u0E2A\u0E39\u0E07
-        ** \u0E43\u0E0A\u0E49\u0E04\u0E39\u0E48\u0E01\u0E31\u0E1A\u0E1B\u0E38\u0E48
-        \u0E21\u0E1B\u0E31\u0E07\u0E04\u0E31\u0E1A\u0E17\u0E34\u0E28\u0E17\u0E32\u0E07\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E2B\u0E49\u0E01\u0E23\u0E30\u0E42\u0E14\u0E14\u0E44\u0E1B\u0E15\u0E32\u0E21
-        \u0E17\u0E34\u0E28\u0E17\u0E32\u0E07\u0E17\u0E35\u0E48\u0E15\u0E49\u0E2D\u0E07\u0E01\u0E32\u0E23\u0E44\u0E14\u0E49"
+        \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25\u0E01\u0E23\u0E30\u0E42\u0E14\u0E14\u0E2A\u0E39\u0E07 
+        ** \u0E43\u0E0A\u0E49\u0E04\u0E39\u0E48\u0E01\u0E31\u0E1A\u0E1B\u0E38\u0E48\u0E21\u0E1B\u0E31\u0E07\u0E04\u0E31\u0E1A\u0E17\u0E34\u0E28\u0E17\u0E32\u0E07\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E2B\u0E49\u0E01\u0E23\u0E30\u0E42\u0E14\u0E14\u0E44\u0E1B\u0E15\u0E32\u0E21
+        \u0E17\u0E34\u0E28\u0E17\u0E32\u0E07\u0E17\u0E35\u0E48\u0E15\u0E49\u0E2D\u0E07\u0E01\u0E32\u0E23\u0E44\u0E14\u0E49 "
       objectReference: {fileID: 0}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
@@ -14034,14 +14039,13 @@ PrefabInstance:
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
       propertyPath: titleText
-      value: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23 \u0E39
-        \u0E49 Tutorial \u0E2A\u0E25\u0E31\u0E1A\u0E15\u0E31\u0E27\u0E25\u0E30\u0E04\u0E23\u0E40\u0E25\u0E48\u0E19"
+      value: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23\u0E39\u0E49
+        Tutorial \u0E2A\u0E25\u0E31\u0E1A\u0E15\u0E31\u0E27\u0E25\u0E30\u0E04\u0E23\u0E40\u0E25\u0E48\u0E19"
       objectReference: {fileID: 0}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
       propertyPath: detailText
-      value: "\u0E01\u0E14\u0E1B\u0E38\u0E48 \u0E21 4 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19\u0E40\u0E1B\u0E47\u0E19\u0E15\u0E31\u0E27\u0E25\u0E30\u0E04\u0E23
-        \u0E19\u0E01\u0E2E\u0E39\u0E01"
+      value: "\u0E01\u0E14\u0E1B\u0E38\u0E48\u0E21 4 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19\u0E40\u0E1B\u0E47\u0E19\u0E15\u0E31\u0E27\u0E25\u0E30\u0E04\u0E23\u0E19\u0E01\u0E2E\u0E39\u0E01"
       objectReference: {fileID: 0}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
@@ -19874,6 +19878,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
+      propertyPath: titleText
+      value: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23\u0E39\u0E49 
+        Tutorial \u0E40\u0E2A\u0E37\u0E2D\u0E14\u0E32\u0E27"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
+        type: 3}
       propertyPath: popupFrame
       value: 
       objectReference: {fileID: 1997603130}
@@ -20761,17 +20771,16 @@ PrefabInstance:
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
       propertyPath: titleText
-      value: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23 \u0E39
-        \u0E49 Tutorial \u0E19\u0E01\u0E2E \u0E39 \u0E01"
+      value: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23\u0E39\u0E49
+        Tutorial \u0E19\u0E01\u0E2E\u0E39\u0E01"
       objectReference: {fileID: 0}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
       propertyPath: detailText
-      value: "\u0E01\u0E14\u0E1B\u0E38\u0E48 \u0E21 2 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25
+      value: "\u0E01\u0E14\u0E1B\u0E38\u0E48\u0E21 2 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25
         \u0E1A\u0E34\u0E19\u0E1C\u0E48\u0E32\u0E19\u0E23\u0E30\u0E22\u0E30\u0E44\u0E01\u0E25
-        \u0E08\u0E38\u0E14 A \u0E44\u0E1B B \u0E40\u0E0A\u0E48\u0E19 \u0E01\u0E32\u0E23
-        \u0E02\u0E49\u0E32\u0E21\u0E41\u0E21\u0E48\u0E19\u0E4D\u0E49\u0E32 \u0E2B\u0E23\u0E37\u0E2D
-        \u0E02\u0E49\u0E32\u0E21 \u0E2A\u0E30\u0E1E\u0E32\u0E19"
+        \u0E08\u0E38\u0E14 A \u0E44\u0E1B B \u0E40\u0E0A\u0E48\u0E19  \u0E01\u0E32\u0E23\u0E02\u0E49\u0E32\u0E21\u0E41\u0E21\u0E48\u0E19\u0E33\u0E49
+        \u0E2B\u0E23\u0E37\u0E2D \u0E02\u0E49\u0E32\u0E21\u0E2A\u0E30\u0E1E\u0E32\u0E19"
       objectReference: {fileID: 0}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
@@ -21360,16 +21369,15 @@ PrefabInstance:
     - target: {fileID: 2675772814500596732, guid: cee18cf5504f6d54fbb05a043cb1dbb2,
         type: 3}
       propertyPath: m_text
-      value: "\u0E01\u0E14\u0E1B\u0E48\u0E38\u0E21\u0E1A\u0E31\u0E07\u0E04\u0E31\u0E1A\u0E17\u0E32\u0E07
-        \" \u0E0B\u0E49\u0E32\u0E22\u0E21\u0E37\u0E2D \" \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E40\u0E14\u0E34\u0E19
-        \u0E1B\u0E48\u0E38\u0E21\u0E2A\u0E01\u0E34\u0E25 ( Skill ) \u0E15\u0E48\u0E32\u0E07\u0E46\u0E08\u0E30\u0E2D\u0E22\u0E39\u0E48\u0E17\u0E32\u0E07
-        \" \u0E02\u0E27\u0E32\u0E21\u0E37\u0E2D \""
+      value: "\u0E25\u0E2D\u0E07\u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19\u0E40\u0E1B\u0E47\u0E19
+        \u0E40\u0E2A\u0E37\u0E2D\u0E42\u0E04\u0E23\u0E48\u0E07 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25
+        \u0E15\u0E48\u0E2D\u0E2A\u0E39\u0E49\u0E25\u0E30\u0E42\u0E08\u0E21\u0E15\u0E35 "
       objectReference: {fileID: 0}
     - target: {fileID: 2675772814768741857, guid: cee18cf5504f6d54fbb05a043cb1dbb2,
         type: 3}
       propertyPath: m_text
       value: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23\u0E39\u0E49
-        Tutorial"
+        Tutorial \u0E17\u0E14\u0E2A\u0E2D\u0E1A\u0E01\u0E32\u0E23\u0E15\u0E48\u0E2D\u0E2A\u0E39\u0E49"
       objectReference: {fileID: 0}
     - target: {fileID: 2675772815540303800, guid: cee18cf5504f6d54fbb05a043cb1dbb2,
         type: 3}
@@ -23108,15 +23116,15 @@ PrefabInstance:
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
       propertyPath: titleText
-      value: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23 \u0E39
-        \u0E49 Tutorial \u0E40\u0E01\u0E47\u0E1A \u0E44\u0E2D\u0E40\u0E17\u0E47\u0E21\u0E1E\u0E34\u0E40\u0E28\u0E29"
+      value: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23\u0E39\u0E49 
+        Tutorial \u0E40\u0E01\u0E47\u0E1A \u0E44\u0E2D\u0E40\u0E17\u0E47\u0E21\u0E1E\u0E34\u0E40\u0E28\u0E29 "
       objectReference: {fileID: 0}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
       propertyPath: detailText
       value: "\u0E25\u0E2D\u0E07\u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19\u0E40\u0E1B\u0E47\u0E19
         \u0E40\u0E2A\u0E37\u0E2D\u0E14\u0E32\u0E27 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25
-        \u0E1C\u0E25\u0E31\u0E01\u0E27\u0E31\u0E15\u0E16\u0E38\u0E14"
+        \u0E1C\u0E25\u0E31\u0E01\u0E27\u0E31\u0E15\u0E16\u0E38"
       objectReference: {fileID: 0}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
@@ -31538,7 +31546,7 @@ PrefabInstance:
     - target: {fileID: 224636566433038052, guid: d4529f47989526241929319abfdfc29d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -8.000244
+      value: -8.000275
       objectReference: {fileID: 0}
     - target: {fileID: 224674173061577030, guid: d4529f47989526241929319abfdfc29d,
         type: 3}
@@ -33037,9 +33045,9 @@ MonoBehaviour:
   popupFrame: {fileID: 1997603130}
   titleTextField: {fileID: 1161717548}
   detailTextField: {fileID: 1161717547}
-  titleText: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23 \u0E39
-    \u0E49 Tutorial \u0E40\u0E2A\u0E37\u0E2D\u0E42\u0E04\u0E23\u0E48\u0E07"
-  detailText: "\u0E01\u0E14\u0E1B\u0E38\u0E48 \u0E21 1 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25
+  titleText: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23\u0E39\u0E49
+    Tutorial \u0E40\u0E2A\u0E37\u0E2D\u0E42\u0E04\u0E23\u0E48\u0E07"
+  detailText: "\u0E01\u0E14\u0E1B\u0E38\u0E48\u0E21 1 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25
     \u0E17\u0E4D\u0E32\u0E25\u0E32\u0E22\u0E2A\u0E34\u0E48\u0E07\u0E02\u0E2D\u0E07
     \u0E17\u0E4D\u0E32\u0E25\u0E32\u0E22\u0E27\u0E31\u0E15\u0E16\u0E38 "
   PopupSoundClip: {fileID: 8300000, guid: 268bb24e34b7cb14bbb5280c8c48417a, type: 3}
@@ -37860,13 +37868,13 @@ PrefabInstance:
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
       propertyPath: titleText
-      value: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23 \u0E39
-        \u0E49 Tutorial \u0E40\u0E2A\u0E37\u0E2D\u0E42\u0E04\u0E23\u0E48\u0E07"
+      value: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23\u0E39\u0E49
+        Tutorial \u0E40\u0E2A\u0E37\u0E2D\u0E42\u0E04\u0E23\u0E48\u0E07"
       objectReference: {fileID: 0}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
       propertyPath: detailText
-      value: "\u0E01\u0E14\u0E1B\u0E38\u0E48 \u0E21 1 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25
+      value: "\u0E01\u0E14\u0E1B\u0E38\u0E48\u0E21 1 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25
         \u0E17\u0E4D\u0E32\u0E25\u0E32\u0E22\u0E2A\u0E34\u0E48\u0E07\u0E02\u0E2D\u0E07
         \u0E17\u0E4D\u0E32\u0E25\u0E32\u0E22\u0E27\u0E31\u0E15\u0E16\u0E38 "
       objectReference: {fileID: 0}
@@ -38130,9 +38138,8 @@ PrefabInstance:
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
       propertyPath: titleText
-      value: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23 \u0E39
-        \u0E49 Tutorial \u0E17\u0E14\u0E2A\u0E2D\u0E1A\u0E01\u0E32\u0E23\u0E15\u0E48\u0E2D\u0E2A
-        \u0E39 \u0E49"
+      value: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23\u0E39\u0E49
+        Tutorial \u0E17\u0E14\u0E2A\u0E2D\u0E1A\u0E01\u0E32\u0E23\u0E15\u0E48\u0E2D\u0E2A\u0E39\u0E49"
       objectReference: {fileID: 0}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
@@ -40671,10 +40678,9 @@ PrefabInstance:
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
       propertyPath: detailText
-      value: "\u0E01\u0E14\u0E1B\u0E38\u0E48 \u0E21 1 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25
+      value: "\u0E01\u0E14\u0E1B\u0E38\u0E48\u0E21 1 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25
         \u0E17\u0E4D\u0E32\u0E25\u0E32\u0E22\u0E2A\u0E34\u0E48\u0E07\u0E02\u0E2D\u0E07
-        \u0E17\u0E4D\u0E32\u0E25\u0E32\u0E22\u0E27\u0E31\u0E15\u0E16\u0E38\u0E2B\u0E23\u0E37\u0E2D
-        \u0E15\u0E48\u0E2D\u0E2A\u0E39\u0E49 "
+        \u0E17\u0E4D\u0E32\u0E25\u0E32\u0E22\u0E27\u0E31\u0E15\u0E16\u0E38 "
       objectReference: {fileID: 0}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
@@ -41364,8 +41370,8 @@ PrefabInstance:
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
       propertyPath: titleText
-      value: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23 \u0E39
-        \u0E49 Tutorial \u0E40\u0E01\u0E47\u0E1A \u0E44\u0E2D\u0E40\u0E17\u0E47\u0E21\u0E1E\u0E34\u0E40\u0E28\u0E29"
+      value: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23\u0E39\u0E49 
+        Tutorial \u0E40\u0E01\u0E47\u0E1A \u0E44\u0E2D\u0E40\u0E17\u0E47\u0E21\u0E1E\u0E34\u0E40\u0E28\u0E29"
       objectReference: {fileID: 0}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
@@ -44020,11 +44026,11 @@ MonoBehaviour:
   popupFrame: {fileID: 1997603130}
   titleTextField: {fileID: 1161717548}
   detailTextField: {fileID: 1161717547}
-  titleText: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23 \u0E39
-    \u0E49 Tutorial \u0E40\u0E2A\u0E37\u0E2D\u0E14\u0E32\u0E27"
+  titleText: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23\u0E39\u0E49 
+    Tutorial \u0E40\u0E2A\u0E37\u0E2D\u0E14\u0E32\u0E27"
   detailText: "\u0E25\u0E2D\u0E07\u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19\u0E40\u0E1B\u0E47\u0E19
     \u0E40\u0E2A\u0E37\u0E2D\u0E14\u0E32\u0E27 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25
-    \u0E1C\u0E25\u0E31\u0E01\u0E27\u0E31\u0E15\u0E16\u0E38\u0E14"
+    \u0E1C\u0E25\u0E31\u0E01\u0E27\u0E31\u0E15\u0E16\u0E38"
   PopupSoundClip: {fileID: 8300000, guid: 5f86e855ad129d347b4e680b0d787a3e, type: 3}
   TriggerSoundClip: {fileID: 0}
   Activated: 0
