@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class EndGame : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private GameObject controllerUi;
     void Start()
     {
-        
+        controllerUi.SetActive(false);
     }
 
     // Update is called once per frame

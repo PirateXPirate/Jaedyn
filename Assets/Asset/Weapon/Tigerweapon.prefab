@@ -102,12 +102,12 @@ MonoBehaviour:
   Flipped: 0
   MeleeDamageAreaMode: 0
   DamageAreaShape: 2
-  AreaSize: {x: 1, y: 1, z: 1.21}
+  AreaSize: {x: 2, y: 1, z: 1.21}
   AreaOffset: {x: 0, y: 0, z: 1.42}
   HitDamageableFeedback: {fileID: 0}
   HitNonDamageableFeedback: {fileID: 0}
   ExistingDamageArea: {fileID: 0}
-  InitialDelay: 0
+  InitialDelay: 0.5
   ActiveDuration: 0.15
   TargetLayerMask:
     serializedVersion: 2

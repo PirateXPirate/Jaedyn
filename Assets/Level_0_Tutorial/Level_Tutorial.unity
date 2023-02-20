@@ -5572,7 +5572,7 @@ RectTransform:
   - {fileID: 25480700}
   - {fileID: 1622766063}
   m_Father: {fileID: 516757092}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6121,6 +6121,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mobile Controller
       objectReference: {fileID: 0}
+    - target: {fileID: 9201587757374745524, guid: bc9529d54b74ea24588e798868920d00,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9201587758257262707, guid: bc9529d54b74ea24588e798868920d00,
         type: 3}
       propertyPath: isActive
@@ -6172,6 +6177,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &339305793 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9201587757374745524, guid: bc9529d54b74ea24588e798868920d00,
+    type: 3}
+  m_PrefabInstance: {fileID: 339305790}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &343339663
 Transform:
   m_ObjectHideFlags: 0
@@ -10198,9 +10209,9 @@ PrefabInstance:
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
       propertyPath: detailText
-      value: "\u0E01\u0E14\u0E1B\u0E38\u0E48 \u0E21 1 \u0E2A\u0E2D\u0E07\u0E04\u0E23\u0E31\u0E49\u0E07
-        \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25\u0E01\u0E23\u0E30\u0E42\u0E14\u0E14\u0E2A\u0E39\u0E07 
-        ** \u0E43\u0E0A\u0E49\u0E04\u0E39\u0E48\u0E01\u0E31\u0E1A\u0E1B\u0E38\u0E48\u0E21\u0E1B\u0E31\u0E07\u0E04\u0E31\u0E1A\u0E17\u0E34\u0E28\u0E17\u0E32\u0E07\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E2B\u0E49\u0E01\u0E23\u0E30\u0E42\u0E14\u0E14\u0E44\u0E1B\u0E15\u0E32\u0E21
+      value: "\u0E01\u0E14\u0E1B\u0E38\u0E48\u0E21 1 \u0E2A\u0E2D\u0E07\u0E04\u0E23\u0E31\u0E49\u0E07
+        \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25\u0E01\u0E23\u0E30\u0E42\u0E14\u0E14\u0E2A\u0E39\u0E07  
+        ** \u0E43\u0E0A\u0E49\u0E04\u0E39\u0E48\u0E01\u0E31\u0E1A\u0E1B\u0E38\u0E48\u0E21\u0E1A\u0E31\u0E07\u0E04\u0E31\u0E1A\u0E17\u0E34\u0E28\u0E17\u0E32\u0E07\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E2B\u0E49\u0E01\u0E23\u0E30\u0E42\u0E14\u0E14\u0E44\u0E1B\u0E15\u0E32\u0E21
         \u0E17\u0E34\u0E28\u0E17\u0E32\u0E07\u0E17\u0E35\u0E48\u0E15\u0E49\u0E2D\u0E07\u0E01\u0E32\u0E23\u0E44\u0E14\u0E49 "
       objectReference: {fileID: 0}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
@@ -11990,7 +12001,7 @@ PrefabInstance:
     - target: {fileID: 7153565290162127227, guid: a1f7bfe70f7f21d4c9613bfa012751c0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.945
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7153565290162127227, guid: a1f7bfe70f7f21d4c9613bfa012751c0,
         type: 3}
@@ -12515,8 +12526,8 @@ MonoBehaviour:
   popupFrame: {fileID: 1997603130}
   titleTextField: {fileID: 1161717548}
   detailTextField: {fileID: 1161717547}
-  titleText: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23 \u0E39
-    \u0E49 Tutorial \u0E40\u0E15\u0E34\u0E21\u0E2B\u0E25\u0E31\u0E07\u0E0A\u0E35\u0E27\u0E34\u0E15"
+  titleText: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23\u0E39\u0E49
+    Tutorial \u0E40\u0E15\u0E34\u0E21\u0E2B\u0E25\u0E31\u0E07\u0E0A\u0E35\u0E27\u0E34\u0E15"
   detailText: "\u0E01\u0E14\u0E02\u0E27\u0E14\u0E22\u0E32\u0E41\u0E14\u0E07 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E40\u0E15\u0E34\u0E21\u0E1E\u0E25\u0E31\u0E07\u0E0A\u0E35\u0E27\u0E34\u0E15
     \u0E01\u0E14\u0E02\u0E27\u0E14\u0E22\u0E32\u0E21\u0E48\u0E27\u0E07 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E40\u0E1E\u0E34\u0E48\u0E21\u0E1E\u0E25\u0E31\u0E07\u0E04\u0E27\u0E32\u0E21\u0E15\u0E49\u0E32\u0E19\u0E17\u0E32\u0E19 "
   activateObject: {fileID: 1548396329}
@@ -15253,7 +15264,7 @@ RectTransform:
   - {fileID: 1506047445}
   - {fileID: 43623729}
   m_Father: {fileID: 516757092}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -18354,15 +18365,15 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 956540465}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1768, y: 1.1768, z: 1.1768}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1564888348}
   - {fileID: 197405391}
-  m_Father: {fileID: 516757092}
-  m_RootOrder: 22
+  m_Father: {fileID: 472595244}
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -20284,8 +20295,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0E02\u0E27\u0E14\u0E22\u0E32 \u0E2A\u0E4D\u0E32\u0E2B\u0E23\u0E31\u0E1A\r\n\u0E40\u0E1E\u0E34\u0E21\u0E04\u0E27\u0E32\u0E21\u0E15\u0E49\u0E32\u0E19\u0E17\u0E32\u0E19
-    \u0E48 1 \u0E02\u0E27\u0E14\r\n\u0E0A\u0E48\u0E27\u0E22\u0E25\u0E14 \u0E1E\u0E25\u0E31\u0E07\u0E42\u0E08\u0E21\u0E15\u0E35\u0E02\u0E2D\u0E07
+  m_text: "\u0E02\u0E27\u0E14\u0E22\u0E32 \u0E2A\u0E4D\u0E32\u0E2B\u0E23\u0E31\u0E1A\r\n\u0E40\u0E1E\u0E34\u0E48\u0E21\u0E04\u0E27\u0E32\u0E21\u0E15\u0E49\u0E32\u0E19\u0E17\u0E32\u0E19
+    1 \u0E02\u0E27\u0E14\r\n\u0E0A\u0E48\u0E27\u0E22\u0E25\u0E14\u0E1E\u0E25\u0E31\u0E07\u0E42\u0E08\u0E21\u0E15\u0E35\u0E02\u0E2D\u0E07
     \u0E21\u0E2D\u0E19\u0E2A\u0E40\u0E15\u0E2D\u0E23\u0E4C \u0E44\u0E14\u0E49"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e29a2f2a4d2e08941a5f0e42bee77c41, type: 2}
@@ -21369,15 +21380,21 @@ PrefabInstance:
     - target: {fileID: 2675772814500596732, guid: cee18cf5504f6d54fbb05a043cb1dbb2,
         type: 3}
       propertyPath: m_text
-      value: "\u0E25\u0E2D\u0E07\u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19\u0E40\u0E1B\u0E47\u0E19
-        \u0E40\u0E2A\u0E37\u0E2D\u0E42\u0E04\u0E23\u0E48\u0E07 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25
-        \u0E15\u0E48\u0E2D\u0E2A\u0E39\u0E49\u0E25\u0E30\u0E42\u0E08\u0E21\u0E15\u0E35 "
+      value: "\u0E01\u0E14\u0E1B\u0E38\u0E48\u0E21\u0E1A\u0E31\u0E07\u0E04\u0E31\u0E1A\u0E17\u0E32\u0E07
+        \u201C\u0E0B\u0E49\u0E32\u0E22\u0E21\u0E37\u0E2D\u201D \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E40\u0E14\u0E34\u0E19\r\n\u0E1B\u0E38\u0E48\u0E21\u0E2A\u0E01\u0E34\u0E25
+        (Skill) \u0E15\u0E48\u0E32\u0E07\u0E46\u0E08\u0E30\u0E2D\u0E22\u0E39\u0E48\u0E17\u0E32\u0E07
+        \u201C\u0E02\u0E27\u0E32\u0E21\u0E37\u0E2D\u201D\r"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2675772814500596734, guid: cee18cf5504f6d54fbb05a043cb1dbb2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2675772814768741857, guid: cee18cf5504f6d54fbb05a043cb1dbb2,
         type: 3}
       propertyPath: m_text
-      value: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23\u0E39\u0E49
-        Tutorial \u0E17\u0E14\u0E2A\u0E2D\u0E1A\u0E01\u0E32\u0E23\u0E15\u0E48\u0E2D\u0E2A\u0E39\u0E49"
+      value: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23\u0E39\u0E49 
+        Tutorial "
       objectReference: {fileID: 0}
     - target: {fileID: 2675772815540303800, guid: cee18cf5504f6d54fbb05a043cb1dbb2,
         type: 3}
@@ -21905,8 +21922,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0E25\u0E39\u0E01\u0E01\u0E38\u0E0D\u0E41\u0E08\u0E40\u0E1E\u0E37\u0E2D\u0E02\u0E49\u0E32\u0E21
-    \u0E48 \u0E14\u0E48\u0E32\u0E19"
+  m_text: "\u0E25\u0E39\u0E01\u0E01\u0E38\u0E0D\u0E41\u0E08\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E02\u0E49\u0E32\u0E21\u0E14\u0E48\u0E32\u0E19"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e29a2f2a4d2e08941a5f0e42bee77c41, type: 2}
   m_sharedMaterial: {fileID: -5650332518054679396, guid: e29a2f2a4d2e08941a5f0e42bee77c41,
@@ -22125,7 +22141,7 @@ RectTransform:
   - {fileID: 791193085}
   - {fileID: 467819191}
   m_Father: {fileID: 516757092}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -22240,6 +22256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 986ea6c75523f934883a51665fcc3112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controllerUi: {fileID: 339305793}
 --- !u!114 &1209530124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23942,7 +23959,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 3.08
-  m_Radius: 1.08
+  m_Radius: 1.61
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -24619,7 +24636,7 @@ RectTransform:
   - {fileID: 1839420198}
   - {fileID: 1449598017}
   m_Father: {fileID: 516757092}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -24834,7 +24851,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0E41\u0E1C\u0E48\u0E19\u0E17\u0E35\u0E43\u0E2B\u0E21\u0E48\u0E44\u0E14\u0E49\u0E16\u0E39\u0E01\u0E1B\u0E25\u0E14\u0E25\u0E47\u0E2D\u0E04\u0E41\u0E25\u0E49\u0E27
+  m_text: "\u0E41\u0E1C\u0E19\u0E17\u0E35\u0E48\u0E43\u0E2B\u0E21\u0E48\u0E44\u0E14\u0E49\u0E16\u0E39\u0E01\u0E1B\u0E25\u0E14\u0E25\u0E47\u0E2D\u0E04\u0E41\u0E25\u0E49\u0E27
     \u0E2A\u0E32\u0E21\u0E32\u0E23\u0E16\u0E1C\u0E08\u0E0D\u0E20\u0E31\u0E22\u0E14\u0E48\u0E32\u0E19\u0E15\u0E48\u0E2D\u0E44\u0E1B\u0E44\u0E14\u0E49\u0E40\u0E25\u0E22"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e29a2f2a4d2e08941a5f0e42bee77c41, type: 2}
@@ -29740,7 +29757,7 @@ RectTransform:
   - {fileID: 1185905233}
   - {fileID: 1292437362}
   m_Father: {fileID: 516757092}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -31546,7 +31563,7 @@ PrefabInstance:
     - target: {fileID: 224636566433038052, guid: d4529f47989526241929319abfdfc29d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -8.000275
+      value: -8.000244
       objectReference: {fileID: 0}
     - target: {fileID: 224674173061577030, guid: d4529f47989526241929319abfdfc29d,
         type: 3}
@@ -38314,7 +38331,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0E20\u0E32\u0E1E\u0E1D\u0E35 \u0E1E\u0E23\u0E30\u0E2B\u0E31\u0E15\u0E16\u0E4C\r"
+  m_text: "\u0E20\u0E32\u0E1E\u0E1D\u0E35\u0E1E\u0E23\u0E30\u0E2B\u0E31\u0E15\u0E16\u0E4C\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e29a2f2a4d2e08941a5f0e42bee77c41, type: 2}
   m_sharedMaterial: {fileID: -5650332518054679396, guid: e29a2f2a4d2e08941a5f0e42bee77c41,
@@ -39852,7 +39869,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1911786653}
   m_LocalRotation: {x: -0, y: 0.93784565, z: -0, w: 0.3470529}
-  m_LocalPosition: {x: -0.06896973, y: 0, z: 0.22595215}
+  m_LocalPosition: {x: -0.06896973, y: 0.42, z: 0.22595215}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -39904,7 +39921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: 
   ComparisonMode: 1
-  Distance: 2
+  Distance: 2.5
 --- !u!114 &1911786658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40310,7 +40327,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
+  m_Height: 3.08
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -40672,8 +40689,8 @@ PrefabInstance:
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
       propertyPath: titleText
-      value: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23 \u0E39
-        \u0E49 Tutorial \u0E40\u0E2A\u0E37\u0E2D\u0E42\u0E04\u0E23\u0E48\u0E07"
+      value: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23\u0E39\u0E49
+        Tutorial \u0E40\u0E2A\u0E37\u0E2D\u0E42\u0E04\u0E23\u0E48\u0E07"
       objectReference: {fileID: 0}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
@@ -41378,11 +41395,11 @@ PrefabInstance:
       propertyPath: detailText
       value: "\u0E25\u0E2D\u0E07\u0E2A\u0E31\u0E07\u0E40\u0E01\u0E15\u0E2A\u0E34\u0E48\u0E07\u0E23\u0E2D\u0E1A\u0E02\u0E49\u0E32\u0E07
         \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E21\u0E2D\u0E07\u0E2B\u0E32\u0E44\u0E2D\u0E40\u0E17\u0E47\u0E21
-        \u0E1E\u0E34\u0E40\u0E28\u0E29 \u0E2B\u0E23\u0E37\u0E2D \u0E44\u0E2D\u0E40\u0E17\u0E47\u0E21
-        \u0E17\u0E35\u0E48\u0E0B\u0E48\u0E2D\u0E19\u0E2D\u0E22\u0E39\u0E48 \u0E15\u0E32\u0E21\u0E08\u0E38\u0E14\u0E15\u0E48\u0E32\u0E07\u0E46\u0E02\u0E2D\u0E07\u0E41\u0E1C\u0E19\u0E17\u0E35\u0E48
+        \u0E1E\u0E34\u0E40\u0E28\u0E29\u0E2B\u0E23\u0E37\u0E2D\u0E44\u0E2D\u0E40\u0E17\u0E47\u0E21\u0E17\u0E35\u0E48\u0E0B\u0E48\u0E2D\u0E19\u0E2D\u0E22\u0E39\u0E48
+        \u0E15\u0E32\u0E21\u0E08\u0E38\u0E14\u0E15\u0E48\u0E32\u0E07\u0E46\u0E02\u0E2D\u0E07\u0E41\u0E1C\u0E19\u0E17\u0E35\u0E48
         \u0E2D\u0E32\u0E08\u0E08\u0E30\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E0A\u0E49\u0E44\u0E2B\u0E27\u0E1E\u0E23\u0E34\u0E1A\u0E43\u0E19\u0E01\u0E32\u0E23\u0E40\u0E01\u0E47\u0E1A\u0E44\u0E2D\u0E40\u0E17\u0E47\u0E21
-        \u0E40\u0E2B\u0E25\u0E48\u0E32\u0E19\u0E31\u0E49\u0E19 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E1B\u0E25\u0E14\u0E25\u0E49\u0E2D\u0E04
-        \u0E23\u0E30\u0E1A\u0E1A\u0E15\u0E48\u0E32\u0E07\u0E46\u0E02\u0E2D\u0E07\u0E40\u0E01\u0E21\u0E2A\u0E4C"
+        \u0E40\u0E2B\u0E25\u0E48\u0E32\u0E19\u0E31\u0E49\u0E19 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E1B\u0E25\u0E14\u0E25\u0E47\u0E2D\u0E04
+        \u0E23\u0E30\u0E1A\u0E1A\u0E15\u0E48\u0E32\u0E07\u0E46\u0E02\u0E2D\u0E07\u0E40\u0E01\u0E21"
       objectReference: {fileID: 0}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
@@ -44200,9 +44217,9 @@ MonoBehaviour:
   popupFrame: {fileID: 1997603130}
   titleTextField: {fileID: 1161717548}
   detailTextField: {fileID: 1161717547}
-  titleText: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23 \u0E39
-    \u0E49 Tutorial \u0E40\u0E2A\u0E37\u0E2D\u0E42\u0E04\u0E23\u0E48\u0E07"
-  detailText: "\u0E01\u0E14\u0E1B\u0E38\u0E48 \u0E21 2 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25
+  titleText: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23\u0E39\u0E49 
+    Tutorial \u0E40\u0E2A\u0E37\u0E2D\u0E42\u0E04\u0E23\u0E48\u0E07"
+  detailText: "\u0E01\u0E14\u0E1B\u0E38\u0E48\u0E21 2 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25
     \u0E17\u0E4D\u0E32\u0E25\u0E32\u0E22\u0E2A\u0E34\u0E48\u0E07\u0E02\u0E2D\u0E07
     \u0E17\u0E4D\u0E32\u0E25\u0E32\u0E22\u0E27\u0E31\u0E15\u0E16\u0E38\u0E2B\u0E23\u0E37\u0E2D\u0E15\u0E48\u0E2D\u0E2A\u0E39\u0E49
     \u0E17\u0E35\u0E48\u0E21\u0E35\u0E04\u0E27\u0E32\u0E21 \u201C \u0E23\u0E38\u0E19\u0E41\u0E23\u0E07
@@ -45074,7 +45091,7 @@ PrefabInstance:
     - target: {fileID: 8205100539466899308, guid: a49c313805edfe44f9843c350826b6d4,
         type: 3}
       propertyPath: m_Radius
-      value: 1.08
+      value: 1.61
       objectReference: {fileID: 0}
     - target: {fileID: 8205100539466899309, guid: a49c313805edfe44f9843c350826b6d4,
         type: 3}
