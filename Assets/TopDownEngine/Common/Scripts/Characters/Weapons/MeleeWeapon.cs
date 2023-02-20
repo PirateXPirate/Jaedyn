@@ -93,8 +93,8 @@ namespace MoreMountains.TopDownEngine
 		protected DamageOnTouch _damageOnTouch;
 		protected GameObject _damageArea;
 
-	
 
+		[SerializeField] private GameObject fxParticle;
 		/// <summary>
 		/// Initialization
 		/// </summary>
@@ -118,6 +118,8 @@ namespace MoreMountains.TopDownEngine
 		/// </summary>
 		protected virtual void CreateDamageArea()
 		{
+			
+				
 			if ((MeleeDamageAreaMode == MeleeDamageAreaModes.Existing) && (ExistingDamageArea != null))
 			{
 				_damageArea = ExistingDamageArea.gameObject;
@@ -239,6 +241,14 @@ namespace MoreMountains.TopDownEngine
 			if (_damageAreaCollider != null)
 			{
 				_damageAreaCollider.enabled = true;
+			}
+			if (fxParticle != null)
+			{
+				var pos = new Vector3(AreaOffset.x , -1.5f, AreaOffset.z);
+				var tmp = Instantiate(fxParticle);
+				tmp.transform.parent = transform;
+				tmp.transform.localPosition = pos;
+				tmp.transform.rotation = Quaternion.Euler(-90, 0, 0);
 			}
 		}
 
