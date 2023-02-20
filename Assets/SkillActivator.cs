@@ -11,6 +11,8 @@ public class SkillActivator : MonoBehaviour
 
     [SerializeField] protected SkillUiManager skillUiManager;
     [SerializeField] protected float coolDown;
+
+    [SerializeField] protected AudioClip skillSound;
     protected virtual  void Start()
     {
         movement = GetComponent<CharacterMovement>();

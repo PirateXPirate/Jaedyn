@@ -69,6 +69,8 @@ namespace MoreMountains.TopDownEngine
 		protected int _doubleJumpingAnimationParameter;
 		protected int _hitTheGroundAnimationParameter;
 		private UniversalButton skillButton;
+
+		[SerializeField] private AudioClip jumpSound;
 		/// <summary>
 		/// On init we grab other components
 		/// </summary>
@@ -209,6 +211,10 @@ namespace MoreMountains.TopDownEngine
 			PlayAbilityStartSfx();
 			PlayAbilityUsedSfx();
 			PlayAbilityStartFeedbacks();
+			if (jumpSound)
+			{
+				Utils.soundManager.PlayFX(jumpSound);
+			}
 		}
 
 		/// <summary>

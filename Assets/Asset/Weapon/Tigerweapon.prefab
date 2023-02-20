@@ -50,7 +50,7 @@ MonoBehaviour:
   TriggerMode: 0
   DelayBeforeUse: 0
   DelayBeforeUseReleaseInterruption: 0
-  TimeBetweenUses: 0.5
+  TimeBetweenUses: 0.8
   TimeBetweenUsesReleaseInterruption: 0
   UseBurstMode: 0
   BurstLength: 3
@@ -100,6 +100,7 @@ MonoBehaviour:
   InitializeOnStart: 1
   Interruptable: 0
   Flipped: 0
+  weaponSound: {fileID: 8300000, guid: 5bc0c3054e062f44eb5052152b5c5f7b, type: 3}
   MeleeDamageAreaMode: 0
   DamageAreaShape: 2
   AreaSize: {x: 2, y: 1, z: 1.21}

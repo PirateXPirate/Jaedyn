@@ -267,6 +267,8 @@ namespace MoreMountains.TopDownEngine
 		protected int _comboInProgressAnimationParameter;
 		protected float _lastShootRequestAt;
 
+
+		public AudioClip weaponSound;
 		/// <summary>
 		/// On start we initialize our weapon
 		/// </summary>
