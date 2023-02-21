@@ -61,7 +61,7 @@ public class UIManager : MonoBehaviour
         if (sceneToPlay == "") { yield break; }
 
         Debug.Log($"Going to {sceneToPlay} scene");
-        FadeController.isGotoMapScenePressed = true;
+        FadeController.isGotoNextScenePressed = true;
         yield return new WaitForSeconds(fadingTime);
         SceneManager.LoadScene(sceneToPlay);
         yield return null;
@@ -107,7 +107,7 @@ public class UIManager : MonoBehaviour
     {
         float fadingTime = 1.5f;
 
-        FadeController.isGotoMapScenePressed = true;
+        FadeController.isGotoNextScenePressed = true;
         yield return new WaitForSeconds(fadingTime);
         SceneManager.LoadScene("MainMenuScene");
         yield return null;

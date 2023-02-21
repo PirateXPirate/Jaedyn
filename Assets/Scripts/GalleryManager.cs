@@ -6,42 +6,101 @@ using UnityEngine.UI;
 
 public class GalleryManager : MonoBehaviour
 {
-    public GameObject pop;
-    public GameObject[] imgs;
-    public GameObject[] imgsLock;
-    public AudioClip fxClick;
-    public AudioClip fxMode;
+    FadeController FadeController;
 
-    private int selectID;
+    public GameObject picturePopup;
+    public GameObject[] pictureExpand;
+    public GameObject lockedPopup;
+
+    [Header("Button")]
+    public Button[] picture;
+    public Button[] pictureLock;
+    public Button homeButton;
+    public Button musicButton;
+    public Button exitPopupButton;
 
     void Start()
     {
-        Utils.soundManager.PlayFX(fxMode);
-        for (int i = 0; i < imgsLock.Length; i++) {
-            if (Utils.gotUnlockImage[i] == "true") {
-                imgsLock[i].SetActive(false);
+        FadeController = GetComponent<FadeController>();
+        CheckPictureState();
+        SetListener();
+    }
+
+    void CheckPictureState()
+    {
+        for (int i = 0; i < pictureLock.Length; i++)
+        {
+            if (LevelData.easyModeState[i] == 2)
+            {
+                pictureLock[i].gameObject.SetActive(false);
             }
         }
     }
 
-    //Button
-    public void OnClickHome() {
-        Utils.soundManager.PlayFX(fxClick);
-        SceneManager.LoadScene("MainMenuScene");
+    void SetListener()
+    {
+        LockedPictureButton();
+        PictureButton();
+        homeButton.onClick.AddListener(HomeButton);
+        musicButton.onClick.AddListener(MusicButton);
+        exitPopupButton.onClick.AddListener(ExitPopupButton);
     }
 
-    public void OnShowImage(int id) {
-        Utils.soundManager.PlayFX(fxClick);
+    void PictureButton()
+    {
+        for (int i = 0; i < picture.Length; i++)
+        {
+            var index = i;
+            picture[i].onClick.AddListener(() => ShowExpandPicture(index));
+        }
 
-        if (Utils.gotUnlockImage[id]=="false") return;
-        selectID = id;
-        pop.SetActive(true);
-        imgs[id].SetActive(true);
+        void ShowExpandPicture(int index)
+        {
+            foreach (GameObject picture in pictureExpand)
+            {
+                picture.SetActive(false);
+            }
+
+            picturePopup.SetActive(true);
+            pictureExpand[index].SetActive(true);
+        }
+    }
+    void LockedPictureButton()
+    {
+        for (int i = 0; i < pictureLock.Length; i++)
+        {
+            pictureLock[i].onClick.AddListener(ShowLockedPopup);
+        }
+
+        void ShowLockedPopup()
+        {
+            lockedPopup.SetActive(true);
+        }
     }
 
-    public void OnCloseImage() {
-        Utils.soundManager.PlayFX(fxClick);
-        pop.SetActive(false);
-        imgs[selectID].SetActive(false);
+    void HomeButton()
+    {
+        StartCoroutine(GoNextScene("MainMenuScene"));
+    }
+
+    void MusicButton()
+    {
+        Debug.Log("MusicButton is pressed!");
+        //SceneManager.LoadScene("");
+    }
+
+    void ExitPopupButton()
+    {
+        lockedPopup.SetActive(false);
+    }
+
+    IEnumerator GoNextScene(string sceneName)
+    {
+        float waitforfade = 2.0f;
+
+        FadeController.isGotoNextScenePressed = true;
+        yield return new WaitForSeconds(waitforfade);
+        SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+        yield return null;
     }
 }

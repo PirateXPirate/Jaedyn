@@ -20,6 +20,7 @@ public class MenuManager : MonoBehaviour
     private void Awake()
     {
         FadeController = gameObject.GetComponent<FadeController>();
+        LevelData.LoadLevelStateData();
         SetListenner();
     }
 
@@ -32,8 +33,7 @@ public class MenuManager : MonoBehaviour
 
     void GalleryButton()
     {
-        Debug.Log("GalleryButton Press!!");
-        //SceneManager.LoadSceneAsync("", LoadSceneMode.Single);
+        StartCoroutine(GoNextScene("GalleryScene"));
     }
     void PlayButton()
     {
@@ -50,7 +50,7 @@ public class MenuManager : MonoBehaviour
 
     void GoMapSceneButton()
     {
-        StartCoroutine(GoMapScene());
+        StartCoroutine(GoNextScene("MapScene"));
     }
 
     IEnumerator DeleteMenuUi()
@@ -71,13 +71,13 @@ public class MenuManager : MonoBehaviour
         yield return null;
     }
 
-    IEnumerator GoMapScene()
+    IEnumerator GoNextScene(string sceneName)
     {
         float waitforfade = 2.0f;
 
-        FadeController.isGotoMapScenePressed = true;
+        FadeController.isGotoNextScenePressed = true;
         yield return new WaitForSeconds(waitforfade);
-        SceneManager.LoadSceneAsync("MapScene", LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
         yield return null;
     }
 }
