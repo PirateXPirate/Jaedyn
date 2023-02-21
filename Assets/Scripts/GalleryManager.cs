@@ -8,16 +8,21 @@ public class GalleryManager : MonoBehaviour
 {
     FadeController FadeController;
 
-    public GameObject picturePopup;
-    public GameObject[] pictureExpand;
-    public GameObject lockedPopup;
+    [SerializeField] GameObject picturePopup;
+    [SerializeField] GameObject[] pictureExpand;
+    [SerializeField] GameObject lockedPopup;
+
+    [Header("Mode")]
+    [SerializeField] GameObject pictureMode;
+    [SerializeField] GameObject musicMode;
 
     [Header("Button")]
-    public Button[] picture;
-    public Button[] pictureLock;
-    public Button homeButton;
-    public Button musicButton;
-    public Button exitPopupButton;
+    [SerializeField] Button[] picture;
+    [SerializeField] Button[] pictureLock;
+    [SerializeField] Button homeButton;
+    [SerializeField] Button musicButton;
+    [SerializeField] Button pictureButton;
+    [SerializeField] Button exitPopupButton;
 
     void Start()
     {
@@ -42,7 +47,8 @@ public class GalleryManager : MonoBehaviour
         LockedPictureButton();
         PictureButton();
         homeButton.onClick.AddListener(HomeButton);
-        musicButton.onClick.AddListener(MusicButton);
+        musicButton.onClick.AddListener(MusicModeButton);
+        pictureButton.onClick.AddListener(PictureModeButton);
         exitPopupButton.onClick.AddListener(ExitPopupButton);
     }
 
@@ -83,10 +89,16 @@ public class GalleryManager : MonoBehaviour
         StartCoroutine(GoNextScene("MainMenuScene"));
     }
 
-    void MusicButton()
+    void MusicModeButton()
     {
-        Debug.Log("MusicButton is pressed!");
-        //SceneManager.LoadScene("");
+        musicMode.SetActive(true);
+        pictureMode.SetActive(false);
+    }
+
+    void PictureModeButton()
+    {
+        musicMode.SetActive(false);
+        pictureMode.SetActive(true);
     }
 
     void ExitPopupButton()
@@ -103,4 +115,5 @@ public class GalleryManager : MonoBehaviour
         SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
         yield return null;
     }
+
 }
