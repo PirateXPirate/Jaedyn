@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,41 +11,61 @@ public class SettingManager : MonoBehaviour
     public Scrollbar sbLoop;
     public Scrollbar sbFX;
 
+    public GameObject SettingPopup;
+
     float valLoop = 0f;
     float valFX = 0f;
 
-    void Start()
+     float tmpvalLoop;
+     float tmpvalFX;
+   
+
+    public void OnChangeScrollBar(string type)
     {
-        valLoop = Utils.volumeLoop / 100f;
-        valFX = Utils.volumeFX / 100f;
-
-        sbLoop.value = valLoop;
-        sbFX.value = valFX;
-    }
-
-    public void OnChangeScrollBar(string type) {
-        if (type == "loop") {
+        if (type == "loop")
+        {
             valLoop = sbLoop.value;
             Utils.volumeLoop = valLoop * 100f;
             Utils.soundManager.loop.volume = valLoop;
-        } else if (type == "fx") {
+        }
+        else if (type == "fx")
+        {
             valFX = sbFX.value;
             Utils.volumeFX = valFX * 100f;
             Utils.soundManager.fx.volume = valFX;
         }
     }
 
-    //Button
-    public void OnClickHome() {
-        Utils.soundManager.PlayFX(fxClick);
-        SceneManager.LoadScene("MainMenuScene");
+    public void LoadSetting()
+    {
+        valLoop = Utils.soundManager.loop.volume ;
+        valFX = Utils.soundManager.fx.volume;
+
+        tmpvalLoop = valLoop;
+        tmpvalFX = valFX;
+
+        sbLoop.value = valLoop;
+        sbFX.value = valFX;
     }
 
-    public void OnClickSave() {
-        PlayerPrefs.SetFloat("loop", Utils.volumeLoop);
-        PlayerPrefs.SetFloat("fx", Utils.volumeLoop);
-
+    //Button
+    public void OnClickHome()
+    {
+        if (SettingPopup)
+            SettingPopup.SetActive(false);
         Utils.soundManager.PlayFX(fxClick);
-        SceneManager.LoadScene("MainMenuScene");
+        Utils.soundManager.fx.volume = tmpvalFX;
+        Utils.soundManager.loop.volume = tmpvalLoop;
+        //  SceneManager.LoadScene("MainMenuScene");
+    }
+
+    public void OnClickSave()
+    {
+        PlayerPrefs.SetFloat("loop", Utils.soundManager.loop.volume);
+        PlayerPrefs.SetFloat("fx", Utils.soundManager.fx.volume);
+        tmpvalFX = Utils.soundManager.fx.volume;
+        tmpvalLoop = Utils.soundManager.loop.volume;
+        Utils.soundManager.PlayFX(fxClick);
+        // SceneManager.LoadScene("MainMenuScene");
     }
 }

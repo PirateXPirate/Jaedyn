@@ -100,9 +100,10 @@ MonoBehaviour:
   InitializeOnStart: 1
   Interruptable: 0
   Flipped: 0
+  weaponSound: {fileID: 0}
   MeleeDamageAreaMode: 0
   DamageAreaShape: 2
-  AreaSize: {x: 3, y: 1, z: 3}
+  AreaSize: {x: 3, y: 2.68, z: 3}
   AreaOffset: {x: 0, y: 0, z: 0}
   HitDamageableFeedback: {fileID: 0}
   HitNonDamageableFeedback: {fileID: 0}
@@ -118,3 +119,4 @@ MonoBehaviour:
   KnockbackForce: {x: 10, y: 2, z: 0}
   InvincibilityDuration: 0.5
   CanDamageOwner: 0
+  fxParticle: {fileID: 0}

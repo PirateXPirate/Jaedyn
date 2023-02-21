@@ -9,6 +9,8 @@ public class DeathPopup : MonoBehaviour
     [SerializeField] private string currentSceneName;
     [SerializeField] private GameObject controlUi;
     [SerializeField] private AudioClip homeButClickSound;
+
+    bool isExiting = false;
     private void Start()
     {
         controlUi.SetActive(false);
@@ -18,12 +20,26 @@ public class DeathPopup : MonoBehaviour
     }
     public void OnClickRestart()
     {
-        SceneManager.LoadScene(currentSceneName);
+        if (!isExiting)
+        {
+            SceneManager.LoadScene(currentSceneName);
+        }
+           
     }
     public void OnClickExit()
     {
-        Utils.soundManager.PlayFX(homeButClickSound);
-        
+        if (!isExiting)
+        {
+            isExiting = true;
+
+            Invoke("Delay", homeButClickSound.length);
+            Utils.soundManager.PlayFX(homeButClickSound);
+
+        }
+    }
+    void Delay()
+    {
+
         SceneManager.LoadScene("MapScene");
     }
 }

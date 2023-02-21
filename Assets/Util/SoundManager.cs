@@ -9,7 +9,12 @@ public class SoundManager : MonoBehaviour
 
     public void Start() {
         DontDestroyOnLoad(this);
+
+        
         Utils.soundManager = this;
+        Utils.soundManager.loop.volume = PlayerPrefs.GetFloat("loop");
+        Utils.soundManager.fx.volume = PlayerPrefs.GetFloat("fx");
+    
     }
 
     public void PlayLoop(AudioClip clip) {
