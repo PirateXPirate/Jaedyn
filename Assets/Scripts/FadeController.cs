@@ -17,7 +17,7 @@ public class FadeController : MonoBehaviour
     public GameObject dialogPanel;
     public CanvasGroup dialogGroupForFade;
     public bool isPlayButtonPressed;
-    public bool isGotoMapScenePressed;
+    public bool isGotoNextScenePressed;
     public bool isFlashSceneAllowed;
 
 
@@ -34,9 +34,9 @@ public class FadeController : MonoBehaviour
             StartCoroutine(FadeToDialog());
         }
 
-        if (isGotoMapScenePressed)
+        if (isGotoNextScenePressed)
         {
-            isGotoMapScenePressed = false;
+            isGotoNextScenePressed = false;
             fadeCanvas.gameObject.SetActive(true);
             StartCoroutine(FadeOut(fadeCanvas,fadeDuration));
         }
