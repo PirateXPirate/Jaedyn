@@ -17,6 +17,8 @@ public class MenuManager : MonoBehaviour
     [SerializeField] GameObject buttonMenu;
     [SerializeField] GameObject headerMenu;
     [SerializeField] GameObject settingScenePrefabs;
+
+    [SerializeField] SettingManager settingManager;
     private void Awake()
     {
         FadeController = gameObject.GetComponent<FadeController>();
@@ -46,6 +48,7 @@ public class MenuManager : MonoBehaviour
     {
         Debug.Log("SettingButton Press!!");
         settingScenePrefabs.SetActive(true);
+        settingManager.LoadSetting();
     }
 
     void GoMapSceneButton()
