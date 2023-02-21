@@ -86,7 +86,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2.51
+  m_Height: 7.38
   m_Radius: 0.49
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -268,8 +268,10 @@ MonoBehaviour:
   UseMaterialPropertyBlocks: 0
   MasterHealth: {fileID: 0}
   TargetDamageResistanceProcessor: {fileID: 0}
-  TargetAnimator: {fileID: 0}
+  TargetAnimator: {fileID: 6379986925204579180}
   DisableAnimatorLogs: 1
+  deathSound: {fileID: 0}
+  damageFx: {fileID: 0}
 --- !u!114 &2620376068809887723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -890,7 +892,7 @@ PrefabInstance:
     - target: {fileID: 8995718604172054061, guid: 740a91c480336b74387762edd492cb3d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.45
       objectReference: {fileID: 0}
     - target: {fileID: 8995718604172054061, guid: 740a91c480336b74387762edd492cb3d,
         type: 3}
@@ -925,7 +927,7 @@ PrefabInstance:
     - target: {fileID: 8995718604172054061, guid: 740a91c480336b74387762edd492cb3d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 100.454
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8995718604172054061, guid: 740a91c480336b74387762edd492cb3d,
         type: 3}

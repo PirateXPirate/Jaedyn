@@ -317,10 +317,6 @@ namespace MoreMountains.TopDownEngine
 			}
 			if(skillUiManager)
 			skillUiManager.SetActionCooldown(coolDown);
-			if (CurrentWeapon.weaponSound)
-			{
-				Utils.soundManager.PlayFX(CurrentWeapon.weaponSound);
-			}
 			
 
 			//  if we've decided to buffer input, and if the weapon is in use right now

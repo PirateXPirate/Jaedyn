@@ -192,7 +192,8 @@ namespace MoreMountains.TopDownEngine
 		protected int _initialLayer;
 		protected MaterialPropertyBlock _propertyBlock;
 		protected bool _hasColorProperty = false;
-
+		[SerializeField] private AudioClip deathSound;
+		[SerializeField] private GameObject damageFx;
 		protected class InterruptiblesDamageOverTimeCoroutine
 		{
 			public Coroutine DamageOverTimeCoroutine;
@@ -440,6 +441,11 @@ namespace MoreMountains.TopDownEngine
 			if (OnHit != null)
 			{
 				OnHit();
+			}
+
+			if (damageFx)
+			{
+				var tmp = Instantiate(damageFx, transform.position, Quaternion.identity);
 			}
 
 			// we prevent the character from colliding with Projectiles, Player and Enemies
@@ -764,6 +770,8 @@ namespace MoreMountains.TopDownEngine
 			}
             
 			OnDeath?.Invoke();
+			if(deathSound)
+			Utils.soundManager.PlayFX(deathSound);
 			MMLifeCycleEvent.Trigger(this, MMLifeCycleEventTypes.Death);
 
 			if (DisableControllerOnDeath && (_controller != null))

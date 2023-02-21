@@ -18,6 +18,9 @@ public class PowerUpManager : MonoBehaviour
     public delegate void OnUseRessistancePotion();
     public OnUseRessistancePotion onUseRessistancePotion;
 
+    [SerializeField] private GameObject healthPotionFx;
+    [SerializeField] private GameObject resistancePotionFx;
+
     void Start()
     {
         powerUpUI.SetHPItemQuantity(hpPotionQuantity);
@@ -49,6 +52,8 @@ public class PowerUpManager : MonoBehaviour
                 playerHealth.CurrentHealth = playerHealth.MaximumHealth;
             playerHealth.UpdateHealthBar(false);
             powerUpUI.SetHPItemQuantity(hpPotionQuantity);
+            Instantiate(healthPotionFx, LevelManager.Instance.Players[0].transform.position, Quaternion.identity);
+           
         }
     }
     public void UseResistancePotion()
@@ -60,7 +65,7 @@ public class PowerUpManager : MonoBehaviour
             damageResistance.DamageMultiplier = .75f;          
             powerUpUI.SetResistanceItemQuantity(resistancePotionQuantity);
             StartCoroutine(CountDown());
-
+            Instantiate(resistancePotionFx, LevelManager.Instance.Players[0].transform.position, Quaternion.identity);
             IEnumerator  CountDown()
             {
                 yield return new WaitForSeconds(15);

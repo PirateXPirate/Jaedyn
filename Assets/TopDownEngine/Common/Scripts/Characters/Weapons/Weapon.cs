@@ -752,6 +752,10 @@ namespace MoreMountains.TopDownEngine
 					}
 				}                
 			}
+			if (weaponSound)
+			{
+				Utils.soundManager.PlayFX(weaponSound);
+			}
 			TriggerWeaponUsedFeedback();
 		}
 
