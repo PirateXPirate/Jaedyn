@@ -14406,7 +14406,7 @@ PrefabInstance:
         type: 3}
       propertyPath: PopupSoundClip
       value: 
-      objectReference: {fileID: 8300000, guid: 02b91cebc5e6b475d8f3571ef7dc0c28, type: 3}
+      objectReference: {fileID: 8300000, guid: 7bef2786bcdd63548b0d4ec999bf43b8, type: 3}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
       propertyPath: titleTextField
@@ -14421,7 +14421,7 @@ PrefabInstance:
         type: 3}
       propertyPath: TriggerSoundClip
       value: 
-      objectReference: {fileID: 8300000, guid: 47dd5975f8c9249e5b24610d9033e32c, type: 3}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf43a7dd258b42b41a217fc2f452aeda, type: 3}
 --- !u!1001 &713443837
@@ -23824,6 +23824,11 @@ PrefabInstance:
       propertyPath: detailTextField
       value: 
       objectReference: {fileID: 1161717547}
+    - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
+        type: 3}
+      propertyPath: TriggerSoundClip
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf43a7dd258b42b41a217fc2f452aeda, type: 3}
 --- !u!4 &1268306234 stripped
@@ -32429,7 +32434,7 @@ PrefabInstance:
     - target: {fileID: 224636566433038052, guid: d4529f47989526241929319abfdfc29d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -8.000244
+      value: -8.000275
       objectReference: {fileID: 0}
     - target: {fileID: 224674173061577030, guid: d4529f47989526241929319abfdfc29d,
         type: 3}
@@ -34073,8 +34078,7 @@ MonoBehaviour:
     Tutorial \u0E40\u0E2A\u0E37\u0E2D\u0E42\u0E04\u0E23\u0E48\u0E07"
   detailText: "\u0E01\u0E14\u0E1B\u0E38\u0E48\u0E21 1 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25
     \u0E17\u0E4D\u0E32\u0E25\u0E32\u0E22\u0E2A\u0E34\u0E48\u0E07\u0E02\u0E2D\u0E07
-    \u0E17\u0E4D\u0E32\u0E25\u0E32\u0E22\u0E27\u0E31\u0E15\u0E16\u0E38\u0E2B\u0E23\u0E37\u0E2D
-    \u0E15\u0E48\u0E2D\u0E2A\u0E39\u0E49"
+    \u0E17\u0E4D\u0E32\u0E25\u0E32\u0E22\u0E27\u0E31\u0E15\u0E16\u0E38"
   PopupSoundClip: {fileID: 8300000, guid: 268bb24e34b7cb14bbb5280c8c48417a, type: 3}
 --- !u!135 &1574484757
 SphereCollider:
@@ -38987,10 +38991,7 @@ PrefabInstance:
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
       propertyPath: detailText
-      value: "\u0E01\u0E14\u0E1B\u0E38\u0E48\u0E21 1 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25
-        \u0E17\u0E4D\u0E32\u0E25\u0E32\u0E22\u0E2A\u0E34\u0E48\u0E07\u0E02\u0E2D\u0E07
-        \u0E17\u0E4D\u0E32\u0E25\u0E32\u0E22\u0E27\u0E31\u0E15\u0E16\u0E38\u0E2B\u0E23\u0E37\u0E2D
-        \u0E15\u0E48\u0E2D\u0E2A\u0E39\u0E49"
+      value: "\u0E01\u0E14\u0E1B\u0E38\u0E48\u0E21 4 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E40\u0E1B\u0E25\u0E35\u0E48\u0E22\u0E19\u0E40\u0E1B\u0E47\u0E19\u0E15\u0E31\u0E27\u0E25\u0E30\u0E04\u0E23\u0E40\u0E2A\u0E37\u0E2D\u0E42\u0E04\u0E23\u0E48\u0E07"
       objectReference: {fileID: 0}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
@@ -39016,7 +39017,7 @@ PrefabInstance:
         type: 3}
       propertyPath: TriggerSoundClip
       value: 
-      objectReference: {fileID: 8300000, guid: 47dd5975f8c9249e5b24610d9033e32c, type: 3}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf43a7dd258b42b41a217fc2f452aeda, type: 3}
 --- !u!4 &1825304503 stripped
@@ -39287,7 +39288,7 @@ PrefabInstance:
         type: 3}
       propertyPath: TriggerSoundClip
       value: 
-      objectReference: {fileID: 8300000, guid: 2cc5bca9b1d204040bb6e8b00985f5be, type: 3}
+      objectReference: {fileID: 8300000, guid: 78a01ba4e43a26a41bb62480f9c9b1d8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf43a7dd258b42b41a217fc2f452aeda, type: 3}
 --- !u!1001 &1835265111
@@ -41875,7 +41876,7 @@ PrefabInstance:
       propertyPath: detailText
       value: "\u0E01\u0E14\u0E1B\u0E38\u0E48\u0E21 1 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25
         \u0E17\u0E4D\u0E32\u0E25\u0E32\u0E22\u0E2A\u0E34\u0E48\u0E07\u0E02\u0E2D\u0E07
-        \u0E17\u0E4D\u0E32\u0E25\u0E32\u0E22\u0E27\u0E31\u0E15\u0E16\u0E38 "
+        \u0E17\u0E4D\u0E32\u0E25\u0E32\u0E22\u0E27\u0E31\u0E15\u0E16\u0E38\u0E2B\u0E23\u0E37\u0E2D\u0E15\u0E48\u0E2D\u0E2A\u0E39\u0E49"
       objectReference: {fileID: 0}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
