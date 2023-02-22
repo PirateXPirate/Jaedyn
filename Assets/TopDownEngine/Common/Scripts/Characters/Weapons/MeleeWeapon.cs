@@ -93,7 +93,7 @@ namespace MoreMountains.TopDownEngine
 		protected DamageOnTouch _damageOnTouch;
 		protected GameObject _damageArea;
 
-
+		[SerializeField] private Collider stunZone;
 		[SerializeField] private GameObject fxParticle;
 		/// <summary>
 		/// Initialization
@@ -110,7 +110,8 @@ namespace MoreMountains.TopDownEngine
 			if (Owner != null)
 			{
 				_damageOnTouch.Owner = Owner.gameObject;
-			}            
+			}
+		
 		}
 
 		/// <summary>
@@ -186,6 +187,7 @@ namespace MoreMountains.TopDownEngine
 			}
 
 			_damageOnTouch = _damageArea.AddComponent<DamageOnTouch>();
+			
 			_damageOnTouch.SetGizmoSize(AreaSize);
 			_damageOnTouch.SetGizmoOffset(AreaOffset);
 			_damageOnTouch.TargetLayerMask = TargetLayerMask;
@@ -242,6 +244,10 @@ namespace MoreMountains.TopDownEngine
 			{
 				_damageAreaCollider.enabled = true;
 			}
+			if (stunZone)
+			{
+				stunZone.enabled = true;
+			}
 			if (fxParticle != null)
 			{
 				var pos = new Vector3(AreaOffset.x , -1.5f, AreaOffset.z);
@@ -265,6 +271,10 @@ namespace MoreMountains.TopDownEngine
 			if (_damageAreaCollider != null)
 			{
 				_damageAreaCollider.enabled = false;
+			}
+			if (stunZone)
+			{
+				stunZone.enabled = false;
 			}
 		}
 

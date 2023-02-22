@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class UseItemListener : MonoBehaviour
 {
-
+    [SerializeField] private TouchInputManager controllerUi;
     [SerializeField] PowerUpManager powerUpManager;
   
     private bool hpUsed = false;
@@ -19,6 +19,7 @@ public class UseItemListener : MonoBehaviour
     [SerializeField] private TextMeshProUGUI detailTextField;
     [SerializeField] private string titleText;
     [SerializeField] private string detailText;
+
 
     [SerializeField] private GameObject resetBotObject;
     public AudioClip PopupSoundClip;
@@ -55,6 +56,7 @@ public class UseItemListener : MonoBehaviour
     {
         if (PopupSoundClip)
             Utils.soundManager.PlayFX(PopupSoundClip);
+        controllerUi.canInteract = false;
         gameObject.SetActive(false);
         popupFrame.SetActive(true);
         titleTextField.text = titleText;
