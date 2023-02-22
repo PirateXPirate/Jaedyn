@@ -2039,7 +2039,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &110382314
 Transform:
   m_ObjectHideFlags: 0
@@ -2053,7 +2053,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &110382315
 AudioSource:
@@ -2312,6 +2312,7 @@ MonoBehaviour:
   titleText: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23\u0E39\u0E49
     Tutorial \u0E19\u0E01\u0E2E\u0E39\u0E01"
   detailText: "\u0E01\u0E14\u0E1B\u0E38\u0E48\u0E21 1 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25\u0E40\u0E27\u0E17\u0E22\u0E4C\u0E21\u0E19\u0E15\u0E4C\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E17\u0E4D\u0E32\u0E25\u0E32\u0E22\u0E40\u0E16\u0E32\u0E27\u0E31\u0E25\u0E22\u0E4C"
+  controllerUi: {fileID: 339305794}
   PopupSoundClip: {fileID: 8300000, guid: 02b91cebc5e6b475d8f3571ef7dc0c28, type: 3}
 --- !u!135 &111663158
 SphereCollider:
@@ -5672,6 +5673,7 @@ MonoBehaviour:
   fxClick: {fileID: 0}
   gameManager: {fileID: 0}
   ActivateObject: {fileID: 0}
+  controllerUi: {fileID: 339305794}
 --- !u!114 &312003361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6264,6 +6266,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 339305790}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &339305794 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1523972217, guid: bc9529d54b74ea24588e798868920d00,
+    type: 3}
+  m_PrefabInstance: {fileID: 339305790}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339305793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf9fc6e876a2114a8380982d7379f6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &343339663
 Transform:
   m_ObjectHideFlags: 0
@@ -8551,6 +8565,11 @@ PrefabInstance:
       objectReference: {fileID: 1997603130}
     - target: {fileID: 630263298023184445, guid: 07eb7471fee62924eb5665784bda9d2f,
         type: 3}
+      propertyPath: controllerUi
+      value: 
+      objectReference: {fileID: 339305794}
+    - target: {fileID: 630263298023184445, guid: 07eb7471fee62924eb5665784bda9d2f,
+        type: 3}
       propertyPath: titleTextField
       value: 
       objectReference: {fileID: 1161717548}
@@ -8559,6 +8578,11 @@ PrefabInstance:
       propertyPath: detailTextField
       value: 
       objectReference: {fileID: 1161717547}
+    - target: {fileID: 4967295076956449940, guid: 07eb7471fee62924eb5665784bda9d2f,
+        type: 3}
+      propertyPath: controllerUi
+      value: 
+      objectReference: {fileID: 339305794}
     - target: {fileID: 6043258314147867352, guid: 07eb7471fee62924eb5665784bda9d2f,
         type: 3}
       propertyPath: m_Name
@@ -10252,8 +10276,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.46, y: 8.75, z: 3.78}
-  m_Center: {x: 0.46610475, y: 0.34926447, z: 0.17926276}
+  m_Size: {x: 10.46, y: 9.13, z: 3.78}
+  m_Center: {x: 0.46610475, y: 3.32, z: 0.17926276}
 --- !u!1001 &556567859
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10332,6 +10356,11 @@ PrefabInstance:
       propertyPath: popupFrame
       value: 
       objectReference: {fileID: 1997603130}
+    - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
+        type: 3}
+      propertyPath: controllerUi
+      value: 
+      objectReference: {fileID: 339305794}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
       propertyPath: PopupSoundClip
@@ -12786,6 +12815,7 @@ MonoBehaviour:
     Tutorial \u0E40\u0E15\u0E34\u0E21\u0E1E\u0E25\u0E31\u0E07\u0E0A\u0E35\u0E27\u0E34\u0E15"
   detailText: "\u0E01\u0E14\u0E02\u0E27\u0E14\u0E22\u0E32\u0E41\u0E14\u0E07 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E40\u0E15\u0E34\u0E21\u0E1E\u0E25\u0E31\u0E07\u0E0A\u0E35\u0E27\u0E34\u0E15
     \u0E01\u0E14\u0E02\u0E27\u0E14\u0E22\u0E32\u0E21\u0E48\u0E27\u0E07 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E40\u0E1E\u0E34\u0E48\u0E21\u0E1E\u0E25\u0E31\u0E07\u0E04\u0E27\u0E32\u0E21\u0E15\u0E49\u0E32\u0E19\u0E17\u0E32\u0E19 "
+  controllerUi: {fileID: 339305794}
   activateObject: {fileID: 1548396329}
   PopupSoundClip: {fileID: 8300000, guid: edb43fd89e23a614fb5daf96004558f4, type: 3}
 --- !u!225 &633305628 stripped
@@ -14404,6 +14434,11 @@ PrefabInstance:
       objectReference: {fileID: 1997603130}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
+      propertyPath: controllerUi
+      value: 
+      objectReference: {fileID: 339305794}
+    - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
+        type: 3}
       propertyPath: PopupSoundClip
       value: 
       objectReference: {fileID: 8300000, guid: 7bef2786bcdd63548b0d4ec999bf43b8, type: 3}
@@ -15895,6 +15930,7 @@ MonoBehaviour:
   fxClick: {fileID: 0}
   gameManager: {fileID: 0}
   ActivateObject: {fileID: 0}
+  controllerUi: {fileID: 339305794}
 --- !u!114 &787767597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18431,7 +18467,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.520001, y: 8.520002, z: 8.586002}
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &930125559 stripped
 Transform:
@@ -18983,6 +19019,7 @@ GameObject:
   - component: {fileID: 956540469}
   - component: {fileID: 956540468}
   - component: {fileID: 956540467}
+  - component: {fileID: 956540470}
   m_Layer: 5
   m_Name: CompletePopUp
   m_TagString: Untagged
@@ -19028,6 +19065,7 @@ MonoBehaviour:
   fxClick: {fileID: 0}
   gameManager: {fileID: 0}
   ActivateObject: {fileID: 0}
+  controllerUi: {fileID: 339305794}
 --- !u!114 &956540468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19066,6 +19104,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 956540465}
   m_CullTransparentMesh: 1
+--- !u!114 &956540470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956540465}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 873a5d26359f2e946b0d25a59b0dddc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 1
 --- !u!1 &956689361
 GameObject:
   m_ObjectHideFlags: 0
@@ -20535,6 +20586,11 @@ PrefabInstance:
       objectReference: {fileID: 1997603130}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
+      propertyPath: controllerUi
+      value: 
+      objectReference: {fileID: 339305794}
+    - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
+        type: 3}
       propertyPath: titleTextField
       value: 
       objectReference: {fileID: 1161717548}
@@ -21436,6 +21492,11 @@ PrefabInstance:
       propertyPath: popupFrame
       value: 
       objectReference: {fileID: 1997603130}
+    - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
+        type: 3}
+      propertyPath: controllerUi
+      value: 
+      objectReference: {fileID: 339305794}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
       propertyPath: PopupSoundClip
@@ -23811,6 +23872,11 @@ PrefabInstance:
       objectReference: {fileID: 1997603130}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
+      propertyPath: controllerUi
+      value: 
+      objectReference: {fileID: 339305794}
+    - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
+        type: 3}
       propertyPath: PopupSoundClip
       value: 
       objectReference: {fileID: 8300000, guid: ead421f9860d6c649ac5e8381d9ccf58, type: 3}
@@ -25426,6 +25492,7 @@ MonoBehaviour:
   fxClick: {fileID: 0}
   gameManager: {fileID: 0}
   ActivateObject: {fileID: 0}
+  controllerUi: {fileID: 339305794}
 --- !u!114 &1302765380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26668,6 +26735,7 @@ MonoBehaviour:
   fxClick: {fileID: 0}
   gameManager: {fileID: 0}
   ActivateObject: {fileID: 2119605917}
+  controllerUi: {fileID: 339305794}
 --- !u!114 &1376403157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30581,6 +30649,7 @@ MonoBehaviour:
   fxClick: {fileID: 0}
   gameManager: {fileID: 0}
   ActivateObject: {fileID: 0}
+  controllerUi: {fileID: 339305794}
 --- !u!114 &1520179301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32434,7 +32503,7 @@ PrefabInstance:
     - target: {fileID: 224636566433038052, guid: d4529f47989526241929319abfdfc29d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -8.000275
+      value: -8.000244
       objectReference: {fileID: 0}
     - target: {fileID: 224674173061577030, guid: d4529f47989526241929319abfdfc29d,
         type: 3}
@@ -33005,6 +33074,7 @@ MonoBehaviour:
   fxClick: {fileID: 0}
   gameManager: {fileID: 0}
   ActivateObject: {fileID: 1376403154}
+  controllerUi: {fileID: 339305794}
 --- !u!114 &1548396332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34079,7 +34149,8 @@ MonoBehaviour:
   detailText: "\u0E01\u0E14\u0E1B\u0E38\u0E48\u0E21 1 \u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E43\u0E0A\u0E49\u0E2A\u0E01\u0E34\u0E25
     \u0E17\u0E4D\u0E32\u0E25\u0E32\u0E22\u0E2A\u0E34\u0E48\u0E07\u0E02\u0E2D\u0E07
     \u0E17\u0E4D\u0E32\u0E25\u0E32\u0E22\u0E27\u0E31\u0E15\u0E16\u0E38"
-  PopupSoundClip: {fileID: 8300000, guid: 268bb24e34b7cb14bbb5280c8c48417a, type: 3}
+  controllerUi: {fileID: 339305794}
+  PopupSoundClip: {fileID: 8300000, guid: 9427e609bd71f4745b90c1dd1528db8a, type: 3}
 --- !u!135 &1574484757
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -35473,75 +35544,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18d14ec2115db6a4083825dbdcd9d7ff, type: 3}
---- !u!1001 &1632770169
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 105942, guid: ff672eaca96d32c419d7a1f1b0346e8d, type: 3}
-      propertyPath: m_Name
-      value: HealOnce
-      objectReference: {fileID: 0}
-    - target: {fileID: 422108, guid: ff672eaca96d32c419d7a1f1b0346e8d, type: 3}
-      propertyPath: m_RootOrder
-      value: 39
-      objectReference: {fileID: 0}
-    - target: {fileID: 422108, guid: ff672eaca96d32c419d7a1f1b0346e8d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 44.74845
-      objectReference: {fileID: 0}
-    - target: {fileID: 422108, guid: ff672eaca96d32c419d7a1f1b0346e8d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 10.628751
-      objectReference: {fileID: 0}
-    - target: {fileID: 422108, guid: ff672eaca96d32c419d7a1f1b0346e8d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 39.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 422108, guid: ff672eaca96d32c419d7a1f1b0346e8d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 422108, guid: ff672eaca96d32c419d7a1f1b0346e8d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 422108, guid: ff672eaca96d32c419d7a1f1b0346e8d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 422108, guid: ff672eaca96d32c419d7a1f1b0346e8d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 422108, guid: ff672eaca96d32c419d7a1f1b0346e8d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 422108, guid: ff672eaca96d32c419d7a1f1b0346e8d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 422108, guid: ff672eaca96d32c419d7a1f1b0346e8d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 19904784, guid: ff672eaca96d32c419d7a1f1b0346e8d, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 19922332, guid: ff672eaca96d32c419d7a1f1b0346e8d, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 19995452, guid: ff672eaca96d32c419d7a1f1b0346e8d, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ff672eaca96d32c419d7a1f1b0346e8d, type: 3}
 --- !u!1001 &1632814682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38609,8 +38611,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.46, y: 8.75, z: 3.78}
-  m_Center: {x: 0.46610475, y: 0.34926447, z: 0.17926276}
+  m_Size: {x: 10.46, y: 9.13, z: 3.78}
+  m_Center: {x: 0.46610475, y: 3.32, z: 0.17926276}
 --- !u!1001 &1811073714
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39000,9 +39002,14 @@ PrefabInstance:
       objectReference: {fileID: 1997603130}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
+      propertyPath: controllerUi
+      value: 
+      objectReference: {fileID: 339305794}
+    - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
+        type: 3}
       propertyPath: PopupSoundClip
       value: 
-      objectReference: {fileID: 8300000, guid: 9427e609bd71f4745b90c1dd1528db8a, type: 3}
+      objectReference: {fileID: 8300000, guid: 47dd5975f8c9249e5b24610d9033e32c, type: 3}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
       propertyPath: titleTextField
@@ -39269,6 +39276,11 @@ PrefabInstance:
       propertyPath: popupFrame
       value: 
       objectReference: {fileID: 1997603130}
+    - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
+        type: 3}
+      propertyPath: controllerUi
+      value: 
+      objectReference: {fileID: 339305794}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
       propertyPath: PopupSoundClip
@@ -40532,6 +40544,7 @@ MonoBehaviour:
   fxClick: {fileID: 8300000, guid: 44d677dea06b4c84a9740b7eb30420af, type: 3}
   gameManager: {fileID: 0}
   ActivateObject: {fileID: 0}
+  controllerUi: {fileID: 339305794}
 --- !u!114 &1888271903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41307,7 +41320,7 @@ MonoBehaviour:
   ImmuneToKnockbackIfZeroDamage: 0
   KnockbackForceMultiplier: 1
   DestroyOnDeath: 1
-  DelayBeforeDestruction: 0
+  DelayBeforeDestruction: 3
   PointsWhenDestroyed: 0
   RespawnAtInitialLocation: 0
   DisableControllerOnDeath: 1
@@ -41883,6 +41896,11 @@ PrefabInstance:
       propertyPath: popupFrame
       value: 
       objectReference: {fileID: 1997603130}
+    - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
+        type: 3}
+      propertyPath: controllerUi
+      value: 
+      objectReference: {fileID: 339305794}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
       propertyPath: PopupSoundClip
@@ -42589,6 +42607,11 @@ PrefabInstance:
       propertyPath: popupFrame
       value: 
       objectReference: {fileID: 1997603130}
+    - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
+        type: 3}
+      propertyPath: controllerUi
+      value: 
+      objectReference: {fileID: 339305794}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
       propertyPath: PopupSoundClip
@@ -43536,6 +43559,7 @@ MonoBehaviour:
   fxClick: {fileID: 8300000, guid: f7d17df6340791b40827777abcf28842, type: 3}
   gameManager: {fileID: 0}
   ActivateObject: {fileID: 956540465}
+  controllerUi: {fileID: 339305794}
 --- !u!224 &1997603133 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2675772815540303801, guid: cee18cf5504f6d54fbb05a043cb1dbb2,
@@ -45254,6 +45278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9426e91dd3de8514897a19e142db2f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controllerUi: {fileID: 339305794}
   popupFrame: {fileID: 1997603130}
   titleTextField: {fileID: 1161717548}
   detailTextField: {fileID: 1161717547}
@@ -45290,7 +45315,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.9759998, y: 3.9759998, z: 3.9759998}
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!225 &2099957762 stripped
 CanvasGroup:
@@ -45427,6 +45452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10d114f866f18043b3ff4a39060063d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controllerUi: {fileID: 339305794}
   powerUpManager: {fileID: 319267132}
   popupFrame: {fileID: 1997603130}
   titleTextField: {fileID: 1161717548}

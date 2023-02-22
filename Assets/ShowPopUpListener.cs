@@ -12,6 +12,7 @@ public class ShowPopUpListener : MonoBehaviour, MMEventListener<TopDownEngineEve
     [SerializeField] private TextMeshProUGUI detailTextField;
     [SerializeField] private string titleText;
     [SerializeField] private string detailText;
+    [SerializeField] private TouchInputManager controllerUi;
     public AudioClip PopupSoundClip;
     private void OnTriggerEnter(Collider other)
     {
@@ -46,7 +47,7 @@ public class ShowPopUpListener : MonoBehaviour, MMEventListener<TopDownEngineEve
     {
         if (PopupSoundClip)
             Utils.soundManager.PlayFX(PopupSoundClip);
-
+        controllerUi.canInteract = false; 
         gameObject.SetActive(false);
         this.MMEventStopListening<TopDownEngineEvent>();
         popupFrame.SetActive(true);

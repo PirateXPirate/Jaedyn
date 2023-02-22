@@ -9,6 +9,7 @@ using UnityEngine;
 
 public class TutorialMarker : MonoBehaviour
 {
+    [SerializeField] private TouchInputManager controllerUi;
     [SerializeField] private GameObject popupFrame;
     [SerializeField] private TextMeshProUGUI titleTextField;
     [SerializeField] private TextMeshProUGUI detailTextField;
@@ -41,6 +42,8 @@ public class TutorialMarker : MonoBehaviour
         if (PopupSoundClip)
             Utils.soundManager.PlayFX(PopupSoundClip);
         popupFrame.SetActive(true);
+
+        controllerUi.canInteract = false;
         titleTextField.text = titleText;
         detailTextField.text = detailText;
         isShowed = true;

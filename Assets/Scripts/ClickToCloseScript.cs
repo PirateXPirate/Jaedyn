@@ -15,6 +15,7 @@ public class ClickToCloseScript : MonoBehaviour
     public GameManager gameManager;
 
     public GameObject ActivateObject;
+    [SerializeField] private TouchInputManager controllerUi;
     void Start()
     {
        
@@ -29,6 +30,7 @@ public class ClickToCloseScript : MonoBehaviour
             LevelManager.Instance.Players[0].LinkedInputManager.InputDetectionActive = true;
             LevelManager.Instance.Players[0].GetComponent<CharacterMovement>().enabled = true;
             LevelManager.Instance.Players[0].GetComponent<TopDownController3D>().enabled = true;
+            controllerUi.canInteract = true;
             if (ActivateObject)
             {
                 ActivateObject.SetActive(true);

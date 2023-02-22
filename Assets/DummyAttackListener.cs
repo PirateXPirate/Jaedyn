@@ -18,7 +18,7 @@ public class DummyAttackListener : MonoBehaviour
     [SerializeField] private TextMeshProUGUI detailTextField;
     [SerializeField] private string titleText;
     [SerializeField] private string detailText;
-
+    [SerializeField] private TouchInputManager controllerUi;
     [SerializeField] private GameObject activateObject;
     public AudioClip PopupSoundClip;
     bool ishow = false;
@@ -51,6 +51,8 @@ public class DummyAttackListener : MonoBehaviour
     {
         if (PopupSoundClip)
             Utils.soundManager.PlayFX(PopupSoundClip);
+
+        controllerUi.canInteract= false;
         popupFrame.SetActive(true);
         titleTextField.text = titleText;
         detailTextField.text = detailText;

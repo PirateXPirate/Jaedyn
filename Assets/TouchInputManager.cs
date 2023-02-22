@@ -5,37 +5,45 @@ using UnityEngine;
 
 public class TouchInputManager : MonoBehaviour
 {
+	public bool canInteract = true;
 	public virtual void PressJumpDown()
 	{
+		if(canInteract)
 		InputManager.Instance.JumpButtonDown();
 	}
 	public virtual void PressJumpUp()
 	{
-		InputManager.Instance.JumpButtonUp();
+		if (canInteract)
+			InputManager.Instance.JumpButtonUp();
 	}
 	public virtual void PressActionDown()
 	{
-		InputManager.Instance.ShootButtonDown();
+		if (canInteract)
+			InputManager.Instance.ShootButtonDown();
 	}
 
 	public virtual void PressActionUp()
 	{
-		InputManager.Instance.ShootButtonUp();
+		if (canInteract)
+			InputManager.Instance.ShootButtonUp();
 	}
 
 	public virtual void PressFunctionDown()
 	{
-		InputManager.Instance.CrouchButtonDown();
+		if (canInteract)
+			InputManager.Instance.CrouchButtonDown();
 	}
 
 	public virtual void PressFunctionUp()
 	{
-		InputManager.Instance.CrouchButtonUp();
+		if (canInteract)
+			InputManager.Instance.CrouchButtonUp();
 	}
 
 
 	public virtual void PressChangeCharDown()
 	{
-		InputManager.Instance.SwitchCharacterButtonDown();
+		if (canInteract)
+			InputManager.Instance.SwitchCharacterButtonDown();
 	}
 }

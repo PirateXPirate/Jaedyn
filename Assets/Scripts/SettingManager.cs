@@ -41,6 +41,7 @@ public class SettingManager : MonoBehaviour
         valLoop = Utils.soundManager.loop.volume ;
         valFX = Utils.soundManager.fx.volume;
 
+        Debug.Log(valLoop);
         tmpvalLoop = valLoop;
         tmpvalFX = valFX;
 
