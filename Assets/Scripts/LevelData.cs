@@ -10,6 +10,11 @@ public static class LevelData
     public static int[] easyModeState = new int[TOTAL_LEVEL];
     public static int[] hardModeState = new int[TOTAL_LEVEL];
 
+    public enum Mode { easy, hard }
+    public static Mode mode;
+    public enum LevelState { Locked = 0, ClearWithOutPicture = 1, PerfectCleared = 2}
+    public static LevelState levelState;
+
     public static void TutorialComplete()
     {
         PlayerPrefs.SetInt("isTutorialComplete", 1);
@@ -18,23 +23,22 @@ public static class LevelData
     /// <summary>
     /// Use this method when player completed any level to save state of that level or Use this method when player use key to unlock any level
     /// </summary>
-    /// <param name="mode">easy or hard</param>
-    /// <param name="levelState">0 = locked, 1 = cleared without picture, 2 = cleared with picture(Perfect clear)</param>
-    public static void SaveLevelStateData(string mode, int levelIndex, int levelState)
+    public static void SaveLevelStateData(int levelIndex)
     {
         if (levelIndex <= 0 || levelIndex > TOTAL_LEVEL) { Debug.LogError($"levelIndex must be between 1 and {TOTAL_LEVEL}"); return; }
-        if (levelState <= 0 || levelState > 2) { Debug.LogError($"levelState must be between 0 and 2"); return; }
+        if (levelState == LevelState.Locked) { Debug.LogError($"Wrong LevelState input"); return; }
 
-        if (mode == "easy" || mode == "hard")
+        switch (mode)
         {
-            PlayerPrefs.SetInt($"{mode}Level{levelIndex}State", levelState);
-        }
-        else
-        {
-            Debug.LogError("mode parameter must be \"easy\" or \"hard\"");
-            return;
+            case Mode.easy:
+                PlayerPrefs.SetInt($"easyLevel{levelIndex}State", (int)levelState);
+                break;
+            case Mode.hard:
+                PlayerPrefs.SetInt($"hardLevel{levelIndex}State", (int)levelState);
+                break;
         }
     }
+
 
     public static void LoadLevelStateData()
     {

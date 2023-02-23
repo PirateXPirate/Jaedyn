@@ -10,23 +10,22 @@ public class EndGame : MonoBehaviour
     [SerializeField] private GameObject controllerUi;
     [SerializeField] private GameObject picture;
 
-    [SerializeField] private bool isTutorialLevel = false;
-    [SerializeField] private int levelIndex = 0;
-    private bool isPictureTaken = false;
-    [SerializeField] private int levelState;
-
-    [SerializeField] private enum Mode { easy, hard }
-    [SerializeField] private Mode mode;
-
     [SerializeField] private Button settingBut;
     [SerializeField] private Button homeBut;
 
-    private void Awake()
-    {
-        controllerUi.SetActive(false);
-        CheckPictureInScene();
-        CheckEndGameState();
 
+    [Header("Setting SaveData Input")]
+    [SerializeField] private bool isTutorialLevel = false;
+    [SerializeField] enum Mode { easy, hard}
+    [SerializeField] Mode mode;
+    [SerializeField] private int levelIndex = 0;
+    private bool isPictureTaken = false;
+
+    void Awake()
+    {
+        PrepareData();
+
+        controllerUi.SetActive(false);
         settingBut.enabled = false;
         homeBut.enabled = false;
         LevelManager.Instance.Players[0].GetComponent<Health>().ImmuneToDamage = true;
@@ -34,7 +33,7 @@ public class EndGame : MonoBehaviour
 
     void Start()
     {
-        SaveToPlayerPerf();
+        SaveDataToPlayerPrefs();
     }
     void Update()
     {
@@ -45,27 +44,48 @@ public class EndGame : MonoBehaviour
         }
     }
 
-    void CheckPictureInScene()
+    void PrepareData()
     {
-        if (!picture.activeSelf)
+        CheckPictureInScene();
+        SetModeData();
+        SetLevelState();
+
+        void CheckPictureInScene()
         {
-            isPictureTaken = true;
+            if (!picture.activeSelf)
+            {
+                isPictureTaken = true;
+            }
+        }
+
+        void SetModeData()
+        {
+            switch (this.mode)
+            {
+                case Mode.easy:
+                    LevelData.mode = LevelData.Mode.easy;
+                    break;
+                case Mode.hard:
+                    LevelData.mode = LevelData.Mode.hard;
+                    break;
+            }
+        }
+
+        void SetLevelState()
+        {
+            if (isPictureTaken)
+            {
+                LevelData.levelState = LevelData.LevelState.PerfectCleared;
+            }
+
+            else
+            {
+                LevelData.levelState = LevelData.LevelState.ClearWithOutPicture;
+            }
         }
     }
 
-    void CheckEndGameState()
-    {
-        if (isPictureTaken)
-        {
-            levelState = 2;
-        }
-
-        else
-        {
-            levelState = 1;
-        }
-    }
-    void SaveToPlayerPerf()
+    void SaveDataToPlayerPrefs()
     {
         if (isTutorialLevel)
         {
@@ -75,7 +95,7 @@ public class EndGame : MonoBehaviour
 
         else
         {
-            LevelData.SaveLevelStateData(mode.ToString(), levelIndex, levelState);
+            LevelData.SaveLevelStateData(levelIndex);
         }
     }
 }
