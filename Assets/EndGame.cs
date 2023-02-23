@@ -1,7 +1,9 @@
+using MoreMountains.TopDownEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class EndGame : MonoBehaviour
 {
@@ -16,11 +18,18 @@ public class EndGame : MonoBehaviour
     [SerializeField] private enum Mode { easy, hard }
     [SerializeField] private Mode mode;
 
+    [SerializeField] private Button settingBut;
+    [SerializeField] private Button homeBut;
+
     private void Awake()
     {
         controllerUi.SetActive(false);
         CheckPictureInScene();
         CheckEndGameState();
+
+        settingBut.enabled = false;
+        homeBut.enabled = false;
+        LevelManager.Instance.Players[0].GetComponent<Health>().ImmuneToDamage = true;
     }
 
     void Start()
