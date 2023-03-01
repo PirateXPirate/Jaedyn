@@ -10,6 +10,8 @@ public class ActionSkill : MonoBehaviour
     protected CharacterMovement movement;
 
     private TutorialMarker currentMaker;
+
+   [SerializeField] private GameObject buttonEffect;
     void Start()
     {
         movement = GetComponent<CharacterMovement>();
@@ -40,12 +42,13 @@ public class ActionSkill : MonoBehaviour
     {
         if (other.tag.Equals("NotiJump0") || other.tag.Equals("SkillPosition"))
         {
+            buttonEffect.SetActive(true);
             inPoint = true;
             currentMaker = other.GetComponent<TutorialMarker>();
             if (currentMaker == null) return;
             if (currentMaker.Activated) return;
             currentMaker.Activated = true;
-
+           
             if (currentMaker.TriggerSoundClip)
             {
                 Debug.Log(currentMaker.TriggerSoundClip.name);
@@ -58,6 +61,7 @@ public class ActionSkill : MonoBehaviour
     {
         if (other.tag.Equals("NotiJump0") || other.tag.Equals("SkillPosition"))
         {
+            buttonEffect.SetActive(false);
             inPoint = false;
             currentMaker = null; 
         }

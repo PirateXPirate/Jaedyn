@@ -18,5 +18,6 @@ public class ResetBot : MonoBehaviour
         dummyBrain.ResetBrain();
         dummyBrain.BrainActive = true;
         dummyCharacter.GetComponent<Health>().ImmuneToDamage = false;
+        dummyCharacter.GetComponent<MMHealthBar>().enabled = true;
     }
 }

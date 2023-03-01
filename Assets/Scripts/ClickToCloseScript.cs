@@ -16,10 +16,24 @@ public class ClickToCloseScript : MonoBehaviour
 
     public GameObject ActivateObject;
     [SerializeField] private TouchInputManager controllerUi;
-    void Start()
+    float currentVolume;
+    private void Start()
     {
-       
+        if (Utils.soundManager)
+        {
+            Utils.soundManager.loop.volume = PlayerPrefs.GetFloat("loop", .5f);
+        }
+           
     }
+    private void OnEnable()
+    {
+        if (Utils.soundManager)
+        {
+            currentVolume = Utils.soundManager.loop.volume;
+             Utils.soundManager.loop.volume *= 0.25f;
+        }
+    }
+  
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -27,6 +41,7 @@ public class ClickToCloseScript : MonoBehaviour
             if (fxClick)
                 Utils.soundManager.PlayFX(fxClick);
             gameObject.SetActive(false);
+            Utils.soundManager.loop.volume = currentVolume;
             LevelManager.Instance.Players[0].LinkedInputManager.InputDetectionActive = true;
             LevelManager.Instance.Players[0].GetComponent<CharacterMovement>().enabled = true;
             LevelManager.Instance.Players[0].GetComponent<TopDownController3D>().enabled = true;
@@ -46,6 +61,7 @@ public class ClickToCloseScript : MonoBehaviour
 
     public void OnClickClose() {
         Utils.soundManager.PlayFX(fxClick);
+      
         gameObject.SetActive(false);
     }
 

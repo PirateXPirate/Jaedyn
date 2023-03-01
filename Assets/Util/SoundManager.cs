@@ -4,16 +4,27 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
+    public static SoundManager Instance { get; private set; }
+
     public AudioSource loop;
     public AudioSource fx;
 
     public void Start() {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+            Utils.soundManager = this;
+            Utils.soundManager.loop.volume = PlayerPrefs.GetFloat("loop",.5f);
+            Utils.soundManager.fx.volume = PlayerPrefs.GetFloat("fx", .5f);
+        }
         DontDestroyOnLoad(this);
 
         
-        Utils.soundManager = this;
-        Utils.soundManager.loop.volume = PlayerPrefs.GetFloat("loop");
-        Utils.soundManager.fx.volume = PlayerPrefs.GetFloat("fx");
+        
     
     }
 

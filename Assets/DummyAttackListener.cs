@@ -20,6 +20,7 @@ public class DummyAttackListener : MonoBehaviour
     [SerializeField] private string detailText;
     [SerializeField] private TouchInputManager controllerUi;
     [SerializeField] private GameObject activateObject;
+    [SerializeField] private GameObject potionUiEffect;
     public AudioClip PopupSoundClip;
     bool ishow = false;
     void Start()
@@ -57,7 +58,7 @@ public class DummyAttackListener : MonoBehaviour
         titleTextField.text = titleText;
         detailTextField.text = detailText;
         ishow = true;
-
+        potionUiEffect.SetActive(true);
 
 
     }

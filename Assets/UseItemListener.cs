@@ -23,6 +23,7 @@ public class UseItemListener : MonoBehaviour
 
     [SerializeField] private GameObject resetBotObject;
     public AudioClip PopupSoundClip;
+    [SerializeField] private GameObject potionUiEffect;
     void Start()
     {
         powerUpManager.onUseHPPotion += onUseHP;
@@ -48,7 +49,7 @@ public class UseItemListener : MonoBehaviour
             powerUpManager.onUseHPPotion -= onUseHP;
             powerUpManager.onUseRessistancePotion -= onResistanceUse;
             ShowPopup();
-           
+            potionUiEffect.SetActive(false);
         }
     }
 
