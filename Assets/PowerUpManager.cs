@@ -21,6 +21,9 @@ public class PowerUpManager : MonoBehaviour
     [SerializeField] private GameObject healthPotionFx;
     [SerializeField] private GameObject resistancePotionFx;
 
+    [SerializeField] private AudioClip useHpPotionSound;
+    [SerializeField] private AudioClip useResistancePotionSound;
+
     void Start()
     {
         powerUpUI.SetHPItemQuantity(hpPotionQuantity);
@@ -51,6 +54,8 @@ public class PowerUpManager : MonoBehaviour
             else
                 playerHealth.CurrentHealth = playerHealth.MaximumHealth;
             playerHealth.UpdateHealthBar(false);
+
+            Utils.soundManager.PlayFX(useHpPotionSound);
             powerUpUI.SetHPItemQuantity(hpPotionQuantity);
             Instantiate(healthPotionFx, LevelManager.Instance.Players[0].transform.position, Quaternion.identity);
            
@@ -66,6 +71,7 @@ public class PowerUpManager : MonoBehaviour
             powerUpUI.SetResistanceItemQuantity(resistancePotionQuantity);
             StartCoroutine(CountDown());
             Instantiate(resistancePotionFx, LevelManager.Instance.Players[0].transform.position, Quaternion.identity);
+            Utils.soundManager.PlayFX(useResistancePotionSound);
             IEnumerator  CountDown()
             {
                 yield return new WaitForSeconds(15);

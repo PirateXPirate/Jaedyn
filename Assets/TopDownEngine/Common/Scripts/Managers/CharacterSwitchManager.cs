@@ -69,11 +69,10 @@ namespace MoreMountains.TopDownEngine
 		private float blockerTime;
         private float spamBlockerDuration = 0.3f;
         private bool isSelecting;
-        private Vector3 button1OriginalPosition;
-        private Vector3 button2OriginalPosition;
+		private Transform originalPosition;
 
-        private Vector3 button1TopPosition;
-        private Vector3 button2TopPosition;
+		[SerializeField] private Transform button1TopPosition;
+		[SerializeField] private Transform button2TopPosition;
         /// <summary>
         /// On Awake we grab our input manager and instantiate our characters and VFX
         /// </summary>
@@ -269,15 +268,15 @@ namespace MoreMountains.TopDownEngine
             if (isSelecting)
             {
                 isSelecting = false;
-                character1Button.transform.DOMoveY(button1OriginalPosition.y, 0.3f, false).OnComplete(SetInActive);
-                character2Button.transform.DOMoveY(button2OriginalPosition.y, 0.15f, false).OnComplete(SetInActive);
+                character1Button.transform.DOMove(originalPosition.transform.position, 0.3f, false).OnComplete(SetInActive);
+                character2Button.transform.DOMove(originalPosition.transform.position, 0.15f, false).OnComplete(SetInActive);
             }
 
             else
             {
                 isSelecting = true;
-				character1Button.transform.DOMoveY(button1TopPosition.y, 0.3f, false);
-				character2Button.transform.DOMoveY(button2TopPosition.y, 0.15f, false);
+				character1Button.transform.DOMove(button1TopPosition.position, 0.3f, false);
+				character2Button.transform.DOMove(button2TopPosition.position, 0.3f, false);
             }
 
     
@@ -291,14 +290,11 @@ namespace MoreMountains.TopDownEngine
 
         private void SetOriginalPosition()
         {
-			float offset1 = 400;
-			float offset2 = 200;
 
-            button1OriginalPosition = character1Button.transform.position;
-            button1TopPosition = new Vector3(button1OriginalPosition.x, button1OriginalPosition.y + offset1, button1OriginalPosition.z);
+			originalPosition = character0Button.transform;
+           // button1TopPosition = new Vector3(button1OriginalPosition.x, button1OriginalPosition.y + offset1, button1OriginalPosition.z);
 
-            button2OriginalPosition = character2Button.transform.position;
-            button2TopPosition = new Vector3(button2OriginalPosition.x, button2OriginalPosition.y + offset2, button2OriginalPosition.z);
+          //  button2TopPosition = new Vector3(button2OriginalPosition.x, button2OriginalPosition.y + offset2, button2OriginalPosition.z);
         }
         private void SetIndexListenner()
         {
