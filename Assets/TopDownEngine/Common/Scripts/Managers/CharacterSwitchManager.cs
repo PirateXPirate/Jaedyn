@@ -3,6 +3,8 @@ using MoreMountains.Tools;
 using UnityEngine.UI;
 using Suriyun.MCS;
 using System.Collections;
+using DG.Tweening;
+
 
 namespace MoreMountains.TopDownEngine
 {
@@ -17,7 +19,7 @@ namespace MoreMountains.TopDownEngine
 	public class CharacterSwitchManager : TopDownMonoBehaviour
 	{
 		/// the possible orders the next character can be selected from
-		public enum NextCharacterChoices { Sequential, Random }
+		public enum NextCharacterChoices { Sequential, Random , ChooseSpecificIndex}
 
 		[Header("Character Switch")]
 		[MMInformation("Add this component to an empty object in your scene, and when you'll press the SwitchCharacter button (P by default, change that in Unity's InputManager settings), your main character will be replaced by one of the prefabs in the list set on this component. You can decide the order (sequential or random), and have as many as you want.", MMInformationAttribute.InformationType.Info, false)]
@@ -47,8 +49,8 @@ namespace MoreMountains.TopDownEngine
 
 		[SerializeField] Image ActionButtonImage;
 		[SerializeField] Image SkillButtonImage;
-		[SerializeField] Image SwitchCharButtonImage;
-		[SerializeField] Image SwitchCharOverlayImage;
+		[SerializeField] Image[] SwitchCharButtonImage;
+		[SerializeField] Image[] SwitchCharOverlayImage;
 
 		[SerializeField] Sprite[] ActionSpriteSet;
 		[SerializeField] Sprite[] SkillSpriteSet;
@@ -57,15 +59,33 @@ namespace MoreMountains.TopDownEngine
 		public float CoolDown;
 		bool isCountdown = false;
 		float countingNumber = 0;
-		/// <summary>
-		/// On Awake we grab our input manager and instantiate our characters and VFX
-		/// </summary>
-		protected virtual void Start()
+
+        [SerializeField] private GameObject character0Button;
+        [SerializeField] private GameObject character1Button;
+        [SerializeField] private GameObject character2Button;
+        [SerializeField] private Image character1OverlayImage;
+        [SerializeField] private Image character2OverlayImage;
+
+		private float blockerTime;
+        private float spamBlockerDuration = 0.3f;
+        private bool isSelecting;
+        private Vector3 button1OriginalPosition;
+        private Vector3 button2OriginalPosition;
+
+        private Vector3 button1TopPosition;
+        private Vector3 button2TopPosition;
+        /// <summary>
+        /// On Awake we grab our input manager and instantiate our characters and VFX
+        /// </summary>
+        protected virtual void Start()
 		{
 			_inputManager = FindObjectOfType(typeof(InputManager)) as InputManager;
 			InstantiateCharacters();
 			InstantiateVFX();
-		}
+			SetOriginalPosition();
+			SetUI(CurrentIndex);
+			SetIndexListenner();
+        }
 
 		/// <summary>
 		/// Instantiates and disables all characters in our list
@@ -108,28 +128,42 @@ namespace MoreMountains.TopDownEngine
 
 			if (_inputManager.SwitchCharacterButton.State.CurrentState == MMInput.ButtonStates.ButtonDown)
 			{
+				blockerTime = 0;
+				SetCharacterSelectorPosition();
 				SwitchCharacter();
 			}
 
 			if (isCountdown)
 			{
-				float tik =( 1 / CoolDown) * countingNumber;
+                character0Button.SetActive(false);
+                float tik =( 1 / CoolDown) * countingNumber;
 				countingNumber += Time.deltaTime;
-				SwitchCharOverlayImage.fillAmount = tik;
-				if (SwitchCharOverlayImage.fillAmount >= 1)
+
+				for (int i = 0; i < SwitchCharOverlayImage.Length; i++)
+				{
+					SwitchCharOverlayImage[i].fillAmount = tik;
+                }
+				
+				if (tik >= 1)
 				{
 					Stopcount();
 				}
 			}
+			else
+			{
+                character0Button.SetActive(true);
+            }
 		}
 
         private void Stopcount()
         {
-			SwitchCharOverlayImage.GetComponentInParent<UniversalButton>().SetActiveState(true);
+            for (int i = 0; i < SwitchCharOverlayImage.Length; i++)
+            {
+				SwitchCharButtonImage[i].gameObject.GetComponent<UniversalButton>().SetActiveState(true);
+            }
+            
 			isCountdown = false;
 			countingNumber = 0;
-
-
 		}
 
         /// <summary>
@@ -143,11 +177,12 @@ namespace MoreMountains.TopDownEngine
 			}
 
 			// we determine the next index
-			if (NextCharacterChoice == NextCharacterChoices.Random)
+            if (NextCharacterChoice == NextCharacterChoices.Random)
 			{
-				CurrentIndex = Random.Range(0, _instantiatedCharacters.Length);
+				CurrentIndex = UnityEngine.Random.Range(0, _instantiatedCharacters.Length);
 			}
-			else
+				
+			if (NextCharacterChoice == NextCharacterChoices.Sequential)
 			{
 				CurrentIndex = CurrentIndex + 1;
 				if (CurrentIndex >= _instantiatedCharacters.Length)
@@ -156,6 +191,16 @@ namespace MoreMountains.TopDownEngine
 				}
 				SetUI(CurrentIndex);
 			}
+
+			if (NextCharacterChoice == NextCharacterChoices.ChooseSpecificIndex)
+			{
+				SetIndexListenner();
+                if (CurrentIndex >= _instantiatedCharacters.Length)
+                {
+                    CurrentIndex = 0;
+                }
+                SetUI(CurrentIndex);
+            }
 
 			// we disable the old main character, and enable the new one
 			LevelManager.Instance.Players[0].gameObject.SetActive(false);
@@ -195,13 +240,87 @@ namespace MoreMountains.TopDownEngine
         {
 			ActionButtonImage.sprite = ActionSpriteSet[currentIndex];
 			SkillButtonImage.sprite = SkillSpriteSet[currentIndex];
-			SwitchCharButtonImage.sprite = CharSpriteSet[currentIndex];
-			SwitchCharOverlayImage.sprite = CharSpriteSet[currentIndex];
-			SwitchCharOverlayImage.fillAmount = 0;
-			SwitchCharOverlayImage.GetComponentInParent<UniversalButton>().SetActiveState(false);
-			isCountdown = true;
+
+            for (int i = 0; i < CharSpriteSet.Length; i++)
+            {
+				var current = currentIndex + i;
+				if (current >= CharSpriteSet.Length)
+				{
+                    current -= CharSpriteSet.Length;
+                }
+
+				SwitchCharButtonImage[i].sprite = CharSpriteSet[current];
+				SwitchCharOverlayImage[i].sprite = CharSpriteSet[current];
+				SwitchCharOverlayImage[i].fillAmount = 0;
+				SwitchCharOverlayImage[i].GetComponentInParent<UniversalButton>().SetActiveState(false);
+            }
+			character0Button.GetComponent<Image>().sprite = CharSpriteSet[currentIndex];
+            isCountdown = true;
 		}
 
-      
+        public void SetCharacterSelectorPosition()
+        {
+			if (blockerTime + spamBlockerDuration > Time.unscaledTime) { return; }
+			blockerTime = Time.unscaledTime;
+
+            character1Button.gameObject.SetActive(true);
+            character2Button.gameObject.SetActive(true);
+
+            if (isSelecting)
+            {
+                isSelecting = false;
+                character1Button.transform.DOMoveY(button1OriginalPosition.y, 0.3f, false).OnComplete(SetInActive);
+                character2Button.transform.DOMoveY(button2OriginalPosition.y, 0.15f, false).OnComplete(SetInActive);
+            }
+
+            else
+            {
+                isSelecting = true;
+				character1Button.transform.DOMoveY(button1TopPosition.y, 0.3f, false);
+				character2Button.transform.DOMoveY(button2TopPosition.y, 0.15f, false);
+            }
+
+    
+
+            void SetInActive()
+            {
+                character1Button.gameObject.SetActive(false);
+                character2Button.gameObject.SetActive(false);
+            }
+        }
+
+        private void SetOriginalPosition()
+        {
+			float offset1 = 400;
+			float offset2 = 200;
+
+            button1OriginalPosition = character1Button.transform.position;
+            button1TopPosition = new Vector3(button1OriginalPosition.x, button1OriginalPosition.y + offset1, button1OriginalPosition.z);
+
+            button2OriginalPosition = character2Button.transform.position;
+            button2TopPosition = new Vector3(button2OriginalPosition.x, button2OriginalPosition.y + offset2, button2OriginalPosition.z);
+        }
+        private void SetIndexListenner()
+        {
+            Button buttonIndex0 = character0Button.GetComponent<Button>();
+
+			buttonIndex0.onClick.AddListener(SetCharacterSelectorPosition);
+            character1Button.GetComponent<UniversalButton>().onPointerDown.AddListener(delegate { SetCurrentIndex(1); });
+            character2Button.GetComponent<UniversalButton>().onPointerDown.AddListener(delegate { SetCurrentIndex(2); });
+        }
+        private void SetCurrentIndex(int buttonIndex)
+        {
+            CurrentIndex = CurrentIndex + buttonIndex;
+            if (CurrentIndex >= _instantiatedCharacters.Length)
+            {
+                CurrentIndex = CurrentIndex - _instantiatedCharacters.Length;
+            }
+
+            character1Button.GetComponent<UniversalButton>().onPointerDown.RemoveAllListeners();
+            character2Button.GetComponent<UniversalButton>().onPointerDown.RemoveAllListeners();
+        }
+
+     
+
     }
 }
