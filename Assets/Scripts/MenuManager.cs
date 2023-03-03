@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class MenuManager : MonoBehaviour
 {
-    FadeController FadeController;
+    DummyLoader dummyLoader;
 
     [Header("Button")]
     [SerializeField] Button galleryButton;
@@ -16,13 +17,16 @@ public class MenuManager : MonoBehaviour
 
     [SerializeField] GameObject buttonMenu;
     [SerializeField] GameObject headerMenu;
-    [SerializeField] GameObject settingScenePrefabs;
+    [SerializeField] GameObject settingScenePrefab;
+    [SerializeField] GameObject dummyLoaderPrefab;
+    [SerializeField] GameObject dialogPanel;
+    [SerializeField] CanvasGroup dialogFaderGroup;
 
     [SerializeField] SettingManager settingManager;
     private void Awake()
     {
-        FadeController = gameObject.GetComponent<FadeController>();
         LevelData.LoadLevelStateData();
+        dummyLoader = dummyLoaderPrefab.GetComponent<DummyLoader>();
         SetListenner();
     }
 
@@ -35,53 +39,52 @@ public class MenuManager : MonoBehaviour
 
     void GalleryButton()
     {
-        StartCoroutine(GoNextScene("GalleryScene"));
+        GoNextScene("GalleryScene");
     }
     void PlayButton()
     {
-        FadeController.isPlayButtonPressed = true;
-        StartCoroutine(DeleteMenuUi());
-        StartCoroutine(ReadyToGoMapScene());
+        DeleteMenuUi();
+        StartCoroutine(LoadingAndDialogProgress());
     }
 
     void SettingButton()
     {
-        Debug.Log("SettingButton Press!!");
-        settingScenePrefabs.SetActive(true);
+        settingScenePrefab.SetActive(true);
         settingManager.LoadSetting();
     }
 
-    void GoMapSceneButton()
+    private void GoMapSceneButton()
     {
-        StartCoroutine(GoNextScene("MapScene"));
+        GoNextScene("MapScene");
     }
 
-    IEnumerator DeleteMenuUi()
+    private void DeleteMenuUi()
     {
-        yield return new WaitForSeconds(2.0f);
         buttonMenu.SetActive(false);
         headerMenu.SetActive(false);
-        yield return null;
     }
 
-    IEnumerator ReadyToGoMapScene()
+    IEnumerator LoadingAndDialogProgress()
     {
-        float delayafterpressplay = 7.0f;
+        float loadingDuration = dummyLoader.loadingDuration;
+        float dialogFadeDuration = 2; //block player to spam click before read some dialog?
 
-        yield return new WaitForSeconds(delayafterpressplay);
+        dummyLoaderPrefab.SetActive(true);
+        yield return new WaitForSeconds(loadingDuration);
+        dummyLoaderPrefab.SetActive(false);
+
+        dialogPanel.SetActive(true);
+        dialogFaderGroup.DOFade(1, dialogFadeDuration);
+        yield return new WaitForSeconds(dialogFadeDuration);
+
         goMapSceneButton.gameObject.SetActive(true);
         goMapSceneButton.onClick.AddListener(GoMapSceneButton);
         yield return null;
     }
 
-    IEnumerator GoNextScene(string sceneName)
+    private void GoNextScene(string sceneName)
     {
-        float waitforfade = 2.0f;
-
-        FadeController.isGotoNextScenePressed = true;
-        yield return new WaitForSeconds(waitforfade);
         SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
-        yield return null;
     }
 }
     

@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class GalleryManager : MonoBehaviour
 {
-    FadeController FadeController;
-
     [SerializeField] GameObject picturePopup;
     [SerializeField] GameObject[] pictureExpand;
     [SerializeField] GameObject lockedPopup;
@@ -19,6 +17,7 @@ public class GalleryManager : MonoBehaviour
     [Header("Button")]
     [SerializeField] Button[] picture;
     [SerializeField] Button[] pictureLock;
+    [SerializeField] Button[] exitExpandPicture;
     [SerializeField] Button homeButton;
     [SerializeField] Button musicButton;
     [SerializeField] Button pictureButton;
@@ -26,7 +25,6 @@ public class GalleryManager : MonoBehaviour
 
     void Start()
     {
-        FadeController = GetComponent<FadeController>();
         CheckPictureState();
         SetListener();
     }
@@ -67,6 +65,11 @@ public class GalleryManager : MonoBehaviour
                 picture.SetActive(false);
             }
 
+            foreach (Button exitButton in exitExpandPicture)
+            {
+                exitButton.onClick.AddListener(() => picturePopup.SetActive(false));
+            }
+
             picturePopup.SetActive(true);
             pictureExpand[index].SetActive(true);
         }
@@ -86,7 +89,7 @@ public class GalleryManager : MonoBehaviour
 
     void HomeButton()
     {
-        StartCoroutine(GoNextScene("MainMenuScene"));
+        SceneManager.LoadSceneAsync("MainMenuScene", LoadSceneMode.Single);
     }
 
     void MusicModeButton()
@@ -105,15 +108,4 @@ public class GalleryManager : MonoBehaviour
     {
         lockedPopup.SetActive(false);
     }
-
-    IEnumerator GoNextScene(string sceneName)
-    {
-        float waitforfade = 2.0f;
-
-        FadeController.isGotoNextScenePressed = true;
-        yield return new WaitForSeconds(waitforfade);
-        SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
-        yield return null;
-    }
-
 }

@@ -8,7 +8,6 @@ public class UIManager : MonoBehaviour
 {
     ButtonFeedbacks ButtonFeedBacks;
     PopupManager PopupManager;
-    FadeController FadeController;
 
     [Header("Button")]
     [SerializeField] private Button easyModeButton;
@@ -29,7 +28,6 @@ public class UIManager : MonoBehaviour
         LevelData.LoadLevelStateData();
         ButtonFeedBacks = gameObject.GetComponent<ButtonFeedbacks>();
         PopupManager = gameObject.GetComponent<PopupManager>();
-        FadeController = gameObject.GetComponent<FadeController>();
         SetButtonListener();
     }
 
@@ -50,21 +48,16 @@ public class UIManager : MonoBehaviour
     {
         hardModeButton.onClick.AddListener(HardMode);
         easyModeButton.onClick.AddListener(EasyMode);
-        playButton.onClick.AddListener(() => StartCoroutine(PlayButton()));
-        homeButton.onClick.AddListener(() => StartCoroutine(HomeButton()));
+        playButton.onClick.AddListener(PlayButton);
+        homeButton.onClick.AddListener(HomeButton);
         shopButton.onClick.AddListener(ShopButton);
     }
 
-    IEnumerator PlayButton()
+    void PlayButton()
     {
-        float fadingTime = 1.5f;
-        if (sceneToPlay == "") { yield break; }
+        if (sceneToPlay == "") { return; }
 
-        Debug.Log($"Going to {sceneToPlay} scene");
-        FadeController.isGotoNextScenePressed = true;
-        yield return new WaitForSeconds(fadingTime);
         SceneManager.LoadScene(sceneToPlay);
-        yield return null;
     }
     void HardMode()
     {
@@ -103,14 +96,9 @@ public class UIManager : MonoBehaviour
         easyModeButton.interactable = false;
     }
 
-    IEnumerator HomeButton()
+    void HomeButton()
     {
-        float fadingTime = 1.5f;
-
-        FadeController.isGotoNextScenePressed = true;
-        yield return new WaitForSeconds(fadingTime);
         SceneManager.LoadScene("MainMenuScene");
-        yield return null;
     }
 
     void ShopButton()
