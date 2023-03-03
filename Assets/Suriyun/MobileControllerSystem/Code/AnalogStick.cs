@@ -16,23 +16,26 @@ namespace Suriyun.MCS {
         public float innerRadius;
         public float pointerRadius;
 
+        public bool canInteract = true;
         protected override void Awake() {
             isAimable = true;
             base.Awake();
             innerRadius = dpadInner.rect.width / 2f * scaler.scaleFactor;
             pointerRadius = pointer.rect.width / 2f * scaler.scaleFactor;
             directionalPointer.gameObject.SetActive(false);
-
             if (isActive) {
                 state = ButtonState.Active;
             } else {
                 state = ButtonState.Inactive;
             }
+            canInteract = true;
         }
 
         protected float tmpFloat;
         protected Vector3 tmpVec;
         public override void OnPointerDown(PointerEventData eventData) {
+      
+            if (!canInteract) return;
             if (state == ButtonState.Active) {
 
                 if (debugLog) {

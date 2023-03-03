@@ -7,11 +7,14 @@ using UnityEngine;
 public class ActionSkill : MonoBehaviour
 {
     protected bool inPoint = false;
+    protected bool inTower = false;
     protected CharacterMovement movement;
 
     private TutorialMarker currentMaker;
 
-   [SerializeField] private GameObject buttonEffect;
+    private Tower currentTower;
+
+    [SerializeField] private GameObject buttonEffect;
     void Start()
     {
         movement = GetComponent<CharacterMovement>();
@@ -34,8 +37,19 @@ public class ActionSkill : MonoBehaviour
             character.LinkedInputManager.InputDetectionActive = false;
             character.GetComponent<CharacterMovement>().enabled = false;
             character.GetComponent<TopDownController3D>().enabled = false;
+
+
             currentMaker.ShowPopup();
             inPoint = false;
+        }
+
+        if (inTower)
+        {
+            if (currentTower == null) return;
+            if (currentTower.trunkObj.activeSelf) return;
+
+            currentTower.Perform();
+
         }
     }
     protected virtual void OnTriggerEnter(Collider other)
@@ -48,13 +62,18 @@ public class ActionSkill : MonoBehaviour
             if (currentMaker == null) return;
             if (currentMaker.Activated) return;
             currentMaker.Activated = true;
-           
+
             if (currentMaker.TriggerSoundClip)
             {
                 Debug.Log(currentMaker.TriggerSoundClip.name);
                 Utils.soundManager.PlayFX(currentMaker.TriggerSoundClip);
             }
-           
+        }
+
+        if (other.tag.Equals("Tower"))
+        {
+            inTower = true;
+            currentTower = other.GetComponent<Tower>();
         }
     }
     private void OnTriggerExit(Collider other)
@@ -63,7 +82,12 @@ public class ActionSkill : MonoBehaviour
         {
             buttonEffect.SetActive(false);
             inPoint = false;
-            currentMaker = null; 
+            currentMaker = null;
+        }
+        if (other.tag.Equals("Tower"))
+        {
+            inTower = false;
+            currentTower = null;
         }
     }
 }

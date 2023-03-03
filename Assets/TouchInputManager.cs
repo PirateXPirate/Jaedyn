@@ -1,4 +1,5 @@
 using MoreMountains.TopDownEngine;
+using Suriyun.MCS;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,8 @@ using UnityEngine;
 public class TouchInputManager : MonoBehaviour
 {
 	public bool canInteract = true;
-	public virtual void PressJumpDown()
+   
+    public virtual void PressJumpDown()
 	{
 		if(canInteract)
 		InputManager.Instance.JumpButtonDown();

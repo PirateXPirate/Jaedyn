@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 using TMPro;
+using System;
 
 namespace Suriyun.MCS {
     public class UniversalButton : MonoBehaviour,
@@ -321,8 +322,12 @@ namespace Suriyun.MCS {
     }
 
     [System.Serializable]
-    public class UnityEventInt : UnityEvent<int> {
-
+    public class UnityEventInt : UnityEvent<int>
+    {
+        public void AddListener(object v)
+        {
+            throw new NotImplementedException();
+        }
     }
 
 #if UNITY_EDITOR

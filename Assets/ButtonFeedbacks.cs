@@ -39,6 +39,7 @@ public class ButtonFeedbacks : MonoBehaviour
     {
         SetListenner();
         PopupManager = gameObject.GetComponent<PopupManager>();
+
     }
 
     void SetListenner()
