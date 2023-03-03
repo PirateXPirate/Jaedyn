@@ -10,6 +10,8 @@ public class PlaySoundWhenDestroy : MonoBehaviour
     bool canPlay = false;
     [SerializeField] GameObject[] revelantObjs;
     [SerializeField] AudioClip soundClip;
+
+    [SerializeField] ActivateObject activateObj;
     void Start()
     {
         health = GetComponent<Health>();
@@ -27,7 +29,13 @@ public class PlaySoundWhenDestroy : MonoBehaviour
             }
         }
         if (canPlay)
+        {
+            if(soundClip)
             Utils.soundManager.PlayFX(soundClip);
+            if (activateObj)
+                activateObj.Activate();
+        }
+         
     }
 
 }

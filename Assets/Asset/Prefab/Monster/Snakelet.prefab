@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 8965143808410761828}
   - component: {fileID: 8965143808410761827}
   - component: {fileID: 8215035232615233827}
+  - component: {fileID: 2276323585293139980}
   m_Layer: 13
   m_Name: Snakelet
   m_TagString: Untagged
@@ -86,13 +87,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 7.17
+  m_Height: 12.19
   m_Radius: 1.42
   m_SlopeLimit: 45
   m_StepOffset: 0
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 2.98, z: 0}
+  m_Center: {x: 0, y: 6, z: 0}
 --- !u!54 &8965143808410761824
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -707,6 +708,33 @@ MonoBehaviour:
   DisplayDurationOnHit: 1
   HideBarAtZero: 1
   HideBarAtZeroDelay: 1
+--- !u!114 &2276323585293139980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8965143808410761832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a31b244c37658fa4197a240b64a28603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityStartSfx: {fileID: 0}
+  AbilityInProgressSfx: {fileID: 0}
+  AbilityStopSfx: {fileID: 0}
+  AbilityStartFeedbacks: {fileID: 0}
+  AbilityStopFeedbacks: {fileID: 0}
+  AbilityPermitted: 1
+  BlockingMovementStates: 
+  BlockingConditionStates: 
+  BoundWeaponIK: {fileID: 0}
+  DetachLeftHand: 0
+  DetachRightHand: 0
+  DisableAimWeaponModelAtTargetDuringStun: 0
+  WeaponModels: []
+  StunButton: 0
+  ExitStunButton: 0
 --- !u!1001 &1493244650059396187
 PrefabInstance:
   m_ObjectHideFlags: 0

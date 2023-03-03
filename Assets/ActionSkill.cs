@@ -8,11 +8,14 @@ public class ActionSkill : MonoBehaviour
 {
     protected bool inPoint = false;
     protected bool inTower = false;
+    protected bool inChest = false;
     protected CharacterMovement movement;
 
     private TutorialMarker currentMaker;
 
     private Tower currentTower;
+
+    private ChestBox currentChest;
 
     [SerializeField] private GameObject buttonEffect;
     void Start()
@@ -51,6 +54,12 @@ public class ActionSkill : MonoBehaviour
             currentTower.Perform();
 
         }
+
+        if (inChest)
+        {
+            currentChest.Perform();
+
+        }
     }
     protected virtual void OnTriggerEnter(Collider other)
     {
@@ -75,6 +84,12 @@ public class ActionSkill : MonoBehaviour
             inTower = true;
             currentTower = other.GetComponent<Tower>();
         }
+
+        if (other.tag.Equals("Chest"))
+        {
+            inChest = true;
+            currentChest = other.GetComponent<ChestBox>();
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -88,6 +103,11 @@ public class ActionSkill : MonoBehaviour
         {
             inTower = false;
             currentTower = null;
+        }
+        if (other.tag.Equals("Chest"))
+        {
+            inChest = false;
+            currentChest = null;
         }
     }
 }
