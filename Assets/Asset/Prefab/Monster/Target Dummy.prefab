@@ -287,7 +287,7 @@ MonoBehaviour:
   ImmuneToKnockbackIfZeroDamage: 0
   KnockbackForceMultiplier: 1
   DestroyOnDeath: 1
-  DelayBeforeDestruction: 0
+  DelayBeforeDestruction: 2
   PointsWhenDestroyed: 0
   RespawnAtInitialLocation: 0
   DisableControllerOnDeath: 1
@@ -752,6 +752,7 @@ MonoBehaviour:
   soundClip: {fileID: 0}
   activateObj: {fileID: 0}
   activateChest: {fileID: 0}
+  setActiveObject: []
 --- !u!1001 &5927732785142406228
 PrefabInstance:
   m_ObjectHideFlags: 0

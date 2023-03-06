@@ -110,6 +110,8 @@ public class UIManager : MonoBehaviour
 
     void SetUpUi()
     {
+        LevelData.easyModeState[0] = 1;
+
         //setup EasymodeUI according to data
         for (int i = 0; i < LevelData.easyModeState.Length; i++)
         {

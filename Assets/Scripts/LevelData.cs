@@ -15,6 +15,7 @@ public static class LevelData
     public enum LevelState { Locked = 0, ClearWithOutPicture = 1, PerfectCleared = 2}
     public static LevelState levelState;
 
+
     public static void TutorialComplete()
     {
         PlayerPrefs.SetInt("isTutorialComplete", 1);

@@ -73,6 +73,7 @@ MonoBehaviour:
   AdditionalAbilityNodes: []
   CharacterBrain: {fileID: 3520515265605006261}
   OptimizeForMobile: 1
+  DPadController: {fileID: 0}
 --- !u!143 &3520515265605006270
 CharacterController:
   m_ObjectHideFlags: 0
@@ -256,6 +257,7 @@ MonoBehaviour:
   WalkParticles: []
   TouchTheGroundParticles: []
   TouchTheGroundSfx: []
+  lerpStopping: 0
 --- !u!114 &3520515265605006260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,7 +284,7 @@ MonoBehaviour:
   ImmuneToKnockbackIfZeroDamage: 0
   KnockbackForceMultiplier: 1
   DestroyOnDeath: 1
-  DelayBeforeDestruction: 0
+  DelayBeforeDestruction: 2
   PointsWhenDestroyed: 0
   RespawnAtInitialLocation: 0
   DisableControllerOnDeath: 1
@@ -301,6 +303,8 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 6018124244186410576}
   DisableAnimatorLogs: 1
+  deathSound: {fileID: 0}
+  damageFx: {fileID: 0}
 --- !u!114 &3520515265605006261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,6 +464,8 @@ MonoBehaviour:
   MaximumBufferDuration: 0.25
   RequiresPerfectTile: 0
   CurrentWeapon: {fileID: 0}
+  skillUiManager: {fileID: 0}
+  coolDown: 0
 --- !u!114 &3520515265605006265
 MonoBehaviour:
   m_ObjectHideFlags: 0

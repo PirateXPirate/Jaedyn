@@ -25,7 +25,7 @@ public class PlaySoundWhenDestroy : MonoBehaviour
         canPlay = true;
         foreach (var obj in revelantObjs)
         {
-            if (obj.activeSelf)
+            if (obj.GetComponent<Health>().CurrentHealth > 0)
             {
                 canPlay = false;
             }

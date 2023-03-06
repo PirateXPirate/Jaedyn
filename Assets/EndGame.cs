@@ -52,6 +52,7 @@ public class EndGame : MonoBehaviour
 
         void CheckPictureInScene()
         {
+            if (picture == null) return;
             if (!picture.activeSelf)
             {
                 isPictureTaken = true;

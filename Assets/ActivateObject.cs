@@ -11,4 +11,6 @@ public class ActivateObject : MonoBehaviour
     {
         transform.DOMove(targetTransform.position, time);
     }
+
+
 }
