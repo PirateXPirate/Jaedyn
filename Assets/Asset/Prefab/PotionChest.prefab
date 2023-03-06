@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 6242598801898461198}
   m_Layer: 0
   m_Name: PotionChest
-  m_TagString: Untagged
+  m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,7 +196,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9099304176408804971}
-  m_LocalRotation: {x: 0.000000004603399, y: 0.97756654, z: -0.000000021365398, w: 0.21062689}
+  m_LocalRotation: {x: 0, y: 0.9775669, z: 0, w: 0.21062534}
   m_LocalPosition: {x: 37.769, y: 11.994139, z: 159.5877}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -346,7 +346,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.96, y: 1.34, z: 1.16}
+  m_Size: {x: 3, y: 1.34, z: 3}
   m_Center: {x: 0, y: 0.69, z: 0}
 --- !u!114 &2409937445886063777
 MonoBehaviour:
@@ -376,6 +376,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpManager: {fileID: 0}
+  numPotion: 0
+  numResistance: 0
 --- !u!1001 &9099304176341306910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -429,6 +431,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 439662, guid: 3c2fb72925d7f3c4a8c2b92cc3a81390, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19802932, guid: 3c2fb72925d7f3c4a8c2b92cc3a81390, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19836136, guid: 3c2fb72925d7f3c4a8c2b92cc3a81390, type: 3}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19901842, guid: 3c2fb72925d7f3c4a8c2b92cc3a81390, type: 3}

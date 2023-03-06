@@ -12,6 +12,8 @@ public class PlaySoundWhenDestroy : MonoBehaviour
     [SerializeField] AudioClip soundClip;
 
     [SerializeField] ActivateObject activateObj;
+    [SerializeField] ChestBox activateChest;
+    [SerializeField] GameObject[] setActiveObject;
     void Start()
     {
         health = GetComponent<Health>();
@@ -34,6 +36,17 @@ public class PlaySoundWhenDestroy : MonoBehaviour
             Utils.soundManager.PlayFX(soundClip);
             if (activateObj)
                 activateObj.Activate();
+
+            if (activateChest)
+                activateChest.canOpen = true;
+
+            if (setActiveObject.Length > 0)
+            {
+                foreach (var obj in setActiveObject)
+                    obj.SetActive(true);
+            }
+            
+
         }
          
     }

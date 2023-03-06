@@ -14,6 +14,8 @@ public class ChestBox : MonoBehaviour
     AddItem addItem;
 
     AudioSource audi;
+
+    public bool canOpen;
     public enum ChestType
     {
         Coin,
@@ -28,6 +30,7 @@ public class ChestBox : MonoBehaviour
     }
     public void Perform()
     {
+        if (!canOpen) return;
         animator.SetBool("openchest",true);
         openParticle.Play();
     }
