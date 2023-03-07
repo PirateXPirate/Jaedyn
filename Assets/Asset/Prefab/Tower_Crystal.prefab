@@ -49,9 +49,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trunkObj: {fileID: 0}
   timeTochange: 0
-  maxTime: 2
+  maxTime: 5
   blueMat: {fileID: 2100000, guid: 3c75c668ed8fbce4f95ebeb2e055db48, type: 2}
   rend: {fileID: 6009246815138265072}
+  obj: {fileID: 0}
+  Complete: 0
 --- !u!65 &919132148476653548
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63,8 +65,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 3, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.79, y: 8.5, z: 2.95}
+  m_Center: {x: 0, y: 4.23, z: 0}
 --- !u!1 &3041078446293114021
 GameObject:
   m_ObjectHideFlags: 0

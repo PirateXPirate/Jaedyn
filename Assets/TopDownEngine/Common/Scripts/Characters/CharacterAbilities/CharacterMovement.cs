@@ -361,7 +361,6 @@ namespace MoreMountains.TopDownEngine
 				    || (_movement.CurrentState == CharacterStates.MovementStates.Idle)
 			    ))
 			{
-				Debug.Log(!_controller.Grounded);
 				_movement.ChangeState(CharacterStates.MovementStates.Falling);
 			}
 

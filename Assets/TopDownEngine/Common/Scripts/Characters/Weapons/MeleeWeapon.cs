@@ -250,7 +250,7 @@ namespace MoreMountains.TopDownEngine
 			}
 			if (fxParticle != null)
 			{
-				var pos = new Vector3(AreaOffset.x , -1.5f, AreaOffset.z);
+				var pos = new Vector3(AreaOffset.x , -0.3f, AreaOffset.z);
 				var tmp = Instantiate(fxParticle);
 				tmp.transform.parent = transform;
 				tmp.transform.localPosition = pos;

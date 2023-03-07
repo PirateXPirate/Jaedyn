@@ -17,7 +17,6 @@ public class StartSound : MonoBehaviour
     AnalogStick analogStick;
     void Start()
     {
-        Debug.Log("DSFDFSFD");
         controllerUi.canInteract = false;
         analogStick =  controllerUi.GetComponentInChildren<AnalogStick>();
         analogStick.canInteract = false;

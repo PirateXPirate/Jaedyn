@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8205100539466899309}
   - component: {fileID: 8205100539466899308}
-  - component: {fileID: 8205100539466899307}
   - component: {fileID: 8205100539466899306}
+  - component: {fileID: 4639436736101682271}
   - component: {fileID: 8205100539466899305}
   - component: {fileID: 8205100539466899304}
   - component: {fileID: 8205100539466899287}
@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 8205100539466899292}
   - component: {fileID: 8205100539466899294}
   - component: {fileID: 8205100539466899293}
+  - component: {fileID: 449484157}
   m_Layer: 10
   m_Name: CharacterAll (3)
   m_TagString: Player
@@ -38,9 +39,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8205100539466899291}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.7771759, y: 6.6885996, z: -11.269318}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2611236840859935304}
@@ -58,26 +59,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1.13
-  m_Radius: 0.5
+  m_Height: 3.08
+  m_Radius: 0.37
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: -0.12, z: 0}
---- !u!65 &8205100539466899307
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8205100539466899291}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.1, z: 0.3}
-  m_Center: {x: 0, y: 0, z: 0.8}
+  m_Center: {x: 0, y: -0.12, z: 1.15}
 --- !u!54 &8205100539466899306
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -94,6 +82,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!65 &4639436736101682271
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8205100539466899291}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7692627, y: 1.8506521, z: 3.366738}
+  m_Center: {x: 0.0020902536, y: 0.7593527, z: -0.115666}
 --- !u!114 &8205100539466899305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,10 +110,10 @@ MonoBehaviour:
   CharacterDimension: 0
   CharacterType: 0
   PlayerID: Player1
-  CharacterAnimator: {fileID: 0}
+  CharacterAnimator: {fileID: 3145878812752129592}
   UseDefaultMecanim: 1
   RunAnimatorSanityChecks: 0
-  DisableAnimatorLogs: 1
+  DisableAnimatorLogs: 0
   CharacterModel: {fileID: 0}
   CharacterHealth: {fileID: 0}
   SendStateChangeEvents: 1
@@ -153,8 +154,8 @@ MonoBehaviour:
   ObstaclesLayerMask:
     serializedVersion: 2
     m_Bits: 199424
-  GroundedRaycastLength: 5
-  MinimumGroundedDistance: 0.2
+  GroundedRaycastLength: 2
+  MinimumGroundedDistance: 5
   GroundedComputationMode: 1
   GroundNormalHeightThreshold: 0.2
   ImpactFalloff: 5
@@ -259,13 +260,14 @@ MonoBehaviour:
   JumpProportionalToPress: 1
   MinimumPressTime: 10
   JumpForce: 800
-  JumpHeight: 1.5
+  JumpHeight: 1.8
   CanJumpOnTooSteepSlopes: 1
-  ResetJumpsOnTooSteepSlopes: 0
+  ResetJumpsOnTooSteepSlopes: 1
   NumberOfJumps: 2
   NumberOfJumpsLeft: 0
   JumpStartFeedback: {fileID: 0}
   JumpStopFeedback: {fileID: 0}
+  jumpSound: {fileID: 8300000, guid: ce3ee80093bd026469e2656829e42c99, type: 3}
 --- !u!114 &8205100539466899284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,7 +292,7 @@ MonoBehaviour:
   InputAuthorized: 1
   AnalogInput: 1
   ScriptDrivenInput: 0
-  WalkSpeed: 3
+  WalkSpeed: 3.5
   ShouldSetMovement: 1
   IdleThreshold: 0.05
   Acceleration: 10
@@ -392,7 +394,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8205100539466899291}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a07c6668aa55403790d27b575279549, type: 3}
   m_Name: 
@@ -471,6 +473,8 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
+  deathSound: {fileID: 0}
+  damageFx: {fileID: 0}
   characterHealthUIManager: {fileID: 0}
 --- !u!114 &8205100539466899294
 MonoBehaviour:
@@ -485,7 +489,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillUiManager: {fileID: 0}
-  coolDown: 0
+  coolDown: 3
+  skillSound: {fileID: 0}
 --- !u!114 &8205100539466899293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,6 +503,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 221e659ef9f0ef441a2f4072ae653e81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonEffect: {fileID: 0}
+--- !u!114 &449484157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8205100539466899291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54b7b53e26347643a7d54dd14a14b62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityStartSfx: {fileID: 0}
+  AbilityInProgressSfx: {fileID: 0}
+  AbilityStopSfx: {fileID: 0}
+  AbilityStartFeedbacks: {fileID: 0}
+  AbilityStopFeedbacks: {fileID: 0}
+  AbilityPermitted: 1
+  BlockingMovementStates: 
+  BlockingConditionStates: 
+  InitialWeapon: {fileID: -283134361146685008, guid: d249dcbdb2271df47b3e5a65883da27d,
+    type: 3}
+  CanPickupWeapons: 1
+  WeaponUseFeedback: {fileID: 0}
+  WeaponAttachment: {fileID: 0}
+  ProjectileSpawn: {fileID: 0}
+  AutomaticallyBindAnimator: 1
+  AmmoDisplayID: 0
+  AutoIK: 1
+  ContinuousPress: 0
+  GettingHitInterruptsAttack: 0
+  UseSecondaryAxisThresholdToShoot: 0
+  ForceWeaponAimControl: 0
+  ForcedWeaponAimControl: 1
+  BufferInput: 0
+  NewInputExtendsBuffer: 0
+  MaximumBufferDuration: 0.25
+  RequiresPerfectTile: 0
+  CurrentWeapon: {fileID: 0}
+  skillUiManager: {fileID: 0}
+  coolDown: 0
 --- !u!1001 &2573318381602325923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -518,7 +565,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e5848a5205d1c1c4a8aef6a07f60c853,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.588
+      value: -1.745
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e5848a5205d1c1c4a8aef6a07f60c853,
         type: 3}
