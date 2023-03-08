@@ -7,6 +7,7 @@ public static class LevelData
     const int TOTAL_LEVEL = 9;
 
     public static bool isTutorialComplete;
+    public static bool isTutorialCompleteWithPicture;
     public static int[] easyModeState = new int[TOTAL_LEVEL];
     public static int[] hardModeState = new int[TOTAL_LEVEL];
 
@@ -16,9 +17,17 @@ public static class LevelData
     public static LevelState levelState;
 
 
-    public static void TutorialComplete()
+    public static void TutorialComplete(bool isPictureTaken)
     {
-        PlayerPrefs.SetInt("isTutorialComplete", 1);
+        if (isPictureTaken == true)
+        {
+            PlayerPrefs.SetInt("isTutorialComplete", 1);
+            PlayerPrefs.SetInt("isTutorialCompleteWithPicture", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("isTutorialComplete", 1);
+        }
     }
     
     /// <summary>
@@ -44,7 +53,11 @@ public static class LevelData
     public static void LoadLevelStateData()
     {
         if (PlayerPrefs.HasKey("isTutorialComplete"))
+        {
             isTutorialComplete = PlayerPrefs.GetInt("isTutorialComplete") == 1 ? true : false;
+            isTutorialCompleteWithPicture = PlayerPrefs.GetInt("isTutorialCompleteWithPicture") == 1 ? true : false;
+        }
+           
 
         for (int i = 0; i < easyModeState.Length; i++)
         {

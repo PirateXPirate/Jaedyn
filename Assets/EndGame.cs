@@ -90,7 +90,16 @@ public class EndGame : MonoBehaviour
     {
         if (isTutorialLevel)
         {
-            LevelData.TutorialComplete();
+            if(LevelData.levelState == LevelData.LevelState.PerfectCleared)
+            {
+                LevelData.TutorialComplete(true);
+            }
+
+            else
+            {
+                LevelData.TutorialComplete(false);
+            }
+
             return;
         }
 

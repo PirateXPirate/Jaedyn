@@ -110,8 +110,8 @@ public class UIManager : MonoBehaviour
 
     void SetUpUi()
     {
-        LevelData.easyModeState[0] = 1;
-        LevelData.hardModeState[0] = 1;
+       // LevelData.easyModeState[0] = 1;
+       // LevelData.hardModeState[0] = 1;
 
         //setup EasymodeUI according to data
         for (int i = 0; i < LevelData.easyModeState.Length; i++)
@@ -182,32 +182,32 @@ public class UIManager : MonoBehaviour
     #region -SetActive UI-
     void CloseAllSymbol(Transform map)
     {
-        map.transform.Find("BG_Brown").gameObject.SetActive(false);
-        map.transform.Find("BG_Pass").gameObject.SetActive(false);
-        map.transform.Find("BG_Lock").gameObject.SetActive(false);
-        map.transform.Find("Lock").gameObject.SetActive(false);
-        map.transform.Find("Star").gameObject.SetActive(false);
-        map.transform.Find("StarYellow").gameObject.SetActive(false);
+        map.transform.Find("BG_Brown")?.gameObject.SetActive(false);
+        map.transform.Find("BG_Pass")?.gameObject.SetActive(false);
+        map.transform.Find("BG_Lock")?.gameObject.SetActive(false);
+        map.transform.Find("Lock")?.gameObject.SetActive(false);
+        map.transform.Find("Star")?.gameObject.SetActive(false);
+        map.transform.Find("StarYellow")?.gameObject.SetActive(false);
     }
     void LevelState0(Transform map)
     {
         CloseAllSymbol(map);
-        map.transform.Find("BG_Lock").gameObject.SetActive(true);
-        map.transform.Find("Lock").gameObject.SetActive(true);
+        map.transform.Find("BG_Lock")?.gameObject.SetActive(true);
+        map.transform.Find("Lock")?.gameObject.SetActive(true);
     }
 
     void LevelState1(Transform map)
     {
         CloseAllSymbol(map);
-        map.transform.Find("BG_Pass").gameObject.SetActive(true);
-        map.transform.Find("Star").gameObject.SetActive(true);
+        map.transform.Find("BG_Pass")?.gameObject.SetActive(true);
+        map.transform.Find("Star")?.gameObject.SetActive(true);
     }
 
     void LevelState2(Transform map)
     {
         CloseAllSymbol(map);
-        map.transform.Find("BG_Pass").gameObject.SetActive(true);
-        map.transform.Find("StarYellow").gameObject.SetActive(true);
+        map.transform.Find("BG_Pass")?.gameObject.SetActive(true);
+        map.transform.Find("StarYellow")?.gameObject.SetActive(true);
     }
 
    void SetBrownPanelEasy(int levelIndex)
@@ -215,25 +215,32 @@ public class UIManager : MonoBehaviour
         if (!LevelData.isTutorialComplete) { return; }
         var map = easyModeUi.transform.Find($"easyLevel{levelIndex}");
         CloseAllSymbol(map);
-        map.transform.Find("BG_Brown").gameObject.SetActive(true);
-        map.transform.Find("Star").gameObject.SetActive(true);
+        map.transform.Find("BG_Brown")?.gameObject.SetActive(true);
+        map.transform.Find("Star")?.gameObject.SetActive(true);
     }
     void SetBrownPanelHard(int levelIndex) 
     { 
         if (!LevelData.isTutorialComplete) { return; }
         var map = hardModeUi.transform.Find($"hardLevel{levelIndex}");
         CloseAllSymbol(map);
-        map.transform.Find("BG_Brown").gameObject.SetActive(true);
-        map.transform.Find("Star").gameObject.SetActive(true);
+        map.transform.Find("BG_Brown")?.gameObject.SetActive(true);
+        map.transform.Find("Star")?.gameObject.SetActive(true);
     }
 
     void SetCompleteTutorial()
     {
+        var map = easyModeUi.transform.Find($"LevelTutorial");
+
         if (LevelData.isTutorialComplete)
         {
-            var map = easyModeUi.transform.Find($"LevelTutorial");
-            map.transform.Find("BG_Brown").gameObject.SetActive(false);
-            map.transform.Find("BG_Pass").gameObject.SetActive(true);
+            map.transform.Find("BG_Brown")?.gameObject.SetActive(false);
+            map.transform.Find("BG_Pass")?.gameObject.SetActive(true);
+        }
+
+        if (LevelData.isTutorialCompleteWithPicture)
+        {
+            map.transform.Find("Star")?.gameObject.SetActive(false);
+            map.transform.Find("StarYellow")?.gameObject.SetActive(true);
         }
     }
     #endregion 
