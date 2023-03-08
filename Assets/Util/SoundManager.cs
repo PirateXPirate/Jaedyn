@@ -34,6 +34,9 @@ public class SoundManager : MonoBehaviour
     }
 
     public void PlayFX(AudioClip clip) {
+        if (fx.isPlaying)
+            fx.Stop();
+
         fx.PlayOneShot(clip);
     }
 }

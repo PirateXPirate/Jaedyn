@@ -16,6 +16,8 @@ public class ChestBox : MonoBehaviour
     AudioSource audi;
 
     public bool canOpen;
+
+    public CoinManager coinManager;
     public enum ChestType
     {
         Coin,
@@ -31,7 +33,7 @@ public class ChestBox : MonoBehaviour
     public void Perform()
     {
         if (!canOpen) return;
-        animator.SetBool("openchest",true);
+        animator.SetBool("openchest", true);
         openParticle.Play();
     }
 
@@ -43,6 +45,13 @@ public class ChestBox : MonoBehaviour
     public void SpawnDrops()
     {
         PopuptoShow.SetActive(true);
-        addItem.GetPotionChest();
+        if (currentChestType == ChestType.Potion)
+            addItem.GetPotionChest();
+        if (currentChestType == ChestType.Coin)
+        {
+            var randomCoin = Random.Range(1, 3);
+            coinManager.AddCoin(randomCoin);
+        }
+           
     }
 }

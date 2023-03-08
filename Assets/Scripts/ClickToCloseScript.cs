@@ -23,17 +23,20 @@ public class ClickToCloseScript : MonoBehaviour
         {
             Utils.soundManager.loop.volume = PlayerPrefs.GetFloat("loop", .5f);
         }
-           
+
     }
     private void OnEnable()
     {
         if (Utils.soundManager)
         {
             currentVolume = Utils.soundManager.loop.volume;
-             Utils.soundManager.loop.volume *= 0.25f;
+            var audi = GetComponent<AudioSource>();
+            if (audi)
+                audi.volume = currentVolume;
+            Utils.soundManager.loop.volume *= 0.25f;
         }
     }
-  
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -51,21 +54,24 @@ public class ClickToCloseScript : MonoBehaviour
                 ActivateObject.SetActive(true);
                 ActivateObject = null;
             }
-              
+
         }
     }
-    public void SetupStory(string msg) {
-      //  txtStory.text = msg;
+    public void SetupStory(string msg)
+    {
+        //  txtStory.text = msg;
         gameObject.SetActive(true);
     }
 
-    public void OnClickClose() {
+    public void OnClickClose()
+    {
         Utils.soundManager.PlayFX(fxClick);
-      
+
         gameObject.SetActive(false);
     }
 
-    public void OnClickGoTitle() {
+    public void OnClickGoTitle()
+    {
         Utils.soundManager.PlayFX(fxClick);
         SceneManager.LoadScene("MapScene");
     }

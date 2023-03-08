@@ -90,9 +90,9 @@ CharacterController:
   serializedVersion: 2
   m_Height: 18.92
   m_Radius: 1.42
-  m_SlopeLimit: 45
+  m_SlopeLimit: 10
   m_StepOffset: 0
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.1
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 9.09, z: 0}
 --- !u!54 &7629490427227888739
@@ -276,8 +276,8 @@ MonoBehaviour:
   Model: {fileID: 0}
   CurrentHealth: 100
   Invulnerable: 0
-  InitialHealth: 30
-  MaximumHealth: 30
+  InitialHealth: 100
+  MaximumHealth: 100
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
   DamageMMFeedbacks: {fileID: 0}
@@ -448,7 +448,7 @@ MonoBehaviour:
   AbilityPermitted: 1
   BlockingMovementStates: 
   BlockingConditionStates: 
-  InitialWeapon: {fileID: -283134361146685008, guid: ec62a76738a85354994c06a89420d12f,
+  InitialWeapon: {fileID: -283134361146685008, guid: 8b5950a51d5ee76428488a59ced05630,
     type: 3}
   CanPickupWeapons: 1
   WeaponUseFeedback: {fileID: 0}

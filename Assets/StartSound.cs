@@ -15,18 +15,26 @@ public class StartSound : MonoBehaviour
     [SerializeField] private AudioClip startWalkAudioClip;
 
     AnalogStick analogStick;
+    public bool isLock;
     void Start()
     {
-        controllerUi.canInteract = false;
-        analogStick =  controllerUi.GetComponentInChildren<AnalogStick>();
-        analogStick.canInteract = false;
-
-        analogStick.onPointerDown.AddListener(delegate { OnStartWalk(0); });
-        Utils.soundManager.PlayFX(startAudioClip);
-
+        if(Utils.soundManager)
         Utils.soundManager.PlayLoop(mapBgAudio);
 
-        Invoke("WaitClipEnd",startAudioClip.length);
+        if (isLock)
+        {
+            controllerUi.canInteract = false;
+            analogStick = controllerUi.GetComponentInChildren<AnalogStick>();
+            analogStick.canInteract = false;
+
+            analogStick.onPointerDown.AddListener(delegate { OnStartWalk(0); });
+            Utils.soundManager.PlayFX(startAudioClip);
+
+
+
+            Invoke("WaitClipEnd", startAudioClip.length);
+        }
+      
     }
     private void OnEnable()
     {
@@ -44,6 +52,7 @@ public class StartSound : MonoBehaviour
     }
     private void OnDisable()
     {
+        if(analogStick)
         analogStick.onPointerDown.RemoveAllListeners();
     }
 

@@ -9,6 +9,7 @@ public class PlaySoundWhenTrigger : MonoBehaviour
     {
         if (other.tag.Equals("Player"))
         {
+            GetComponent<Collider>().enabled = false;
             Utils.soundManager.PlayFX(audi);
         }
     }

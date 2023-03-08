@@ -103,8 +103,8 @@ MonoBehaviour:
   weaponSound: {fileID: 8300000, guid: 7b2693fecd53d6148aeb02e07c91eb1a, type: 3}
   MeleeDamageAreaMode: 0
   DamageAreaShape: 2
-  AreaSize: {x: 1.45, y: 1, z: 0.59}
-  AreaOffset: {x: 0, y: 0, z: 0.99}
+  AreaSize: {x: 1.45, y: 1, z: 0.75}
+  AreaOffset: {x: 0, y: 0.75, z: 2}
   HitDamageableFeedback: {fileID: 0}
   HitNonDamageableFeedback: {fileID: 0}
   ExistingDamageArea: {fileID: 0}
@@ -115,8 +115,8 @@ MonoBehaviour:
     m_Bits: 8192
   MinDamageCaused: 5
   MaxDamageCaused: 5
-  Knockback: 0
-  KnockbackForce: {x: 20, y: 2, z: 0}
+  Knockback: 1
+  KnockbackForce: {x: 50, y: 2, z: 0}
   InvincibilityDuration: 0.5
   CanDamageOwner: 0
   stunZone: {fileID: 0}

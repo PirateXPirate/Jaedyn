@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KeyManager : MonoBehaviour
 {
@@ -13,12 +14,15 @@ public class KeyManager : MonoBehaviour
     bool gotKey = false;
     bool gotLock = false;
 
+    public Text ketText;
+
     public void AddKey(int quantity)
     {
         keyQuantity += quantity;
         keyUIManager.SetkeyQuantity(keyQuantity);
         gotKey = true;
         CheckKey();
+        ketText.text = keyQuantity.ToString();
 
     }
     public void GetLock()

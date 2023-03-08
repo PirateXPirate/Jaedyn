@@ -39,7 +39,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2771629095996229263}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.7771759, y: 6.6885996, z: -11.269318}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -65,7 +65,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: -0.12, z: 1.15}
+  m_Center: {x: 0, y: 1.37, z: 1.17}
 --- !u!65 &2771629095996229279
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -155,7 +155,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 199424
   GroundedRaycastLength: 2
-  MinimumGroundedDistance: 0.2
+  MinimumGroundedDistance: 5
   GroundedComputationMode: 1
   GroundNormalHeightThreshold: 0.2
   ImpactFalloff: 5
@@ -632,7 +632,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 899f2c5eb095244f19afab1a8f1e47d7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.71
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 899f2c5eb095244f19afab1a8f1e47d7,
         type: 3}
