@@ -1083,13 +1083,21 @@ namespace MoreMountains.TopDownEngine
 		/// </summary>
 		public virtual void UpdateAnimator()
 		{
+			if (_ownerAnimator == null)
+			{
+				_ownerAnimator = GetComponentInParent<Character>()._animator;
+				SetOwner(GetComponentInParent<Character>(), GetComponentInParent<CharacterHandleWeapon>());
+				InitializeAnimatorParameters();
+			}
+		
 			for (int i = 0; i < Animators.Count; i++)
 			{
+				
 				UpdateAnimator(Animators[i], _animatorParameters[i]);
 			}
-
 			if ((_ownerAnimator != null) && (WeaponState != null) && (_ownerAnimatorParameters != null))
 			{
+				
 				UpdateAnimator(_ownerAnimator, _ownerAnimatorParameters);
 			}
 		}

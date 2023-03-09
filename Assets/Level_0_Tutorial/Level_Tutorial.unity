@@ -7933,7 +7933,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 8205100539245790408}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 496088571}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 450ff36cd4c98a949bbf8d3d0a2b270e, type: 3}
@@ -7945,7 +7945,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 8205100539245790408}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 496088571}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fe81ad80cb743b408fa90b048ad597f, type: 3}
@@ -11039,53 +11039,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1535793890}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &496088571 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8205100539466899291, guid: a49c313805edfe44f9843c350826b6d4,
-    type: 3}
-  m_PrefabInstance: {fileID: 8205100539245790408}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &496088587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 496088571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c54b7b53e26347643a7d54dd14a14b62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AbilityStartSfx: {fileID: 0}
-  AbilityInProgressSfx: {fileID: 0}
-  AbilityStopSfx: {fileID: 0}
-  AbilityStartFeedbacks: {fileID: 0}
-  AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 1
-  BlockingMovementStates: 
-  BlockingConditionStates: 
-  InitialWeapon: {fileID: -283134361146685008, guid: d249dcbdb2271df47b3e5a65883da27d,
-    type: 3}
-  CanPickupWeapons: 1
-  WeaponUseFeedback: {fileID: 0}
-  WeaponAttachment: {fileID: 0}
-  ProjectileSpawn: {fileID: 0}
-  AutomaticallyBindAnimator: 1
-  AmmoDisplayID: 0
-  AutoIK: 1
-  ContinuousPress: 0
-  GettingHitInterruptsAttack: 0
-  UseSecondaryAxisThresholdToShoot: 0
-  ForceWeaponAimControl: 0
-  ForcedWeaponAimControl: 1
-  BufferInput: 0
-  NewInputExtendsBuffer: 0
-  MaximumBufferDuration: 0.25
-  RequiresPerfectTile: 0
-  CurrentWeapon: {fileID: 0}
-  skillUiManager: {fileID: 0}
-  coolDown: 0
 --- !u!1001 &499140938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43673,6 +43626,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839420197}
   m_CullTransparentMesh: 1
+--- !u!1 &1840686655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1840686657}
+  - component: {fileID: 1840686656}
+  m_Layer: 0
+  m_Name: StartSoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1840686656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840686655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d1c489839887240b13362b280b2ff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controllerUi: {fileID: 339305794}
+  startAudioClip: {fileID: 8300000, guid: bdfbe4843cd2643d4b10ae0757965eb6, type: 3}
+  mapBgAudio: {fileID: 8300000, guid: 450d93660894cc047968212ab6fa48bd, type: 3}
+  startWalkAudioClip: {fileID: 8300000, guid: d8ab973583c494137b312e78058ca0c9, type: 3}
+  isLock: 0
+--- !u!4 &1840686657
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840686655}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.5, y: 1.5, z: 9.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 40
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1843258260 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8593737713898898275, guid: 4b19d86f3e0e9f344b600ca085cb5f75,
@@ -45027,8 +45029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AutoAttributePlayerIDs: 1
-  PlayerPrefabs:
-  - {fileID: 358013857}
+  PlayerPrefabs: []
   SceneCharacters:
   - {fileID: 358013857}
   InitialSpawnPoint: {fileID: 731019057}
@@ -51141,7 +51142,7 @@ PrefabInstance:
     - target: {fileID: 8205100539466899305, guid: a49c313805edfe44f9843c350826b6d4,
         type: 3}
       propertyPath: RunAnimatorSanityChecks
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8205100539466899308, guid: a49c313805edfe44f9843c350826b6d4,
         type: 3}

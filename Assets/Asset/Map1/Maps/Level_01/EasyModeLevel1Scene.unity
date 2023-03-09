@@ -3875,6 +3875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyUIManager: {fileID: 134998577}
   endGateParticle: {fileID: 841454324}
+  ketText: {fileID: 1951434389}
 --- !u!114 &134998577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11124,6 +11125,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -10.364
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1b7a92d868fdac244bf60322418e64d1,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 1b7a92d868fdac244bf60322418e64d1,
         type: 3}
@@ -22890,6 +22896,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 13.282
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1b7a92d868fdac244bf60322418e64d1,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 1b7a92d868fdac244bf60322418e64d1,
         type: 3}
@@ -42410,7 +42421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1888651051
 Transform:
   m_ObjectHideFlags: 0
@@ -42442,6 +42453,7 @@ MonoBehaviour:
   startAudioClip: {fileID: 8300000, guid: bdfbe4843cd2643d4b10ae0757965eb6, type: 3}
   mapBgAudio: {fileID: 8300000, guid: 450d93660894cc047968212ab6fa48bd, type: 3}
   startWalkAudioClip: {fileID: 8300000, guid: d8ab973583c494137b312e78058ca0c9, type: 3}
+  isLock: 1
 --- !u!1001 &1892638159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43476,12 +43488,12 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 3.08
-  m_Radius: 0.37
+  m_Radius: 1.48
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1.37, z: 1.17}
+  m_Center: {x: 0, y: 1.37, z: 0}
 --- !u!1 &1927094449
 GameObject:
   m_ObjectHideFlags: 0
@@ -45999,7 +46011,7 @@ BoxCollider:
   m_GameObject: {fileID: 2014973153}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.7692627, y: 1.8506521, z: 3.366738}
   m_Center: {x: 0.0020902536, y: 0.7593527, z: -0.115666}
@@ -46015,12 +46027,12 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 3.08
-  m_Radius: 0.37
+  m_Radius: 1.48
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1.37, z: 1.17}
+  m_Center: {x: 0, y: 1.37, z: 0}
 --- !u!1001 &2015995796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46885,6 +46897,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.27
       objectReference: {fileID: 0}
+    - target: {fileID: 4639436736101682271, guid: a49c313805edfe44f9843c350826b6d4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8205100539466899284, guid: a49c313805edfe44f9843c350826b6d4,
         type: 3}
       propertyPath: WalkSpeed
@@ -46988,7 +47005,22 @@ PrefabInstance:
     - target: {fileID: 8205100539466899308, guid: a49c313805edfe44f9843c350826b6d4,
         type: 3}
       propertyPath: m_Radius
-      value: 0.37
+      value: 1.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205100539466899308, guid: a49c313805edfe44f9843c350826b6d4,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205100539466899308, guid: a49c313805edfe44f9843c350826b6d4,
+        type: 3}
+      propertyPath: m_SlopeLimit
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205100539466899308, guid: a49c313805edfe44f9843c350826b6d4,
+        type: 3}
+      propertyPath: m_StepOffset
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8205100539466899309, guid: a49c313805edfe44f9843c350826b6d4,
         type: 3}

@@ -6423,6 +6423,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZMOBA_Prop_Stairs_A_3
       objectReference: {fileID: 0}
+    - target: {fileID: 1991800757512256, guid: b9f4dc5b51591f54bb72f2af08a3dbf7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4833596872686158, guid: b9f4dc5b51591f54bb72f2af08a3dbf7, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -6465,6 +6469,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4833596872686158, guid: b9f4dc5b51591f54bb72f2af08a3dbf7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64486131494021548, guid: b9f4dc5b51591f54bb72f2af08a3dbf7,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9644,7 +9653,12 @@ PrefabInstance:
     - target: {fileID: 8205100539466899308, guid: a49c313805edfe44f9843c350826b6d4,
         type: 3}
       propertyPath: m_SlopeLimit
-      value: 45
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205100539466899308, guid: a49c313805edfe44f9843c350826b6d4,
+        type: 3}
+      propertyPath: m_StepOffset
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8205100539466899309, guid: a49c313805edfe44f9843c350826b6d4,
         type: 3}
@@ -13899,6 +13913,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 857851617}
     m_Modifications:
+    - target: {fileID: 211423970243289707, guid: f086d36d937dcbb4c86f786798e4312a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.19
+      objectReference: {fileID: 0}
     - target: {fileID: 2603745913545982229, guid: f086d36d937dcbb4c86f786798e4312a,
         type: 3}
       propertyPath: m_Name
@@ -13958,6 +13977,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6614945475837217387, guid: f086d36d937dcbb4c86f786798e4312a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f086d36d937dcbb4c86f786798e4312a, type: 3}
@@ -19591,13 +19615,23 @@ PrefabInstance:
       objectReference: {fileID: 736377181}
     - target: {fileID: 2937549640230559041, guid: 390f9f3a179dc8440a8c0f91f92a4341,
         type: 3}
+      propertyPath: m_Height
+      value: 6.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2937549640230559041, guid: 390f9f3a179dc8440a8c0f91f92a4341,
+        type: 3}
       propertyPath: m_Radius
-      value: 0.76
+      value: 0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 2937549640230559041, guid: 390f9f3a179dc8440a8c0f91f92a4341,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 3.17
       objectReference: {fileID: 0}
     - target: {fileID: 2937549640230559041, guid: 390f9f3a179dc8440a8c0f91f92a4341,
         type: 3}
       propertyPath: m_Center.z
-      value: 0.66
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: 2937549640230559048, guid: 390f9f3a179dc8440a8c0f91f92a4341,
         type: 3}
@@ -23104,6 +23138,10 @@ PrefabInstance:
       value: ZMOBA_Prop_Stairs_A_3 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1991800757512256, guid: b9f4dc5b51591f54bb72f2af08a3dbf7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991800757512256, guid: b9f4dc5b51591f54bb72f2af08a3dbf7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -23149,6 +23187,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4833596872686158, guid: b9f4dc5b51591f54bb72f2af08a3dbf7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64486131494021548, guid: b9f4dc5b51591f54bb72f2af08a3dbf7,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -35487,6 +35530,10 @@ PrefabInstance:
       value: ZMOBA_Prop_Stairs_A_3 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 1991800757512256, guid: b9f4dc5b51591f54bb72f2af08a3dbf7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991800757512256, guid: b9f4dc5b51591f54bb72f2af08a3dbf7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -35532,6 +35579,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4833596872686158, guid: b9f4dc5b51591f54bb72f2af08a3dbf7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64486131494021548, guid: b9f4dc5b51591f54bb72f2af08a3dbf7,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -40762,7 +40814,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1671820274}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 47.97, y: 10, z: 26.24}
+  m_LocalPosition: {x: 48.13, y: 9.93, z: 190.42139}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49317,6 +49369,10 @@ PrefabInstance:
       value: ZMOBA_Prop_Stairs_A_3 (3)
       objectReference: {fileID: 0}
     - target: {fileID: 1991800757512256, guid: b9f4dc5b51591f54bb72f2af08a3dbf7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991800757512256, guid: b9f4dc5b51591f54bb72f2af08a3dbf7, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -49362,6 +49418,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4833596872686158, guid: b9f4dc5b51591f54bb72f2af08a3dbf7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64486131494021548, guid: b9f4dc5b51591f54bb72f2af08a3dbf7,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

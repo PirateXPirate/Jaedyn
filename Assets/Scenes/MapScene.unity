@@ -7735,6 +7735,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 651074047}
   m_CullTransparentMesh: 1
+--- !u!1 &657560601
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 657560603}
+  - component: {fileID: 657560602}
+  m_Layer: 0
+  m_Name: StartSoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &657560602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657560601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d1c489839887240b13362b280b2ff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controllerUi: {fileID: 0}
+  startAudioClip: {fileID: 8300000, guid: bdfbe4843cd2643d4b10ae0757965eb6, type: 3}
+  mapBgAudio: {fileID: 8300000, guid: 450d93660894cc047968212ab6fa48bd, type: 3}
+  startWalkAudioClip: {fileID: 8300000, guid: d8ab973583c494137b312e78058ca0c9, type: 3}
+  isLock: 0
+--- !u!4 &657560603
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657560601}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.5, y: 1.5, z: 9.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &667899722
 GameObject:
   m_ObjectHideFlags: 0
