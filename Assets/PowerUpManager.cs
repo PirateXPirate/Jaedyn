@@ -45,7 +45,7 @@ public class PowerUpManager : MonoBehaviour
 
     public void UseHPPotion()
     {
-        if (hpPotionQuantity > 0)
+        if (hpPotionQuantity > 0 && playerHealth.CurrentHealth > 0)
         {
             onUseHPPotion?.Invoke();
             hpPotionQuantity -= 1;
@@ -63,7 +63,7 @@ public class PowerUpManager : MonoBehaviour
     }
     public void UseResistancePotion()
     {
-        if (resistancePotionQuantity > 0)
+        if (resistancePotionQuantity > 0 && playerHealth.CurrentHealth > 0)
         {
             onUseRessistancePotion?.Invoke();
             resistancePotionQuantity -= 1;

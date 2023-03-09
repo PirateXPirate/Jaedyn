@@ -33,6 +33,10 @@ public class EndGame : MonoBehaviour
 
     void Start()
     {
+        if (Utils.soundManager)
+        {
+            Utils.soundManager.loop.volume = PlayerPrefs.GetFloat("loop", .5f);
+        }
         SaveDataToPlayerPrefs();
     }
     void Update()
