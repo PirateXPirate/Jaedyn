@@ -3448,6 +3448,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   ActivateObject: {fileID: 0}
   controllerUi: {fileID: 860151321}
+  IgnoreSound: 0
 --- !u!114 &122304614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12270,6 +12271,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   ActivateObject: {fileID: 0}
   controllerUi: {fileID: 860151321}
+  IgnoreSound: 0
 --- !u!114 &549569422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18370,6 +18372,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   ActivateObject: {fileID: 0}
   controllerUi: {fileID: 860151321}
+  IgnoreSound: 0
 --- !u!114 &812563981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23761,6 +23764,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   ActivateObject: {fileID: 0}
   controllerUi: {fileID: 860151321}
+  IgnoreSound: 0
 --- !u!114 &1023427738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26156,6 +26160,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   ActivateObject: {fileID: 0}
   controllerUi: {fileID: 860151321}
+  IgnoreSound: 0
 --- !u!114 &1133779463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29383,8 +29388,8 @@ GameObject:
   - component: {fileID: 1289654109}
   - component: {fileID: 1289654113}
   - component: {fileID: 1289654112}
-  - component: {fileID: 1289654111}
   - component: {fileID: 1289654110}
+  - component: {fileID: 1289654111}
   m_Layer: 5
   m_Name: KeyPopup
   m_TagString: Untagged
@@ -29530,6 +29535,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   ActivateObject: {fileID: 0}
   controllerUi: {fileID: 860151321}
+  IgnoreSound: 0
 --- !u!114 &1289654112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39376,6 +39382,11 @@ MonoBehaviour:
   - {fileID: 852952878}
   - {fileID: 1559420530}
   - {fileID: 1114890372}
+  healthSound:
+  - {fileID: 8300000, guid: 6f2d511566a6b5645a2733a656b74a09, type: 3}
+  - {fileID: 8300000, guid: edb43fd89e23a614fb5daf96004558f4, type: 3}
+  - {fileID: 8300000, guid: 1a44880258ad8d041b2ac22370aff23a, type: 3}
+  - {fileID: 8300000, guid: bb8fd39532f17014abd14c7d622f40f4, type: 3}
 --- !u!114 &1781734609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43822,6 +43833,11 @@ PrefabInstance:
       propertyPath: PopuptoShow
       value: 
       objectReference: {fileID: 812563978}
+    - target: {fileID: 2409937445886063777, guid: 402e64ed91375ef428cbb96a1e8451d8,
+        type: 3}
+      propertyPath: ResistancePopup
+      value: 
+      objectReference: {fileID: 549569419}
     - target: {fileID: 6242598801898461198, guid: 402e64ed91375ef428cbb96a1e8451d8,
         type: 3}
       propertyPath: numPotion
@@ -44192,7 +44208,7 @@ RectTransform:
   m_GameObject: {fileID: 1965260656}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.0517, y: 2.0517, z: 2.0517}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1289654109}
@@ -44200,7 +44216,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 198.1}
+  m_AnchoredPosition: {x: 0, y: 124.7}
   m_SizeDelta: {x: 129, y: 117}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1965260658
@@ -46673,7 +46689,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8242244, guid: 41abc70738414b04091e8d9522137704, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 41abc70738414b04091e8d9522137704, type: 3}
 --- !u!1 &2029645312 stripped
 GameObject:
@@ -47165,6 +47182,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   ActivateObject: {fileID: 1023427735}
   controllerUi: {fileID: 860151321}
+  IgnoreSound: 0
 --- !u!114 &2046264042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48980,6 +48998,21 @@ PrefabInstance:
       propertyPath: controlUi
       value: 
       objectReference: {fileID: 860151320}
+    - target: {fileID: 5297537128408653013, guid: d4529f47989526241929319abfdfc29d,
+        type: 3}
+      propertyPath: restartSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 87569eae5b27945abbc58f79104d63b3, type: 3}
+    - target: {fileID: 5297537128408653013, guid: d4529f47989526241929319abfdfc29d,
+        type: 3}
+      propertyPath: startPopupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 9a77ee04550c257458882c7d3862ccfa, type: 3}
+    - target: {fileID: 5297537128408653013, guid: d4529f47989526241929319abfdfc29d,
+        type: 3}
+      propertyPath: currentSceneName
+      value: EasyModeLevel1Scene
+      objectReference: {fileID: 0}
     - target: {fileID: 5297537128408653013, guid: d4529f47989526241929319abfdfc29d,
         type: 3}
       propertyPath: homeButClickSound
@@ -51513,6 +51546,11 @@ PrefabInstance:
       propertyPath: PopuptoShow
       value: 
       objectReference: {fileID: 812563978}
+    - target: {fileID: 2409937445886063777, guid: 402e64ed91375ef428cbb96a1e8451d8,
+        type: 3}
+      propertyPath: ResistancePopup
+      value: 
+      objectReference: {fileID: 549569419}
     - target: {fileID: 6242598801898461198, guid: 402e64ed91375ef428cbb96a1e8451d8,
         type: 3}
       propertyPath: powerUpManager

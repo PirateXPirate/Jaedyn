@@ -10,6 +10,7 @@ public class ChestBox : MonoBehaviour
     public ParticleSystem openParticle;
 
     public GameObject PopuptoShow;
+    public GameObject ResistancePopup;
 
     AddItem addItem;
 
@@ -44,13 +45,38 @@ public class ChestBox : MonoBehaviour
 
     public void SpawnDrops()
     {
-        PopuptoShow.SetActive(true);
+       
         if (currentChestType == ChestType.Potion)
-            addItem.GetPotionChest();
+        {
+            var randomPotion = Random.Range(0, 100);
+            if (randomPotion >= 70)
+            {
+                PopuptoShow.SetActive(true);
+                addItem.GetPotionChest();
+            }
+            else
+            {
+                ResistancePopup.SetActive(true);
+
+                addItem.GetResistanceChest();
+            }
+
+        }
+        
         if (currentChestType == ChestType.Coin)
         {
-            var randomCoin = Random.Range(1, 3);
-            coinManager.AddCoin(randomCoin);
+            PopuptoShow.SetActive(true);
+            var randomCoin = Random.Range(0,101);
+            int numCoin;
+            if (randomCoin <= 65)
+                numCoin = 1;
+            else if (randomCoin <= 85)
+                numCoin = 2;
+            else if (randomCoin <= 95)
+                numCoin = 5;
+            else
+                numCoin = 10;
+            coinManager.AddCoin(numCoin);
         }
            
     }

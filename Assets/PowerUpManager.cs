@@ -55,7 +55,7 @@ public class PowerUpManager : MonoBehaviour
                 playerHealth.CurrentHealth = playerHealth.MaximumHealth;
             playerHealth.UpdateHealthBar(false);
 
-            Utils.soundManager.PlayFX(useHpPotionSound);
+            Utils.soundManager.PlayFX(useHpPotionSound, true);
             powerUpUI.SetHPItemQuantity(hpPotionQuantity);
             Instantiate(healthPotionFx, LevelManager.Instance.Players[0].transform.position, Quaternion.identity);
            
@@ -71,7 +71,7 @@ public class PowerUpManager : MonoBehaviour
             powerUpUI.SetResistanceItemQuantity(resistancePotionQuantity);
             StartCoroutine(CountDown());
             Instantiate(resistancePotionFx, LevelManager.Instance.Players[0].transform.position, Quaternion.identity);
-            Utils.soundManager.PlayFX(useResistancePotionSound);
+            Utils.soundManager.PlayFX(useResistancePotionSound,true);
             IEnumerator  CountDown()
             {
                 yield return new WaitForSeconds(15);

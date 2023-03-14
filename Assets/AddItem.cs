@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,5 +17,10 @@ public class AddItem : MonoBehaviour
     public void GetPotionChest()
     {
         powerUpManager.AddHpPotion(1);
+    }
+
+    internal void GetResistanceChest()
+    {
+        powerUpManager.AddResistancePotion(1);
     }
 }

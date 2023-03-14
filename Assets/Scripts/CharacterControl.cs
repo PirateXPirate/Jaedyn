@@ -197,7 +197,7 @@ public class CharacterControl : MonoBehaviour
         } else if (currentSelect == 1) {
             //tiger Attack 10%
             characters[currentSelect].GetComponent<Animator>().SetTrigger("isAttack");
-            Utils.soundManager.PlayFX(fxTigerAttack);
+            Utils.soundManager.PlayFX(fxTigerAttack, true);
             
             if (!tigerAttack.activeSelf) {
                 tigerAttack.SetActive(true);
@@ -224,7 +224,7 @@ public class CharacterControl : MonoBehaviour
         }else if (currentSelect == 1) {
             //Tiger Attack
             characters[currentSelect].GetComponent<Animator>().SetTrigger("isAttack");
-            Utils.soundManager.PlayFX(fxTigerAttack);
+            Utils.soundManager.PlayFX(fxTigerAttack, true);
 
             if (!tigerAttack.activeSelf) {
                 tigerAttack.SetActive(true);
@@ -356,7 +356,7 @@ public class CharacterControl : MonoBehaviour
         print(other.tag);
         if (other.gameObject.tag == "Destroyable") {
             destDestroy = other.gameObject;
-            Utils.soundManager.PlayFX(fxTigerAttack);
+            Utils.soundManager.PlayFX(fxTigerAttack, true);
         } else if (other.gameObject.tag == "Fly" && currentSelect==2) {
             onFly = other.gameObject;
         } else if (other.gameObject.tag == "NotiJump") {

@@ -27,6 +27,8 @@ GameObject:
   - component: {fileID: 7574661053924195999}
   - component: {fileID: 7455049300593606111}
   - component: {fileID: 5217103523324010848}
+  - component: {fileID: 3111420331172889234}
+  - component: {fileID: 5750242802996724774}
   m_Layer: 13
   m_Name: WolfPupHard
   m_TagString: Untagged
@@ -324,7 +326,7 @@ MonoBehaviour:
   - StateName: Detecting
     Actions:
       array:
-      - {fileID: 7574661053924196068}
+      - {fileID: 5750242802996724774}
     Transitions:
       array:
       - Decision: {fileID: 7574661053924196070}
@@ -548,7 +550,7 @@ MonoBehaviour:
   TimeScale: 0
   HealthBarPrefab: {fileID: 0}
   TargetProgressBar: {fileID: 0}
-  Size: {x: 1, y: 0.2}
+  Size: {x: 1, y: 0.125}
   BackgroundPadding: {x: 0.01, y: 0.01}
   InitialRotationAngles: {x: 0, y: 0, z: 0}
   ForegroundColor:
@@ -735,6 +737,60 @@ MonoBehaviour:
   WeaponModels: []
   StunButton: 0
   ExitStunButton: 0
+--- !u!114 &3111420331172889234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7574661053924195988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b81dc1a6e4b189d4bae2faab8a2a1a25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CycleOption: 1
+  LoopInitialMovementDirection: 0
+  PathElements:
+  - PathElementPosition: {x: 3.4911613, y: -0.43019962, z: 0.19229126}
+    Delay: 2
+  - PathElementPosition: {x: 3, y: 0, z: 3}
+    Delay: 2
+  - PathElementPosition: {x: 1.2, y: 0, z: 5.81}
+    Delay: 2
+  - PathElementPosition: {x: -4.26, y: 0, z: 1.97}
+    Delay: 2
+  - PathElementPosition: {x: -2.2305222, y: -0.14275074, z: -3.528183}
+    Delay: 2
+  - PathElementPosition: {x: 3.4602928, y: 0.6119118, z: -2.771515}
+    Delay: 2
+  ReferenceMMPath: {fileID: 3111420331172889234}
+  AbsoluteReferencePath: 0
+  MinDistanceToGoal: 1
+  LockHandlesOnXAxis: 0
+  LockHandlesOnYAxis: 0
+  LockHandlesOnZAxis: 0
+--- !u!114 &5750242802996724774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7574661053924195988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab38fb8d19ed4db48b4e6216a171c08f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationMode: 0
+  Label: 
+  ChangeDirectionOnObstacle: 1
+  ObstacleDetectionDistance: 1
+  ObstaclesCheckFrequency: 1
+  ObstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  CurrentPathIndex: 0
 --- !u!1001 &7616885646572762217
 PrefabInstance:
   m_ObjectHideFlags: 0

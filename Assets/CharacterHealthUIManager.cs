@@ -7,7 +7,9 @@ public class CharacterHealthUIManager : MonoBehaviour
 {
     [SerializeField] Sprite[] heartSprites;
     [SerializeField] Image[] heartUIImage;
-    
+
+    [SerializeField] AudioClip[] healthSound;
+
 
 
     // Start is called before the first frame update
@@ -19,7 +21,6 @@ public class CharacterHealthUIManager : MonoBehaviour
 
     public void SetHP(int value)
     {
-        float secment = value / 5;
 
         for (int i = 0; i < heartUIImage.Length; i++)
         {
@@ -42,6 +43,7 @@ public class CharacterHealthUIManager : MonoBehaviour
         }
         else if (value > 60)
         {
+            Utils.soundManager.PlayFX(healthSound[0]);
             for (int i = 0; i < 4; i++)
             {
                 heartUIImage[i].sprite = heartSprites[0];
@@ -49,6 +51,7 @@ public class CharacterHealthUIManager : MonoBehaviour
         }
         else if (value > 40)
         {
+            Utils.soundManager.PlayFX(healthSound[1]);
             for (int i = 0; i < 3; i++)
             {
                 heartUIImage[i].sprite = heartSprites[0];
@@ -56,6 +59,7 @@ public class CharacterHealthUIManager : MonoBehaviour
         }
         else if (value > 20)
         {
+            Utils.soundManager.PlayFX(healthSound[2]);
             for (int i = 0; i < 2; i++)
             {
                 heartUIImage[i].sprite = heartSprites[0];
@@ -63,6 +67,7 @@ public class CharacterHealthUIManager : MonoBehaviour
         }
         else if (value > 0)
         {
+            Utils.soundManager.PlayFX(healthSound[3]);
             heartUIImage[0].sprite = heartSprites[0];
         }
 

@@ -17,8 +17,11 @@ public class ClickToCloseScript : MonoBehaviour
     public GameObject ActivateObject;
     [SerializeField] private TouchInputManager controllerUi;
     float currentVolume;
+    public bool IgnoreSound;
+    AudioSource audi;
     private void Start()
     {
+        
         if (Utils.soundManager)
         {
             Utils.soundManager.loop.volume = PlayerPrefs.GetFloat("loop", .5f);
@@ -27,9 +30,16 @@ public class ClickToCloseScript : MonoBehaviour
     }
     private void OnEnable()
     {
+       
+        audi = GetComponent<AudioSource>();
+        Debug.Log(audi);
+        if (audi)
+            audi.volume = Utils.soundManager.fx.volume;
         if (Utils.soundManager)
         {
             currentVolume = Utils.soundManager.loop.volume;
+            if (IgnoreSound) return;
+            Debug.Log("Ignore");
             var audi = GetComponent<AudioSource>();
             if (audi)
                 audi.volume = currentVolume;
@@ -42,9 +52,10 @@ public class ClickToCloseScript : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             if (fxClick)
-                Utils.soundManager.PlayFX(fxClick);
+                Utils.soundManager.PlayFX(fxClick, true);
             gameObject.SetActive(false);
-            Utils.soundManager.loop.volume = currentVolume;
+            if (!IgnoreSound)
+                Utils.soundManager.loop.volume = currentVolume;
             LevelManager.Instance.Players[0].LinkedInputManager.InputDetectionActive = true;
             LevelManager.Instance.Players[0].GetComponent<CharacterMovement>().enabled = true;
             LevelManager.Instance.Players[0].GetComponent<TopDownController3D>().enabled = true;
@@ -65,14 +76,14 @@ public class ClickToCloseScript : MonoBehaviour
 
     public void OnClickClose()
     {
-        Utils.soundManager.PlayFX(fxClick);
+        Utils.soundManager.PlayFX(fxClick, true);
 
         gameObject.SetActive(false);
     }
 
     public void OnClickGoTitle()
     {
-        Utils.soundManager.PlayFX(fxClick);
+        Utils.soundManager.PlayFX(fxClick, true);
         SceneManager.LoadScene("MapScene");
     }
 }

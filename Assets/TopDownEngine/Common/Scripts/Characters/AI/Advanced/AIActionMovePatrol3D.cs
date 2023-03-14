@@ -124,6 +124,7 @@ namespace MoreMountains.TopDownEngine
 			CheckForObstacles();
 
 			CurrentPathIndex = _mmPath.CurrentIndex();
+			
 			if (CurrentPathIndex != _indexLastFrame)
 			{
 				LastReachedPatrolPoint = _mmPath.CurrentPoint();

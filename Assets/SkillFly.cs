@@ -17,7 +17,7 @@ public class SkillFly : SkillActivator
         {
             base.Perform();
             if (skillSound)
-                Utils.soundManager.PlayFX(skillSound);
+                Utils.soundManager.PlayFX(skillSound, true);
             movement.ScriptDrivenInput = true;
             transform.DOMove(target.position, 1).SetEase(Ease.Linear).OnComplete(Complete);
             LevelManager.Instance.Players[0].LinkedInputManager.InputDetectionActive = false;

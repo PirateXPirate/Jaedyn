@@ -236,10 +236,11 @@ namespace MoreMountains.Tools
 				// if the path is looping
 				if (CycleOption == CycleOptions.Loop)
 				{
-					index = index + _direction;
-					if(index < 0)
+					//index = index + _direction;
+					index = Random.Range(0, PathElements.Count - 1);
+					if (index < 0)
 					{
-						index = PathElements.Count-1;
+						index =  PathElements.Count-1;
 					}
 					else if(index > PathElements.Count - 1)
 					{

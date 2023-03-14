@@ -10,10 +10,14 @@ public class DeathPopup : MonoBehaviour
     [SerializeField] private GameObject controlUi;
     [SerializeField] private AudioClip homeButClickSound;
 
+    [SerializeField] private AudioClip startPopupSound;
+    [SerializeField] private AudioClip restartSound;
+
     bool isExiting = false;
     private void Start()
     {
         controlUi.SetActive(false);
+        Utils.soundManager.PlayFX(startPopupSound);
         LevelManager.Instance.Players[0].LinkedInputManager.InputDetectionActive = false;
         LevelManager.Instance.Players[0].GetComponent<CharacterMovement>().enabled = false;
         LevelManager.Instance.Players[0].GetComponent<TopDownController3D>().enabled = false;
@@ -22,9 +26,15 @@ public class DeathPopup : MonoBehaviour
     {
         if (!isExiting)
         {
-            SceneManager.LoadScene(currentSceneName);
+            Utils.soundManager.PlayFX(restartSound);
+            Invoke("Restart", homeButClickSound.length);
+          
         }
            
+    }
+    void Restart()
+    {
+        SceneManager.LoadScene(currentSceneName);
     }
     public void OnClickExit()
     {
@@ -33,7 +43,7 @@ public class DeathPopup : MonoBehaviour
             isExiting = true;
 
             Invoke("Delay", homeButClickSound.length);
-            Utils.soundManager.PlayFX(homeButClickSound);
+            Utils.soundManager.PlayFX(homeButClickSound, true);
 
         }
     }

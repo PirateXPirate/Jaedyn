@@ -84,7 +84,9 @@ namespace MoreMountains.TopDownEngine
 			_rayDirection = Vector3.zero;
 			_rayDirection.x = _direction.x;
 			_rayDirection.z = _direction.y;
-			bool hit = Physics.BoxCast(_collider.bounds.center, _collider.bounds.extents, _rayDirection.normalized, this.transform.rotation, ObstaclesDetectionDistance, ObstacleLayerMask);
+			RaycastHit hitinfo;
+			bool hit = Physics.BoxCast(_collider.bounds.center, _collider.bounds.extents, _rayDirection.normalized, out hitinfo,this.transform.rotation, ObstaclesDetectionDistance, ObstacleLayerMask );
+			Debug.Log(hitinfo.collider);
 			if (hit)
 			{
 				PickRandomDirection();

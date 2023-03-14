@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyManager: {fileID: 1560378623}
-  powerManager: {fileID: 0}
+  powerManager: {fileID: 319267132}
   itemType: 0
   SoundClip: {fileID: 0}
 --- !u!114 &4341349
@@ -6621,6 +6621,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   ActivateObject: {fileID: 0}
   controllerUi: {fileID: 339305794}
+  IgnoreSound: 0
 --- !u!114 &312003361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7878,7 +7879,7 @@ RectTransform:
   m_GameObject: {fileID: 355678362}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.0517, y: 2.0517, z: 2.0517}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1520179298}
@@ -7886,7 +7887,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 198.1}
+  m_AnchoredPosition: {x: 0, y: 124.7}
   m_SizeDelta: {x: 129, y: 117}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &355678364
@@ -8711,12 +8712,12 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 3.08
-  m_Radius: 0.37
+  m_Radius: 1.48
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1.37, z: 1.17}
+  m_Center: {x: 0, y: 1.37, z: 0}
 --- !u!1001 &377732046
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12352,6 +12353,11 @@ MonoBehaviour:
   - {fileID: 1275862967}
   - {fileID: 973371548}
   - {fileID: 221811883}
+  healthSound:
+  - {fileID: 8300000, guid: 6f2d511566a6b5645a2733a656b74a09, type: 3}
+  - {fileID: 8300000, guid: edb43fd89e23a614fb5daf96004558f4, type: 3}
+  - {fileID: 8300000, guid: 1a44880258ad8d041b2ac22370aff23a, type: 3}
+  - {fileID: 8300000, guid: bb8fd39532f17014abd14c7d622f40f4, type: 3}
 --- !u!114 &564106307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17960,6 +17966,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   ActivateObject: {fileID: 0}
   controllerUi: {fileID: 339305794}
+  IgnoreSound: 0
 --- !u!114 &787767597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26097,6 +26104,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 19890270, guid: 79cd481c8e7a27a44ba9a78fbb16b903, type: 3}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19890270, guid: 79cd481c8e7a27a44ba9a78fbb16b903, type: 3}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19890270, guid: 79cd481c8e7a27a44ba9a78fbb16b903, type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19890270, guid: 79cd481c8e7a27a44ba9a78fbb16b903, type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 19961808, guid: 79cd481c8e7a27a44ba9a78fbb16b903, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -27592,8 +27615,8 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 3.08
-  m_Radius: 1.36
-  m_SlopeLimit: 10
+  m_Radius: 1.48
+  m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
@@ -28404,6 +28427,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   ActivateObject: {fileID: 0}
   controllerUi: {fileID: 339305794}
+  IgnoreSound: 0
 --- !u!114 &1302765380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29736,6 +29760,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   ActivateObject: {fileID: 2119605917}
   controllerUi: {fileID: 339305794}
+  IgnoreSound: 1
 --- !u!114 &1376403157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33956,6 +33981,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   ActivateObject: {fileID: 0}
   controllerUi: {fileID: 339305794}
+  IgnoreSound: 0
 --- !u!114 &1520179301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36125,6 +36151,16 @@ PrefabInstance:
       objectReference: {fileID: 339305793}
     - target: {fileID: 5297537128408653013, guid: d4529f47989526241929319abfdfc29d,
         type: 3}
+      propertyPath: restartSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 87569eae5b27945abbc58f79104d63b3, type: 3}
+    - target: {fileID: 5297537128408653013, guid: d4529f47989526241929319abfdfc29d,
+        type: 3}
+      propertyPath: startPopupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 9a77ee04550c257458882c7d3862ccfa, type: 3}
+    - target: {fileID: 5297537128408653013, guid: d4529f47989526241929319abfdfc29d,
+        type: 3}
       propertyPath: homeButClickSound
       value: 
       objectReference: {fileID: 8300000, guid: 819994fd230bfc845a29bca02f74ca4c, type: 3}
@@ -36518,6 +36554,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   ActivateObject: {fileID: 1376403154}
   controllerUi: {fileID: 339305794}
+  IgnoreSound: 1
 --- !u!114 &1548396332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36893,7 +36930,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyUIManager: {fileID: 1560378624}
   endGateParticle: {fileID: 1338193482}
-  ketText: {fileID: 0}
+  ketText: {fileID: 882301087}
 --- !u!114 &1560378624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44773,6 +44810,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   ActivateObject: {fileID: 0}
   controllerUi: {fileID: 339305794}
+  IgnoreSound: 0
 --- !u!114 &1888271903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51064,6 +51102,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.27
       objectReference: {fileID: 0}
+    - target: {fileID: 4639436736101682271, guid: a49c313805edfe44f9843c350826b6d4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8205100539466899284, guid: a49c313805edfe44f9843c350826b6d4,
         type: 3}
       propertyPath: WalkSpeed
@@ -51152,7 +51195,22 @@ PrefabInstance:
     - target: {fileID: 8205100539466899308, guid: a49c313805edfe44f9843c350826b6d4,
         type: 3}
       propertyPath: m_Radius
-      value: 0.37
+      value: 1.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205100539466899308, guid: a49c313805edfe44f9843c350826b6d4,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205100539466899308, guid: a49c313805edfe44f9843c350826b6d4,
+        type: 3}
+      propertyPath: m_SlopeLimit
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205100539466899308, guid: a49c313805edfe44f9843c350826b6d4,
+        type: 3}
+      propertyPath: m_StepOffset
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8205100539466899309, guid: a49c313805edfe44f9843c350826b6d4,
         type: 3}

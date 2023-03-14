@@ -41,7 +41,7 @@ namespace MoreMountains.TopDownEngine
 			}
 
 			float distance = Vector3.Distance(this.transform.position, _brain.Target.position);
-			Debug.Log(distance);
+		//	Debug.Log(distance);
 			if (ComparisonMode == ComparisonModes.StrictlyLowerThan)
 			{
 				return (distance < Distance);

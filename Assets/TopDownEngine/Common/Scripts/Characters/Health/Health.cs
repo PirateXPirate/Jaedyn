@@ -771,7 +771,7 @@ namespace MoreMountains.TopDownEngine
             
 			OnDeath?.Invoke();
 			if(deathSound)
-			Utils.soundManager.PlayFX(deathSound);
+			Utils.soundManager.PlayFX(deathSound,true);
 			MMLifeCycleEvent.Trigger(this, MMLifeCycleEventTypes.Death);
 
 			if (DisableControllerOnDeath && (_controller != null))
