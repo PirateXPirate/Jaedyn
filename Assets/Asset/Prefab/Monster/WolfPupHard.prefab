@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 7455049300593606111}
   - component: {fileID: 5217103523324010848}
   - component: {fileID: 3111420331172889234}
-  - component: {fileID: 5750242802996724774}
+  - component: {fileID: 795626839922887868}
   m_Layer: 13
   m_Name: WolfPupHard
   m_TagString: Untagged
@@ -326,7 +326,7 @@ MonoBehaviour:
   - StateName: Detecting
     Actions:
       array:
-      - {fileID: 5750242802996724774}
+      - {fileID: 795626839922887868}
     Transitions:
       array:
       - Decision: {fileID: 7574661053924196070}
@@ -770,7 +770,7 @@ MonoBehaviour:
   LockHandlesOnXAxis: 0
   LockHandlesOnYAxis: 0
   LockHandlesOnZAxis: 0
---- !u!114 &5750242802996724774
+--- !u!114 &795626839922887868
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -27,6 +27,8 @@ GameObject:
   - component: {fileID: 7128705378216306673}
   - component: {fileID: 7819658570596295857}
   - component: {fileID: 77556472801631646}
+  - component: {fileID: 2978970508068617770}
+  - component: {fileID: 1758249352340706165}
   m_Layer: 13
   m_Name: Snake
   m_TagString: Untagged
@@ -324,7 +326,7 @@ MonoBehaviour:
   - StateName: Detecting
     Actions:
       array:
-      - {fileID: 7128705378216306570}
+      - {fileID: 2978970508068617770}
     Transitions:
       array:
       - Decision: {fileID: 7128705378216306568}
@@ -387,7 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Label: 
-  Radius: 2.99
+  Radius: 4.71
   DetectionOriginOffset: {x: 0, y: 0, z: 0}
   TargetLayerMask:
     serializedVersion: 2
@@ -735,6 +737,60 @@ MonoBehaviour:
   WeaponModels: []
   StunButton: 0
   ExitStunButton: 0
+--- !u!114 &2978970508068617770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7128705378216306682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab38fb8d19ed4db48b4e6216a171c08f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationMode: 0
+  Label: 
+  ChangeDirectionOnObstacle: 1
+  ObstacleDetectionDistance: 1
+  ObstaclesCheckFrequency: 1
+  ObstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  CurrentPathIndex: 0
+--- !u!114 &1758249352340706165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7128705378216306682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b81dc1a6e4b189d4bae2faab8a2a1a25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CycleOption: 1
+  LoopInitialMovementDirection: 0
+  PathElements:
+  - PathElementPosition: {x: 3.4911613, y: -0.43019962, z: 0.19229126}
+    Delay: 2
+  - PathElementPosition: {x: 3, y: 0, z: 3}
+    Delay: 2
+  - PathElementPosition: {x: 1.2, y: 0, z: 5.81}
+    Delay: 2
+  - PathElementPosition: {x: -4.26, y: 0, z: 1.97}
+    Delay: 2
+  - PathElementPosition: {x: -2.2305222, y: -0.14275074, z: -3.528183}
+    Delay: 2
+  - PathElementPosition: {x: 3.4602928, y: 0.6119118, z: -2.771515}
+    Delay: 2
+  ReferenceMMPath: {fileID: 1758249352340706165}
+  AbsoluteReferencePath: 0
+  MinDistanceToGoal: 1
+  LockHandlesOnXAxis: 0
+  LockHandlesOnYAxis: 0
+  LockHandlesOnZAxis: 0
 --- !u!1001 &2098062968636039314
 PrefabInstance:
   m_ObjectHideFlags: 0

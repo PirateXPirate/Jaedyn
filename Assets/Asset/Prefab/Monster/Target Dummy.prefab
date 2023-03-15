@@ -28,6 +28,8 @@ GameObject:
   - component: {fileID: 2855900221038605636}
   - component: {fileID: 626411337185651195}
   - component: {fileID: 4986170423226175531}
+  - component: {fileID: 1547074744480213379}
+  - component: {fileID: 8579499390323228988}
   m_Layer: 13
   m_Name: Target Dummy
   m_TagString: Untagged
@@ -325,7 +327,7 @@ MonoBehaviour:
   - StateName: Detecting
     Actions:
       array:
-      - {fileID: 3010955216887740031}
+      - {fileID: 1547074744480213379}
     Transitions:
       array:
       - Decision: {fileID: 3010955216887740029}
@@ -753,6 +755,60 @@ MonoBehaviour:
   activateObj: {fileID: 0}
   activateChest: {fileID: 0}
   setActiveObject: []
+--- !u!114 &1547074744480213379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3010955216887739919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab38fb8d19ed4db48b4e6216a171c08f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationMode: 0
+  Label: 
+  ChangeDirectionOnObstacle: 1
+  ObstacleDetectionDistance: 1
+  ObstaclesCheckFrequency: 1
+  ObstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  CurrentPathIndex: 0
+--- !u!114 &8579499390323228988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3010955216887739919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b81dc1a6e4b189d4bae2faab8a2a1a25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CycleOption: 1
+  LoopInitialMovementDirection: 0
+  PathElements:
+  - PathElementPosition: {x: 3.4911613, y: -0.43019962, z: 0.19229126}
+    Delay: 2
+  - PathElementPosition: {x: 3, y: 0, z: 3}
+    Delay: 2
+  - PathElementPosition: {x: 1.2, y: 0, z: 5.81}
+    Delay: 2
+  - PathElementPosition: {x: -4.26, y: 0, z: 1.97}
+    Delay: 2
+  - PathElementPosition: {x: -2.2305222, y: -0.14275074, z: -3.528183}
+    Delay: 2
+  - PathElementPosition: {x: 3.4602928, y: 0.6119118, z: -2.771515}
+    Delay: 2
+  ReferenceMMPath: {fileID: 8579499390323228988}
+  AbsoluteReferencePath: 0
+  MinDistanceToGoal: 1
+  LockHandlesOnXAxis: 0
+  LockHandlesOnYAxis: 0
+  LockHandlesOnZAxis: 0
 --- !u!1001 &5927732785142406228
 PrefabInstance:
   m_ObjectHideFlags: 0
