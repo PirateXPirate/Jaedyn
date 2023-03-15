@@ -25134,10 +25134,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controllerUi: {fileID: 1952858271}
-  startAudioClip: {fileID: 8300000, guid: bdfbe4843cd2643d4b10ae0757965eb6, type: 3}
+  startAudioClip: {fileID: 8300000, guid: 0ecf498595be34b10ba64d31ddea8531, type: 3}
   mapBgAudio: {fileID: 8300000, guid: 450d93660894cc047968212ab6fa48bd, type: 3}
   startWalkAudioClip: {fileID: 8300000, guid: d8ab973583c494137b312e78058ca0c9, type: 3}
-  isLock: 0
+  isLock: 1
 --- !u!1001 &1178512183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26859,7 +26859,7 @@ GameObject:
   - component: {fileID: 1262337712}
   - component: {fileID: 1262337711}
   - component: {fileID: 1262337710}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30726,7 +30726,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1464203217
 PrefabInstance:
@@ -33227,7 +33227,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575047777}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 47.97, y: 10, z: 26.24}
+  m_LocalPosition: {x: 53.01, y: 10.29, z: 38.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38438,7 +38438,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9685c3722034e0048ad003b442b8892b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9685c3722034e0048ad003b442b8892b,
         type: 3}
