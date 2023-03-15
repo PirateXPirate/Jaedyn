@@ -9,7 +9,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource loop;
     public AudioSource fx;
 
-    public void Start() {
+    public void Awake() {
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);

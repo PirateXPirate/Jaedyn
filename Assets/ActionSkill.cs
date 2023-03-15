@@ -41,9 +41,11 @@ public class ActionSkill : MonoBehaviour
             character.GetComponent<CharacterMovement>().enabled = false;
             character.GetComponent<TopDownController3D>().enabled = false;
 
-
+            if(currentMaker)
             currentMaker.ShowPopup();
             inPoint = false;
+
+     
         }
 
         if (inTower)
@@ -51,8 +53,8 @@ public class ActionSkill : MonoBehaviour
             if (currentTower == null) return;
             if (currentTower.trunkObj)
                 if (currentTower.trunkObj.activeSelf) return;
-
-            currentTower.Perform();
+            if (currentMaker)
+                currentTower.Perform();
 
         }
 

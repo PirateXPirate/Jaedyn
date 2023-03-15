@@ -8,14 +8,24 @@ public class LeoSkill : SkillActivator
 {
     Transform targetObject;
     Transform targetPosition;
+    ActivateObject activateObject;
     CharacterOrientation3D rotation;
 
-    
+
     protected override void Perform()
     {
         skillUiManager.SetSkillCooldown(coolDown);
         if (inPoint)
         {
+            var checkCollide = targetObject.GetComponent<ChekcCollide>();
+            if (checkCollide)
+            {
+                if (checkCollide.hitObstacle != null)
+                {
+                    if (checkCollide.hitObstacle.activeSelf) return;
+                }
+                  
+            }
             base.Perform();
             movement.ScriptDrivenInput = true;
             targetObject.DOMove(targetPosition.position, 1).SetEase(Ease.Linear).OnComplete(Complete);
@@ -25,12 +35,17 @@ public class LeoSkill : SkillActivator
             LevelManager.Instance.Players[0].GetComponent<CharacterOrientation3D>().enabled = false;
             targetObject.transform.position = new Vector3(targetObject.position.x, transform.position.y, targetObject.position.z);
             transform.DOLookAt(targetObject.position, .5f);
-           
+
             inPoint = false;
         }
     }
     void Complete()
     {
+        if(activateObject)
+            activateObject.Activate();
+
+        if (targetObject.GetComponent<Rigidbody>())
+            targetObject.GetComponent<Rigidbody>().isKinematic = false;
         movement.ScriptDrivenInput = false;
         LevelManager.Instance.Players[0].LinkedInputManager.InputDetectionActive = true;
         LevelManager.Instance.Players[0].GetComponent<CharacterMovement>().enabled = true;
@@ -48,7 +63,8 @@ public class LeoSkill : SkillActivator
             if (other.GetComponent<MoveObject>() == null) return;
             targetObject = other.GetComponent<MoveObject>().Target;
             targetPosition = other.GetComponent<MoveObject>().TargetPosition;
-            other.GetComponent<Collider>().enabled = false;
+            activateObject = other.GetComponent<MoveObject>().TargetActivateObject;
+          //  other.GetComponent<Collider>().enabled = false;
         }
     }
 }

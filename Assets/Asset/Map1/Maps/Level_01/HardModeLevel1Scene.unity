@@ -31972,6 +31972,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5571368770627763058, guid: b377460d66ab1e54b84016dbfe371499,
         type: 3}
+      propertyPath: MinDistanceToGoal
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5571368770627763058, guid: b377460d66ab1e54b84016dbfe371499,
+        type: 3}
       propertyPath: PathElements.Array.data[5].PathElementPosition.x
       value: 1.6659203
       objectReference: {fileID: 0}
