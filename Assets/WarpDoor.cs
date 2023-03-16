@@ -5,6 +5,8 @@ using UnityEngine;
 public class WarpDoor : MonoBehaviour
 {
     [SerializeField] WarpDoor targetWarpPoint;
+
+    [SerializeField] Transform warpPosition;
     [SerializeField] AudioClip warpSound;
     public bool CanEnter;
     public bool waitForExit = false;
@@ -19,14 +21,19 @@ public class WarpDoor : MonoBehaviour
             if (CanEnter)
             {
                 Utils.soundManager.PlayFX(warpSound);
-                other.transform.position = targetWarpPoint.transform.position;
+                other.transform.position = warpPosition.position;
                // targetWarpPoint.CanEnter = true;
                 CanEnter = false;
                 waitForExit = false;
                 targetWarpPoint.waitForExit = true;
+                Invoke("Reset", 1);
             }
             
         }
+    }
+    private void Reset()
+    {
+        CanEnter = true;
     }
     private void OnTriggerExit(Collider other)
     {

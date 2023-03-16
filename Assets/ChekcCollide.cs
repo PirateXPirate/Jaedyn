@@ -14,7 +14,6 @@ public class ChekcCollide : MonoBehaviour
     public string tagName;
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.transform.tag);
         if (collision.transform.CompareTag("Trunk"))
         {
             hitObstacle = collision.gameObject;
