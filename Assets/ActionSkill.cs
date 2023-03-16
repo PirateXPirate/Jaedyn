@@ -53,7 +53,7 @@ public class ActionSkill : MonoBehaviour
             if (currentTower == null) return;
             if (currentTower.trunkObj)
                 if (currentTower.trunkObj.activeSelf) return;
-            if (currentMaker)
+            if (currentTower)
                 currentTower.Perform();
 
         }
