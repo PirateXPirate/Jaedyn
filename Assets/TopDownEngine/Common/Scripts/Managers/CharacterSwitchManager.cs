@@ -201,6 +201,10 @@ namespace MoreMountains.TopDownEngine
                 SetUI(CurrentIndex);
             }
 
+			
+		
+			var oldAngle = LevelManager.Instance.Players[0].transform.localEulerAngles;
+
 			// we disable the old main character, and enable the new one
 			LevelManager.Instance.Players[0].gameObject.SetActive(false);
 			_instantiatedCharacters[CurrentIndex].gameObject.SetActive(true);
@@ -229,6 +233,10 @@ namespace MoreMountains.TopDownEngine
 				_instantiatedVFX.transform.position = _instantiatedCharacters[CurrentIndex].transform.position;
 				_instantiatedVFX.Play();
 			}
+			LevelManager.Instance.Players[0].GetComponent<TopDownController3D>().Reset();
+			var orientation = LevelManager.Instance.Players[0].GetComponent<CharacterOrientation3D>();
+			//LevelManager.Instance.Players[0].GetComponent<TopDownController3D>().Reset();
+				orientation.Face(oldAngle);
 
 			// we trigger a switch event (for the camera to know, mostly)
 			MMEventManager.TriggerEvent(_switchEvent);

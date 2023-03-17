@@ -17,7 +17,6 @@ public class ChangeCameraOnTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(gameObject.name);
         if (OnCamera != null)
             OnCamera.gameObject.SetActive(true);
         if (OffCamera != null)

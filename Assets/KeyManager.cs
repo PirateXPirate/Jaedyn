@@ -22,7 +22,7 @@ public class KeyManager : MonoBehaviour
         keyUIManager.SetkeyQuantity(keyQuantity);
         gotKey = true;
         CheckKey();
-        ketText.text = keyQuantity.ToString();
+        ketText.text = keyQuantity.ToString() + "/1";
 
     }
     public void GetLock()

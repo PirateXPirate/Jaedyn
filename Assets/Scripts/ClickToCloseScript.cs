@@ -32,14 +32,12 @@ public class ClickToCloseScript : MonoBehaviour
     {
        
         audi = GetComponent<AudioSource>();
-        Debug.Log(audi);
         if (audi)
             audi.volume = Utils.soundManager.fx.volume;
         if (Utils.soundManager)
         {
             currentVolume = Utils.soundManager.loop.volume;
             if (IgnoreSound) return;
-            Debug.Log("Ignore");
             var audi = GetComponent<AudioSource>();
             if (audi)
                 audi.volume = currentVolume;

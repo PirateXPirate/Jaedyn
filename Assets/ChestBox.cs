@@ -19,6 +19,8 @@ public class ChestBox : MonoBehaviour
     public bool canOpen;
 
     public CoinManager coinManager;
+
+    public KeyManager keyManager;
     public enum ChestType
     {
         Coin,
@@ -45,7 +47,7 @@ public class ChestBox : MonoBehaviour
 
     public void SpawnDrops()
     {
-       
+        canOpen = false;
         if (currentChestType == ChestType.Potion)
         {
             var randomPotion = Random.Range(0, 100);
@@ -78,6 +80,11 @@ public class ChestBox : MonoBehaviour
                 numCoin = 10;
             coinManager.AddCoin(numCoin);
         }
-           
+        if (currentChestType == ChestType.Key)
+        {
+            keyManager.AddKey(1);
+        }
+
+            
     }
 }

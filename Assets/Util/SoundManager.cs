@@ -33,9 +33,10 @@ public class SoundManager : MonoBehaviour
         loop.Play();
     }
 
-    public void PlayFX(AudioClip clip,bool append =false) {
+    public void PlayFX(AudioClip clip,bool append =false,bool prevent=false) {
         if (fx.isPlaying && !append)
             fx.Stop();
+        if (fx.isPlaying && prevent) return;
         fx.PlayOneShot(clip);
     }
 }

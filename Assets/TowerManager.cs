@@ -8,6 +8,8 @@ public class TowerManager : MonoBehaviour
     public Tower[] TowerList = new Tower[0];
     bool allComplete = false;
     public ActivateObject obj;
+    public WarpDoor warpDoor;
+    public ParticleSystem[] particle;
     void Start()
     {
         
@@ -29,6 +31,25 @@ public class TowerManager : MonoBehaviour
         }
 
         if (allComplete)
-            obj.Activate();
+        {
+            if(obj)
+                obj.Activate();
+
+            if (warpDoor)
+            {
+                warpDoor.CanEnter = true;
+            }
+
+            if (particle.Length>0)
+            {
+                foreach (var par in particle)
+                {
+                    ParticleSystem.MainModule settings = par.GetComponent<ParticleSystem>().main;
+                    settings.startColor = new ParticleSystem.MinMaxGradient(Color.green);
+                }
+              
+            }
+        }
+           
     }
 }

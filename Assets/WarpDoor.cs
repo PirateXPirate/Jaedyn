@@ -1,3 +1,5 @@
+using MoreMountains.Tools;
+using MoreMountains.TopDownEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +10,7 @@ public class WarpDoor : MonoBehaviour
 
     [SerializeField] Transform warpPosition;
     [SerializeField] AudioClip warpSound;
+    [SerializeField] Character.FacingDirections directionAfterWarp;
     public bool CanEnter;
     public bool waitForExit = false;
     void Start()
@@ -26,7 +29,13 @@ public class WarpDoor : MonoBehaviour
                 CanEnter = false;
                 waitForExit = false;
                 targetWarpPoint.waitForExit = true;
-                Invoke("Reset", 1);
+                Invoke("Reset", 2);
+                var orientation = LevelManager.Instance.Players[0].GetComponent<CharacterOrientation3D>();
+                LevelManager.Instance.Players[0].GetComponent<TopDownController3D>().Reset();
+               
+                orientation.Face(directionAfterWarp);
+                LevelManager.Instance.Players[0].GetComponent<CharacterMovement>().enabled = false;
+                MMAnimatorExtensions.UpdateAnimatorBoolIfExists(LevelManager.Instance.Players[0].GetComponentInChildren<Animator>(), "Walking", false);
             }
             
         }
@@ -34,6 +43,7 @@ public class WarpDoor : MonoBehaviour
     private void Reset()
     {
         CanEnter = true;
+        LevelManager.Instance.Players[0].GetComponent<CharacterMovement>().enabled = true;
     }
     private void OnTriggerExit(Collider other)
     {
