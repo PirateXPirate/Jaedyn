@@ -12,8 +12,11 @@ public class ChekcCollide : MonoBehaviour
     public GameObject particle;
     public AudioClip sound;
     public string tagName;
+
+    public GameObject activeObject;
     private void OnCollisionEnter(Collision collision)
     {
+
         if (collision.transform.CompareTag("Trunk"))
         {
             hitObstacle = collision.gameObject;
@@ -41,6 +44,8 @@ public class ChekcCollide : MonoBehaviour
 
 
                 }
+                if (activeObject)
+                    activeObject.SetActive(true);
                 if (sound)
                     Utils.soundManager.PlayFX(sound);
             }

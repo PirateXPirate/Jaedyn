@@ -34,7 +34,6 @@ public class PlaySoundWhenDestroy : MonoBehaviour
         {
             if(soundClip)
             Utils.soundManager.PlayFX(soundClip,true);
-            Debug.Log(soundClip);
             if (activateObj)
                 activateObj.Activate();
 
