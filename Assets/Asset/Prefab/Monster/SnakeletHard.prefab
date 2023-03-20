@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 2276323585293139980}
   - component: {fileID: 2690328556909443987}
   - component: {fileID: 7205965240784170825}
+  - component: {fileID: 6283068348762893434}
   m_Layer: 13
   m_Name: SnakeletHard
   m_TagString: Untagged
@@ -329,7 +330,7 @@ MonoBehaviour:
       - {fileID: 2690328556909443987}
     Transitions:
       array:
-      - Decision: {fileID: 8965143808410761754}
+      - Decision: {fileID: 6283068348762893434}
         TrueState: Moving
         FalseState: 
   - StateName: Moving
@@ -338,7 +339,7 @@ MonoBehaviour:
       - {fileID: 8965143808410761753}
     Transitions:
       array:
-      - Decision: {fileID: 8965143808410761754}
+      - Decision: {fileID: 6283068348762893434}
         TrueState: 
         FalseState: Detecting
       - Decision: {fileID: 8965143808410761829}
@@ -791,6 +792,20 @@ MonoBehaviour:
   LockHandlesOnXAxis: 0
   LockHandlesOnYAxis: 0
   LockHandlesOnZAxis: 0
+--- !u!114 &6283068348762893434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8965143808410761832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e94b6e8844697fc41a8345101ce1845b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  zoneCollider: {fileID: 0}
 --- !u!1001 &1493244650059396187
 PrefabInstance:
   m_ObjectHideFlags: 0

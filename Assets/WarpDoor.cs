@@ -21,7 +21,7 @@ public class WarpDoor : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (CanEnter)
+            if (CanEnter && warpPosition!=null)
             {
                 Utils.soundManager.PlayFX(warpSound);
                 other.transform.position = warpPosition.position;

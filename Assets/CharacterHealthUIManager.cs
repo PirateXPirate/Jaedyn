@@ -10,6 +10,7 @@ public class CharacterHealthUIManager : MonoBehaviour
 
     [SerializeField] AudioClip[] healthSound;
 
+    bool isDead = false;
 
 
     // Start is called before the first frame update
@@ -74,7 +75,14 @@ public class CharacterHealthUIManager : MonoBehaviour
         }
         else
         {
-            Utils.soundManager.PlayFX(healthSound[3], false, true);
+            if (!isDead)
+            {
+                isDead = true;
+
+                Utils.soundManager.PlayFX(healthSound[3], false, true);
+            }
+
+
         }
 
 

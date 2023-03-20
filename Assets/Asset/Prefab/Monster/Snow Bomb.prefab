@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 6278529293062960347}
   - component: {fileID: 169530891035750035}
   - component: {fileID: 1478288891691649695}
+  - component: {fileID: 2572305001480578569}
   m_Layer: 13
   m_Name: Snow Bomb
   m_TagString: Untagged
@@ -329,7 +330,7 @@ MonoBehaviour:
       - {fileID: 169530891035750035}
     Transitions:
       array:
-      - Decision: {fileID: 6278529293062960275}
+      - Decision: {fileID: 2572305001480578569}
         TrueState: Moving
         FalseState: 
   - StateName: Moving
@@ -338,7 +339,7 @@ MonoBehaviour:
       - {fileID: 6278529293062960272}
     Transitions:
       array:
-      - Decision: {fileID: 6278529293062960275}
+      - Decision: {fileID: 2572305001480578569}
         TrueState: 
         FalseState: Detecting
       - Decision: {fileID: 6278529293062960364}
@@ -791,6 +792,20 @@ MonoBehaviour:
   LockHandlesOnXAxis: 0
   LockHandlesOnYAxis: 0
   LockHandlesOnZAxis: 0
+--- !u!114 &2572305001480578569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6278529293062960353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e94b6e8844697fc41a8345101ce1845b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  zoneCollider: {fileID: 0}
 --- !u!1001 &3434390599814877131
 PrefabInstance:
   m_ObjectHideFlags: 0

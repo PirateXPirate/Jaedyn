@@ -22,7 +22,7 @@ public class HomeButton : MonoBehaviour
             isExiting = true;
 
             Invoke("Delay", homeButClickSound.length);
-            Utils.soundManager.PlayFX(homeButClickSound, true);
+            Utils.soundManager.PlayFX(homeButClickSound);
 
         }
     }

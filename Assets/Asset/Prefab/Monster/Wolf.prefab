@@ -30,6 +30,7 @@ GameObject:
   - component: {fileID: 1326082149322601430}
   - component: {fileID: 2724002723530952371}
   - component: {fileID: 6488171992800892464}
+  - component: {fileID: 6772284717187400166}
   m_Layer: 13
   m_Name: Wolf
   m_TagString: Untagged
@@ -330,7 +331,7 @@ MonoBehaviour:
       - {fileID: 2724002723530952371}
     Transitions:
       array:
-      - Decision: {fileID: 2937549640230559034}
+      - Decision: {fileID: 6772284717187400166}
         TrueState: Moving
         FalseState: 
   - StateName: Moving
@@ -339,7 +340,7 @@ MonoBehaviour:
       - {fileID: 2937549640230559033}
     Transitions:
       array:
-      - Decision: {fileID: 2937549640230559034}
+      - Decision: {fileID: 6772284717187400166}
         TrueState: 
         FalseState: Detecting
       - Decision: {fileID: 2937549640230559045}
@@ -811,6 +812,20 @@ MonoBehaviour:
   LockHandlesOnXAxis: 0
   LockHandlesOnYAxis: 0
   LockHandlesOnZAxis: 0
+--- !u!114 &6772284717187400166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2937549640230559048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e94b6e8844697fc41a8345101ce1845b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  zoneCollider: {fileID: 0}
 --- !u!1001 &6978141821819774397
 PrefabInstance:
   m_ObjectHideFlags: 0

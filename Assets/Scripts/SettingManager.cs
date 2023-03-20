@@ -18,7 +18,10 @@ public class SettingManager : MonoBehaviour
 
      float tmpvalLoop;
      float tmpvalFX;
-   
+
+    public delegate void OnSaveSoundSettingDelegate();
+    public OnSaveSoundSettingDelegate OnSaveSoundSetting;
+
 
     public void OnChangeScrollBar(string type)
     {
@@ -56,6 +59,7 @@ public class SettingManager : MonoBehaviour
         Utils.soundManager.PlayFX(fxClick);
         Utils.soundManager.fx.volume = tmpvalFX;
         Utils.soundManager.loop.volume = tmpvalLoop;
+        OnSaveSoundSetting?.Invoke();
         //  SceneManager.LoadScene("MainMenuScene");
     }
 
@@ -66,6 +70,8 @@ public class SettingManager : MonoBehaviour
         tmpvalFX = Utils.soundManager.fx.volume;
         tmpvalLoop = Utils.soundManager.loop.volume;
         Utils.soundManager.PlayFX(fxClick);
+
         // SceneManager.LoadScene("MainMenuScene");
+        
     }
 }

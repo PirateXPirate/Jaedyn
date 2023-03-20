@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 7557904218113522058}
   - component: {fileID: 7003116910521429354}
   - component: {fileID: 5571368770627763058}
+  - component: {fileID: 2388056191326570169}
   m_Layer: 13
   m_Name: Bomb Hard
   m_TagString: Untagged
@@ -329,7 +330,7 @@ MonoBehaviour:
       - {fileID: 7003116910521429354}
     Transitions:
       array:
-      - Decision: {fileID: 7557904218113522114}
+      - Decision: {fileID: 2388056191326570169}
         TrueState: Moving
         FalseState: 
   - StateName: Moving
@@ -338,7 +339,7 @@ MonoBehaviour:
       - {fileID: 7557904218113522113}
     Transitions:
       array:
-      - Decision: {fileID: 7557904218113522114}
+      - Decision: {fileID: 2388056191326570169}
         TrueState: 
         FalseState: Detecting
       - Decision: {fileID: 7557904218113522109}
@@ -791,6 +792,20 @@ MonoBehaviour:
   LockHandlesOnXAxis: 0
   LockHandlesOnYAxis: 0
   LockHandlesOnZAxis: 0
+--- !u!114 &2388056191326570169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7557904218113522096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e94b6e8844697fc41a8345101ce1845b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  zoneCollider: {fileID: 0}
 --- !u!1001 &6287160727633774290
 PrefabInstance:
   m_ObjectHideFlags: 0

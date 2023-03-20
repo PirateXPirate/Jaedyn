@@ -30,6 +30,7 @@ GameObject:
   - component: {fileID: 3562960789274608164}
   - component: {fileID: 1132354933123985064}
   - component: {fileID: 2586192355592378185}
+  - component: {fileID: 1442680703768631661}
   m_Layer: 13
   m_Name: Practice Dummy
   m_TagString: Untagged
@@ -330,7 +331,7 @@ MonoBehaviour:
       - {fileID: 1132354933123985064}
     Transitions:
       array:
-      - Decision: {fileID: 6740003743323694194}
+      - Decision: {fileID: 1442680703768631661}
         TrueState: Moving
         FalseState: 
   - StateName: Moving
@@ -339,7 +340,7 @@ MonoBehaviour:
       - {fileID: 6740003743323694193}
     Transitions:
       array:
-      - Decision: {fileID: 6740003743323694194}
+      - Decision: {fileID: 1442680703768631661}
         TrueState: 
         FalseState: Detecting
       - Decision: {fileID: 6740003743323694093}
@@ -809,6 +810,20 @@ MonoBehaviour:
   LockHandlesOnXAxis: 0
   LockHandlesOnYAxis: 0
   LockHandlesOnZAxis: 0
+--- !u!114 &1442680703768631661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6740003743323694080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e94b6e8844697fc41a8345101ce1845b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  zoneCollider: {fileID: 0}
 --- !u!1001 &2212935987778902895
 PrefabInstance:
   m_ObjectHideFlags: 0

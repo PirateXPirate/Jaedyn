@@ -10176,6 +10176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93321afbfe37ea647a79a54eaee85b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settingManager: {fileID: 43293106}
 --- !u!4 &450626656 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6634668326284583237, guid: 7bfc69592d8bf2a4e9e5fa6842e93043,
@@ -36146,6 +36147,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5297537128408653013, guid: d4529f47989526241929319abfdfc29d,
         type: 3}
+      propertyPath: setupBut
+      value: 
+      objectReference: {fileID: 1530387154}
+    - target: {fileID: 5297537128408653013, guid: d4529f47989526241929319abfdfc29d,
+        type: 3}
       propertyPath: controlUi
       value: 
       objectReference: {fileID: 339305793}
@@ -38998,8 +39004,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0E02\u0E27\u0E14\u0E22\u0E32 \u0E2A\u0E4D\u0E32\u0E2B\u0E23\u0E31\u0E1A\r\n\u0E40\u0E1E\u0E34\u0E21\u0E04\u0E27\u0E32\u0E21\u0E15\u0E49\u0E32\u0E19\u0E17\u0E32\u0E19
-    \u0E48 1 \u0E02\u0E27\u0E14\r\n\u0E0A\u0E48\u0E27\u0E22\u0E25\u0E14 \u0E1E\u0E25\u0E31\u0E07\u0E42\u0E08\u0E21\u0E15\u0E35\u0E02\u0E2D\u0E07
+  m_text: "\u0E02\u0E27\u0E14\u0E22\u0E32 \u0E2A\u0E4D\u0E32\u0E2B\u0E23\u0E31\u0E1A\r\n\u0E40\u0E1E\u0E34\u0E21\u0E04\u0E27\u0E32\u0E21\u0E15\u0E49\u0E32\u0E19\u0E17\u0E32\u0E19 
+    1 \u0E02\u0E27\u0E14\r\n\u0E0A\u0E48\u0E27\u0E22\u0E25\u0E14 \u0E1E\u0E25\u0E31\u0E07\u0E42\u0E08\u0E21\u0E15\u0E35\u0E02\u0E2D\u0E07
     \u0E21\u0E2D\u0E19\u0E2A\u0E40\u0E15\u0E2D\u0E23\u0E4C \u0E44\u0E14\u0E49"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e29a2f2a4d2e08941a5f0e42bee77c41, type: 2}
@@ -43696,6 +43702,7 @@ MonoBehaviour:
   startAudioClip: {fileID: 8300000, guid: bdfbe4843cd2643d4b10ae0757965eb6, type: 3}
   mapBgAudio: {fileID: 8300000, guid: 450d93660894cc047968212ab6fa48bd, type: 3}
   startWalkAudioClip: {fileID: 8300000, guid: d8ab973583c494137b312e78058ca0c9, type: 3}
+  SettingBut: {fileID: 0}
   isLock: 0
 --- !u!4 &1840686657
 Transform:
@@ -46038,7 +46045,7 @@ MonoBehaviour:
   NestDrawnHealthBar: 0
   Billboard: 1
   InstantiatedOnDeath: {fileID: 0}
-  HealthBarOffset: {x: 0, y: -1, z: 0}
+  HealthBarOffset: {x: 0, y: 2.5, z: 0}
   AlwaysVisible: 1
   DisplayDurationOnHit: 1
   HideBarAtZero: 1
@@ -50078,6 +50085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Target: {fileID: 803671310}
   TargetPosition: {fileID: 856693489}
+  TargetActivateObject: {fileID: 0}
 --- !u!65 &2098505008
 BoxCollider:
   m_ObjectHideFlags: 0

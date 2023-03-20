@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StartSound : MonoBehaviour
 {
@@ -14,13 +15,16 @@ public class StartSound : MonoBehaviour
 
     [SerializeField] private AudioClip startWalkAudioClip;
 
+    [SerializeField] private Button SettingBut;
+
     AnalogStick analogStick;
     public bool isLock;
     void Start()
     {
-        if(Utils.soundManager)
-        Utils.soundManager.PlayLoop(mapBgAudio);
-
+        if (Utils.soundManager)
+            Utils.soundManager.PlayLoop(mapBgAudio);
+        if (SettingBut)
+            SettingBut.enabled = false;
         if (isLock)
         {
             controllerUi.canInteract = false;
@@ -34,11 +38,11 @@ public class StartSound : MonoBehaviour
 
             Invoke("WaitClipEnd", startAudioClip.length);
         }
-      
+
     }
     private void OnEnable()
     {
-       
+
     }
     private int OnStartWalk(int index)
     {
@@ -47,17 +51,18 @@ public class StartSound : MonoBehaviour
             Utils.soundManager.PlayFX(startWalkAudioClip);
             analogStick.onPointerDown.RemoveAllListeners();
         }
-       
+
         return index;
     }
     private void OnDisable()
     {
-        if(analogStick)
-        analogStick.onPointerDown.RemoveAllListeners();
+        if (analogStick)
+            analogStick.onPointerDown.RemoveAllListeners();
     }
 
     private void WaitClipEnd()
     {
+        SettingBut.enabled = true;
         controllerUi.canInteract = true;
         controllerUi.GetComponentInChildren<AnalogStick>().canInteract = true;
     }
@@ -65,6 +70,6 @@ public class StartSound : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
