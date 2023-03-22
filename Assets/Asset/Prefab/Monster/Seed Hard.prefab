@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 3548423626886799170}
   - component: {fileID: 1835899278386806006}
   - component: {fileID: 2903571847175688617}
+  - component: {fileID: 1482030236225144676}
   m_Layer: 13
   m_Name: Seed Hard
   m_TagString: Untagged
@@ -329,7 +330,7 @@ MonoBehaviour:
       - {fileID: 1835899278386806006}
     Transitions:
       array:
-      - Decision: {fileID: 5963679101956957524}
+      - Decision: {fileID: 1482030236225144676}
         TrueState: Moving
         FalseState: 
   - StateName: Moving
@@ -338,7 +339,7 @@ MonoBehaviour:
       - {fileID: 5963679101956957527}
     Transitions:
       array:
-      - Decision: {fileID: 5963679101956957524}
+      - Decision: {fileID: 1482030236225144676}
         TrueState: 
         FalseState: Detecting
       - Decision: {fileID: 5963679101956957483}
@@ -791,6 +792,20 @@ MonoBehaviour:
   LockHandlesOnXAxis: 0
   LockHandlesOnYAxis: 0
   LockHandlesOnZAxis: 0
+--- !u!114 &1482030236225144676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5963679101956957478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e94b6e8844697fc41a8345101ce1845b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  zoneCollider: {fileID: 0}
 --- !u!1001 &2342154589975095079
 PrefabInstance:
   m_ObjectHideFlags: 0
