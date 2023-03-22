@@ -277,8 +277,8 @@ MonoBehaviour:
   Model: {fileID: 0}
   CurrentHealth: 100
   Invulnerable: 0
-  InitialHealth: 50
-  MaximumHealth: 50
+  InitialHealth: 20
+  MaximumHealth: 20
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
   DamageMMFeedbacks: {fileID: 0}
@@ -449,7 +449,7 @@ MonoBehaviour:
   AbilityPermitted: 1
   BlockingMovementStates: 
   BlockingConditionStates: 
-  InitialWeapon: {fileID: -283134361146685008, guid: fbfef60cb9ee3f64c92bd8294b244910,
+  InitialWeapon: {fileID: -283134361146685008, guid: c10d62de10b711045b62fb65cf372147,
     type: 3}
   CanPickupWeapons: 1
   WeaponUseFeedback: {fileID: 0}
