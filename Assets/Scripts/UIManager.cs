@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using DG.Tweening;
 
 public class UIManager : MonoBehaviour
 {
@@ -19,6 +20,11 @@ public class UIManager : MonoBehaviour
     [Header("UI")]
     [SerializeField] private GameObject easyModeUi;
     [SerializeField] private GameObject hardModeUi;
+
+    [Header("Dialog")]
+    [SerializeField] private GameObject dialogPanel;
+    [SerializeField] private CanvasGroup dialogGroup;
+    [SerializeField] private Button overLayButton;
 
     public bool isHardmodePlayable;
     public string sceneToPlay = "";
@@ -56,8 +62,27 @@ public class UIManager : MonoBehaviour
     void PlayButton()
     {
         if (sceneToPlay == "") { return; }
+        
+        if (sceneToPlay == "EasyModeLevel1Scene") //scene1 name
+        {
+            StartCoroutine(StartDialog());
+        }
+        else
+        {
+            SceneManager.LoadScene(sceneToPlay);
+        }
+        
 
-        SceneManager.LoadScene(sceneToPlay);
+        IEnumerator StartDialog()
+        {
+            float dialogTime = 2f;
+            float blockingTime = 2f;
+
+            dialogPanel.SetActive(true);
+            dialogGroup.DOFade(2, dialogTime);
+            yield return new WaitForSeconds(blockingTime);
+            overLayButton.gameObject.SetActive(true);
+        }
     }
     void HardMode()
     {
@@ -108,6 +133,7 @@ public class UIManager : MonoBehaviour
         Debug.Log("ShopButton is Press!!");
     }
 
+    public void GoToScene1() => SceneManager.LoadScene("EasyModeLevel1Scene");
     void SetUpUi()
     {
         LevelData.easyModeState[0] = 1;

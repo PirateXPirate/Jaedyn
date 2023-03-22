@@ -39,7 +39,7 @@ public class MenuManager : MonoBehaviour
 
     void GalleryButton()
     {
-        GoNextScene("GalleryScene");
+        SceneManager.LoadSceneAsync("GalleryScene", LoadSceneMode.Single);
     }
     void PlayButton()
     {
@@ -52,12 +52,6 @@ public class MenuManager : MonoBehaviour
         settingScenePrefab.SetActive(true);
         settingManager.LoadSetting();
     }
-
-    private void GoMapSceneButton()
-    {
-        GoNextScene("MapScene");
-    }
-
     private void DeleteMenuUi()
     {
         buttonMenu.SetActive(false);
@@ -67,24 +61,11 @@ public class MenuManager : MonoBehaviour
     IEnumerator LoadingAndDialogProgress()
     {
         float loadingDuration = dummyLoader.loadingDuration;
-        float dialogFadeDuration = 2; //block player to spam click before read some dialog?
 
         dummyLoaderPrefab.SetActive(true);
         yield return new WaitForSeconds(loadingDuration);
         dummyLoaderPrefab.SetActive(false);
-
-        dialogPanel.SetActive(true);
-        dialogFaderGroup.DOFade(1, dialogFadeDuration);
-        yield return new WaitForSeconds(dialogFadeDuration);
-
-        goMapSceneButton.gameObject.SetActive(true);
-        goMapSceneButton.onClick.AddListener(GoMapSceneButton);
-        yield return null;
-    }
-
-    private void GoNextScene(string sceneName)
-    {
-        SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync("MapScene", LoadSceneMode.Single);
     }
 }
     
