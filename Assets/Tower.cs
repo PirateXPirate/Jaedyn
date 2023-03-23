@@ -13,7 +13,13 @@ public class Tower : MonoBehaviour
     public ActivateObject obj;
     public bool Complete = false;
     TowerManager manager;
-   
+    public WarpDoor warpDoor;
+    public ParticleSystem warpDoorParticle;
+
+    public GameObject activeObj;
+
+    public TutorialMarker marker;
+
     void Start()
     {
         manager = GetComponentInParent<TowerManager>();
@@ -31,6 +37,23 @@ public class Tower : MonoBehaviour
             obj.Activate();
             if (manager)
                 manager.CheckAll();
+
+            if (warpDoor)
+                warpDoor.CanEnter = true;
+
+            if (warpDoorParticle)
+            {
+                ParticleSystem.MainModule settings = warpDoorParticle.GetComponent<ParticleSystem>().main;
+                settings.startColor = new ParticleSystem.MinMaxGradient(Color.green);
+            }
+
+            if (activeObj)
+            {
+                activeObj.SetActive(true);
+            }
+
+            if (marker)
+                marker.ShowPopup();
         }
     }
 

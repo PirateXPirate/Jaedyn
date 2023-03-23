@@ -21,7 +21,9 @@ public class ChestBox : MonoBehaviour
     public CoinManager coinManager;
 
     public KeyManager keyManager;
-    public enum ChestType
+
+    public GameObject[] activeObjs;
+     public enum ChestType
     {
         Coin,
         Key,
@@ -47,6 +49,13 @@ public class ChestBox : MonoBehaviour
 
     public void SpawnDrops()
     {
+        if (activeObjs.Length > 0)
+        {
+            foreach (var ob in activeObjs)
+            {
+                ob.SetActive(true);
+            }
+        }
         canOpen = false;
         if (currentChestType == ChestType.Potion)
         {

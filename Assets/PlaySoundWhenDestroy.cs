@@ -37,6 +37,8 @@ public class PlaySoundWhenDestroy : MonoBehaviour
             if (activateObj)
                 activateObj.Activate();
 
+
+
             if (activateChest)
                 activateChest.canOpen = true;
 

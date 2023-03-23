@@ -2981,7 +2981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 449724, guid: 84e83dd4c176d1245a64822c0f970207, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 449724, guid: 84e83dd4c176d1245a64822c0f970207, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4782,7 +4782,7 @@ Transform:
   m_Children:
   - {fileID: 450006803}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &240864320
 PrefabInstance:
@@ -5554,6 +5554,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bud (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5487344542542193668, guid: 158daaa37168793499fa649e29059ab4,
+        type: 3}
+      propertyPath: Size.y
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 158daaa37168793499fa649e29059ab4, type: 3}
@@ -25544,6 +25549,7 @@ GameObject:
   - component: {fileID: 1209530124}
   - component: {fileID: 1209530123}
   - component: {fileID: 1209530122}
+  - component: {fileID: 1209530126}
   m_Layer: 5
   m_Name: EndGamePopup
   m_TagString: Untagged
@@ -25732,6 +25738,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1209530120}
   m_CullTransparentMesh: 1
+--- !u!114 &1209530126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209530120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93321afbfe37ea647a79a54eaee85b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingManager: {fileID: 43293106}
 --- !u!4 &1210884305 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3605678714552062435, guid: 107776f1ba7eac34e919e34cfdaf8083,
@@ -40178,6 +40197,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bud (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5487344542542193668, guid: 158daaa37168793499fa649e29059ab4,
+        type: 3}
+      propertyPath: Size.y
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 158daaa37168793499fa649e29059ab4, type: 3}
 --- !u!4 &1666271988 stripped
@@ -45890,7 +45914,7 @@ MonoBehaviour:
   TimeScale: 0
   HealthBarPrefab: {fileID: 0}
   TargetProgressBar: {fileID: 0}
-  Size: {x: 1, y: 0.2}
+  Size: {x: 1, y: 0.1}
   BackgroundPadding: {x: 0.01, y: 0.01}
   InitialRotationAngles: {x: 0, y: 0, z: 0}
   ForegroundColor:
@@ -51039,7 +51063,7 @@ PrefabInstance:
     - target: {fileID: 2620376068809887716, guid: 158daaa37168793499fa649e29059ab4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2620376068809887716, guid: 158daaa37168793499fa649e29059ab4,
         type: 3}
@@ -51095,6 +51119,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bud
+      objectReference: {fileID: 0}
+    - target: {fileID: 5487344542542193668, guid: 158daaa37168793499fa649e29059ab4,
+        type: 3}
+      propertyPath: Size.y
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 158daaa37168793499fa649e29059ab4, type: 3}

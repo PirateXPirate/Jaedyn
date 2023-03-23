@@ -23,6 +23,7 @@ public class WarpDoor : MonoBehaviour
         {
             if (CanEnter && warpPosition!=null)
             {
+                Debug.Log(name);
                 Utils.soundManager.PlayFX(warpSound);
                 other.transform.position = warpPosition.position;
                // targetWarpPoint.CanEnter = true;

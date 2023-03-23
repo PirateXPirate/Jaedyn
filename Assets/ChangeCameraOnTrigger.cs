@@ -10,13 +10,21 @@ public class ChangeCameraOnTrigger : MonoBehaviour
     [SerializeField] CinemachineVirtualCamera OffCamera;
 
     CinemachineComponentBase body;
+
+    WarpDoor warpDoor;
     void Start()
     {
-
+        warpDoor = GetComponent<WarpDoor>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        if (warpDoor)
+        {
+            if (!warpDoor.CanEnter) return;
+        }
+
+
         if (OnCamera != null)
             OnCamera.gameObject.SetActive(true);
         if (OffCamera != null)
