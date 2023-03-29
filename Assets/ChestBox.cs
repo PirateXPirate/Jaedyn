@@ -91,6 +91,7 @@ public class ChestBox : MonoBehaviour
         }
         if (currentChestType == ChestType.Key)
         {
+            PopuptoShow.SetActive(true);
             keyManager.AddKey(1);
         }
 

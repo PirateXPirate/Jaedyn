@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1018370323088741752}
   - component: {fileID: 1018370323089104478}
   - component: {fileID: 5843160822641584736}
+  - component: {fileID: 4084222085292122300}
   m_Layer: 0
   m_Name: KeyChest
   m_TagString: Chest
@@ -199,6 +200,20 @@ MonoBehaviour:
   canOpen: 1
   coinManager: {fileID: 0}
   keyManager: {fileID: 0}
+  activeObjs: []
+--- !u!114 &4084222085292122300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018370323095462058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93321afbfe37ea647a79a54eaee85b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingManager: {fileID: 0}
 --- !u!1 &1018370323163648313
 GameObject:
   m_ObjectHideFlags: 0

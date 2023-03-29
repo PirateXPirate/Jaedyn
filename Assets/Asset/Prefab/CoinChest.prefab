@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6110646050033708847}
   - component: {fileID: 6110646050033713687}
   - component: {fileID: 1481365978633832850}
+  - component: {fileID: 6635311098103244615}
   m_Layer: 0
   m_Name: CoinChest
   m_TagString: Chest
@@ -195,8 +196,24 @@ MonoBehaviour:
   currentChestType: 0
   openParticle: {fileID: 397903971398650001}
   PopuptoShow: {fileID: 0}
+  ResistancePopup: {fileID: 0}
   canOpen: 0
   coinManager: {fileID: 0}
+  keyManager: {fileID: 0}
+  activeObjs: []
+--- !u!114 &6635311098103244615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6110646050027371105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93321afbfe37ea647a79a54eaee85b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingManager: {fileID: 0}
 --- !u!1 &6110646050027388463
 GameObject:
   m_ObjectHideFlags: 0

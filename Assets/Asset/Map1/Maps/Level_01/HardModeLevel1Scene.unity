@@ -2897,7 +2897,7 @@ MonoBehaviour:
   keyManager: {fileID: 1509699646}
   powerManager: {fileID: 1537557713}
   itemType: 1
-  SoundClip: {fileID: 8300000, guid: 73b8eb2b3ea96804eb93e7404e6fedc8, type: 3}
+  SoundClip: {fileID: 0}
 --- !u!65 &98120989
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9314,8 +9314,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.0115895, y: 0.22840288, z: 1.9934849}
-  m_Center: {x: 0.0026957393, y: 0.099385895, z: 0.007951917}
+  m_Size: {x: 6.7764473, y: 0.22840288, z: 1.9934849}
+  m_Center: {x: -0.4764824, y: 0.0993859, z: 0.007951915}
 --- !u!4 &422124831 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4899585634617078, guid: 9b42f9d14b52bd840afbef0e34f754f2,
@@ -14957,6 +14957,7 @@ Transform:
   - {fileID: 581212939}
   - {fileID: 244475112}
   - {fileID: 1597812116}
+  - {fileID: 636571389}
   m_Father: {fileID: 857851617}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16074,6 +16075,63 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 635039038}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &636571387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 636571389}
+  - component: {fileID: 636571388}
+  m_Layer: 0
+  m_Name: ChangeSkinManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &636571388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636571387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff298645d4ba8d84cb0d521038a6b7c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeSkinBut: {fileID: 953657708}
+  changeSkinImg: {fileID: 953657709}
+  leoMats:
+  - {fileID: 2100000, guid: 2583ad24f2517cf4e98d9d229b5a7ccf, type: 2}
+  - {fileID: 2100000, guid: 152c8146009823f4696c5134ab22c707, type: 2}
+  tigerMats:
+  - {fileID: 2100000, guid: bfd504be17617a34f97c866567cc0861, type: 2}
+  - {fileID: 2100000, guid: 4037fc82604cdf6429bae9d5336a1298, type: 2}
+  owlMats:
+  - {fileID: 2100000, guid: c7a1a921ed1bfbd4c907f422df386160, type: 2}
+  - {fileID: 2100000, guid: c685db39ea080654198c5b6e10e5c4c4, type: 2}
+  - {fileID: 2100000, guid: d2a98e1518020704aa6473173dce77aa, type: 2}
+  - {fileID: 2100000, guid: 3f39d7c853ddc6041aa590b0253dc259, type: 2}
+--- !u!4 &636571389
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636571387}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 614953615}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &640551451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23426,8 +23484,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.0115895, y: 0.22840288, z: 1.9934849}
-  m_Center: {x: 0.0026957393, y: 0.099385895, z: 0.007951917}
+  m_Size: {x: 6.3553543, y: 0.22840288, z: 1.9934849}
+  m_Center: {x: -0.42134857, y: 0.0993859, z: 0.007951915}
 --- !u!1001 &933186510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23981,7 +24039,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 953657709}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 636571388}
+        m_TargetAssemblyTypeName: ChangeSkinManager, Assembly-CSharp
+        m_MethodName: OnChangeSkin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &953657709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26082,7 +26152,7 @@ PrefabInstance:
         type: 3}
       propertyPath: titleText
       value: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23\u0E39\u0E49 
-        Tutorial \u0E40\u0E01\u0E47\u0E1A"
+        Tutorial "
       objectReference: {fileID: 0}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}

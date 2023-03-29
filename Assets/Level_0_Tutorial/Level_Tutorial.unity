@@ -564,7 +564,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 21408060}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1549886762}
+        m_TargetAssemblyTypeName: ChangeSkinManager, Assembly-CSharp
+        m_MethodName: OnChangeSkin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &21408060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18653,12 +18665,17 @@ PrefabInstance:
     - target: {fileID: 6661666020791853698, guid: 447014c64af03634f8be0a425a0ad2b9,
         type: 3}
       propertyPath: m_Size.z
-      value: 3.67
+      value: 5.8601394
+      objectReference: {fileID: 0}
+    - target: {fileID: 6661666020791853698, guid: 447014c64af03634f8be0a425a0ad2b9,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.00010871888
       objectReference: {fileID: 0}
     - target: {fileID: 6661666020791853698, guid: 447014c64af03634f8be0a425a0ad2b9,
         type: 3}
       propertyPath: m_Center.z
-      value: 1.54
+      value: 2.6350746
       objectReference: {fileID: 0}
     - target: {fileID: 8199702449656359989, guid: 447014c64af03634f8be0a425a0ad2b9,
         type: 3}
@@ -26922,6 +26939,7 @@ Transform:
   - {fileID: 1238781844}
   - {fileID: 43293107}
   - {fileID: 205640305}
+  - {fileID: 1549886763}
   m_Father: {fileID: 1499738435}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -36624,6 +36642,63 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1430969678}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1549886761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1549886763}
+  - component: {fileID: 1549886762}
+  m_Layer: 0
+  m_Name: ChangeSkinManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1549886762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549886761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff298645d4ba8d84cb0d521038a6b7c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeSkinBut: {fileID: 21408059}
+  changeSkinImg: {fileID: 21408060}
+  leoMats:
+  - {fileID: 2100000, guid: 2583ad24f2517cf4e98d9d229b5a7ccf, type: 2}
+  - {fileID: 2100000, guid: 152c8146009823f4696c5134ab22c707, type: 2}
+  tigerMats:
+  - {fileID: 2100000, guid: bfd504be17617a34f97c866567cc0861, type: 2}
+  - {fileID: 2100000, guid: 4037fc82604cdf6429bae9d5336a1298, type: 2}
+  owlMats:
+  - {fileID: 2100000, guid: c7a1a921ed1bfbd4c907f422df386160, type: 2}
+  - {fileID: 2100000, guid: c685db39ea080654198c5b6e10e5c4c4, type: 2}
+  - {fileID: 2100000, guid: d2a98e1518020704aa6473173dce77aa, type: 2}
+  - {fileID: 2100000, guid: 3f39d7c853ddc6041aa590b0253dc259, type: 2}
+--- !u!4 &1549886763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549886761}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1272554710}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1553626006
 PrefabInstance:
   m_ObjectHideFlags: 0

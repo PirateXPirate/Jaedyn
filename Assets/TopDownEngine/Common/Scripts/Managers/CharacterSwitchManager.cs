@@ -239,6 +239,7 @@ namespace MoreMountains.TopDownEngine
 				orientation.Face(oldAngle);
 
 			// we trigger a switch event (for the camera to know, mostly)
+			_switchEvent.OriginCharacter = LevelManager.Instance.Players[0];
 			MMEventManager.TriggerEvent(_switchEvent);
 			MMCameraEvent.Trigger(MMCameraEventTypes.RefreshAutoFocus, LevelManager.Instance.Players[0], null);
 		}

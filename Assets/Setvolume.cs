@@ -9,6 +9,7 @@ public class Setvolume : MonoBehaviour
     public SettingManager settingManager;
     private void OnEnable()
     {
+        if (!settingManager) return;
         settingManager.OnSaveSoundSetting += OnSaveSetting;
         if (Utils.soundManager)
         {
@@ -18,6 +19,7 @@ public class Setvolume : MonoBehaviour
     }
     private void OnDisable()
     {
+        if (!settingManager) return;
         settingManager.OnSaveSoundSetting -= OnSaveSetting;
     }
     private void OnSaveSetting()

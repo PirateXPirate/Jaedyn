@@ -9212,6 +9212,7 @@ Transform:
   - {fileID: 497663095}
   - {fileID: 1888651051}
   - {fileID: 1952383506}
+  - {fileID: 835591511}
   m_Father: {fileID: 708807968}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18482,8 +18483,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.0115895, y: 0.22840288, z: 1.9934849}
-  m_Center: {x: 0.0026957393, y: 0.099385895, z: 0.007951917}
+  m_Size: {x: 6.566969, y: 0.22840288, z: 1.9934849}
+  m_Center: {x: -0.21432972, y: 0.0993859, z: 0.007951915}
 --- !u!1001 &806909064
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19156,6 +19157,63 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 64449852470282422, guid: 7ab427dd6ddec154e9f1b33c9ee38485, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7ab427dd6ddec154e9f1b33c9ee38485, type: 3}
+--- !u!1 &835591510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 835591511}
+  - component: {fileID: 835591512}
+  m_Layer: 0
+  m_Name: ChangeSkinManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &835591511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835591510}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 407472119}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &835591512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835591510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff298645d4ba8d84cb0d521038a6b7c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeSkinBut: {fileID: 1792097822}
+  changeSkinImg: {fileID: 1792097823}
+  leoMats:
+  - {fileID: 2100000, guid: 2583ad24f2517cf4e98d9d229b5a7ccf, type: 2}
+  - {fileID: 2100000, guid: 152c8146009823f4696c5134ab22c707, type: 2}
+  tigerMats:
+  - {fileID: 2100000, guid: bfd504be17617a34f97c866567cc0861, type: 2}
+  - {fileID: 2100000, guid: 4037fc82604cdf6429bae9d5336a1298, type: 2}
+  owlMats:
+  - {fileID: 2100000, guid: c7a1a921ed1bfbd4c907f422df386160, type: 2}
+  - {fileID: 2100000, guid: c685db39ea080654198c5b6e10e5c4c4, type: 2}
+  - {fileID: 2100000, guid: d2a98e1518020704aa6473173dce77aa, type: 2}
+  - {fileID: 2100000, guid: 3f39d7c853ddc6041aa590b0253dc259, type: 2}
 --- !u!1 &838191856
 GameObject:
   m_ObjectHideFlags: 0
@@ -22535,8 +22593,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.0115895, y: 0.22840288, z: 1.9934849}
-  m_Center: {x: 0.0026957393, y: 0.099385895, z: 0.007951917}
+  m_Size: {x: 8.056257, y: 0.22840288, z: 1.9934849}
+  m_Center: {x: 0.31935024, y: 0.0993859, z: 0.007951915}
 --- !u!1001 &963970359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30480,7 +30538,7 @@ PrefabInstance:
         type: 3}
       propertyPath: titleText
       value: "\u0E42\u0E2B\u0E21\u0E14\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23\u0E39\u0E49 
-        Tutorial \u0E40\u0E01\u0E47\u0E1A"
+        Tutorial"
       objectReference: {fileID: 0}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
@@ -40465,7 +40523,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1792097823}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 835591512}
+        m_TargetAssemblyTypeName: ChangeSkinManager, Assembly-CSharp
+        m_MethodName: OnChangeSkin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1792097823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46210,7 +46280,7 @@ MonoBehaviour:
   keyManager: {fileID: 134998576}
   powerManager: {fileID: 158685287}
   itemType: 1
-  SoundClip: {fileID: 8300000, guid: 73b8eb2b3ea96804eb93e7404e6fedc8, type: 3}
+  SoundClip: {fileID: 0}
 --- !u!65 &1999653927
 BoxCollider:
   m_ObjectHideFlags: 0
