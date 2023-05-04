@@ -279,7 +279,10 @@ MonoBehaviour:
   CurrentHealth: 100
   Invulnerable: 0
   InitialHealth: 150
-  MaximumHealth: 150
+  isRandomHealth: 1
+  minInitialHealth: 120
+  maxInitialHealth: 150
+  MaximumHealth: 200
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
   DamageMMFeedbacks: {fileID: 0}

@@ -51,14 +51,19 @@ namespace MoreMountains.TopDownEngine
 		/// If this is true, this object can't take damage at this time
 		[MMReadOnly]
 		[Tooltip("If this is true, this object can't take damage at this time")]
-		public bool Invulnerable = false;	
+		public bool Invulnerable = false;
 
 		[MMInspectorGroup("Health", true, 5)]
 
-		[MMInformation("Add this component to an object and it'll have health, will be able to get damaged and potentially die.",MoreMountains.Tools.MMInformationAttribute.InformationType.Info,false)]
+		[MMInformation("Add this component to an object and it'll have health, will be able to get damaged and potentially die.", MoreMountains.Tools.MMInformationAttribute.InformationType.Info, false)]
 		/// the initial amount of health of the object
 		[Tooltip("the initial amount of health of the object")]
 		public float InitialHealth = 10;
+
+		[Tooltip("for random health function")]
+		public bool isRandomHealth;
+		public float minInitialHealth;
+		public float maxInitialHealth;
 		/// the maximum amount of health of the object
 		[Tooltip("the maximum amount of health of the object")]
 		public float MaximumHealth = 10;
@@ -348,6 +353,13 @@ namespace MoreMountains.TopDownEngine
 		{
 			if (MasterHealth == null)
 			{
+				if(isRandomHealth)
+                {
+					var randomHealth = Random.Range(minInitialHealth, maxInitialHealth);
+					InitialHealth = (int)randomHealth;
+					MaximumHealth = (int)randomHealth;
+                }
+
 				SetHealth(InitialHealth);	
 			}
 			else

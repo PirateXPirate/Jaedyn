@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 3520515265605006267}
   - component: {fileID: 3520515265605006268}
   m_Layer: 13
-  m_Name: Bloom
+  m_Name: bloom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -274,6 +274,9 @@ MonoBehaviour:
   CurrentHealth: 100
   Invulnerable: 0
   InitialHealth: 30
+  isRandomHealth: 1
+  minInitialHealth: 80
+  maxInitialHealth: 130
   MaximumHealth: 30
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
