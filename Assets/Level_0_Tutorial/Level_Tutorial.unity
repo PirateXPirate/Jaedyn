@@ -8271,6 +8271,9 @@ MonoBehaviour:
   CurrentHealth: 0
   Invulnerable: 0
   InitialHealth: 10
+  isRandomHealth: 0
+  minInitialHealth: 0
+  maxInitialHealth: 0
   MaximumHealth: 10
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
@@ -11835,6 +11838,9 @@ MonoBehaviour:
   CurrentHealth: 0
   Invulnerable: 0
   InitialHealth: 10
+  isRandomHealth: 0
+  minInitialHealth: 0
+  maxInitialHealth: 0
   MaximumHealth: 10
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
@@ -16798,6 +16804,107 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1628907214}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &743036253
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1275488001}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 61007a4059f3a6c4cbe495112fd15439,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 61007a4059f3a6c4cbe495112fd15439,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 61007a4059f3a6c4cbe495112fd15439,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 61007a4059f3a6c4cbe495112fd15439,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 61007a4059f3a6c4cbe495112fd15439,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 61007a4059f3a6c4cbe495112fd15439,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 61007a4059f3a6c4cbe495112fd15439,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 61007a4059f3a6c4cbe495112fd15439,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 61007a4059f3a6c4cbe495112fd15439,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 61007a4059f3a6c4cbe495112fd15439,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 61007a4059f3a6c4cbe495112fd15439,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 61007a4059f3a6c4cbe495112fd15439,
+        type: 3}
+      propertyPath: m_Name
+      value: Tiger_Unity_New
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 61007a4059f3a6c4cbe495112fd15439, type: 3}
+--- !u!4 &743036254 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 61007a4059f3a6c4cbe495112fd15439,
+    type: 3}
+  m_PrefabInstance: {fileID: 743036253}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &743036255 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 61007a4059f3a6c4cbe495112fd15439,
+    type: 3}
+  m_PrefabInstance: {fileID: 743036253}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &743036256
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743036255}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 740b6dfadded84ff8bb4bd0af40b6fc1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &745636759
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27163,6 +27270,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1489003840}
+  - {fileID: 743036254}
   m_Father: {fileID: 1499738435}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27195,6 +27303,9 @@ MonoBehaviour:
   CurrentHealth: 0
   Invulnerable: 0
   InitialHealth: 10
+  isRandomHealth: 0
+  minInitialHealth: 0
+  maxInitialHealth: 0
   MaximumHealth: 10
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
@@ -27601,7 +27712,7 @@ MonoBehaviour:
   CharacterDimension: 0
   CharacterType: 0
   PlayerID: Player1
-  CharacterAnimator: {fileID: 1489003842}
+  CharacterAnimator: {fileID: 743036256}
   UseDefaultMecanim: 1
   RunAnimatorSanityChecks: 0
   DisableAnimatorLogs: 1
@@ -32568,6 +32679,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tiger_New
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 899f2c5eb095244f19afab1a8f1e47d7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 980543514239069839, guid: 899f2c5eb095244f19afab1a8f1e47d7,
         type: 3}
@@ -42752,6 +42868,9 @@ MonoBehaviour:
   CurrentHealth: 0
   Invulnerable: 0
   InitialHealth: 10
+  isRandomHealth: 0
+  minInitialHealth: 0
+  maxInitialHealth: 0
   MaximumHealth: 10
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
@@ -45732,6 +45851,9 @@ MonoBehaviour:
   CurrentHealth: 100
   Invulnerable: 0
   InitialHealth: 200
+  isRandomHealth: 0
+  minInitialHealth: 0
+  maxInitialHealth: 0
   MaximumHealth: 200
   ResetHealthOnEnable: 1
   ImmuneToDamage: 1
@@ -47215,6 +47337,9 @@ MonoBehaviour:
   CurrentHealth: 0
   Invulnerable: 0
   InitialHealth: 100
+  isRandomHealth: 0
+  minInitialHealth: 0
+  maxInitialHealth: 0
   MaximumHealth: 100
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
@@ -50185,6 +50310,7 @@ MonoBehaviour:
   Target: {fileID: 803671310}
   TargetPosition: {fileID: 856693489}
   TargetActivateObject: {fileID: 0}
+  isDrop: 1
 --- !u!65 &2098505008
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50363,6 +50489,7 @@ MonoBehaviour:
   powerUpManager: {fileID: 319267132}
   numPotion: 1
   numResistance: 1
+  isRandom: 0
 --- !u!4 &2119605920
 Transform:
   m_ObjectHideFlags: 0

@@ -1859,6 +1859,9 @@ MonoBehaviour:
   CurrentHealth: 0
   Invulnerable: 0
   InitialHealth: 10
+  isRandomHealth: 0
+  minInitialHealth: 0
+  maxInitialHealth: 0
   MaximumHealth: 10
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
@@ -3252,6 +3255,9 @@ MonoBehaviour:
   CurrentHealth: 0
   Invulnerable: 0
   InitialHealth: 10
+  isRandomHealth: 0
+  minInitialHealth: 0
+  maxInitialHealth: 0
   MaximumHealth: 10
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
@@ -6555,6 +6561,7 @@ MonoBehaviour:
   Target: {fileID: 2109368671}
   TargetPosition: {fileID: 763666200}
   TargetActivateObject: {fileID: 1703845840}
+  isDrop: 1
 --- !u!65 &267687284
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9108,6 +9115,9 @@ MonoBehaviour:
   CurrentHealth: 0
   Invulnerable: 0
   InitialHealth: 10
+  isRandomHealth: 0
+  minInitialHealth: 0
+  maxInitialHealth: 0
   MaximumHealth: 10
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
@@ -9567,7 +9577,7 @@ CharacterController:
   serializedVersion: 2
   m_Height: 3.08
   m_Radius: 1.48
-  m_SlopeLimit: 45
+  m_SlopeLimit: 65
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
@@ -10492,6 +10502,9 @@ MonoBehaviour:
   CurrentHealth: 0
   Invulnerable: 0
   InitialHealth: 10
+  isRandomHealth: 0
+  minInitialHealth: 0
+  maxInitialHealth: 0
   MaximumHealth: 10
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
@@ -14641,6 +14654,7 @@ MonoBehaviour:
   Target: {fileID: 445432858}
   TargetPosition: {fileID: 470070325}
   TargetActivateObject: {fileID: 1703845840}
+  isDrop: 1
 --- !u!65 &527038393
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17329,7 +17343,7 @@ PrefabInstance:
     - target: {fileID: 8205100539466899308, guid: a49c313805edfe44f9843c350826b6d4,
         type: 3}
       propertyPath: m_SlopeLimit
-      value: 45
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 8205100539466899308, guid: a49c313805edfe44f9843c350826b6d4,
         type: 3}
@@ -27863,6 +27877,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tiger_New
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 899f2c5eb095244f19afab1a8f1e47d7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 980543514239069839, guid: 899f2c5eb095244f19afab1a8f1e47d7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -36496,6 +36515,9 @@ MonoBehaviour:
   CurrentHealth: 0
   Invulnerable: 0
   InitialHealth: 10
+  isRandomHealth: 0
+  minInitialHealth: 0
+  maxInitialHealth: 0
   MaximumHealth: 10
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
@@ -39100,6 +39122,107 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1253217735}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1255908415
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2025958602}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 61007a4059f3a6c4cbe495112fd15439,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 61007a4059f3a6c4cbe495112fd15439,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 61007a4059f3a6c4cbe495112fd15439,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 61007a4059f3a6c4cbe495112fd15439,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 61007a4059f3a6c4cbe495112fd15439,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 61007a4059f3a6c4cbe495112fd15439,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 61007a4059f3a6c4cbe495112fd15439,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 61007a4059f3a6c4cbe495112fd15439,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 61007a4059f3a6c4cbe495112fd15439,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 61007a4059f3a6c4cbe495112fd15439,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 61007a4059f3a6c4cbe495112fd15439,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 61007a4059f3a6c4cbe495112fd15439,
+        type: 3}
+      propertyPath: m_Name
+      value: Tiger_Unity_New
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 61007a4059f3a6c4cbe495112fd15439, type: 3}
+--- !u!4 &1255908416 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 61007a4059f3a6c4cbe495112fd15439,
+    type: 3}
+  m_PrefabInstance: {fileID: 1255908415}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1255908417 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 61007a4059f3a6c4cbe495112fd15439,
+    type: 3}
+  m_PrefabInstance: {fileID: 1255908415}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1255908418
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255908417}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 740b6dfadded84ff8bb4bd0af40b6fc1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1262337709
 GameObject:
   m_ObjectHideFlags: 0
@@ -41709,6 +41832,9 @@ MonoBehaviour:
   CurrentHealth: 0
   Invulnerable: 0
   InitialHealth: 10
+  isRandomHealth: 0
+  minInitialHealth: 0
+  maxInitialHealth: 0
   MaximumHealth: 10
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
@@ -48242,6 +48368,7 @@ MonoBehaviour:
   powerUpManager: {fileID: 199118048}
   numPotion: 2
   numResistance: 0
+  isRandom: 0
 --- !u!65 &1635339673
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59823,6 +59950,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 844963503}
+  - {fileID: 1255908416}
   m_Father: {fileID: 660480806}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -59896,6 +60024,9 @@ MonoBehaviour:
   CurrentHealth: 0
   Invulnerable: 0
   InitialHealth: 10
+  isRandomHealth: 0
+  minInitialHealth: 0
+  maxInitialHealth: 0
   MaximumHealth: 10
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
@@ -60302,7 +60433,7 @@ MonoBehaviour:
   CharacterDimension: 0
   CharacterType: 0
   PlayerID: Player1
-  CharacterAnimator: {fileID: 844963505}
+  CharacterAnimator: {fileID: 1255908418}
   UseDefaultMecanim: 1
   RunAnimatorSanityChecks: 0
   DisableAnimatorLogs: 1
@@ -60355,7 +60486,7 @@ CharacterController:
   serializedVersion: 2
   m_Height: 3.08
   m_Radius: 1.48
-  m_SlopeLimit: 45
+  m_SlopeLimit: 65
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
@@ -66531,7 +66662,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd6ae4922b1b34340a763eb08fa6f29b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 1877361463}
+  obj:
+  - {fileID: 0}
 --- !u!65 &2067302355
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67234,6 +67366,9 @@ MonoBehaviour:
   CurrentHealth: 0
   Invulnerable: 0
   InitialHealth: 10
+  isRandomHealth: 0
+  minInitialHealth: 0
+  maxInitialHealth: 0
   MaximumHealth: 10
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0

@@ -1,4 +1,4 @@
-using System;
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,8 +9,14 @@ public class AddItem : MonoBehaviour
     public int numPotion;
     public int numResistance;
 
+    public bool isRandom = false;
+
     private void OnEnable()
     {
+        if (isRandom)
+        {
+            numPotion = Random.Range(1, 3);
+        }
         powerUpManager.AddHpPotion(numPotion);
         powerUpManager.AddResistancePotion(numResistance);
     }
