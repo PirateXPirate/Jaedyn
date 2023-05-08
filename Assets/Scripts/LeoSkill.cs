@@ -10,7 +10,7 @@ public class LeoSkill : SkillActivator
     Transform targetPosition;
     ActivateObject activateObject;
     CharacterOrientation3D rotation;
-
+    bool isDrop = true;
 
     protected override void Perform()
     {
@@ -24,11 +24,12 @@ public class LeoSkill : SkillActivator
                 {
                     if (checkCollide.hitObstacle.activeSelf) return;
                 }
-                  
+
             }
             base.Perform();
             movement.ScriptDrivenInput = true;
             targetObject.DOMove(targetPosition.position, 1).SetEase(Ease.Linear).OnComplete(Complete);
+            Debug.Log(targetObject);
             LevelManager.Instance.Players[0].LinkedInputManager.InputDetectionActive = false;
             LevelManager.Instance.Players[0].GetComponent<CharacterMovement>().enabled = false;
             LevelManager.Instance.Players[0].GetComponent<TopDownController3D>().enabled = false;
@@ -41,11 +42,14 @@ public class LeoSkill : SkillActivator
     }
     void Complete()
     {
-        if(activateObject)
+        if (activateObject)
             activateObject.Activate();
 
         if (targetObject.GetComponent<Rigidbody>())
-            targetObject.GetComponent<Rigidbody>().isKinematic = false;
+        {
+
+            targetObject.GetComponent<Rigidbody>().isKinematic = !isDrop;
+        }
         movement.ScriptDrivenInput = false;
         LevelManager.Instance.Players[0].LinkedInputManager.InputDetectionActive = true;
         LevelManager.Instance.Players[0].GetComponent<CharacterMovement>().enabled = true;
@@ -64,7 +68,8 @@ public class LeoSkill : SkillActivator
             targetObject = other.GetComponent<MoveObject>().Target;
             targetPosition = other.GetComponent<MoveObject>().TargetPosition;
             activateObject = other.GetComponent<MoveObject>().TargetActivateObject;
-          //  other.GetComponent<Collider>().enabled = false;
+            isDrop = other.GetComponent<MoveObject>().isDrop;
+            //  other.GetComponent<Collider>().enabled = false;
         }
     }
 }
