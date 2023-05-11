@@ -4571,7 +4571,7 @@ RectTransform:
   m_GameObject: {fileID: 232710563}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.4259353, y: 2.3070602, z: 1.6174968}
+  m_LocalScale: {x: 3.54401, y: 2.3070602, z: 1.6174968}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 516757092}
@@ -4579,7 +4579,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 230, y: -406.44202}
+  m_AnchoredPosition: {x: 331, y: -387}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &232710565
@@ -6728,6 +6728,7 @@ MonoBehaviour:
   damageResistance: {fileID: 1599679585}
   healthPotionFx: {fileID: 105942, guid: ff672eaca96d32c419d7a1f1b0346e8d, type: 3}
   resistancePotionFx: {fileID: 147642, guid: 685c97d007af49549b239b56b6d2000a, type: 3}
+  shieldFloorFx: {fileID: 0}
   useHpPotionSound: {fileID: 8300000, guid: 86759931f7ebea3479014bc21cf06962, type: 3}
   useResistancePotionSound: {fileID: 8300000, guid: 46093719e61781a4fa171e0cd140a04f,
     type: 3}
@@ -7150,6 +7151,11 @@ PrefabInstance:
     - target: {fileID: 1851237174, guid: bc9529d54b74ea24588e798868920d00, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559232570396311411, guid: bc9529d54b74ea24588e798868920d00,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.9411765
       objectReference: {fileID: 0}
     - target: {fileID: 2675772815557730292, guid: bc9529d54b74ea24588e798868920d00,
         type: 3}
@@ -42974,6 +42980,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 65897054604079466, guid: 785090ee535617b44af22a4e6a55f67c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 785090ee535617b44af22a4e6a55f67c, type: 3}
 --- !u!4 &1811073715 stripped
@@ -46266,6 +46277,7 @@ MonoBehaviour:
   NestDrawnHealthBar: 0
   Billboard: 1
   InstantiatedOnDeath: {fileID: 0}
+  DeathSound: {fileID: 0}
   HealthBarOffset: {x: 0, y: 2.5, z: 0}
   AlwaysVisible: 1
   DisplayDurationOnHit: 1
@@ -46298,6 +46310,7 @@ MonoBehaviour:
   WeaponModels: []
   StunButton: 0
   ExitStunButton: 0
+  StunParticleObject: {fileID: 0}
 --- !u!1 &1913800743
 GameObject:
   m_ObjectHideFlags: 0
@@ -49144,6 +49157,11 @@ PrefabInstance:
     - target: {fileID: 4095582538101974, guid: 785090ee535617b44af22a4e6a55f67c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65897054604079466, guid: 785090ee535617b44af22a4e6a55f67c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 785090ee535617b44af22a4e6a55f67c, type: 3}

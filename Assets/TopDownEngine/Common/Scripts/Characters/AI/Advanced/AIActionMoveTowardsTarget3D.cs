@@ -54,7 +54,6 @@ namespace MoreMountains.TopDownEngine
 			_movementVector.y = _directionToTarget.z;
 			_characterMovement.SetMovement(_movementVector);
 
-
 			if (Mathf.Abs(this.transform.position.x - _brain.Target.position.x) < MinimumDistance)
 			{
 				_characterMovement.SetHorizontalMovement(0f);

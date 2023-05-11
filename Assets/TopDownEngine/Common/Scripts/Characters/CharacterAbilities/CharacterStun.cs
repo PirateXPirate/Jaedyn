@@ -46,6 +46,8 @@ namespace MoreMountains.TopDownEngine
 		protected Coroutine _stunCoroutine;
 		protected CharacterStates.CharacterConditions _previousCondition;
 
+		public GameObject StunParticleObject;
+
 		/// <summary>
 		/// Stuns the character
 		/// </summary>
@@ -54,7 +56,9 @@ namespace MoreMountains.TopDownEngine
 			if ((_previousCondition != CharacterStates.CharacterConditions.Stunned) && (_condition.CurrentState != CharacterStates.CharacterConditions.Stunned))
 			{
 				_previousCondition = _condition.CurrentState;
-			} 		
+			}
+			if (StunParticleObject)
+				StunParticleObject.SetActive(true);
 			_condition.ChangeState(CharacterStates.CharacterConditions.Stunned);
 			_controller.SetMovement(Vector3.zero);
 			AbilityStartFeedbacks?.PlayFeedbacks();
@@ -81,6 +85,8 @@ namespace MoreMountains.TopDownEngine
 		{
 			AbilityStopFeedbacks?.PlayFeedbacks();
 			_condition.ChangeState(_previousCondition);
+			if (StunParticleObject)
+				StunParticleObject.SetActive(false);
 			AttachIK();
 		}
 

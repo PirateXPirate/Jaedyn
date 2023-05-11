@@ -453,6 +453,7 @@ namespace MoreMountains.TopDownEngine
 			if (OnHit != null)
 			{
 				OnHit();
+				
 			}
 
 			if (damageFx)

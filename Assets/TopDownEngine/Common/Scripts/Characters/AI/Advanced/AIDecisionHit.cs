@@ -69,6 +69,7 @@ namespace MoreMountains.TopDownEngine
 		/// </summary>
 		protected virtual void OnHit()
 		{
+			_brain.Target = LevelManager.Instance.Players[0].transform;
 			_hitCounter++;
 		}
 

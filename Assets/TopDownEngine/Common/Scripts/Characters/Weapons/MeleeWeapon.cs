@@ -254,7 +254,7 @@ namespace MoreMountains.TopDownEngine
 				var tmp = Instantiate(fxParticle);
 				tmp.transform.parent = transform;
 				tmp.transform.localPosition = pos;
-				tmp.transform.rotation = Quaternion.Euler(-90, 0, 0);
+				tmp.transform.localEulerAngles = Vector3.zero;
 			}
 		}
 

@@ -23,6 +23,7 @@ public class GetItem : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (other.tag != "Player") return;
         gameObject.SetActive(false);
         if (SoundClip)
             Utils.soundManager.PlayFX(SoundClip);

@@ -4570,6 +4570,7 @@ MonoBehaviour:
   damageResistance: {fileID: 376798779}
   healthPotionFx: {fileID: 105942, guid: ff672eaca96d32c419d7a1f1b0346e8d, type: 3}
   resistancePotionFx: {fileID: 147642, guid: 685c97d007af49549b239b56b6d2000a, type: 3}
+  shieldFloorFx: {fileID: 0}
   useHpPotionSound: {fileID: 8300000, guid: 86759931f7ebea3479014bc21cf06962, type: 3}
   useResistancePotionSound: {fileID: 8300000, guid: 46093719e61781a4fa171e0cd140a04f,
     type: 3}
@@ -64160,6 +64161,11 @@ PrefabInstance:
     - target: {fileID: 1997603132, guid: bc9529d54b74ea24588e798868920d00, type: 3}
       propertyPath: ActivateObject
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2559232570396311411, guid: bc9529d54b74ea24588e798868920d00,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.9411765
       objectReference: {fileID: 0}
     - target: {fileID: 2675772814718023084, guid: bc9529d54b74ea24588e798868920d00,
         type: 3}

@@ -10,6 +10,7 @@ public class LeoSkill : SkillActivator
     Transform targetPosition;
     ActivateObject activateObject;
     CharacterOrientation3D rotation;
+    TutorialMarker marker;
     bool isDrop = true;
 
     protected override void Perform()
@@ -17,6 +18,13 @@ public class LeoSkill : SkillActivator
         skillUiManager.SetSkillCooldown(coolDown);
         if (inPoint)
         {
+            if (marker)
+            {
+                marker.ShowPopup();
+                marker = null;
+                return;
+            }
+           
             var checkCollide = targetObject.GetComponent<ChekcCollide>();
             if (checkCollide)
             {
@@ -29,7 +37,6 @@ public class LeoSkill : SkillActivator
             base.Perform();
             movement.ScriptDrivenInput = true;
             targetObject.DOMove(targetPosition.position, 1).SetEase(Ease.Linear).OnComplete(Complete);
-            Debug.Log(targetObject);
             LevelManager.Instance.Players[0].LinkedInputManager.InputDetectionActive = false;
             LevelManager.Instance.Players[0].GetComponent<CharacterMovement>().enabled = false;
             LevelManager.Instance.Players[0].GetComponent<TopDownController3D>().enabled = false;
@@ -70,6 +77,13 @@ public class LeoSkill : SkillActivator
             activateObject = other.GetComponent<MoveObject>().TargetActivateObject;
             isDrop = other.GetComponent<MoveObject>().isDrop;
             //  other.GetComponent<Collider>().enabled = false;
+        }
+
+        if (other.tag.Equals("Popup"))
+        {
+            inPoint = true;
+            marker = other.GetComponent<TutorialMarker>();
+          
         }
     }
 }

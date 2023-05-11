@@ -16,7 +16,7 @@ public class ChekcCollide : MonoBehaviour
     public GameObject activeObject;
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.CompareTag("Trunk"))
+        if (collision.transform.CompareTag("Trunk") || collision.transform.CompareTag("Destroyable"))
         {
             hitObstacle = collision.gameObject;
             DOTween.KillAll();

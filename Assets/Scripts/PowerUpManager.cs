@@ -6,8 +6,8 @@ using UnityEngine;
 public class PowerUpManager : MonoBehaviour
 {
     [SerializeField] private PowerUpUIManager powerUpUI;
-    int hpPotionQuantity = 0;
-    int resistancePotionQuantity = 0;
+    int hpPotionQuantity = 10;
+    int resistancePotionQuantity = 10;
 
     [SerializeField] private JDHealth playerHealth;
     [SerializeField] private DamageResistance damageResistance;
@@ -20,6 +20,8 @@ public class PowerUpManager : MonoBehaviour
 
     [SerializeField] private GameObject healthPotionFx;
     [SerializeField] private GameObject resistancePotionFx;
+    [SerializeField] private GameObject shieldFloorFx;
+
 
     [SerializeField] private AudioClip useHpPotionSound;
     [SerializeField] private AudioClip useResistancePotionSound;
@@ -69,13 +71,17 @@ public class PowerUpManager : MonoBehaviour
             resistancePotionQuantity -= 1;
             damageResistance.DamageMultiplier = .75f;          
             powerUpUI.SetResistanceItemQuantity(resistancePotionQuantity);
-            StartCoroutine(CountDown());
+           
             Instantiate(resistancePotionFx, LevelManager.Instance.Players[0].transform.position, Quaternion.identity);
             Utils.soundManager.PlayFX(useResistancePotionSound,true);
-            IEnumerator  CountDown()
+            var shield = Instantiate(shieldFloorFx, LevelManager.Instance.Players[0].transform.position, Quaternion.identity);
+            shield.transform.parent = LevelManager.Instance.Players[0].transform;
+            StartCoroutine(CountDown(shield));
+            IEnumerator  CountDown(GameObject aa)
             {
                 yield return new WaitForSeconds(15);
                 damageResistance.DamageMultiplier =1f;
+                Destroy(aa);
             }
         }
        

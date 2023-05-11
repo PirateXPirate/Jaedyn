@@ -131,6 +131,7 @@ namespace MoreMountains.Tools
 		/// a gameobject (usually a particle system) to instantiate when the healthbar reaches zero
 		[Tooltip("a gameobject (usually a particle system) to instantiate when the healthbar reaches zero")]
 		public GameObject InstantiatedOnDeath;
+		public AudioClip DeathSound;
 
 		[Header("Offset")]
 		[MMInformation("Set the offset (in world units), relative to the object's center, to which the health bar will be displayed.",MoreMountains.Tools.MMInformationAttribute.InformationType.Info,false)]
@@ -373,6 +374,7 @@ namespace MoreMountains.Tools
 			{
 				GameObject instantiatedOnDeath = Instantiate(InstantiatedOnDeath, this.transform.position + HealthBarOffset, this.transform.rotation);
 				SceneManager.MoveGameObjectToScene(instantiatedOnDeath.gameObject, this.gameObject.scene);
+				Utils.soundManager.PlayFX(DeathSound);
 			}
 			if (HideBarAtZeroDelay == 0)
 			{

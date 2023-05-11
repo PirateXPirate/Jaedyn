@@ -20,6 +20,8 @@ public class Tower : MonoBehaviour
 
     public TutorialMarker marker;
 
+    public GameObject completeParticle;
+
     void Start()
     {
         manager = GetComponentInParent<TowerManager>();
@@ -54,6 +56,9 @@ public class Tower : MonoBehaviour
 
             if (marker)
                 marker.ShowPopup();
+
+            if (completeParticle)
+                completeParticle.SetActive(true);
         }
     }
 

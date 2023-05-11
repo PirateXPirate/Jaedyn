@@ -13,6 +13,7 @@ public class ShowPopupWhenTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if (other.tag != "Player") return;
         objectToShow.SetActive(true);
         gameObject.SetActive(false);
         LevelManager.Instance.Players[0].LinkedInputManager.InputDetectionActive = false;

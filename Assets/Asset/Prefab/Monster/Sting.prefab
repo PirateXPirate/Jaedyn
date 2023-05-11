@@ -1,5 +1,37 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1358633495981507599
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 981311582560977951}
+  m_Layer: 13
+  m_Name: StunParticle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &981311582560977951
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358633495981507599}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.6, y: -0.07, z: 0.07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7653729473482592166}
+  m_Father: {fileID: 5676686983994365558}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5676686983994365559
 GameObject:
   m_ObjectHideFlags: 0
@@ -50,6 +82,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6264961566501819149}
+  - {fileID: 981311582560977951}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 179.09, z: 0}
@@ -312,7 +345,7 @@ MonoBehaviour:
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
   deathSound: {fileID: 0}
-  damageFx: {fileID: 0}
+  damageFx: {fileID: 100000, guid: 42f9b2529dc1b5e48a16a781777e04f5, type: 3}
 --- !u!114 &5676686983994365557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -708,7 +741,8 @@ MonoBehaviour:
   FollowTargetMode: 2
   NestDrawnHealthBar: 0
   Billboard: 1
-  InstantiatedOnDeath: {fileID: 100002, guid: 646ed295d7110f448b5bef03394520bf, type: 3}
+  InstantiatedOnDeath: {fileID: 100000, guid: df352093d7e91c444a52031e4e4ccf5f, type: 3}
+  DeathSound: {fileID: 8300000, guid: 23eb736482b5a5e4aa2ab8dd494502ed, type: 3}
   HealthBarOffset: {x: 0, y: 1.5, z: 0}
   AlwaysVisible: 1
   DisplayDurationOnHit: 1
@@ -741,6 +775,7 @@ MonoBehaviour:
   WeaponModels: []
   StunButton: 0
   ExitStunButton: 0
+  StunParticleObject: {fileID: 1358633495981507599}
 --- !u!114 &849501727690942840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -889,4 +924,83 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6902694358649812514, guid: 785a71c34aa70094982ab3dc90ecd70f,
     type: 3}
   m_PrefabInstance: {fileID: 665079927178716463}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7653729473482200358
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 981311582560977951}
+    m_Modifications:
+    - target: {fileID: 100000, guid: d464cfd295013264b9ceef6a1566da0b, type: 3}
+      propertyPath: m_Name
+      value: CFXM3_Shield_Leaves
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d464cfd295013264b9ceef6a1566da0b, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d464cfd295013264b9ceef6a1566da0b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d464cfd295013264b9ceef6a1566da0b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d464cfd295013264b9ceef6a1566da0b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d464cfd295013264b9ceef6a1566da0b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d464cfd295013264b9ceef6a1566da0b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d464cfd295013264b9ceef6a1566da0b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d464cfd295013264b9ceef6a1566da0b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d464cfd295013264b9ceef6a1566da0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d464cfd295013264b9ceef6a1566da0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: d464cfd295013264b9ceef6a1566da0b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900000, guid: d464cfd295013264b9ceef6a1566da0b, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900002, guid: d464cfd295013264b9ceef6a1566da0b, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900004, guid: d464cfd295013264b9ceef6a1566da0b, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19900006, guid: d464cfd295013264b9ceef6a1566da0b, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d464cfd295013264b9ceef6a1566da0b, type: 3}
+--- !u!4 &7653729473482592166 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: d464cfd295013264b9ceef6a1566da0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7653729473482200358}
   m_PrefabAsset: {fileID: 0}
