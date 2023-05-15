@@ -58,10 +58,11 @@ GameObject:
   - component: {fileID: 5676686983994365563}
   - component: {fileID: 5676686983994365564}
   - component: {fileID: 4660268437041681724}
-  - component: {fileID: 3258937391904271379}
   - component: {fileID: 849501727690942840}
   - component: {fileID: 555616125436513667}
   - component: {fileID: 5832372659704419671}
+  - component: {fileID: 6764391727729187932}
+  - component: {fileID: 3258937391904271379}
   m_Layer: 13
   m_Name: Dragon Spark
   m_TagString: Untagged
@@ -742,40 +743,12 @@ MonoBehaviour:
   NestDrawnHealthBar: 0
   Billboard: 1
   InstantiatedOnDeath: {fileID: 100002, guid: 646ed295d7110f448b5bef03394520bf, type: 3}
-  DeathSound: {fileID: 8300000, guid: 91d37bde673efda46897964c80853d2b, type: 3}
+  DeathSound: {fileID: 8300000, guid: 5b0416b589806714fb3e5b03fc863580, type: 3}
   HealthBarOffset: {x: 0, y: 1.5, z: 0}
   AlwaysVisible: 1
   DisplayDurationOnHit: 1
   HideBarAtZero: 1
   HideBarAtZeroDelay: 1
---- !u!114 &3258937391904271379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5676686983994365559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a31b244c37658fa4197a240b64a28603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AbilityStartSfx: {fileID: 0}
-  AbilityInProgressSfx: {fileID: 0}
-  AbilityStopSfx: {fileID: 0}
-  AbilityStartFeedbacks: {fileID: 0}
-  AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 1
-  BlockingMovementStates: 
-  BlockingConditionStates: 
-  BoundWeaponIK: {fileID: 0}
-  DetachLeftHand: 0
-  DetachRightHand: 0
-  DisableAimWeaponModelAtTargetDuringStun: 0
-  WeaponModels: []
-  StunButton: 0
-  ExitStunButton: 0
-  StunParticleObject: {fileID: 411987136014535567}
 --- !u!114 &849501727690942840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -844,6 +817,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: 
   zoneCollider: {fileID: 0}
+--- !u!114 &6764391727729187932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5676686983994365559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a31b244c37658fa4197a240b64a28603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityStartSfx: {fileID: 0}
+  AbilityInProgressSfx: {fileID: 0}
+  AbilityStopSfx: {fileID: 0}
+  AbilityStartFeedbacks: {fileID: 0}
+  AbilityStopFeedbacks: {fileID: 0}
+  AbilityPermitted: 1
+  BlockingMovementStates: 
+  BlockingConditionStates: 
+  BoundWeaponIK: {fileID: 0}
+  DetachLeftHand: 0
+  DetachRightHand: 0
+  DisableAimWeaponModelAtTargetDuringStun: 0
+  WeaponModels: []
+  StunButton: 0
+  ExitStunButton: 0
+  StunParticleObject: {fileID: 0}
+--- !u!114 &3258937391904271379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5676686983994365559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a31b244c37658fa4197a240b64a28603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityStartSfx: {fileID: 0}
+  AbilityInProgressSfx: {fileID: 0}
+  AbilityStopSfx: {fileID: 0}
+  AbilityStartFeedbacks: {fileID: 0}
+  AbilityStopFeedbacks: {fileID: 0}
+  AbilityPermitted: 1
+  BlockingMovementStates: 
+  BlockingConditionStates: 
+  BoundWeaponIK: {fileID: 0}
+  DetachLeftHand: 0
+  DetachRightHand: 0
+  DisableAimWeaponModelAtTargetDuringStun: 0
+  WeaponModels: []
+  StunButton: 0
+  ExitStunButton: 0
+  StunParticleObject: {fileID: 411987136014535567}
 --- !u!1001 &1458037388299335424
 PrefabInstance:
   m_ObjectHideFlags: 0

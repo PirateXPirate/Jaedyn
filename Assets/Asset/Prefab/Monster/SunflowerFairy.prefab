@@ -58,10 +58,11 @@ GameObject:
   - component: {fileID: 1915158798050616141}
   - component: {fileID: 1915158798050616138}
   - component: {fileID: 1512997304007761930}
-  - component: {fileID: 5762342858745822882}
   - component: {fileID: 3057265682593049939}
   - component: {fileID: 9007576433767223105}
   - component: {fileID: 5633692875634616202}
+  - component: {fileID: -3782097078349078657}
+  - component: {fileID: 5762342858745822882}
   m_Layer: 13
   m_Name: SunflowerFairy
   m_TagString: Untagged
@@ -748,34 +749,6 @@ MonoBehaviour:
   DisplayDurationOnHit: 1
   HideBarAtZero: 1
   HideBarAtZeroDelay: 1
---- !u!114 &5762342858745822882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1915158798050616129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a31b244c37658fa4197a240b64a28603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AbilityStartSfx: {fileID: 0}
-  AbilityInProgressSfx: {fileID: 0}
-  AbilityStopSfx: {fileID: 0}
-  AbilityStartFeedbacks: {fileID: 0}
-  AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 1
-  BlockingMovementStates: 
-  BlockingConditionStates: 
-  BoundWeaponIK: {fileID: 0}
-  DetachLeftHand: 0
-  DetachRightHand: 0
-  DisableAimWeaponModelAtTargetDuringStun: 0
-  WeaponModels: []
-  StunButton: 0
-  ExitStunButton: 0
-  StunParticleObject: {fileID: 914192160108755139}
 --- !u!114 &3057265682593049939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -844,6 +817,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: 
   zoneCollider: {fileID: 0}
+--- !u!114 &-3782097078349078657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915158798050616129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a31b244c37658fa4197a240b64a28603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityStartSfx: {fileID: 0}
+  AbilityInProgressSfx: {fileID: 0}
+  AbilityStopSfx: {fileID: 0}
+  AbilityStartFeedbacks: {fileID: 0}
+  AbilityStopFeedbacks: {fileID: 0}
+  AbilityPermitted: 1
+  BlockingMovementStates: 
+  BlockingConditionStates: 
+  BoundWeaponIK: {fileID: 0}
+  DetachLeftHand: 0
+  DetachRightHand: 0
+  DisableAimWeaponModelAtTargetDuringStun: 0
+  WeaponModels: []
+  StunButton: 0
+  ExitStunButton: 0
+  StunParticleObject: {fileID: 0}
+--- !u!114 &5762342858745822882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915158798050616129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a31b244c37658fa4197a240b64a28603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityStartSfx: {fileID: 0}
+  AbilityInProgressSfx: {fileID: 0}
+  AbilityStopSfx: {fileID: 0}
+  AbilityStartFeedbacks: {fileID: 0}
+  AbilityStopFeedbacks: {fileID: 0}
+  AbilityPermitted: 1
+  BlockingMovementStates: 
+  BlockingConditionStates: 
+  BoundWeaponIK: {fileID: 0}
+  DetachLeftHand: 0
+  DetachRightHand: 0
+  DisableAimWeaponModelAtTargetDuringStun: 0
+  WeaponModels: []
+  StunButton: 0
+  ExitStunButton: 0
+  StunParticleObject: {fileID: 914192160108755139}
 --- !u!1001 &711827638604873401
 PrefabInstance:
   m_ObjectHideFlags: 0
