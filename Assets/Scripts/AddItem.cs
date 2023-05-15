@@ -10,12 +10,17 @@ public class AddItem : MonoBehaviour
     public int numResistance;
 
     public bool isRandom = false;
+    public bool isRandomResitance = false;
 
     private void OnEnable()
     {
         if (isRandom)
         {
             numPotion = Random.Range(1, 3);
+        }
+        if (isRandomResitance)
+        {
+            numResistance = Random.Range(1, 3);
         }
         powerUpManager.AddHpPotion(numPotion);
         powerUpManager.AddResistancePotion(numResistance);

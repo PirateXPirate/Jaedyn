@@ -509,6 +509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 1326847364}
   time: 1
+  targetPuzzleValue: 1
 --- !u!1 &8046439
 GameObject:
   m_ObjectHideFlags: 0
@@ -4494,6 +4495,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: c685db39ea080654198c5b6e10e5c4c4, type: 2}
   - {fileID: 2100000, guid: d2a98e1518020704aa6473173dce77aa, type: 2}
   - {fileID: 2100000, guid: 3f39d7c853ddc6041aa590b0253dc259, type: 2}
+  skinFx: {fileID: 19831716, guid: 685c97d007af49549b239b56b6d2000a, type: 3}
+  skinSound: {fileID: 8300000, guid: 2a6cdfe10fdcf534cbea7cedb295990f, type: 3}
 --- !u!1001 &193048371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8728,6 +8731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 1253217736}
   time: 1
+  targetPuzzleValue: 1
 --- !u!65 &320869771
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16330,7 +16334,7 @@ MonoBehaviour:
   NextCharacterChoice: 2
   CurrentIndex: 0
   CommonHealth: 0
-  CharacterSwitchVFX: {fileID: 0}
+  CharacterSwitchVFX: {fileID: 19831716, guid: 685c97d007af49549b239b56b6d2000a, type: 3}
   ActionButtonImage: {fileID: 1952858269}
   SkillButtonImage: {fileID: 1952858274}
   SwitchCharButtonImage:
@@ -16361,6 +16365,7 @@ MonoBehaviour:
   character2OverlayImage: {fileID: 1952858286}
   button1TopPosition: {fileID: 1247101928}
   button2TopPosition: {fileID: 1028351061}
+  switchSound: {fileID: 8300000, guid: d55e5b5ee6710124ab06b986e8c966be, type: 3}
 --- !u!1 &604036202
 GameObject:
   m_ObjectHideFlags: 0
@@ -29745,6 +29750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 1735614469}
   time: 1
+  targetPuzzleValue: 1
 --- !u!65 &914780878
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34463,6 +34469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 646423237}
   time: 1
+  targetPuzzleValue: 1
 --- !u!65 &1105385023
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48370,6 +48377,7 @@ MonoBehaviour:
   numPotion: 2
   numResistance: 0
   isRandom: 0
+  isRandomResitance: 0
 --- !u!65 &1635339673
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50952,6 +50960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 425634012}
   time: 1
+  targetPuzzleValue: 1
 --- !u!1001 &1705109202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55497,6 +55506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 1950903641}
   time: 1
+  targetPuzzleValue: 1
 --- !u!65 &1852548157
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56527,6 +56537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 289312075}
   time: 1
+  targetPuzzleValue: 1
 --- !u!65 &1896667045
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -59,7 +59,8 @@ public class PowerUpManager : MonoBehaviour
 
             Utils.soundManager.PlayFX(useHpPotionSound, true);
             powerUpUI.SetHPItemQuantity(hpPotionQuantity);
-            Instantiate(healthPotionFx, LevelManager.Instance.Players[0].transform.position, Quaternion.identity);
+            var pos = LevelManager.Instance.Players[0].transform.position + (Vector3.up * 1.5f);
+            Instantiate(healthPotionFx, pos, Quaternion.identity);
            
         }
     }
@@ -71,8 +72,8 @@ public class PowerUpManager : MonoBehaviour
             resistancePotionQuantity -= 1;
             damageResistance.DamageMultiplier = .75f;          
             powerUpUI.SetResistanceItemQuantity(resistancePotionQuantity);
-           
-            Instantiate(resistancePotionFx, LevelManager.Instance.Players[0].transform.position, Quaternion.identity);
+            var pos = LevelManager.Instance.Players[0].transform.position + (Vector3.up * 1.5f);
+            Instantiate(resistancePotionFx, pos, Quaternion.identity);
             Utils.soundManager.PlayFX(useResistancePotionSound,true);
             var shield = Instantiate(shieldFloorFx, LevelManager.Instance.Players[0].transform.position, Quaternion.identity);
             shield.transform.parent = LevelManager.Instance.Players[0].transform;

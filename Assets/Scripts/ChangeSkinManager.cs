@@ -15,6 +15,10 @@ public class ChangeSkinManager : MonoBehaviour
     [SerializeField] Material[] tigerMats;
     [SerializeField] Material[] owlMats;
 
+    [SerializeField] ParticleSystem skinFx;
+    [SerializeField] AudioClip skinSound;
+
+    protected ParticleSystem _instantiatedVFX;
     bool canChange = true;
 
     int leoMatIndex = 0;
@@ -45,6 +49,12 @@ public class ChangeSkinManager : MonoBehaviour
         canChange = false;
         changeSkinBut.enabled = false;
         changeSkinImg.color = new Color32(255, 255, 255, 100);
+
+        _instantiatedVFX = Instantiate(skinFx, LevelManager.Instance.Players[0].transform.position, Quaternion.identity);
+
+
+        Utils.soundManager.PlayFX(skinSound, true);
+
         switch (LevelManager.Instance.Players[0].name)
         {
 

@@ -44,7 +44,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1915158798050616129}
-  m_LocalRotation: {x: -0, y: 0.9997659, z: -0, w: -0.02163937}
+  m_LocalRotation: {x: 0, y: 0.9997659, z: -0, w: -0.021640321}
   m_LocalPosition: {x: 41.73, y: 10.26, z: 66.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
@@ -709,6 +709,7 @@ MonoBehaviour:
   NestDrawnHealthBar: 0
   Billboard: 1
   InstantiatedOnDeath: {fileID: 100002, guid: 646ed295d7110f448b5bef03394520bf, type: 3}
+  DeathSound: {fileID: 0}
   HealthBarOffset: {x: 0, y: 1.5, z: 0}
   AlwaysVisible: 1
   DisplayDurationOnHit: 1
@@ -741,6 +742,7 @@ MonoBehaviour:
   WeaponModels: []
   StunButton: 0
   ExitStunButton: 0
+  StunParticleObject: {fileID: 0}
 --- !u!114 &3057265682593049939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -777,17 +779,17 @@ MonoBehaviour:
   CycleOption: 1
   LoopInitialMovementDirection: 0
   PathElements:
-  - PathElementPosition: {x: 3.4911613, y: -0.43019962, z: 0.19229126}
+  - PathElementPosition: {x: 1.4702988, y: 0, z: -0.040542603}
     Delay: 2
-  - PathElementPosition: {x: 3, y: 0, z: 3}
+  - PathElementPosition: {x: 1.9106293, y: 0, z: 0.7621803}
     Delay: 2
-  - PathElementPosition: {x: 1.2, y: 0, z: 5.81}
+  - PathElementPosition: {x: 0.40696335, y: 0, z: 1.7477798}
     Delay: 2
-  - PathElementPosition: {x: -4.26, y: 0, z: 1.97}
+  - PathElementPosition: {x: -2.14991, y: 0, z: -0.6170006}
     Delay: 2
-  - PathElementPosition: {x: -2.2305222, y: -0.14275074, z: -3.528183}
+  - PathElementPosition: {x: -0.48309326, y: 0, z: -2.032875}
     Delay: 2
-  - PathElementPosition: {x: 3.4602928, y: 0.6119118, z: -2.771515}
+  - PathElementPosition: {x: 1.6882057, y: 0, z: -1.9878464}
     Delay: 2
   ReferenceMMPath: {fileID: 9007576433767223105}
   AbsoluteReferencePath: 0
@@ -825,6 +827,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663426514577986154, guid: b9eabdbeefe8bbf4986499c4662e2778,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663426514577986154, guid: b9eabdbeefe8bbf4986499c4662e2778,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8663426514577986154, guid: b9eabdbeefe8bbf4986499c4662e2778,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8663426514577986154, guid: b9eabdbeefe8bbf4986499c4662e2778,
         type: 3}

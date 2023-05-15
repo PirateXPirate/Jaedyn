@@ -709,7 +709,8 @@ MonoBehaviour:
   NestDrawnHealthBar: 0
   Billboard: 1
   InstantiatedOnDeath: {fileID: 100002, guid: 646ed295d7110f448b5bef03394520bf, type: 3}
-  HealthBarOffset: {x: 0, y: 1.5, z: 0}
+  DeathSound: {fileID: 0}
+  HealthBarOffset: {x: 0, y: 2.5, z: 0}
   AlwaysVisible: 1
   DisplayDurationOnHit: 1
   HideBarAtZero: 1
@@ -741,6 +742,7 @@ MonoBehaviour:
   WeaponModels: []
   StunButton: 0
   ExitStunButton: 0
+  StunParticleObject: {fileID: 0}
 --- !u!114 &849501727690942840
 MonoBehaviour:
   m_ObjectHideFlags: 0

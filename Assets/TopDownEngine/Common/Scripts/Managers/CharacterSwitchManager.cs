@@ -73,10 +73,12 @@ namespace MoreMountains.TopDownEngine
 
 		[SerializeField] private Transform button1TopPosition;
 		[SerializeField] private Transform button2TopPosition;
-        /// <summary>
-        /// On Awake we grab our input manager and instantiate our characters and VFX
-        /// </summary>
-        protected virtual void Start()
+
+		[SerializeField] private AudioClip switchSound;
+		/// <summary>
+		/// On Awake we grab our input manager and instantiate our characters and VFX
+		/// </summary>
+		protected virtual void Start()
 		{
 			_inputManager = FindObjectOfType(typeof(InputManager)) as InputManager;
 			InstantiateCharacters();
@@ -200,9 +202,9 @@ namespace MoreMountains.TopDownEngine
                 }
                 SetUI(CurrentIndex);
             }
+			Utils.soundManager.PlayFX(switchSound, true);
 
-			
-		
+
 			var oldAngle = LevelManager.Instance.Players[0].transform.localEulerAngles;
 
 			// we disable the old main character, and enable the new one

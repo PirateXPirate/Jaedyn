@@ -5182,6 +5182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 1923134334}
   time: 2
+  targetPuzzleValue: 1
 --- !u!65 &210829134
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18473,6 +18474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 2098501019}
   time: 2
+  targetPuzzleValue: 1
 --- !u!65 &805378105
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19215,6 +19217,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: c685db39ea080654198c5b6e10e5c4c4, type: 2}
   - {fileID: 2100000, guid: d2a98e1518020704aa6473173dce77aa, type: 2}
   - {fileID: 2100000, guid: 3f39d7c853ddc6041aa590b0253dc259, type: 2}
+  skinFx: {fileID: 19831716, guid: 685c97d007af49549b239b56b6d2000a, type: 3}
+  skinSound: {fileID: 8300000, guid: 2a6cdfe10fdcf534cbea7cedb295990f, type: 3}
 --- !u!1 &838191856
 GameObject:
   m_ObjectHideFlags: 0
@@ -22588,6 +22592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 897996032359248055}
   time: 2
+  targetPuzzleValue: 1
 --- !u!65 &962864364
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39453,7 +39458,7 @@ MonoBehaviour:
   NextCharacterChoice: 2
   CurrentIndex: 0
   CommonHealth: 0
-  CharacterSwitchVFX: {fileID: 0}
+  CharacterSwitchVFX: {fileID: 19831716, guid: 685c97d007af49549b239b56b6d2000a, type: 3}
   ActionButtonImage: {fileID: 1452321677}
   SkillButtonImage: {fileID: 620380147}
   SwitchCharButtonImage:
@@ -39484,6 +39489,7 @@ MonoBehaviour:
   character2OverlayImage: {fileID: 2003069769}
   button1TopPosition: {fileID: 660274514}
   button2TopPosition: {fileID: 256183198}
+  switchSound: {fileID: 8300000, guid: d55e5b5ee6710124ab06b986e8c966be, type: 3}
 --- !u!1 &1759816744
 GameObject:
   m_ObjectHideFlags: 0

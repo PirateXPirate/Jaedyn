@@ -9,6 +9,7 @@ public class ActiveWhenTrigger : MonoBehaviour
     {
         if (other.tag.Equals("Player"))
         {
+         
             GetComponent<Collider>().enabled = false;
             foreach (var a in obj)
             {

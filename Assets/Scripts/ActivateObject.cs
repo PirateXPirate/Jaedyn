@@ -7,9 +7,14 @@ public class ActivateObject : MonoBehaviour
 {
     public Transform targetTransform;
     public float time;
+
+    public int targetPuzzleValue = 1;
+    int currentValue = 0;
     public void Activate()
     {
-        transform.DOMove(targetTransform.position, time);
+        currentValue += 1;
+        if(currentValue == targetPuzzleValue)
+             transform.DOMove(targetTransform.position, time);
     }
 
 

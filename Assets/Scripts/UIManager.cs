@@ -141,6 +141,7 @@ public class UIManager : MonoBehaviour
         LevelData.easyModeState[1] = 1;
         LevelData.hardModeState[1] = 1;
         LevelData.easyModeState[2] = 1;
+        LevelData.hardModeState[2] = 1;
 
         //setup EasymodeUI according to data
         for (int i = 0; i < LevelData.easyModeState.Length; i++)
