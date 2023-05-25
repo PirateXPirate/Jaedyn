@@ -50,7 +50,7 @@ public class ChangeSkinManager : MonoBehaviour
         changeSkinBut.enabled = false;
         changeSkinImg.color = new Color32(255, 255, 255, 100);
 
-        _instantiatedVFX = Instantiate(skinFx, LevelManager.Instance.Players[0].transform.position, Quaternion.identity);
+        _instantiatedVFX = Instantiate(skinFx, LevelManager.Instance.Players[0].transform.position, Quaternion.Euler(-90,0,0));
 
 
         Utils.soundManager.PlayFX(skinSound, true);

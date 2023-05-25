@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using MoreMountains.Tools;
+using System;
 #if MM_CINEMACHINE
 using Cinemachine;
 
@@ -12,6 +13,7 @@ namespace MoreMountains.TopDownEngine
 	[ExecuteInEditMode]
 	[SaveDuringPlay]
 	[AddComponentMenu("")]
+	[Serializable]
 	public class CinemachineAxisLocker : CinemachineExtension
 	{
 		/// the possible methods to lock axis on

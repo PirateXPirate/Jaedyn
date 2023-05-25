@@ -2227,7 +2227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad980451443d70438faac0bc6c235a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
+  m_TrackedObjectOffset: {x: 0, y: 2.5, z: 0}
   m_LookaheadTime: 0.239
   m_LookaheadSmoothing: 10
   m_LookaheadIgnoreY: 0
@@ -5781,6 +5781,7 @@ GameObject:
   - component: {fileID: 114812769770389294}
   - component: {fileID: 1966889048}
   - component: {fileID: 1966889053}
+  - component: {fileID: 1714852172970114734}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: MainCamera
@@ -5966,6 +5967,25 @@ MonoBehaviour:
   TestTransitionDuration: 0.1
   TestDuration: 0.05
   TestZoomButton: 0
+--- !u!114 &1714852172970114734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485278404875530}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5c9f882c880a6d4eba541985f1e9416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LockXAxis: 0
+  LockYAxis: 1
+  LockZAxis: 0
+  Method: 1
+  ForcedPosition: {x: 0, y: 0, z: 0}
+  TargetCollider: {fileID: 0}
+  TargetCollider2D: {fileID: 0}
 --- !u!1 &1490441814341022
 GameObject:
   m_ObjectHideFlags: 0

@@ -33,7 +33,9 @@ public class ButtonFeedbacks : MonoBehaviour
     [Header("Play Button")]
     public Button playButton;
     public Button blockPlayButton;
-    public Button unLockButton;
+
+
+    public GameObject unLockObject;
 
     void Awake()
     {
@@ -66,7 +68,7 @@ public class ButtonFeedbacks : MonoBehaviour
         hardLevel9.onClick.AddListener(HardLevel9Button);
 
         blockPlayButton.onClick.AddListener(BlockPlayButton);
-        unLockButton.onClick.AddListener(UnLockButton);
+        //unLockObject.onClick.AddListener(UnLockButton);
     }
 
     public void BlockPlayButton()
@@ -243,13 +245,13 @@ public class ButtonFeedbacks : MonoBehaviour
         {
             blockPlayButton.gameObject.SetActive(true);
             playButton.gameObject.SetActive(false);
-            unLockButton.gameObject.SetActive(true);
+            unLockObject.gameObject.SetActive(true);
         }
         else
         {
             blockPlayButton.gameObject.SetActive(false);
             playButton.gameObject.SetActive(true);
-            unLockButton.gameObject.SetActive(false);
+            unLockObject.gameObject.SetActive(false);
         }
             
     }

@@ -68,9 +68,11 @@ public class ActionSkill : MonoBehaviour
     {
         if (other.tag.Equals("NotiJump0") || other.tag.Equals("SkillPosition"))
         {
+            currentMaker = other.GetComponent<TutorialMarker>();
+            if (currentMaker == null) return;
             buttonEffect.SetActive(true);
             inPoint = true;
-            currentMaker = other.GetComponent<TutorialMarker>();
+           
             if (currentMaker == null) return;
             if (currentMaker.Activated) return;
             currentMaker.Activated = true;

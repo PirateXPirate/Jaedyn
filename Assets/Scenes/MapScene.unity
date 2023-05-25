@@ -7787,6 +7787,7 @@ MonoBehaviour:
   mapBgAudio: {fileID: 8300000, guid: 450d93660894cc047968212ab6fa48bd, type: 3}
   startWalkAudioClip: {fileID: 8300000, guid: d8ab973583c494137b312e78058ca0c9, type: 3}
   SettingBut: {fileID: 0}
+  DisableObject: {fileID: 0}
   isLock: 0
 --- !u!4 &657560603
 Transform:
@@ -11925,7 +11926,7 @@ MonoBehaviour:
   hardLevel9: {fileID: 1531549649}
   playButton: {fileID: 8714178}
   blockPlayButton: {fileID: 294409544}
-  unLockButton: {fileID: 1416363282}
+  unLockObject: {fileID: 1495380171}
 --- !u!114 &1123778762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16003,6 +16004,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5703829129466977851, guid: 83a9678fd0c8d754f92816157d87939f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -689
       objectReference: {fileID: 0}
     - target: {fileID: 5703829131156317844, guid: 83a9678fd0c8d754f92816157d87939f,
         type: 3}

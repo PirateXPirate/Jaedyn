@@ -17,6 +17,8 @@ public class StartSound : MonoBehaviour
 
     [SerializeField] private Button SettingBut;
 
+    [SerializeField] private GameObject DisableObject;
+
     AnalogStick analogStick;
     public bool isLock;
     void Start()
@@ -38,6 +40,12 @@ public class StartSound : MonoBehaviour
 
             Invoke("WaitClipEnd", startAudioClip.length);
         }
+        else
+        {
+            if (SettingBut)
+                SettingBut.enabled = true;
+        }
+           
 
     }
     private void OnEnable()
@@ -65,6 +73,7 @@ public class StartSound : MonoBehaviour
         SettingBut.enabled = true;
         controllerUi.canInteract = true;
         controllerUi.GetComponentInChildren<AnalogStick>().canInteract = true;
+        DisableObject.SetActive(false);
     }
 
     // Update is called once per frame

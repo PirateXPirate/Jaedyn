@@ -36,7 +36,7 @@ public class PowerUpManager : MonoBehaviour
     {
         hpPotionQuantity += quantity;
         powerUpUI.SetHPItemQuantity(hpPotionQuantity);
-      
+
     }
 
     public void AddResistancePotion(int quantity)
@@ -51,17 +51,14 @@ public class PowerUpManager : MonoBehaviour
         {
             onUseHPPotion?.Invoke();
             hpPotionQuantity -= 1;
-            if (playerHealth.CurrentHealth + 20 < playerHealth.MaximumHealth)
-                playerHealth.CurrentHealth += 20;
-            else
-                playerHealth.CurrentHealth = playerHealth.MaximumHealth;
+            playerHealth.CurrentHealth = playerHealth.MaximumHealth;
             playerHealth.UpdateHealthBar(false);
 
             Utils.soundManager.PlayFX(useHpPotionSound, true);
             powerUpUI.SetHPItemQuantity(hpPotionQuantity);
             var pos = LevelManager.Instance.Players[0].transform.position + (Vector3.up * 1.5f);
             Instantiate(healthPotionFx, pos, Quaternion.identity);
-           
+
         }
     }
     public void UseResistancePotion()
@@ -70,22 +67,23 @@ public class PowerUpManager : MonoBehaviour
         {
             onUseRessistancePotion?.Invoke();
             resistancePotionQuantity -= 1;
-            damageResistance.DamageMultiplier = .75f;          
+            damageResistance.DamageMultiplier = .75f;
             powerUpUI.SetResistanceItemQuantity(resistancePotionQuantity);
             var pos = LevelManager.Instance.Players[0].transform.position + (Vector3.up * 1.5f);
             Instantiate(resistancePotionFx, pos, Quaternion.identity);
-            Utils.soundManager.PlayFX(useResistancePotionSound,true);
-            var shield = Instantiate(shieldFloorFx, LevelManager.Instance.Players[0].transform.position, Quaternion.identity);
+            Utils.soundManager.PlayFX(useResistancePotionSound, true);
+            var pos2 = LevelManager.Instance.Players[0].transform.position + (Vector3.up * -0.20f);
+            var shield = Instantiate(shieldFloorFx, pos2, Quaternion.Euler(-90, 0, 0));
             shield.transform.parent = LevelManager.Instance.Players[0].transform;
             StartCoroutine(CountDown(shield));
-            IEnumerator  CountDown(GameObject aa)
+            IEnumerator CountDown(GameObject aa)
             {
                 yield return new WaitForSeconds(15);
-                damageResistance.DamageMultiplier =1f;
+                damageResistance.DamageMultiplier = 1f;
                 Destroy(aa);
             }
         }
-       
+
     }
 
 }

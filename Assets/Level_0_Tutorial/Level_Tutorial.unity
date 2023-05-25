@@ -2572,7 +2572,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 110382313}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 11541b61fdff9a3468a25980b93945b5, type: 3}
@@ -6727,8 +6727,8 @@ MonoBehaviour:
   playerHealth: {fileID: 358013844}
   damageResistance: {fileID: 1599679585}
   healthPotionFx: {fileID: 105942, guid: ff672eaca96d32c419d7a1f1b0346e8d, type: 3}
-  resistancePotionFx: {fileID: 147642, guid: 685c97d007af49549b239b56b6d2000a, type: 3}
-  shieldFloorFx: {fileID: 0}
+  resistancePotionFx: {fileID: 196408, guid: 1f97b666eff46cf47b053df2b70ba548, type: 3}
+  shieldFloorFx: {fileID: 103040, guid: b6ce1f77626e35649ad06061cd7ed381, type: 3}
   useHpPotionSound: {fileID: 8300000, guid: 86759931f7ebea3479014bc21cf06962, type: 3}
   useResistancePotionSound: {fileID: 8300000, guid: 46093719e61781a4fa171e0cd140a04f,
     type: 3}
@@ -43935,7 +43935,8 @@ MonoBehaviour:
   startAudioClip: {fileID: 8300000, guid: bdfbe4843cd2643d4b10ae0757965eb6, type: 3}
   mapBgAudio: {fileID: 8300000, guid: 450d93660894cc047968212ab6fa48bd, type: 3}
   startWalkAudioClip: {fileID: 8300000, guid: d8ab973583c494137b312e78058ca0c9, type: 3}
-  SettingBut: {fileID: 0}
+  SettingBut: {fileID: 1530387154}
+  DisableObject: {fileID: 0}
   isLock: 0
 --- !u!4 &1840686657
 Transform:
