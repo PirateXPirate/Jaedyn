@@ -22,7 +22,6 @@ public class GalleryManager : MonoBehaviour
     [SerializeField] Button musicButton;
     [SerializeField] Button pictureButton;
     [SerializeField] Button exitPopupButton;
-
     void Start()
     {
         CheckPictureState();
@@ -31,11 +30,18 @@ public class GalleryManager : MonoBehaviour
 
     void CheckPictureState()
     {
-        for (int i = 0; i < pictureLock.Length; i++)
+        pictureLock[0].gameObject.SetActive(!LevelData.isTutorialCompleteWithPicture);
+
+        for (int i = 1; i < pictureLock.Length; i++)
         {
-            if (LevelData.easyModeState[i] == 2)
+            if(i % 2 == 1 && LevelData.easyModeState[i] == 2)
             {
-                pictureLock[i].gameObject.SetActive(false);
+               pictureLock[i].gameObject.SetActive(false);
+            }
+
+            if (i % 2 == 0 && LevelData.hardModeState[i] == 2)
+            {
+               pictureLock[i].gameObject.SetActive(false);
             }
         }
     }
@@ -44,9 +50,16 @@ public class GalleryManager : MonoBehaviour
     {
         LockedPictureButton();
         PictureButton();
+        homeButton.onClick.RemoveAllListeners();
         homeButton.onClick.AddListener(HomeButton);
+
+        musicButton.onClick.RemoveAllListeners();
         musicButton.onClick.AddListener(MusicModeButton);
+
+        pictureButton.onClick.RemoveAllListeners();
         pictureButton.onClick.AddListener(PictureModeButton);
+
+        exitPopupButton.onClick.RemoveAllListeners();
         exitPopupButton.onClick.AddListener(ExitPopupButton);
     }
 
@@ -55,6 +68,7 @@ public class GalleryManager : MonoBehaviour
         for (int i = 0; i < picture.Length; i++)
         {
             var index = i;
+            picture[i].onClick.RemoveAllListeners();
             picture[i].onClick.AddListener(() => ShowExpandPicture(index));
         }
 
@@ -67,6 +81,7 @@ public class GalleryManager : MonoBehaviour
 
             foreach (Button exitButton in exitExpandPicture)
             {
+                exitButton.onClick.RemoveAllListeners();
                 exitButton.onClick.AddListener(() => picturePopup.SetActive(false));
             }
 
@@ -78,6 +93,7 @@ public class GalleryManager : MonoBehaviour
     {
         for (int i = 0; i < pictureLock.Length; i++)
         {
+            pictureLock[i].onClick.RemoveAllListeners();
             pictureLock[i].onClick.AddListener(ShowLockedPopup);
         }
 
