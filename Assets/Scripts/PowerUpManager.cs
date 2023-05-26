@@ -72,7 +72,7 @@ public class PowerUpManager : MonoBehaviour
             var pos = LevelManager.Instance.Players[0].transform.position + (Vector3.up * 1.5f);
             Instantiate(resistancePotionFx, pos, Quaternion.identity);
             Utils.soundManager.PlayFX(useResistancePotionSound, true);
-            var pos2 = LevelManager.Instance.Players[0].transform.position + (Vector3.up * -0.20f);
+            var pos2 = LevelManager.Instance.Players[0].transform.position + (Vector3.up * -0.2f);
             var shield = Instantiate(shieldFloorFx, pos2, Quaternion.Euler(-90, 0, 0));
             shield.transform.parent = LevelManager.Instance.Players[0].transform;
             StartCoroutine(CountDown(shield));
