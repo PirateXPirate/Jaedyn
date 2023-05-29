@@ -336,19 +336,19 @@ MonoBehaviour:
       array:
       - Decision: {fileID: 5896022354027123085}
         TrueState: Moving
-        FalseState: 
+        FalseState: Detecting
   - StateName: Moving
     Actions:
       array:
       - {fileID: 5896022354027123096}
     Transitions:
       array:
+      - Decision: {fileID: 5896022354027123100}
+        TrueState: Attack
+        FalseState: 
       - Decision: {fileID: 5896022354027123085}
         TrueState: 
         FalseState: Detecting
-      - Decision: {fileID: 5896022354027123100}
-        TrueState: Attack
-        FalseState: Moving
   - StateName: Attack
     Actions:
       array:
@@ -364,7 +364,7 @@ MonoBehaviour:
       - {fileID: 5896022354027123097}
     Transitions:
       array:
-      - Decision: {fileID: 5896022354027123102}
+      - Decision: {fileID: 5896022354027123101}
         TrueState: Detecting
         FalseState: 
       - Decision: {fileID: 5896022354027123100}
