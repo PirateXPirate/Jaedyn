@@ -23,8 +23,9 @@ public class StartSound : MonoBehaviour
     public bool isLock;
     void Start()
     {
+        /*
         if (Utils.soundManager)
-            Utils.soundManager.PlayLoop(mapBgAudio);
+            Utils.soundManager.PlayLoop(mapBgAudio);*/
         if (SettingBut)
             SettingBut.enabled = false;
         if (isLock)
