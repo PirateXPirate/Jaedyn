@@ -72765,6 +72765,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6389677173359568194, guid: 3b28ed01da5281a4e8201e3e037b75d0,
+        type: 3}
+      propertyPath: zoneCollider
+      value: 
+      objectReference: {fileID: 37554864}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b28ed01da5281a4e8201e3e037b75d0, type: 3}
 --- !u!1001 &2489153533408171124
@@ -73206,8 +73211,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Phantom
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3956890722260958693, guid: deff4bed103d22048a2548eae0203ed3, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: deff4bed103d22048a2548eae0203ed3, type: 3}
 --- !u!1001 &5792105373054468531
 PrefabInstance:
