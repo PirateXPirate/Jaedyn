@@ -4535,6 +4535,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6740003743323694082, guid: bb2416283eb00b0459ad08e31ecb2fb0,
+        type: 3}
+      propertyPath: States.Array.data[1].Transitions.array.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6740003743323694082, guid: bb2416283eb00b0459ad08e31ecb2fb0,
+        type: 3}
+      propertyPath: States.Array.data[0].Transitions.array.Array.data[0].FalseState
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6740003743323694082, guid: bb2416283eb00b0459ad08e31ecb2fb0,
+        type: 3}
+      propertyPath: States.Array.data[1].Transitions.array.Array.data[0].FalseState
+      value: Moving
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb2416283eb00b0459ad08e31ecb2fb0, type: 3}
 --- !u!4 &96329437 stripped
@@ -10000,6 +10015,21 @@ PrefabInstance:
         type: 3}
       propertyPath: PathElements.Array.data[5].PathElementPosition.z
       value: -1.0541744
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676686983994365557, guid: 94a52a907ee99b3408a8af716ddb225c,
+        type: 3}
+      propertyPath: States.Array.data[1].Transitions.array.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676686983994365557, guid: 94a52a907ee99b3408a8af716ddb225c,
+        type: 3}
+      propertyPath: States.Array.data[0].Transitions.array.Array.data[0].FalseState
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676686983994365557, guid: 94a52a907ee99b3408a8af716ddb225c,
+        type: 3}
+      propertyPath: States.Array.data[1].Transitions.array.Array.data[0].FalseState
+      value: Moving
       objectReference: {fileID: 0}
     - target: {fileID: 5676686983994365558, guid: 94a52a907ee99b3408a8af716ddb225c,
         type: 3}
