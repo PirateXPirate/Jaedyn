@@ -11,7 +11,14 @@ public class AIDecisionInsideZone : AIDecision
 	public override void Initialization()
 	{
 		zoneCollider.OnTriggerPlayer += OnPlayerHit;
-	}
+        zoneCollider.OnExitTriggerPlayer += OnPlayerExit;
+    }
+    private void OnPlayerExit(Transform target)
+    {
+        isHit = false;
+        _brain.Target = null;
+    }
+
 
     private void OnPlayerHit(Transform target)
     {
@@ -23,5 +30,10 @@ public class AIDecisionInsideZone : AIDecision
     {
        
         return isHit;
+    }
+    private void OnDestroy()
+    {
+        zoneCollider.OnTriggerPlayer -= OnPlayerHit;
+        zoneCollider.OnExitTriggerPlayer -= OnPlayerExit;
     }
 }
