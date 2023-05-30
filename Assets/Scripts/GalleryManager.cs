@@ -22,6 +22,11 @@ public class GalleryManager : MonoBehaviour
     [SerializeField] Button musicButton;
     [SerializeField] Button pictureButton;
     [SerializeField] Button exitPopupButton;
+
+    private void Awake()
+    {
+        LevelData.LoadLevelStateData();
+    }
     void Start()
     {
         CheckPictureState();
