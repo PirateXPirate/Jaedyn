@@ -23,20 +23,31 @@ public class TutorialMarker : MonoBehaviour
     public bool Activated = false;
 
     bool isShowed = false;
+    bool canShow = true;
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag.Equals("Player"))
         {
-            return;
+            if (!canShow) return;
             if (!isShowed)
             {
-             //   ShowPopup();
+                Character character = other.GetComponent<Character>();
+                character.LinkedInputManager.InputDetectionActive = false;
+                character.GetComponent<CharacterMovement>().enabled = false;
+                character.GetComponent<TopDownController3D>().enabled = false;
+                   ShowPopup();
+                canShow = false;
+                Invoke("ResetCanShow",20);
             }
          
         }
        
     }
-
+    void ResetCanShow()
+    {
+        canShow = true;
+        isShowed = false;
+    }
     public void ShowPopup()
     {
         if (PopupSoundClip)

@@ -36,6 +36,7 @@ public class ActionSkill : MonoBehaviour
     {
         if (inPoint)
         {
+            return;
             Character character = GetComponent<Character>();
             character.LinkedInputManager.InputDetectionActive = false;
             character.GetComponent<CharacterMovement>().enabled = false;

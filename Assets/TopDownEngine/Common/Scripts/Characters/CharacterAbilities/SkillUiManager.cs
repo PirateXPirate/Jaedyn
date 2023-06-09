@@ -12,6 +12,8 @@ public class SkillUiManager : MonoBehaviour
     [SerializeField] Image SkillButtonOverlayImage;
     [SerializeField] Image ActionButtonOverlayImage;
 
+    [SerializeField] Image SkillImage;
+
     bool isSkillCountdown = false;
     bool isActionCountdown = false;
     float countingSkillNumber = 0;
@@ -22,6 +24,8 @@ public class SkillUiManager : MonoBehaviour
     {
         SkillButtonOverlayImage.fillAmount = 1;
         SkillButtonOverlayImage.GetComponentInParent<UniversalButton>().SetActiveState(false);
+        SkillImage.fillAmount = 1;
+
         isSkillCountdown = true;
         skillCoolDown = cooldown;
         countingSkillNumber = cooldown;
@@ -46,6 +50,7 @@ public class SkillUiManager : MonoBehaviour
             float tik = (1 / skillCoolDown) * countingSkillNumber;
             countingSkillNumber -= Time.deltaTime;
             SkillButtonOverlayImage.fillAmount = tik;
+            SkillImage.fillAmount = tik;
             if (SkillButtonOverlayImage.fillAmount <=0)
             {
                 StopSkillcount();
@@ -57,6 +62,7 @@ public class SkillUiManager : MonoBehaviour
             float tik = (1 / actionCoolDown) * countingActionNumber;
             countingActionNumber -= Time.deltaTime;
             ActionButtonOverlayImage.fillAmount = tik;
+            
             if (ActionButtonOverlayImage.fillAmount <= 0)
             {
                 StopActioncount();
@@ -74,6 +80,7 @@ public class SkillUiManager : MonoBehaviour
     private void StopSkillcount()
     {
         SkillButtonOverlayImage.GetComponentInParent<UniversalButton>().SetActiveState(true);
+        SkillImage.fillAmount = 1;
         isSkillCountdown = false;
         countingSkillNumber = 0;
 

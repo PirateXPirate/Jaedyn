@@ -571,11 +571,12 @@ namespace MoreMountains.TopDownEngine
 		/// <param name="collider"></param>
 		protected virtual void Colliding(GameObject collider)
 		{
+		
 			if (!EvaluateAvailability(collider))
 			{
 				return;
 			}
-
+			
 			// cache reset 
 			_colliderTopDownController = null;
 			_colliderHealth = collider.gameObject.MMGetComponentNoAlloc<Health>();
@@ -583,10 +584,10 @@ namespace MoreMountains.TopDownEngine
 			// if what we're colliding with is damageable
 			if (_colliderHealth != null)
 			{
-				if (_colliderHealth.CurrentHealth > 0)
-				{
+				//if (_colliderHealth.CurrentHealth > 0)
+				//{
 					OnCollideWithDamageable(_colliderHealth);
-				}
+				//}
 				HitDamageableEvent?.Invoke(_colliderHealth);
 			}
 			else // if what we're colliding with can't be damaged
@@ -629,22 +630,21 @@ namespace MoreMountains.TopDownEngine
 		protected virtual void OnCollideWithDamageable(Health health)
 		{
 			_collidingHealth = health;
-
 			if (health.CanTakeDamageThisFrame())
 			{
 				// if what we're colliding with is a TopDownController, we apply a knockback force
 				_colliderTopDownController = health.gameObject.MMGetComponentNoAlloc<TopDownController>();
 
 				HitDamageableFeedback?.PlayFeedbacks(this.transform.position);
-
+				
 				// we apply the damage to the thing we've collided with
 				float randomDamage =
 					UnityEngine.Random.Range(MinDamageCaused, Mathf.Max(MaxDamageCaused, MinDamageCaused));
-
+			
 				ApplyKnockback(randomDamage, TypedDamages);
-
+			
 				DetermineDamageDirection();
-
+				
 				if (RepeatDamageOverTime)
 				{
 					_colliderHealth.DamageOverTime(randomDamage, gameObject, InvincibilityDuration,

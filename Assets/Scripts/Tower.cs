@@ -21,7 +21,14 @@ public class Tower : MonoBehaviour
     public TutorialMarker marker;
 
     public GameObject completeParticle;
+    public GameObject wrongParticle;
+    public GameObject transitionParticle;
 
+    public AudioClip wrongSound;
+    public AudioClip rightSound;
+
+    public AudioClip redToBlueSound;
+    bool enable = true;
     void Start()
     {
         manager = GetComponentInParent<TowerManager>();
@@ -30,38 +37,64 @@ public class Tower : MonoBehaviour
 
     public void Perform()
     {
+        if (!enable) return;
+        if (Complete) return;
         timeTochange -= 1;
         if (timeTochange == 0)
         {
             Complete = true;
-            rend.material = blueMat;
-            if(obj)
-            obj.Activate();
-            if (manager)
-                manager.CheckAll();
+            Utils.soundManager.PlayFX(rightSound);
+            transitionParticle.SetActive(true);
+            Invoke("CompleteFunc", 2f);
 
-            if (warpDoor)
-                warpDoor.CanEnter = true;
-
-            if (warpDoorParticle)
-            {
-                ParticleSystem.MainModule settings = warpDoorParticle.GetComponent<ParticleSystem>().main;
-                settings.startColor = new ParticleSystem.MinMaxGradient(Color.green);
-            }
-
-            if (activeObj)
-            {
-                activeObj.SetActive(true);
-            }
-
-            if (marker)
-                marker.ShowPopup();
-
-            if (completeParticle)
-                completeParticle.SetActive(true);
+         
         }
+        else
+        {
+            wrongParticle.SetActive(true);
+            Utils.soundManager.PlayFX(wrongSound);
+            enable = false;
+            Invoke("Reset", 2.5f); 
+         
+        }
+  
     }
+    void CompleteFunc()
+    {
+    
+        Utils.soundManager.PlayFX(redToBlueSound);
+        
+        completeParticle.SetActive(true);
+        rend.material = blueMat;
+        if (obj)
+            obj.Activate();
+        if (manager)
+            manager.CheckAll();
 
+        if (warpDoor)
+            warpDoor.CanEnter = true;
+
+        if (warpDoorParticle)
+        {
+            ParticleSystem.MainModule settings = warpDoorParticle.GetComponent<ParticleSystem>().main;
+            settings.startColor = new ParticleSystem.MinMaxGradient(Color.green);
+        }
+
+        if (activeObj)
+        {
+            activeObj.SetActive(true);
+        }
+
+        if (marker)
+            marker.ShowPopup();
+
+        if (completeParticle)
+            completeParticle.SetActive(true);
+    }
+    private void Reset()
+    {
+        enable = true;
+    }
     // Update is called once per frame
     void Update()
     {

@@ -6803,7 +6803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpUI: {fileID: 319267133}
-  playerHealth: {fileID: 358013844}
+  playerHealth: {fileID: 2113971313}
   damageResistance: {fileID: 1599679585}
   healthPotionFx: {fileID: 105942, guid: ff672eaca96d32c419d7a1f1b0346e8d, type: 3}
   resistancePotionFx: {fileID: 196408, guid: 1f97b666eff46cf47b053df2b70ba548, type: 3}
@@ -7141,11 +7141,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 1.2
       objectReference: {fileID: 0}
-    - target: {fileID: 395654557, guid: bc9529d54b74ea24588e798868920d00, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 04e5c66223a2928448417591865924b3,
-        type: 3}
     - target: {fileID: 1345828362, guid: bc9529d54b74ea24588e798868920d00, type: 3}
       propertyPath: m_SizeDelta.x
       value: 512
@@ -7239,7 +7234,7 @@ PrefabInstance:
     - target: {fileID: 2675772815557730292, guid: bc9529d54b74ea24588e798868920d00,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3391583153041015170, guid: bc9529d54b74ea24588e798868920d00,
         type: 3}
@@ -8385,13 +8380,14 @@ MonoBehaviour:
   ResetColorOnRevive: 1
   ColorMaterialPropertyName: _Color
   UseMaterialPropertyBlocks: 0
-  MasterHealth: {fileID: 358013844}
+  MasterHealth: {fileID: 2113971313}
   TargetDamageResistanceProcessor: {fileID: 1599679587}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
   deathSound: {fileID: 0}
   damageFx: {fileID: 0}
   characterHealthUIManager: {fileID: 564106306}
+  Particle: {fileID: 100002, guid: 5c1a1b8b0fc6a7a4083086fd4b43b8cf, type: 3}
 --- !u!114 &377639854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18495,7 +18491,7 @@ MonoBehaviour:
   - {fileID: 1275488014}
   NextCharacterChoice: 2
   CurrentIndex: 0
-  CommonHealth: 0
+  CommonHealth: 1
   CharacterSwitchVFX: {fileID: 19831716, guid: 685c97d007af49549b239b56b6d2000a, type: 3}
   ActionButtonImage: {fileID: 1689310626}
   SkillButtonImage: {fileID: 395654557}
@@ -26710,6 +26706,7 @@ MonoBehaviour:
   ActionButton: {fileID: 657580181}
   SkillButtonOverlayImage: {fileID: 339305791}
   ActionButtonOverlayImage: {fileID: 339305792}
+  SkillImage: {fileID: 395654557}
 --- !u!1001 &1239689869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27322,6 +27319,7 @@ Transform:
   - {fileID: 43293107}
   - {fileID: 205640305}
   - {fileID: 1549886763}
+  - {fileID: 2113971314}
   m_Father: {fileID: 1499738435}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27606,13 +27604,14 @@ MonoBehaviour:
   ResetColorOnRevive: 1
   ColorMaterialPropertyName: _Color
   UseMaterialPropertyBlocks: 0
-  MasterHealth: {fileID: 358013844}
+  MasterHealth: {fileID: 2113971313}
   TargetDamageResistanceProcessor: {fileID: 1599679587}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
   deathSound: {fileID: 0}
   damageFx: {fileID: 0}
   characterHealthUIManager: {fileID: 564106306}
+  Particle: {fileID: 100002, guid: 5c1a1b8b0fc6a7a4083086fd4b43b8cf, type: 3}
 --- !u!114 &1275488004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51143,6 +51142,90 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1312034582}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2113971312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2113971314}
+  - component: {fileID: 2113971313}
+  m_Layer: 0
+  m_Name: Health
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2113971313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113971312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 450ff36cd4c98a949bbf8d3d0a2b270e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Model: {fileID: 0}
+  CurrentHealth: 0
+  Invulnerable: 0
+  InitialHealth: 100
+  isRandomHealth: 0
+  minInitialHealth: 0
+  maxInitialHealth: 0
+  MaximumHealth: 100
+  ResetHealthOnEnable: 1
+  ImmuneToDamage: 0
+  DamageMMFeedbacks: {fileID: 0}
+  FeedbackIsProportionalToDamage: 0
+  PreventTakeSelfDamage: 0
+  ImmuneToKnockback: 0
+  ImmuneToKnockbackIfZeroDamage: 0
+  KnockbackForceMultiplier: 1
+  DestroyOnDeath: 1
+  DelayBeforeDestruction: 0
+  PointsWhenDestroyed: 0
+  RespawnAtInitialLocation: 0
+  DisableControllerOnDeath: 1
+  DisableModelOnDeath: 1
+  DisableCollisionsOnDeath: 1
+  DisableChildCollisionsOnDeath: 0
+  ChangeLayerOnDeath: 0
+  ChangeLayersRecursivelyOnDeath: 0
+  LayerOnDeath:
+    _layerIndex: 0
+  DeathMMFeedbacks: {fileID: 0}
+  ResetColorOnRevive: 1
+  ColorMaterialPropertyName: _Color
+  UseMaterialPropertyBlocks: 0
+  MasterHealth: {fileID: 0}
+  TargetDamageResistanceProcessor: {fileID: 0}
+  TargetAnimator: {fileID: 0}
+  DisableAnimatorLogs: 1
+  deathSound: {fileID: 0}
+  damageFx: {fileID: 0}
+  characterHealthUIManager: {fileID: 564106306}
+  Particle: {fileID: 0}
+--- !u!4 &2113971314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113971312}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1272554710}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2119605917
 GameObject:
   m_ObjectHideFlags: 0
@@ -52096,6 +52179,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharacterAll (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8205100539466899292, guid: a49c313805edfe44f9843c350826b6d4,
+        type: 3}
+      propertyPath: Particle
+      value: 
+      objectReference: {fileID: 100002, guid: 5c1a1b8b0fc6a7a4083086fd4b43b8cf, type: 3}
+    - target: {fileID: 8205100539466899292, guid: a49c313805edfe44f9843c350826b6d4,
+        type: 3}
+      propertyPath: MasterHealth
+      value: 
+      objectReference: {fileID: 2113971313}
     - target: {fileID: 8205100539466899292, guid: a49c313805edfe44f9843c350826b6d4,
         type: 3}
       propertyPath: characterHealthUIManager

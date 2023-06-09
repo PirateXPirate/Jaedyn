@@ -52,7 +52,8 @@ public class PowerUpManager : MonoBehaviour
             onUseHPPotion?.Invoke();
             hpPotionQuantity -= 1;
             playerHealth.CurrentHealth = playerHealth.MaximumHealth;
-            playerHealth.UpdateHealthBar(false);
+            playerHealth.characterHealthUIManager.SetHP(Mathf.FloorToInt(playerHealth.CurrentHealth));
+            //  playerHealth.UpdateHealthBar(false);
 
             Utils.soundManager.PlayFX(useHpPotionSound, true);
             powerUpUI.SetHPItemQuantity(hpPotionQuantity);

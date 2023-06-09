@@ -216,14 +216,16 @@ namespace MoreMountains.TopDownEngine
 			_instantiatedCharacters[CurrentIndex].transform.rotation = LevelManager.Instance.Players[0].transform.rotation;
 
 			// we keep the health if needed
-			if (CommonHealth)
-			{
-				_instantiatedCharacters[CurrentIndex].gameObject.MMGetComponentNoAlloc<Health>().SetHealth(LevelManager.Instance.Players[0].gameObject.MMGetComponentNoAlloc<Health>().CurrentHealth);
-			}
+			//if (CommonHealth)
+			//{
+				_instantiatedCharacters[CurrentIndex].gameObject.MMGetComponentNoAlloc<Health>().SetHealth(LevelManager.Instance.Players[0].gameObject.MMGetComponentNoAlloc<Health>().MasterHealth.CurrentHealth);
+			//}
 
 			// we put it in the same state the old one was in
 			_instantiatedCharacters[CurrentIndex].MovementState.ChangeState(LevelManager.Instance.Players[0].MovementState.CurrentState);
 			_instantiatedCharacters[CurrentIndex].ConditionState.ChangeState(LevelManager.Instance.Players[0].ConditionState.CurrentState);
+
+			
 
 			// we make it the current character
 			LevelManager.Instance.Players[0] = _instantiatedCharacters[CurrentIndex];
@@ -236,6 +238,9 @@ namespace MoreMountains.TopDownEngine
 				_instantiatedVFX.Play();
 			}
 			LevelManager.Instance.Players[0].GetComponent<TopDownController3D>().Reset();
+			LevelManager.Instance.Players[0].GetComponent<Health>().DamageEnabled();
+
+
 			var orientation = LevelManager.Instance.Players[0].GetComponent<CharacterOrientation3D>();
 			//LevelManager.Instance.Players[0].GetComponent<TopDownController3D>().Reset();
 				orientation.Face(oldAngle);

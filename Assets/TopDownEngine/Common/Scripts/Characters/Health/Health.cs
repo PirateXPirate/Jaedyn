@@ -410,12 +410,24 @@ namespace MoreMountains.TopDownEngine
 			{
 				return false;
 			}
-			
+
 			// if we're already below zero, we do nothing and exit
-			if ((CurrentHealth <= 0) && (InitialHealth != 0))
+			if (MasterHealth)
 			{
-				return false;
+				if ((MasterHealth.CurrentHealth <= 0) && (InitialHealth != 0))
+				{
+					return false;
+				}
 			}
+			else
+			{
+				if ((CurrentHealth <= 0) && (InitialHealth != 0))
+				{
+					return false;
+				}
+			}
+	
+			
 
 			return true;
 		}

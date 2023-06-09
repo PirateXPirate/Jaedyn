@@ -12,6 +12,8 @@ public class ChangeCameraOnTrigger : MonoBehaviour
     CinemachineComponentBase body;
 
     WarpDoor warpDoor;
+
+    public bool OneTime = false;
     void Start()
     {
         warpDoor = GetComponent<WarpDoor>();
@@ -19,6 +21,7 @@ public class ChangeCameraOnTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+       
         if (other.tag != "Player") return;
         if (warpDoor)
         {
@@ -32,7 +35,8 @@ public class ChangeCameraOnTrigger : MonoBehaviour
             OffCamera.gameObject.SetActive(false);
         //Invoke("RefreshPos", 2);
         //   OffCamera.gameObject.SetActive(false);
-
+        if (OneTime)
+           enabled = false;
     }
     void RefreshPos()
     {

@@ -25,6 +25,8 @@ public class MenuManager : MonoBehaviour
     [SerializeField] SettingManager settingManager;
     private void Awake()
     {
+
+
         LevelData.LoadLevelStateData();
         dummyLoader = dummyLoaderPrefab.GetComponent<DummyLoader>();
         SetListenner();

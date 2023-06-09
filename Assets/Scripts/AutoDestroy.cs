@@ -11,7 +11,6 @@ public class AutoDestroy : MonoBehaviour
     }
     void DeActivate()
     {
-        Debug.Log("SSS");
         gameObject.SetActive(false);
     }
 }

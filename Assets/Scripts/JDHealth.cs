@@ -6,7 +6,9 @@ using UnityEngine;
 
 public class JDHealth : Health
 {
-    [SerializeField] private CharacterHealthUIManager characterHealthUIManager;
+    public CharacterHealthUIManager characterHealthUIManager;
+
+    [SerializeField] GameObject Particle;
 
     public delegate void OnRecieveAttack(int currenthealth);
     public OnRecieveAttack onRecieveAttack;
@@ -14,11 +16,19 @@ public class JDHealth : Health
     public override void UpdateHealthBar(bool show)
     {
         base.UpdateHealthBar(show);
-        if (_character.CharacterType == Character.CharacterTypes.Player)
+        Debug.Log(name);
+        if (_character != null )
         {
             characterHealthUIManager.SetHP(Mathf.FloorToInt(MasterHealth.CurrentHealth));
             onRecieveAttack?.Invoke(Mathf.FloorToInt(MasterHealth.CurrentHealth));
         }
+        
             
     }
+    public override void DamageDisabled()
+    {
+        base.DamageDisabled();
+        Instantiate(Particle, transform.position, Quaternion.Euler(0,0,0));
+    }
+  
 }

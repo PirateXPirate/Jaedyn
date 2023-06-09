@@ -17,6 +17,8 @@ public class ActivateObject : MonoBehaviour
         currentValue += 1;
         if (currentValue == targetPuzzleValue)
         {
+            if (GetComponent<Collider>())
+            GetComponent<Collider>().enabled = false;
             activateParticleObject.SetActive(true);
             if(activateSound)
             Utils.soundManager.PlayFX(activateSound);
