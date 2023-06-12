@@ -202,7 +202,7 @@ namespace MoreMountains.TopDownEngine
                 }
                 SetUI(CurrentIndex);
             }
-			Utils.soundManager.PlayFX(switchSound, true);
+		
 
 
 			var oldAngle = LevelManager.Instance.Players[0].transform.localEulerAngles;
@@ -225,7 +225,7 @@ namespace MoreMountains.TopDownEngine
 			_instantiatedCharacters[CurrentIndex].MovementState.ChangeState(LevelManager.Instance.Players[0].MovementState.CurrentState);
 			_instantiatedCharacters[CurrentIndex].ConditionState.ChangeState(LevelManager.Instance.Players[0].ConditionState.CurrentState);
 
-			
+			Utils.soundManager.PlayFX(switchSound, true);
 
 			// we make it the current character
 			LevelManager.Instance.Players[0] = _instantiatedCharacters[CurrentIndex];

@@ -13713,7 +13713,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &491232279
 Transform:
   m_ObjectHideFlags: 0
@@ -13738,7 +13738,7 @@ BoxCollider:
   m_GameObject: {fileID: 491232278}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
@@ -13756,7 +13756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnCamera: {fileID: 5643509}
   OffCamera: {fileID: 1321725526}
-  OneTime: 0
+  OneTime: 1
 --- !u!1001 &493004758
 PrefabInstance:
   m_ObjectHideFlags: 0

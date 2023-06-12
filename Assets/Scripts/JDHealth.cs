@@ -16,7 +16,6 @@ public class JDHealth : Health
     public override void UpdateHealthBar(bool show)
     {
         base.UpdateHealthBar(show);
-        Debug.Log(name);
         if (_character != null )
         {
             characterHealthUIManager.SetHP(Mathf.FloorToInt(MasterHealth.CurrentHealth));

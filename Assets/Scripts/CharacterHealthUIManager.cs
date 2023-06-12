@@ -52,7 +52,7 @@ public class CharacterHealthUIManager : MonoBehaviour
         }
         else if (value > 40)
         {
-            Utils.soundManager.PlayFX(healthSound[0]);
+            Utils.soundManager.PlayFX(healthSound[0],false,true);
            
             for (int i = 0; i < 3; i++)
             {
@@ -61,7 +61,7 @@ public class CharacterHealthUIManager : MonoBehaviour
         }
         else if (value > 20)
         {
-            Utils.soundManager.PlayFX(healthSound[1]);
+            Utils.soundManager.PlayFX(healthSound[1], false, true);
            
             for (int i = 0; i < 2; i++)
             {
@@ -70,7 +70,7 @@ public class CharacterHealthUIManager : MonoBehaviour
         }
         else if (value > 0)
         {
-            Utils.soundManager.PlayFX(healthSound[2]);
+            Utils.soundManager.PlayFX(healthSound[2], false, true);
             heartUIImage[0].sprite = heartSprites[0];
         }
         else
