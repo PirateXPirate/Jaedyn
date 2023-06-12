@@ -134,15 +134,8 @@ public class UIManager : MonoBehaviour
     }
 
     public void GoToScene1() => SceneManager.LoadScene("EasyModeLevel1Scene");
-    void SetUpUi()
+    public void SetUpUi()
     {
-        LevelData.easyModeState[0] = 1;
-        LevelData.hardModeState[0] = 1;
-        LevelData.easyModeState[1] = 1;
-        LevelData.hardModeState[1] = 1;
-        LevelData.easyModeState[2] = 1;
-        LevelData.hardModeState[2] = 1;
-
         //setup EasymodeUI according to data
         for (int i = 0; i < LevelData.easyModeState.Length; i++)
         {
@@ -174,7 +167,7 @@ public class UIManager : MonoBehaviour
             
         }
     }
-    void SetActiveSymbolEasy(int levelState, int levelIndex)
+    public void SetActiveSymbolEasy(int levelState, int levelIndex)
     {
         var map = easyModeUi.transform.Find($"easyLevel{levelIndex}");
 
@@ -191,7 +184,7 @@ public class UIManager : MonoBehaviour
                 break;
         }
     }
-    void SetActiveSymbolHard(int levelState, int levelIndex)
+    public void SetActiveSymbolHard(int levelState, int levelIndex)
     {
         var map = hardModeUi.transform.Find($"hardLevel{levelIndex}");
 
@@ -210,7 +203,7 @@ public class UIManager : MonoBehaviour
     }
 
     #region -SetActive UI-
-    void CloseAllSymbol(Transform map)
+    public void CloseAllSymbol(Transform map)
     {
         map.transform.Find("BG_Brown")?.gameObject.SetActive(false);
         map.transform.Find("BG_Pass")?.gameObject.SetActive(false);
@@ -219,7 +212,7 @@ public class UIManager : MonoBehaviour
         map.transform.Find("Star")?.gameObject.SetActive(false);
         map.transform.Find("StarYellow")?.gameObject.SetActive(false);
     }
-    void LevelState0(Transform map)
+    public void LevelState0(Transform map)
     {
         CloseAllSymbol(map);
         map.transform.Find("BG_Lock")?.gameObject.SetActive(true);
@@ -257,7 +250,7 @@ public class UIManager : MonoBehaviour
         map.transform.Find("Star")?.gameObject.SetActive(true);
     }
 
-    void SetCompleteTutorial()
+    public void SetCompleteTutorial()
     {
         var map = easyModeUi.transform.Find($"LevelTutorial");
 

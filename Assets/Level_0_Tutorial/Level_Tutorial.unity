@@ -7231,6 +7231,11 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.9411765
       objectReference: {fileID: 0}
+    - target: {fileID: 2675772814718023084, guid: bc9529d54b74ea24588e798868920d00,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2675772815557730292, guid: bc9529d54b74ea24588e798868920d00,
         type: 3}
       propertyPath: m_RootOrder
@@ -44549,7 +44554,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 121}
-  m_SizeDelta: {x: 1080, y: 1486.4515}
+  m_SizeDelta: {x: 1486.4515, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1860503588
 MonoBehaviour:
@@ -44571,7 +44576,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9839476ca7379044bb0e8784c5de6642, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7c936398095249c4592e1172e638be68, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
