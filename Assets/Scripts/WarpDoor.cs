@@ -28,8 +28,9 @@ public class WarpDoor : MonoBehaviour
                // targetWarpPoint.CanEnter = true;
                 CanEnter = false;
                 waitForExit = false;
+                if(targetWarpPoint)
                 targetWarpPoint.waitForExit = true;
-                Invoke("Reset", 2);
+                Invoke("Reset", 1);
                 var orientation = LevelManager.Instance.Players[0].GetComponent<CharacterOrientation3D>();
                 LevelManager.Instance.Players[0].GetComponent<TopDownController3D>().Reset();
                
@@ -42,7 +43,7 @@ public class WarpDoor : MonoBehaviour
     }
     private void Reset()
     {
-        CanEnter = true;
+       // CanEnter = true;
         LevelManager.Instance.Players[0].GetComponent<CharacterMovement>().enabled = true;
     }
     private void OnTriggerExit(Collider other)

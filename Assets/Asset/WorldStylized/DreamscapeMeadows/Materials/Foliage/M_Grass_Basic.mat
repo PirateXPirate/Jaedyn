@@ -13,7 +13,7 @@ Material:
     _LIGHTING_QUALITY_HIGH _SPECULARHIGHLIGHTS_OFF _WIND_AUTO
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: 2450
   stringTagMap:
     RenderType: TransparentCutout
@@ -82,6 +82,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _AO: 2.4
     - _AlphaTest: 0
@@ -159,3 +160,4 @@ Material:
     - _TreeOffset: {r: 0, g: 5, b: 0, a: 0}
     - _TrunkBendFactor: {r: 1, g: 0, b: 0, a: 0}
     - _WindFade: {r: 50, g: 20, b: 0, a: 0}
+  m_BuildTextureStacks: []

@@ -22,24 +22,24 @@ public class ArtUtil : MonoBehaviour {
     public void Layout()
     {
 
-        //Object[] objs = Selection.GetFiltered<Object>(SelectionMode.DeepAssets);
-        //int count = objs.Length;
-        //int col = 5;
-        //int row = Mathf.CeilToInt( count / 4.0f);
+        Object[] objs = Selection.GetFiltered<Object>(SelectionMode.DeepAssets);
+        int count = objs.Length;
+        int col = 5;
+        int row = Mathf.CeilToInt( count / 4.0f);
 
-        //int width = (int)(row * offset);
+        int width = (int)(row * offset);
 
-        //for (int i = 0; i < objs.Length; i++)
-        //{
-        //    int tmpRow = i / col;
-        //    int tmpCol = i % col;
-        //    GameObject go = objs[i] as GameObject;
-        //    if (go != null)
-        //    {
-        //        GameObject tmpGo = Instantiate(go);
-        //        tmpGo.transform.position = new Vector3(tmpRow * offset, 0, tmpCol * offsetY);
-        //    }          
-        //}
+        for (int i = 0; i < objs.Length; i++)
+        {
+            int tmpRow = i / col;
+            int tmpCol = i % col;
+            GameObject go = objs[i] as GameObject;
+            if (go != null)
+            {
+                GameObject tmpGo = Instantiate(go);
+                tmpGo.transform.position = new Vector3(tmpRow * offset, 0, tmpCol * offsetY);
+            }          
+        }
     }
 
 

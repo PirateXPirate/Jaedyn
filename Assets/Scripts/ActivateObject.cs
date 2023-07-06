@@ -12,7 +12,7 @@ public class ActivateObject : MonoBehaviour
     int currentValue = 0;
     public GameObject activateParticleObject;
     public AudioClip activateSound;
-    public void Activate()
+    virtual public void Activate()
     {
         currentValue += 1;
         if (currentValue == targetPuzzleValue)

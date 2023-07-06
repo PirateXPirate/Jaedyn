@@ -8031,18 +8031,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 355678362}
   m_CullTransparentMesh: 1
---- !u!114 &358013844 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8205100539466899292, guid: a49c313805edfe44f9843c350826b6d4,
-    type: 3}
-  m_PrefabInstance: {fileID: 8205100539245790408}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 450ff36cd4c98a949bbf8d3d0a2b270e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &358013857 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8205100539466899305, guid: a49c313805edfe44f9843c350826b6d4,
@@ -14636,7 +14624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7508e07a016e9024daa4154f4e25e3be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 358013844}
+  playerHealth: {fileID: 2113971313}
   dummyCharacter: {fileID: 1911786670}
   popupFrame: {fileID: 1997603130}
   titleTextField: {fileID: 1161717548}
@@ -34842,7 +34830,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -122.19995, y: -94.3999}
+  m_AnchoredPosition: {x: -122.200195, y: -94.3999}
   m_SizeDelta: {x: 152, y: 159}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1530387154
@@ -47802,11 +47790,11 @@ MonoBehaviour:
   Model: {fileID: 0}
   CurrentHealth: 0
   Invulnerable: 0
-  InitialHealth: 100
+  InitialHealth: 50
   isRandomHealth: 0
   minInitialHealth: 0
   maxInitialHealth: 0
-  MaximumHealth: 100
+  MaximumHealth: 50
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
   DamageMMFeedbacks: {fileID: 0}

@@ -16,7 +16,6 @@ public class BossDeathListener : MonoBehaviour
 
     private void BossDeath()
     {
-        Debug.Log("DDDD");
         completePopup.SetActive(true);
     }
 

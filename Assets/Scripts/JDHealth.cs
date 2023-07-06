@@ -16,10 +16,11 @@ public class JDHealth : Health
     public override void UpdateHealthBar(bool show)
     {
         base.UpdateHealthBar(show);
+        onRecieveAttack?.Invoke(Mathf.FloorToInt(LevelManager.Instance.Players[0].gameObject.MMGetComponentNoAlloc<Health>().MasterHealth.CurrentHealth));
         if (_character != null )
         {
             characterHealthUIManager.SetHP(Mathf.FloorToInt(MasterHealth.CurrentHealth));
-            onRecieveAttack?.Invoke(Mathf.FloorToInt(MasterHealth.CurrentHealth));
+           
         }
         
             
@@ -27,6 +28,7 @@ public class JDHealth : Health
     public override void DamageDisabled()
     {
         base.DamageDisabled();
+        if(Particle)
         Instantiate(Particle, transform.position, Quaternion.Euler(0,0,0));
     }
   

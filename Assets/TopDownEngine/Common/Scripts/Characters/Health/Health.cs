@@ -513,6 +513,7 @@ namespace MoreMountains.TopDownEngine
 				{
 					MasterHealth.CurrentHealth = 0;
 					MasterHealth.Kill();
+					Kill();
 				}
 			}
 			else
@@ -724,7 +725,6 @@ namespace MoreMountains.TopDownEngine
 			{
 				return;
 			}
-	        
 			if (_character != null)
 			{
 				// we set its dead state to true
