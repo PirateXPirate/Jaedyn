@@ -7,21 +7,27 @@ public class FireflyManager : MonoBehaviour
     public Firefly[] fireflySet;
     int fireflyNum;
     public GameObject particle;
-    public ActivateObject activatedObject;
+    public ActivateObject[] activatedObjects;
     public AudioClip[] flySound;
     public AudioClip completeSound;
     int index = 0;
     void Start()
     {
-        
+
     }
     public void ActivateFirefly()
     {
+       
         fireflyNum += 1;
         if (fireflyNum == fireflySet.Length)
         {
             particle.SetActive(true);
-            activatedObject.Activate();
+            foreach (var a in activatedObjects)
+            {
+              
+                a.Activate();
+            }
+              
             Utils.soundManager.PlayFX(completeSound);
         }
     }
@@ -33,6 +39,6 @@ public class FireflyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

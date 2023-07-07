@@ -15,14 +15,22 @@ public class ActivateObject : MonoBehaviour
     virtual public void Activate()
     {
         currentValue += 1;
+
         if (currentValue == targetPuzzleValue)
         {
-            if (GetComponent<Collider>())
-            GetComponent<Collider>().enabled = false;
-            activateParticleObject.SetActive(true);
-            if(activateSound)
-            Utils.soundManager.PlayFX(activateSound);
             transform.DOMove(targetTransform.position, time);
+            if (GetComponent<Collider>())
+                GetComponent<Collider>().enabled = false;
+
+            if(activateParticleObject)
+            activateParticleObject.SetActive(true);
+            if (activateSound)
+                Utils.soundManager.PlayFX(activateSound);
+            Debug.Log(name);
+            Debug.Log(currentValue);
+            Debug.Log(targetPuzzleValue);
+            
+            Debug.Log("End" + name);
         }
     }
 
