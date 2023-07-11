@@ -26,11 +26,6 @@ public class ActivateObject : MonoBehaviour
             activateParticleObject.SetActive(true);
             if (activateSound)
                 Utils.soundManager.PlayFX(activateSound);
-            Debug.Log(name);
-            Debug.Log(currentValue);
-            Debug.Log(targetPuzzleValue);
-            
-            Debug.Log("End" + name);
         }
     }
 
