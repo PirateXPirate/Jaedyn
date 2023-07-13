@@ -15,7 +15,6 @@ public class WarpDoor : MonoBehaviour
     public bool waitForExit = false;
     void Start()
     {
-        
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -23,18 +22,21 @@ public class WarpDoor : MonoBehaviour
         {
             if (CanEnter && warpPosition!=null)
             {
-                Utils.soundManager.PlayFX(warpSound);
+                if (warpSound)
+                    Utils.soundManager.PlayFX(warpSound);
                 other.transform.position = warpPosition.position;
                // targetWarpPoint.CanEnter = true;
                 CanEnter = false;
                 waitForExit = false;
                 if(targetWarpPoint)
                 targetWarpPoint.waitForExit = true;
-                Invoke("Reset", 1);
                 var orientation = LevelManager.Instance.Players[0].GetComponent<CharacterOrientation3D>();
+                orientation.Face(directionAfterWarp);
+                Invoke("Reset", 1);
+               
                 LevelManager.Instance.Players[0].GetComponent<TopDownController3D>().Reset();
                
-                orientation.Face(directionAfterWarp);
+              
                 LevelManager.Instance.Players[0].GetComponent<CharacterMovement>().enabled = false;
                 MMAnimatorExtensions.UpdateAnimatorBoolIfExists(LevelManager.Instance.Players[0].GetComponentInChildren<Animator>(), "Walking", false);
             }
@@ -45,6 +47,7 @@ public class WarpDoor : MonoBehaviour
     {
        // CanEnter = true;
         LevelManager.Instance.Players[0].GetComponent<CharacterMovement>().enabled = true;
+      
     }
     private void OnTriggerExit(Collider other)
     {

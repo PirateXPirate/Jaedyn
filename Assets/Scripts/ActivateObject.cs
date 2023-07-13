@@ -28,6 +28,6 @@ public class ActivateObject : MonoBehaviour
                 Utils.soundManager.PlayFX(activateSound);
         }
     }
-
+   
 
 }
