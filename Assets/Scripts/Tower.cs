@@ -39,6 +39,7 @@ public class Tower : MonoBehaviour
     {
         if (!enable) return;
         if (Complete) return;
+      
         timeTochange -= 1;
 
         timeTochange = 0;

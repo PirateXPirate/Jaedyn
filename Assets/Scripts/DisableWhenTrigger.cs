@@ -5,11 +5,12 @@ using UnityEngine;
 public class DisableWhenTrigger : MonoBehaviour
 {
     public GameObject[] obj;
+    public bool KeepCollider = false;
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag.Equals("Player"))
         {
-            GetComponent<Collider>().enabled = false;
+            GetComponent<Collider>().enabled = KeepCollider;
             foreach (var a in obj)
             {
                 a.SetActive(false);

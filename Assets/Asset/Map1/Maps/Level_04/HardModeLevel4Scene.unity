@@ -354,18 +354,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2102847}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6109570 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1788706286784460295, guid: 8037fe7b24f996d479136145f1acfaf0,
-    type: 3}
-  m_PrefabInstance: {fileID: 1125914017}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a09ee7c3ce2742a49b57c41ad4930533, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &10536361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -870,7 +858,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30188216}
   m_LocalRotation: {x: -0, y: -0.99912167, z: -0, w: -0.04190426}
-  m_LocalPosition: {x: 42.25, y: 11.78, z: 129.36}
+  m_LocalPosition: {x: 42.25, y: 9.88, z: 129.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2956,6 +2944,26 @@ PrefabInstance:
       propertyPath: zoneCollider
       value: 
       objectReference: {fileID: 30188217}
+    - target: {fileID: 5041158337711515338, guid: 3cc8229a7629bdb4dae7cdba9a1c5663,
+        type: 3}
+      propertyPath: PathElements.Array.data[3].PathElementPosition.x
+      value: -0.20002747
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041158337711515338, guid: 3cc8229a7629bdb4dae7cdba9a1c5663,
+        type: 3}
+      propertyPath: PathElements.Array.data[3].PathElementPosition.z
+      value: 0.9707184
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041158337711515338, guid: 3cc8229a7629bdb4dae7cdba9a1c5663,
+        type: 3}
+      propertyPath: PathElements.Array.data[4].PathElementPosition.x
+      value: 1.900238
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041158337711515338, guid: 3cc8229a7629bdb4dae7cdba9a1c5663,
+        type: 3}
+      propertyPath: PathElements.Array.data[4].PathElementPosition.z
+      value: -0.7757416
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cc8229a7629bdb4dae7cdba9a1c5663, type: 3}
 --- !u!4 &122253463 stripped
@@ -6326,8 +6334,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0143100945, y: 0.0016708145, z: 0.017037543}
-  m_Center: {x: 0, y: 0, z: 0.0085995095}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: -0.26, z: 0.0085995095}
 --- !u!1001 &238714285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9835,11 +9843,16 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 765091727}
+    - target: {fileID: 8294862308098026849, guid: 8037fe7b24f996d479136145f1acfaf0,
+        type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 765091727}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8037fe7b24f996d479136145f1acfaf0, type: 3}
 --- !u!114 &360898575 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1788706286784460295, guid: 8037fe7b24f996d479136145f1acfaf0,
+  m_CorrespondingSourceObject: {fileID: 8294862308098026849, guid: 8037fe7b24f996d479136145f1acfaf0,
     type: 3}
   m_PrefabInstance: {fileID: 360898574}
   m_PrefabAsset: {fileID: 0}
@@ -11292,6 +11305,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  KeepCollider: 0
 --- !u!114 &385211173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20263,6 +20277,7 @@ MonoBehaviour:
   targetPuzzleValue: 1
   activateParticleObject: {fileID: 0}
   activateSound: {fileID: 0}
+  AutoActivate: 0
 --- !u!65 &764544549
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26729,7 +26744,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1036162821}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.84, y: 0.35, z: 0}
+  m_LocalPosition: {x: -0.084, y: 0.652, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -27986,7 +28001,7 @@ MonoBehaviour:
   targetWarpPoint: {fileID: 234361243}
   warpPosition: {fileID: 234361241}
   warpSound: {fileID: 0}
-  directionAfterWarp: 1
+  directionAfterWarp: 3
   CanEnter: 1
   waitForExit: 1
 --- !u!65 &1090445259
@@ -28000,8 +28015,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0143100945, y: 0.0016708145, z: 0.017037543}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: -0.19, z: 0}
 --- !u!1001 &1092183800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28870,8 +28885,25 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 1990861231}
+    - target: {fileID: 8294862308098026849, guid: 8037fe7b24f996d479136145f1acfaf0,
+        type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1990861231}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8037fe7b24f996d479136145f1acfaf0, type: 3}
+--- !u!114 &1125914018 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8294862308098026849, guid: 8037fe7b24f996d479136145f1acfaf0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1125914017}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a09ee7c3ce2742a49b57c41ad4930533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1127954696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37770,11 +37802,16 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 765091727}
+    - target: {fileID: 8294862308098026849, guid: 8037fe7b24f996d479136145f1acfaf0,
+        type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 765091727}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8037fe7b24f996d479136145f1acfaf0, type: 3}
 --- !u!114 &1507785731 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1788706286784460295, guid: 8037fe7b24f996d479136145f1acfaf0,
+  m_CorrespondingSourceObject: {fileID: 8294862308098026849, guid: 8037fe7b24f996d479136145f1acfaf0,
     type: 3}
   m_PrefabInstance: {fileID: 1507785730}
   m_PrefabAsset: {fileID: 0}
@@ -50240,7 +50277,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1831969664268716, guid: f73cc954436271b48b6d8fa0e8da19c0, type: 3}
       propertyPath: m_Name
-      value: VortexPortalRed
+      value: VortexPortalRed1
       objectReference: {fileID: 0}
     - target: {fileID: 1831969664268716, guid: f73cc954436271b48b6d8fa0e8da19c0, type: 3}
       propertyPath: m_IsActive
@@ -50331,7 +50368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71bac960249489647afba720f3bf4715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetWarpPoint: {fileID: 1951068903}
+  targetWarpPoint: {fileID: 2028615723}
   warpPosition: {fileID: 1695625848}
   warpSound: {fileID: 0}
   directionAfterWarp: 1
@@ -50348,8 +50385,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0143100945, y: 0.0016708145, z: 0.017037543}
-  m_Center: {x: 0, y: 0, z: 0.0085995095}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.02, z: 0.0085995095}
 --- !u!114 &1951068907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50364,6 +50401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj:
   - {fileID: 1036162821}
+  KeepCollider: 1
 --- !u!4 &1959189290 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4823874436023973524, guid: d72db45a64746e14394ae0221fec26a2,
@@ -52413,7 +52451,7 @@ MonoBehaviour:
   - {fileID: 471220525}
   - {fileID: 1354357751}
   - {fileID: 206619007}
-  - {fileID: 6109570}
+  - {fileID: 1125914018}
   particle: {fileID: 1990861230}
   activatedObjects:
   - {fileID: 543742433}
@@ -53281,7 +53319,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1831969664268716, guid: f73cc954436271b48b6d8fa0e8da19c0, type: 3}
       propertyPath: m_Name
-      value: VortexPortalRed
+      value: VortexPortalRed2
       objectReference: {fileID: 0}
     - target: {fileID: 1831969664268716, guid: f73cc954436271b48b6d8fa0e8da19c0, type: 3}
       propertyPath: m_IsActive
@@ -53389,7 +53427,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0143100945, y: 0.0016708145, z: 0.017037543}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0.0085995095}
 --- !u!1001 &2032764180
 PrefabInstance:
