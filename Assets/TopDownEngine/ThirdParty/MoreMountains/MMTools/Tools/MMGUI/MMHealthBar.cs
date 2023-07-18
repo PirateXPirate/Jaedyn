@@ -258,7 +258,9 @@ namespace MoreMountains.Tools
 			newCanvas.GetComponent<RectTransform>().sizeDelta = Size;
 			if (!string.IsNullOrEmpty(SortingLayerName))
 			{
-				newCanvas.sortingLayerName = SortingLayerName;
+				//newCanvas.sortingLayerName = SortingLayerName;
+				newCanvas.sortingLayerName = "Above";
+				
 			}
 
 			GameObject container = new GameObject();

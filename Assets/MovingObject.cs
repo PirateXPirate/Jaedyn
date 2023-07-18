@@ -6,9 +6,19 @@ using UnityEngine;
 public class MovingObject : ActivateObject
 {
     public bool AutoActivate;
+
+    bool isMoving = false;
     public override void Activate()
     {
-        transform.DOMove(targetTransform.position, time).SetLoops(-1,LoopType.Yoyo);
+        if (isMoving) return;
+        currentValue += 1;
+
+        if (currentValue == targetPuzzleValue)
+        {
+            isMoving = true;
+            transform.DOMove(targetTransform.position, time).SetLoops(-1, LoopType.Yoyo);
+        }
+          
     }
     private void Start()
     {

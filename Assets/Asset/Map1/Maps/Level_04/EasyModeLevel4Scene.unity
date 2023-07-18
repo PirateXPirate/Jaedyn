@@ -950,6 +950,7 @@ MonoBehaviour:
   targetPuzzleValue: 1
   activateParticleObject: {fileID: 906774771}
   activateSound: {fileID: 8300000, guid: 1d0679a9ab303d745904e5152b229a55, type: 3}
+  KeepCollider: 0
 --- !u!65 &32530658
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7323,7 +7324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerUpManager: {fileID: 948822768}
   numPotion: 2
-  numResistance: 2
+  numResistance: 0
   isRandom: 1
   isRandomResitance: 0
 --- !u!4 &312478425
@@ -14592,6 +14593,7 @@ MonoBehaviour:
   targetPuzzleValue: 1
   activateParticleObject: {fileID: 0}
   activateSound: {fileID: 0}
+  KeepCollider: 1
 --- !u!114 &613734801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15043,7 +15045,7 @@ MonoBehaviour:
   activateObj: {fileID: 0}
   activateChest: {fileID: 0}
   setActiveObject:
-  - {fileID: 0}
+  - {fileID: 640754265}
 --- !u!1001 &643275891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16741,6 +16743,7 @@ MonoBehaviour:
   targetPuzzleValue: 1
   activateParticleObject: {fileID: 1629972431}
   activateSound: {fileID: 8300000, guid: 1d0679a9ab303d745904e5152b229a55, type: 3}
+  KeepCollider: 0
 --- !u!65 &659356682
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21303,7 +21306,7 @@ PrefabInstance:
     - target: {fileID: 448819489424763479, guid: 0664a00c68f4d004594b91ecff62dfe3,
         type: 3}
       propertyPath: PathElements.Array.data[2].PathElementPosition.y
-      value: -0.7499056
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 448819489424763479, guid: 0664a00c68f4d004594b91ecff62dfe3,
         type: 3}
@@ -21318,7 +21321,7 @@ PrefabInstance:
     - target: {fileID: 448819489424763479, guid: 0664a00c68f4d004594b91ecff62dfe3,
         type: 3}
       propertyPath: PathElements.Array.data[3].PathElementPosition.y
-      value: -1.2760382
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 448819489424763479, guid: 0664a00c68f4d004594b91ecff62dfe3,
         type: 3}
@@ -26052,6 +26055,7 @@ MonoBehaviour:
   targetPuzzleValue: 1
   activateParticleObject: {fileID: 1747454310}
   activateSound: {fileID: 8300000, guid: 1d0679a9ab303d745904e5152b229a55, type: 3}
+  KeepCollider: 0
 --- !u!65 &939898840
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40658,6 +40662,7 @@ MonoBehaviour:
   targetPuzzleValue: 1
   activateParticleObject: {fileID: 834026004}
   activateSound: {fileID: 8300000, guid: 1d0679a9ab303d745904e5152b229a55, type: 3}
+  KeepCollider: 0
 --- !u!65 &1492943550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42223,7 +42228,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.0143100945, y: 0.0016708145, z: 0.017037543}
-  m_Center: {x: 0, y: -0.002, z: 0.0085995095}
+  m_Center: {x: 0, y: -0.003, z: 0.0085995095}
 --- !u!114 &1549837957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45590,6 +45595,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1839095307}
   - {fileID: 640754264}
   m_Father: {fileID: 0}
   m_RootOrder: 47
@@ -48180,6 +48186,7 @@ MonoBehaviour:
   targetPuzzleValue: 1
   activateParticleObject: {fileID: 0}
   activateSound: {fileID: 0}
+  KeepCollider: 0
   AutoActivate: 0
 --- !u!65 &1821043190
 BoxCollider:
@@ -48425,6 +48432,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838975196}
   m_CullTransparentMesh: 1
+--- !u!1 &1839095306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1839095307}
+  - component: {fileID: 1839095308}
+  m_Layer: 13
+  m_Name: AddCoin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1839095307
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839095306}
+  m_LocalRotation: {x: -0, y: 0.5649021, z: -0, w: 0.82515794}
+  m_LocalPosition: {x: 51.981678, y: -0.06272507, z: 3.6276817}
+  m_LocalScale: {x: 0.039960004, y: 0.39896, z: 0.04555}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1711703808}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1839095308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839095306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b497815c93aec24ab0fb3a8564eff44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUpManager: {fileID: 948822768}
+  numPotion: 2
+  numResistance: 0
+  isRandom: 1
+  isRandomResitance: 0
 --- !u!1001 &1844918294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49494,8 +49550,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 448819489424763479, guid: 0664a00c68f4d004594b91ecff62dfe3,
         type: 3}
+      propertyPath: PathElements.Array.data[1].PathElementPosition.x
+      value: 0.33047104
+      objectReference: {fileID: 0}
+    - target: {fileID: 448819489424763479, guid: 0664a00c68f4d004594b91ecff62dfe3,
+        type: 3}
       propertyPath: PathElements.Array.data[1].PathElementPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 448819489424763479, guid: 0664a00c68f4d004594b91ecff62dfe3,
+        type: 3}
+      propertyPath: PathElements.Array.data[1].PathElementPosition.z
+      value: 1.8237
       objectReference: {fileID: 0}
     - target: {fileID: 448819489424763479, guid: 0664a00c68f4d004594b91ecff62dfe3,
         type: 3}
@@ -49505,7 +49571,7 @@ PrefabInstance:
     - target: {fileID: 448819489424763479, guid: 0664a00c68f4d004594b91ecff62dfe3,
         type: 3}
       propertyPath: PathElements.Array.data[2].PathElementPosition.y
-      value: -0.7499056
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 448819489424763479, guid: 0664a00c68f4d004594b91ecff62dfe3,
         type: 3}
@@ -49515,17 +49581,22 @@ PrefabInstance:
     - target: {fileID: 448819489424763479, guid: 0664a00c68f4d004594b91ecff62dfe3,
         type: 3}
       propertyPath: PathElements.Array.data[3].PathElementPosition.x
-      value: -1.2853394
+      value: 0.8481827
       objectReference: {fileID: 0}
     - target: {fileID: 448819489424763479, guid: 0664a00c68f4d004594b91ecff62dfe3,
         type: 3}
       propertyPath: PathElements.Array.data[3].PathElementPosition.y
-      value: -1.2760382
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 448819489424763479, guid: 0664a00c68f4d004594b91ecff62dfe3,
         type: 3}
       propertyPath: PathElements.Array.data[3].PathElementPosition.z
-      value: -1.6200714
+      value: -0.90424347
+      objectReference: {fileID: 0}
+    - target: {fileID: 448819489424763479, guid: 0664a00c68f4d004594b91ecff62dfe3,
+        type: 3}
+      propertyPath: PathElements.Array.data[4].PathElementPosition.x
+      value: 1.441719
       objectReference: {fileID: 0}
     - target: {fileID: 448819489424763479, guid: 0664a00c68f4d004594b91ecff62dfe3,
         type: 3}
@@ -49534,8 +49605,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 448819489424763479, guid: 0664a00c68f4d004594b91ecff62dfe3,
         type: 3}
+      propertyPath: PathElements.Array.data[4].PathElementPosition.z
+      value: 0.2533493
+      objectReference: {fileID: 0}
+    - target: {fileID: 448819489424763479, guid: 0664a00c68f4d004594b91ecff62dfe3,
+        type: 3}
+      propertyPath: PathElements.Array.data[5].PathElementPosition.x
+      value: 0.07800293
+      objectReference: {fileID: 0}
+    - target: {fileID: 448819489424763479, guid: 0664a00c68f4d004594b91ecff62dfe3,
+        type: 3}
       propertyPath: PathElements.Array.data[5].PathElementPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 448819489424763479, guid: 0664a00c68f4d004594b91ecff62dfe3,
+        type: 3}
+      propertyPath: PathElements.Array.data[5].PathElementPosition.z
+      value: -1.7661209
       objectReference: {fileID: 0}
     - target: {fileID: 448819489424763576, guid: 0664a00c68f4d004594b91ecff62dfe3,
         type: 3}

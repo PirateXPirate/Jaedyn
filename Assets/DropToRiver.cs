@@ -37,6 +37,8 @@ public class DropToRiver : MonoBehaviour
                 orientation.Face(directionAfterWarp);
                 LevelManager.Instance.Players[0].GetComponent<CharacterMovement>().enabled = false;
                 MMAnimatorExtensions.UpdateAnimatorBoolIfExists(LevelManager.Instance.Players[0].GetComponentInChildren<Animator>(), "Walking", false);
+                LevelManager.Instance.Players[0].GetComponent<CharacterJump3D>().JumpStop();
+                LevelManager.Instance.Players[0].MovementState.ChangeState(CharacterStates.MovementStates.Idle);
             }
 
         }

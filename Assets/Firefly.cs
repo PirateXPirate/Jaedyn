@@ -18,7 +18,6 @@ public class Firefly : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            //.
             GetComponent<Collider>().enabled = false;
             transform.DOMove(manager.transform.position, 3).SetSpeedBased().OnComplete(onComplete) ;
             Utils.soundManager.PlayFX(collectedSound);
