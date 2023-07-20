@@ -2202,6 +2202,7 @@ MonoBehaviour:
   targetPuzzleValue: 1
   activateParticleObject: {fileID: 720319717}
   activateSound: {fileID: 8300000, guid: 1d0679a9ab303d745904e5152b229a55, type: 3}
+  KeepCollider: 0
 --- !u!65 &76691767
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9586,6 +9587,7 @@ MonoBehaviour:
   targetPuzzleValue: 1
   activateParticleObject: {fileID: 394452934}
   activateSound: {fileID: 8300000, guid: 1d0679a9ab303d745904e5152b229a55, type: 3}
+  KeepCollider: 0
 --- !u!65 &418057201
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24265,6 +24267,7 @@ MonoBehaviour:
   targetPuzzleValue: 1
   activateParticleObject: {fileID: 1609886479}
   activateSound: {fileID: 8300000, guid: 1d0679a9ab303d745904e5152b229a55, type: 3}
+  KeepCollider: 0
 --- !u!65 &926329643
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34688,6 +34691,21 @@ PrefabInstance:
         type: 3}
       propertyPath: PathElements.Array.data[2].PathElementPosition.z
       value: -2.299591
+      objectReference: {fileID: 0}
+    - target: {fileID: 5571368770627763058, guid: b377460d66ab1e54b84016dbfe371499,
+        type: 3}
+      propertyPath: PathElements.Array.data[3].PathElementPosition.x
+      value: -1.8302307
+      objectReference: {fileID: 0}
+    - target: {fileID: 5571368770627763058, guid: b377460d66ab1e54b84016dbfe371499,
+        type: 3}
+      propertyPath: PathElements.Array.data[3].PathElementPosition.y
+      value: -1.2191916
+      objectReference: {fileID: 0}
+    - target: {fileID: 5571368770627763058, guid: b377460d66ab1e54b84016dbfe371499,
+        type: 3}
+      propertyPath: PathElements.Array.data[3].PathElementPosition.z
+      value: -5.8270416
       objectReference: {fileID: 0}
     - target: {fileID: 5571368770627763058, guid: b377460d66ab1e54b84016dbfe371499,
         type: 3}
@@ -49217,18 +49235,48 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5571368770627763058, guid: b377460d66ab1e54b84016dbfe371499,
         type: 3}
+      propertyPath: PathElements.Array.data[1].PathElementPosition.x
+      value: 1.8361282
+      objectReference: {fileID: 0}
+    - target: {fileID: 5571368770627763058, guid: b377460d66ab1e54b84016dbfe371499,
+        type: 3}
+      propertyPath: PathElements.Array.data[1].PathElementPosition.y
+      value: 0.14757347
+      objectReference: {fileID: 0}
+    - target: {fileID: 5571368770627763058, guid: b377460d66ab1e54b84016dbfe371499,
+        type: 3}
+      propertyPath: PathElements.Array.data[1].PathElementPosition.z
+      value: -2.055603
+      objectReference: {fileID: 0}
+    - target: {fileID: 5571368770627763058, guid: b377460d66ab1e54b84016dbfe371499,
+        type: 3}
       propertyPath: PathElements.Array.data[2].PathElementPosition.x
-      value: -1.5134773
+      value: -2.4719734
       objectReference: {fileID: 0}
     - target: {fileID: 5571368770627763058, guid: b377460d66ab1e54b84016dbfe371499,
         type: 3}
       propertyPath: PathElements.Array.data[2].PathElementPosition.y
-      value: 0
+      value: 0.18324566
       objectReference: {fileID: 0}
     - target: {fileID: 5571368770627763058, guid: b377460d66ab1e54b84016dbfe371499,
         type: 3}
       propertyPath: PathElements.Array.data[2].PathElementPosition.z
-      value: 2.4444275
+      value: -0.47605896
+      objectReference: {fileID: 0}
+    - target: {fileID: 5571368770627763058, guid: b377460d66ab1e54b84016dbfe371499,
+        type: 3}
+      propertyPath: PathElements.Array.data[3].PathElementPosition.x
+      value: -2.9445686
+      objectReference: {fileID: 0}
+    - target: {fileID: 5571368770627763058, guid: b377460d66ab1e54b84016dbfe371499,
+        type: 3}
+      propertyPath: PathElements.Array.data[3].PathElementPosition.y
+      value: -0.6865463
+      objectReference: {fileID: 0}
+    - target: {fileID: 5571368770627763058, guid: b377460d66ab1e54b84016dbfe371499,
+        type: 3}
+      propertyPath: PathElements.Array.data[3].PathElementPosition.z
+      value: -2.7849274
       objectReference: {fileID: 0}
     - target: {fileID: 5571368770627763058, guid: b377460d66ab1e54b84016dbfe371499,
         type: 3}

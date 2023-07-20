@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ButtonFeedbacks : MonoBehaviour
@@ -68,8 +70,11 @@ public class ButtonFeedbacks : MonoBehaviour
         hardLevel9.onClick.AddListener(HardLevel9Button);
 
         blockPlayButton.onClick.AddListener(BlockPlayButton);
+
+
         //unLockObject.onClick.AddListener(UnLockButton);
     }
+
 
     public void BlockPlayButton()
     {
@@ -255,5 +260,30 @@ public class ButtonFeedbacks : MonoBehaviour
         }
             
     }
+    private void OnDestroy()
+    {
+       
+        tutorial.onClick.RemoveListener(TutorialButton);
+        easyLevel1.onClick.RemoveListener(EasyLevel1Button);
+        easyLevel2.onClick.RemoveListener(EasyLevel2Button);
+        easyLevel3.onClick.RemoveListener(EasyLevel3Button);
+        easyLevel4.onClick.RemoveListener(EasyLevel4Button);
+        easyLevel5.onClick.RemoveListener(EasyLevel5Button);
+        easyLevel6.onClick.RemoveListener(EasyLevel6Button);
+        easyLevel7.onClick.RemoveListener(EasyLevel7Button);
+        easyLevel8.onClick.RemoveListener(EasyLevel8Button);
+        easyLevel9.onClick.RemoveListener(EasyLevel9Button);
 
+        hardLevel1.onClick.RemoveListener(HardLevel1Button);
+        hardLevel2.onClick.RemoveListener(HardLevel2Button);
+        hardLevel3.onClick.RemoveListener(HardLevel3Button);
+        hardLevel4.onClick.RemoveListener(HardLevel4Button);
+        hardLevel5.onClick.RemoveListener(HardLevel5Button);
+        hardLevel6.onClick.RemoveListener(HardLevel6Button);
+        hardLevel7.onClick.RemoveListener(HardLevel7Button);
+        hardLevel8.onClick.RemoveListener(HardLevel8Button);
+        hardLevel9.onClick.RemoveListener(HardLevel9Button);
+
+        blockPlayButton.onClick.RemoveListener(BlockPlayButton);
+    }
 }

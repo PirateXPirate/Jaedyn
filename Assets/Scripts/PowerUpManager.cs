@@ -28,6 +28,9 @@ public class PowerUpManager : MonoBehaviour
 
     void Start()
     {
+        hpPotionQuantity = PlayerPrefs.GetInt("hpPotionQuantity");
+        resistancePotionQuantity = PlayerPrefs.GetInt("resistancePotionQuantity");
+
         powerUpUI.SetHPItemQuantity(hpPotionQuantity);
         powerUpUI.SetResistanceItemQuantity(resistancePotionQuantity);
     }

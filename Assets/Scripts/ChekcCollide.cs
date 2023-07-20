@@ -32,6 +32,7 @@ public class ChekcCollide : MonoBehaviour
                 // col.enabled = true;
             }
         }
+       
         if (!string.IsNullOrEmpty(tagName))
         {
             if (collision.transform.CompareTag(tagName))

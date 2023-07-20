@@ -22,6 +22,7 @@ public class ShopManager : MonoBehaviour
     void Start()
     {
         txtCoin.text = Utils.coin.ToString();   
+
     }
 
     //Button Function

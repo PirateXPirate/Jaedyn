@@ -39888,8 +39888,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.0115895, y: 0.22840282, z: 1.9934844}
-  m_Center: {x: 0.0026957393, y: 0.09938587, z: 0.007951915}
+  m_Size: {x: 2.0115895, y: 5.47, z: 1.9934844}
+  m_Center: {x: 0.0026957393, y: -2.57, z: 0.007951915}
 --- !u!1001 &1298409509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47039,6 +47039,54 @@ MonoBehaviour:
   warpPosition: {fileID: 488162445}
   warpSound: {fileID: 0}
   directionAfterWarp: 2
+--- !u!114 &1560176158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560176153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76891b3b532f84acaaeed44c357bd00c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  Owner: {fileID: 0}
+  TriggerFilter: 1
+  MinDamageCaused: 20
+  MaxDamageCaused: 20
+  TypedDamages: []
+  DamageDirectionMode: 1
+  DamageCausedKnockbackType: 1
+  DamageCausedKnockbackDirection: 0
+  DamageCausedKnockbackForce: {x: 10, y: 10, z: 0}
+  InvincibilityDuration: 0.5
+  RepeatDamageOverTime: 0
+  AmountOfRepeats: 3
+  DurationBetweenRepeats: 1
+  DamageOverTimeInterruptible: 1
+  RepeatedDamageType: {fileID: 0}
+  DamageTakenEveryTime: 0
+  DamageTakenDamageable: 0
+  DamageTakenNonDamageable: 0
+  DamageTakenKnockbackType: 0
+  DamageTakenKnockbackForce: {x: 0, y: 0, z: 0}
+  DamageTakenInvincibilityDuration: 0.5
+  HitDamageableFeedback: {fileID: 0}
+  HitNonDamageableFeedback: {fileID: 0}
+  HitAnythingFeedback: {fileID: 0}
+  HitDamageableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  HitNonDamageableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  HitAnythingEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1562504242
 PrefabInstance:
   m_ObjectHideFlags: 0

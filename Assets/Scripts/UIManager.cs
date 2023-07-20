@@ -131,6 +131,7 @@ public class UIManager : MonoBehaviour
         //TODO FadeIn
         //TODO LoadScene ShopScene
         Debug.Log("ShopButton is Press!!");
+        SceneManager.LoadScene("ShopScene");
     }
 
     public void GoToScene1() => SceneManager.LoadScene("EasyModeLevel1Scene");

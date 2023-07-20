@@ -13,10 +13,10 @@ public class RedeemPopup : MonoBehaviour
     [SerializeField] GameObject popUp;
     void Awake()
     {
-        bonusButton.onClick.AddListener(OnToggle);
-        okButton.onClick.AddListener(OnToggle);
-        closePopupButton.onClick.AddListener(OnToggle);
-        popUp.SetActive(false);
+      //  bonusButton.onClick.AddListener(OnToggle);
+      //  okButton.onClick.AddListener(OnToggle);
+       // closePopupButton.onClick.AddListener(OnToggle);
+      //  popUp.SetActive(false);
     }
 
     void OnToggle()
