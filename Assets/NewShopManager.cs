@@ -72,27 +72,27 @@ public class NewShopManager : MonoBehaviour
         for (int i = 0; i < data100.Count; i++)
         {
 
-            Code50List.Add(data100[i]["Code"].ToString());
+            Code100List.Add(data100[i]["Code"].ToString());
         }
         for (int i = 0; i < data300.Count; i++)
         {
 
-            Code50List.Add(data300[i]["Code"].ToString());
+            Code300List.Add(data300[i]["Code"].ToString());
         }
 
-        // bonus1Bought = PlayerPrefsIntToBool("bonus1Bought");
-        // bonus2Bought = PlayerPrefsIntToBool("bonus2Bought");
-        // bonus3Bought = PlayerPrefsIntToBool("bonus3Bought");
-        //  bonus4Bought = PlayerPrefsIntToBool("bonus4Bought");
-        //  bonus5Bought = PlayerPrefsIntToBool("bonus5Bought");
-        //   bonus6Bought = PlayerPrefsIntToBool("bonus6Bought");
+         bonus1Bought = PlayerPrefsIntToBool("bonus1Bought");
+         bonus2Bought = PlayerPrefsIntToBool("bonus2Bought");
+         bonus3Bought = PlayerPrefsIntToBool("bonus3Bought");
+          bonus4Bought = PlayerPrefsIntToBool("bonus4Bought");
+          bonus5Bought = PlayerPrefsIntToBool("bonus5Bought");
+           bonus6Bought = PlayerPrefsIntToBool("bonus6Bought");
 
-        //  BonusList[0].bonusButton.gameObject.SetActive(!bonus1Bought);
-        //  BonusList[1].bonusButton.gameObject.SetActive(!bonus2Bought);
-        //  BonusList[2].bonusButton.gameObject.SetActive(!bonus3Bought);
-        //  BonusList[3].bonusButton.gameObject.SetActive(!bonus4Bought);
-        //  BonusList[4].bonusButton.gameObject.SetActive(!bonus5Bought);
-        //  BonusList[5].bonusButton.gameObject.SetActive(!bonus6Bought);
+          BonusList[0].bonusButton.gameObject.SetActive(!bonus1Bought);
+          BonusList[1].bonusButton.gameObject.SetActive(!bonus2Bought);
+          BonusList[2].bonusButton.gameObject.SetActive(!bonus3Bought);
+          BonusList[3].bonusButton.gameObject.SetActive(!bonus4Bought);
+          BonusList[4].bonusButton.gameObject.SetActive(!bonus5Bought);
+          BonusList[5].bonusButton.gameObject.SetActive(!bonus6Bought);
 
         hpPotionQuantity = PlayerPrefs.GetInt("hpPotionQuantity", 0);
         resistancePotionQuantity = PlayerPrefs.GetInt("resistancePotionQuantity", 0);
@@ -193,40 +193,49 @@ public class NewShopManager : MonoBehaviour
             switch (bonusButton.index)
             {
                 case 0:
-                    hpPotionQuantity += 2;
+                    hpPotionQuantity = 2;
                     PlayerPrefs.SetInt("hpPotionQuantity", hpPotionQuantity);
+                    PlayerPrefs.SetInt("bonus1Bought", 1);
                     break;
                 case 1:
-                    hpPotionQuantity += 2;
-                    resistancePotionQuantity += 2;
+                    hpPotionQuantity = 2;
+                    resistancePotionQuantity = 2;
                     PlayerPrefs.SetInt("hpPotionQuantity", hpPotionQuantity);
                     PlayerPrefs.SetInt("resistancePotionQuantity", resistancePotionQuantity);
+                    PlayerPrefs.SetInt("bonus2Bought", 1);
                     break;
                 case 2:
-                    hpPotionQuantity += 5;
-                    resistancePotionQuantity += 5;
+                    hpPotionQuantity = 3;
+                    resistancePotionQuantity = 3;
                     PlayerPrefs.SetInt("hpPotionQuantity", hpPotionQuantity);
                     PlayerPrefs.SetInt("resistancePotionQuantity", resistancePotionQuantity);
+                    PlayerPrefs.SetInt("bonus3Bought", 1);
                     break;
                 case 3:
-                    hpPotionQuantity += 2;
-                    resistancePotionQuantity += 2;
-                    keyQuantity += 2;
+                    hpPotionQuantity = 4;
+                    resistancePotionQuantity = 4;
+                    keyQuantity = 4;
                     PlayerPrefs.SetInt("hpPotionQuantity", hpPotionQuantity);
                     PlayerPrefs.SetInt("resistancePotionQuantity", resistancePotionQuantity);
                     PlayerPrefs.SetInt("keyQuantity", keyQuantity);
+                    PlayerPrefs.SetInt("bonus4Bought", 1);
                     break;
                 case 4:
-                    hpPotionQuantity += 4;
-                    resistancePotionQuantity += 2;
+                    hpPotionQuantity = 5;
+                    resistancePotionQuantity = 5;
+                    keyQuantity = 5;
                     PlayerPrefs.SetInt("hpPotionQuantity", hpPotionQuantity);
                     PlayerPrefs.SetInt("resistancePotionQuantity", resistancePotionQuantity);
+                    PlayerPrefs.SetInt("bonus5Bought", 1);
+                    PlayerPrefs.SetInt("skinBought", 1);
                     break;
                 case 5:
-                    hpPotionQuantity += 15;
-                    resistancePotionQuantity += 5;
+                    hpPotionQuantity = 10;
+                    resistancePotionQuantity = 10;
+                    keyQuantity = 10;
                     PlayerPrefs.SetInt("hpPotionQuantity", hpPotionQuantity);
                     PlayerPrefs.SetInt("resistancePotionQuantity", resistancePotionQuantity);
+                    PlayerPrefs.SetInt("bonus6Bought", 1);
                     break;
             }
             PlayerPrefs.Save();

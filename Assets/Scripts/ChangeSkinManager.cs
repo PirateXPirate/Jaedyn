@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class ChangeSkinManager : MonoBehaviour
 
-
 {
     [SerializeField] Button changeSkinBut;
     [SerializeField] Image changeSkinImg;
@@ -27,7 +26,14 @@ public class ChangeSkinManager : MonoBehaviour
     float coolDownTime = 3;
     float count;
 
-   
+    private void Start()
+    {
+        if (PlayerPrefs.GetInt("skinBought") == 0)
+        {
+            changeSkinBut.gameObject.SetActive(false);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
