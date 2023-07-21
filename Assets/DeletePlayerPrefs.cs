@@ -8,7 +8,9 @@ public class DeletePlayerPrefs : MonoBehaviour
     [SerializeField] Button deletePlayerPrefsButton;
     [SerializeField] Button unlockedMapsButton;
 
-    [SerializeField] UIManager uiManager;
+    [SerializeField] UiManager uiManager;
+
+    [SerializeField] Button[] testUnlockMapEasy;
     private void Awake()
     {
         deletePlayerPrefsButton.onClick.RemoveAllListeners();
@@ -16,19 +18,30 @@ public class DeletePlayerPrefs : MonoBehaviour
 
         unlockedMapsButton.onClick.RemoveAllListeners();
         unlockedMapsButton.onClick.AddListener(OnClickUnlockedAllMaps);
+
+        LevelData.TutorialComplete(true);
+
+        for (int i = 0; i < testUnlockMapEasy.Length; i++)
+        {
+            var index = 0;
+            index += i;
+            testUnlockMapEasy[i].onClick.AddListener(() => TestUnlockMap(index));
+        }
+    }
+
+    void TestUnlockMap(int levelIndex)
+    {
+        LevelData.mode = LevelData.Mode.easy;
+        LevelData.levelState = LevelData.LevelState.PerfectCleared;
+        LevelData.SaveLevelStateData(levelIndex + 1);
+        LevelData.LoadLevelStateData();
+        RefreshUi();
     }
 
     void OnClickDeletePlayerPrefs()
     {
         PlayerPrefs.DeleteAll();
-        for (int i = 0; i < LevelData.easyModeState.Length; i++)
-        {
-            LevelData.easyModeState[i] = 0;
-            LevelData.hardModeState[i] = 0;
-
-            uiManager.SetActiveSymbolEasy(0, i + 1);
-            uiManager.SetActiveSymbolHard(0, i + 1);
-        }
+        LevelData.LoadLevelStateData();
         RefreshUi();
     }
 
@@ -36,8 +49,10 @@ public class DeletePlayerPrefs : MonoBehaviour
     {
         for (int i = 0; i < LevelData.easyModeState.Length; i++)
         {
-            LevelData.easyModeState[i] = 2;
-            LevelData.hardModeState[i] = 2;
+            LevelData.easyModeState[i] = 3;
+            LevelData.hardModeState[i] = 3;
+            LevelData.isTutorialComplete = true;
+            LevelData.isTutorialCompleteWithPicture = true;
         }
         RefreshUi();
     }

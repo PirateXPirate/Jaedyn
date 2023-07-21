@@ -11,7 +11,7 @@ public class PopupManager : MonoBehaviour
 
     [SerializeField] Button closeHardModeLockedButton;
     [SerializeField] Button closeLevelLockedButton;
-    [SerializeField] Button closeUnLockedButton;
+    [SerializeField] Button[] closeUnLockedButtons;
 
     private void Start()
     {
@@ -22,7 +22,13 @@ public class PopupManager : MonoBehaviour
     {
         closeHardModeLockedButton.onClick.AddListener(CloseAllPopup);
         closeLevelLockedButton.onClick.AddListener(CloseAllPopup);
-        closeUnLockedButton.onClick.AddListener(CloseAllPopup);
+        closeUnLockedButtons[0].onClick.AddListener(CloseAllPopup);
+
+        //waiting for no key popup
+        /*foreach (var button in closeUnLockedButtons)
+        {
+            button.onClick.AddListener(CloseAllPopup);
+        }*/
     }
 
     public void CloseAllPopup()
@@ -36,6 +42,17 @@ public class PopupManager : MonoBehaviour
     {
         CloseAllPopup();
         popup.SetActive(true);
+    }
+
+    private void OnDestroy()
+    {
+        closeHardModeLockedButton.onClick.RemoveAllListeners();
+        closeLevelLockedButton.onClick.RemoveAllListeners();
+
+        foreach (var button in closeUnLockedButtons)
+        {
+            button.onClick.RemoveAllListeners();
+        }
     }
 
 }

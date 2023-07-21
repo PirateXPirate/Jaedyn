@@ -4,8 +4,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using DG.Tweening;
+using TMPro;
 
-public class UIManager : MonoBehaviour
+public class UiManager : MonoBehaviour
 {
     ButtonFeedbacks ButtonFeedBacks;
     PopupManager PopupManager;
@@ -25,6 +26,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject dialogPanel;
     [SerializeField] private CanvasGroup dialogGroup;
     [SerializeField] private Button overLayButton;
+
+    [SerializeField] private TextMeshProUGUI keyQuantityText;
+    public int keyQuantity = 0;
 
     public bool isHardmodePlayable;
     public string sceneToPlay = "";
@@ -120,7 +124,6 @@ public class UIManager : MonoBehaviour
         hardModeButton.interactable = true;
         easyModeButton.interactable = false;
     }
-
     void HomeButton()
     {
         SceneManager.LoadScene("MainMenuScene");
@@ -135,38 +138,22 @@ public class UIManager : MonoBehaviour
     }
 
     public void GoToScene1() => SceneManager.LoadScene("EasyModeLevel1Scene");
+
+   
     public void SetUpUi()
     {
-        //setup EasymodeUI according to data
+        //setup UI according to data
         for (int i = 0; i < LevelData.easyModeState.Length; i++)
         {
-            if (LevelData.easyModeState[i] != 0)
-            {
-                SetActiveSymbolEasy(LevelData.easyModeState[i], i + 1);
-            }            
-            else
-            {
-                SetBrownPanelEasy(i+1);
-                break;
-            }
-                
+            SetActiveSymbolEasy(LevelData.easyModeState[i], i + 1);
         }
 
-        //setup HardmodeUI according to data
         for (int i = 0; i < LevelData.hardModeState.Length; i++)
         {
-            if (LevelData.hardModeState[i] != 0)
-            {
-                SetActiveSymbolHard(LevelData.hardModeState[i], i + 1);
-            }
-            else
-            {
-               SetBrownPanelHard(i+1);
-               break;
-            }
-
-            
+            SetActiveSymbolHard(LevelData.hardModeState[i], i + 1);
         }
+
+        LoadingKey();
     }
     public void SetActiveSymbolEasy(int levelState, int levelIndex)
     {
@@ -175,13 +162,17 @@ public class UIManager : MonoBehaviour
         switch (levelState)
         {
             case 0:
-                LevelState0(map);
+                LevelState0Locked(map);
                 break;
             case 1:
-                LevelState1(map);
+                LevelState1ClearedWithoutPicture(map);
                 break;
             case 2:
-                LevelState2(map);
+                LevelState2PerfectCleared(map);
+                break;
+            case 3:
+                LevelState3Unlocked(map);
+                print("MAP IS  "+map);
                 break;
         }
     }
@@ -192,15 +183,24 @@ public class UIManager : MonoBehaviour
         switch (levelState)
         {
             case 0:
-                LevelState0(map);
+                LevelState0Locked(map);
                 break;
             case 1:
-                LevelState1(map);
+                LevelState1ClearedWithoutPicture(map);
                 break;
             case 2:
-                LevelState2(map);
+                LevelState2PerfectCleared(map);
+                break;            
+            case 3:
+                LevelState3Unlocked(map);
                 break;
         }
+    }
+    void LoadingKey()
+    {
+        keyQuantity = PlayerPrefs.GetInt("keyQuantity", 0);
+        print($"========================={keyQuantity}");
+        keyQuantityText.text = $"{keyQuantity} Key";
     }
 
     #region -SetActive UI-
@@ -213,39 +213,29 @@ public class UIManager : MonoBehaviour
         map.transform.Find("Star")?.gameObject.SetActive(false);
         map.transform.Find("StarYellow")?.gameObject.SetActive(false);
     }
-    public void LevelState0(Transform map)
+    void LevelState0Locked(Transform map)
     {
         CloseAllSymbol(map);
         map.transform.Find("BG_Lock")?.gameObject.SetActive(true);
         map.transform.Find("Lock")?.gameObject.SetActive(true);
     }
 
-    void LevelState1(Transform map)
+    void LevelState1ClearedWithoutPicture(Transform map)
     {
         CloseAllSymbol(map);
         map.transform.Find("BG_Pass")?.gameObject.SetActive(true);
         map.transform.Find("Star")?.gameObject.SetActive(true);
     }
 
-    void LevelState2(Transform map)
+    void LevelState2PerfectCleared(Transform map)
     {
         CloseAllSymbol(map);
         map.transform.Find("BG_Pass")?.gameObject.SetActive(true);
         map.transform.Find("StarYellow")?.gameObject.SetActive(true);
     }
 
-   void SetBrownPanelEasy(int levelIndex)
+   void LevelState3Unlocked(Transform map)
     {
-        if (!LevelData.isTutorialComplete) { return; }
-        var map = easyModeUi.transform.Find($"easyLevel{levelIndex}");
-        CloseAllSymbol(map);
-        map.transform.Find("BG_Brown")?.gameObject.SetActive(true);
-        map.transform.Find("Star")?.gameObject.SetActive(true);
-    }
-    void SetBrownPanelHard(int levelIndex) 
-    { 
-        if (!LevelData.isTutorialComplete) { return; }
-        var map = hardModeUi.transform.Find($"hardLevel{levelIndex}");
         CloseAllSymbol(map);
         map.transform.Find("BG_Brown")?.gameObject.SetActive(true);
         map.transform.Find("Star")?.gameObject.SetActive(true);

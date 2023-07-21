@@ -13,7 +13,6 @@ public class EndGame : MonoBehaviour
     [SerializeField] private Button settingBut;
     [SerializeField] private Button homeBut;
 
-
     [Header("Setting SaveData Input")]
     [SerializeField] private bool isTutorialLevel = false;
     [SerializeField] enum Mode { easy, hard}
