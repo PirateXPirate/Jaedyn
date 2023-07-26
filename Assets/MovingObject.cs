@@ -16,7 +16,7 @@ public class MovingObject : ActivateObject
         if (currentValue == targetPuzzleValue)
         {
             isMoving = true;
-            transform.DOMove(targetTransform.position, time).SetLoops(-1, LoopType.Yoyo);
+            transform.DOMove(targetTransform.position, time).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.Linear);
         }
           
     }

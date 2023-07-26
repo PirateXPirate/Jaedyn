@@ -9,6 +9,7 @@ public class ActionSkill : MonoBehaviour
     protected bool inPoint = false;
     protected bool inTower = false;
     protected bool inChest = false;
+    protected bool inFirefly = false;
     protected CharacterMovement movement;
 
     private TutorialMarker currentMaker;
@@ -16,6 +17,8 @@ public class ActionSkill : MonoBehaviour
     private Tower currentTower;
 
     private ChestBox currentChest;
+
+    private FireflyManager currentFirefly;
 
     [SerializeField] private GameObject buttonEffect;
     void Start()
@@ -59,6 +62,15 @@ public class ActionSkill : MonoBehaviour
 
         }
 
+        if (inFirefly)
+        {
+            if (currentFirefly == null) return;
+           
+            if (currentFirefly)
+                currentFirefly.Perform();
+
+        }
+
         if (inChest)
         {
             currentChest.Perform();
@@ -96,6 +108,12 @@ public class ActionSkill : MonoBehaviour
             inChest = true;
             currentChest = other.GetComponent<ChestBox>();
         }
+
+        if (other.tag.Equals("Firefly"))
+        {
+            inFirefly = true;
+            currentFirefly = other.GetComponent<FireflyManager>();
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -114,6 +132,11 @@ public class ActionSkill : MonoBehaviour
         {
             inChest = false;
             currentChest = null;
+        }
+        if (other.tag.Equals("Firefly"))
+        {
+            inFirefly = false;
+            currentFirefly = null;
         }
     }
 }

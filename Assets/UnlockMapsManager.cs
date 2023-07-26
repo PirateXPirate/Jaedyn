@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UnlockMapsManager : MonoBehaviour
 {
-    UiManager uiManager;
+    UIManager uiManager;
     ButtonFeedbacks buttonFeedbacks;
     PopupManager popupManager;
 
@@ -16,7 +16,7 @@ public class UnlockMapsManager : MonoBehaviour
 
     private void Awake()
     {
-        uiManager = GetComponent<UiManager>();
+        uiManager = GetComponent<UIManager>();
         buttonFeedbacks = GetComponent<ButtonFeedbacks>();
         popupManager = GetComponent<PopupManager>();
         keyQuantity = PlayerPrefs.GetInt("keyQuantity", keyQuantity);

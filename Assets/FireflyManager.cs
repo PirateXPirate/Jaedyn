@@ -1,3 +1,5 @@
+using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,26 +13,56 @@ public class FireflyManager : MonoBehaviour
     public AudioClip[] flySound;
     public AudioClip completeSound;
     int index = 0;
+    bool complete = false;
     void Start()
     {
 
     }
+    public void Perform()
+    {
+        ActivateFirefly();
+    }
+    public void AddFirefly()
+    {
+        fireflyNum += 1;
+    }
     public void ActivateFirefly()
     {
-       
-        fireflyNum += 1;
+        if (complete) return;
+        if (fireflyNum == fireflySet.Length)
+        {
+            complete = true;
+            foreach (var a in fireflySet)
+            {
+                a.transform.parent = transform;
+
+                a.transform.DOMove(transform.position, 1).SetSpeedBased().OnComplete(onComplete);
+            }
+            Utils.soundManager.PlayFX(completeSound);
+        }
+            
+
+        
+    }
+
+    private void onComplete()
+    {
         if (fireflyNum == fireflySet.Length)
         {
             particle.SetActive(true);
             foreach (var a in activatedObjects)
             {
-              
+
                 a.Activate();
             }
-              
-            Utils.soundManager.PlayFX(completeSound);
+            foreach (var a in fireflySet)
+            {
+                a.gameObject.SetActive(false);
+            }
+           
         }
     }
+
     public void PlayFlySound()
     {
         Utils.soundManager.PlayFX(flySound[index]);

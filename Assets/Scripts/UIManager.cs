@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using DG.Tweening;
 using TMPro;
+using System.Collections.Generic;
 
-public class UiManager : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
     ButtonFeedbacks ButtonFeedBacks;
     PopupManager PopupManager;
@@ -33,12 +34,41 @@ public class UiManager : MonoBehaviour
     public bool isHardmodePlayable;
     public string sceneToPlay = "";
 
+    List<string> UnlockHardmodeCodeList = new List<string>();
+
+    [SerializeField] private TextMeshProUGUI inputUnlockCodeTextField;
+    [SerializeField] private Button unlcokCodeButton;
+
     void Awake()
     {
         LevelData.LoadLevelStateData();
         ButtonFeedBacks = gameObject.GetComponent<ButtonFeedbacks>();
         PopupManager = gameObject.GetComponent<PopupManager>();
         SetButtonListener();
+
+        isHardmodePlayable = PlayerPrefsIntToBool("isHardmodePlayable");
+
+        List<Dictionary<string, object>> dataUnlockHardmode = CSVReader.Read("Unlock");
+        for (int i = 0; i < dataUnlockHardmode.Count; i++)
+        {
+
+            UnlockHardmodeCodeList.Add(dataUnlockHardmode[i]["code"].ToString());
+            Debug.Log(dataUnlockHardmode[i]["code"]);
+        }
+        unlcokCodeButton.onClick.AddListener(OnClickUnlockHard);
+    }
+
+    private void OnClickUnlockHard()
+    {
+        string codeWithoutLastLetter = inputUnlockCodeTextField.text.Substring(0, inputUnlockCodeTextField.text.Length - 1);
+        if (UnlockHardmodeCodeList.Contains(codeWithoutLastLetter))
+        {
+            isHardmodePlayable = true;
+            PlayerPrefs.SetInt("isHardmodePlayable",1);
+            unlcokCodeButton.transform.parent.transform.parent.gameObject.SetActive(false);
+
+        }
+      
     }
 
     void Start()
@@ -257,6 +287,12 @@ public class UiManager : MonoBehaviour
             map.transform.Find("StarYellow")?.gameObject.SetActive(true);
         }
     }
-    #endregion 
+    #endregion
+
+    public bool PlayerPrefsIntToBool(string key)
+    {
+        int intValue = PlayerPrefs.GetInt(key);
+        return intValue != 0;
+    }
 
 }

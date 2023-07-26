@@ -14,6 +14,7 @@ public class CoinManager : MonoBehaviour
     {
         currentCoin = PlayerPrefs.GetInt("CoinQuantity", 0);
         CoinText.text = currentCoin.ToString();
+        Debug.Log(currentCoin);
     }
 
     public void AddCoin(int num)

@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2608618793865162883}
   - component: {fileID: 276790718824793161}
   - component: {fileID: 7080408219006734675}
+  - component: {fileID: 8426835959327182305}
   m_Layer: 0
   m_Name: Dev_SM_Env_GlowingOrb
-  m_TagString: Untagged
+  m_TagString: Firefly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,4 +98,17 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.5464485, y: 1.9054766, z: 2.515836}
+  m_Center: {x: 0.13287437, y: 0.06526258, z: 1.2505289}
+--- !u!65 &8426835959327182305
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790083824508659100}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.5, y: 3.5, z: 2.515836}
   m_Center: {x: 0.13287437, y: 0.06526258, z: 1.2505289}

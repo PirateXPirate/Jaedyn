@@ -11,10 +11,13 @@ public class KeyManager : MonoBehaviour
 
     [SerializeField] private GameObject endGateParticle;
 
-    bool gotKey = false;
-    bool gotLock = false;
+    public bool gotKey = false;
+    public bool gotLock = false;
 
     public Text ketText;
+
+    [SerializeField] private GameObject noKeyPopUp;
+    [SerializeField] private GameObject LockPopUp;
 
     public void AddKey(int quantity)
     {
@@ -27,8 +30,17 @@ public class KeyManager : MonoBehaviour
     }
     public void GetLock()
     {
-        gotLock = true;
-        CheckKey();
+        if (gotKey == false)
+        {
+            noKeyPopUp.SetActive(true);
+        }
+        else
+        {
+            LockPopUp.SetActive(true);
+            gotLock = true;
+            CheckKey();
+        }
+      
 
     }
 

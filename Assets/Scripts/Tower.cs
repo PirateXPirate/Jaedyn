@@ -28,6 +28,8 @@ public class Tower : MonoBehaviour
     public AudioClip rightSound;
 
     public AudioClip redToBlueSound;
+
+    public GameObject questionMarkObject;
     bool enable = true;
     void Start()
     {
@@ -48,7 +50,7 @@ public class Tower : MonoBehaviour
             Complete = true;
             Utils.soundManager.PlayFX(rightSound);
             transitionParticle.SetActive(true);
-            Invoke("CompleteFunc", 2f);
+            Invoke("CompleteFunc", .5f);
 
          
         }
@@ -66,7 +68,7 @@ public class Tower : MonoBehaviour
     {
     
         Utils.soundManager.PlayFX(redToBlueSound);
-        
+        questionMarkObject.SetActive(false);
         completeParticle.SetActive(true);
         rend.material = blueMat;
         if (obj)

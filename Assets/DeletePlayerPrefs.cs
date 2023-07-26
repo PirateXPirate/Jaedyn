@@ -8,7 +8,7 @@ public class DeletePlayerPrefs : MonoBehaviour
     [SerializeField] Button deletePlayerPrefsButton;
     [SerializeField] Button unlockedMapsButton;
 
-    [SerializeField] UiManager uiManager;
+    [SerializeField] UIManager uiManager;
 
     [SerializeField] Button[] testUnlockMapEasy;
     private void Awake()

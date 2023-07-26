@@ -56,11 +56,14 @@ public class NewShopManager : MonoBehaviour
     List<string> Code300List = new List<string>();
 
     List<string> UsedCodeList = new List<string>();
+
+    public GameObject ShopList;
+    public GameObject AllBuyList;
     void Start()
     {
-        UsedCodeList =  LoadList("UsedCodeList");
-      
-        List <Dictionary<string, object>> data50 = CSVReader.Read("50Coin");
+        UsedCodeList = LoadList("UsedCodeList");
+
+        List<Dictionary<string, object>> data50 = CSVReader.Read("50Coin");
         List<Dictionary<string, object>> data100 = CSVReader.Read("100Coin");
         List<Dictionary<string, object>> data300 = CSVReader.Read("300Coin");
 
@@ -80,19 +83,19 @@ public class NewShopManager : MonoBehaviour
             Code300List.Add(data300[i]["Code"].ToString());
         }
 
-         bonus1Bought = PlayerPrefsIntToBool("bonus1Bought");
-         bonus2Bought = PlayerPrefsIntToBool("bonus2Bought");
-         bonus3Bought = PlayerPrefsIntToBool("bonus3Bought");
-          bonus4Bought = PlayerPrefsIntToBool("bonus4Bought");
-          bonus5Bought = PlayerPrefsIntToBool("bonus5Bought");
-           bonus6Bought = PlayerPrefsIntToBool("bonus6Bought");
+        bonus1Bought = PlayerPrefsIntToBool("bonus1Bought");
+        bonus2Bought = PlayerPrefsIntToBool("bonus2Bought");
+        bonus3Bought = PlayerPrefsIntToBool("bonus3Bought");
+        bonus4Bought = PlayerPrefsIntToBool("bonus4Bought");
+        bonus5Bought = PlayerPrefsIntToBool("bonus5Bought");
+        bonus6Bought = PlayerPrefsIntToBool("bonus6Bought");
 
-          BonusList[0].bonusButton.gameObject.SetActive(!bonus1Bought);
-          BonusList[1].bonusButton.gameObject.SetActive(!bonus2Bought);
-          BonusList[2].bonusButton.gameObject.SetActive(!bonus3Bought);
-          BonusList[3].bonusButton.gameObject.SetActive(!bonus4Bought);
-          BonusList[4].bonusButton.gameObject.SetActive(!bonus5Bought);
-          BonusList[5].bonusButton.gameObject.SetActive(!bonus6Bought);
+        BonusList[0].bonusButton.gameObject.SetActive(!bonus1Bought);
+        BonusList[1].bonusButton.gameObject.SetActive(!bonus2Bought);
+        BonusList[2].bonusButton.gameObject.SetActive(!bonus3Bought);
+        BonusList[3].bonusButton.gameObject.SetActive(!bonus4Bought);
+        BonusList[4].bonusButton.gameObject.SetActive(!bonus5Bought);
+        BonusList[5].bonusButton.gameObject.SetActive(!bonus6Bought);
 
         hpPotionQuantity = PlayerPrefs.GetInt("hpPotionQuantity", 0);
         resistancePotionQuantity = PlayerPrefs.GetInt("resistancePotionQuantity", 0);
@@ -116,6 +119,12 @@ public class NewShopManager : MonoBehaviour
         foreach (var bonusButton in BonusList)
         {
             bonusButton.bonusButton.onClick.AddListener(delegate { OnclickBonus(bonusButton); });
+        }
+
+        if (bonus1Bought && bonus2Bought && bonus3Bought && bonus4Bought && bonus5Bought && bonus6Bought)
+        {
+            ShopList.SetActive(false);
+            AllBuyList.SetActive(true);
         }
     }
 
@@ -157,7 +166,7 @@ public class NewShopManager : MonoBehaviour
         PlayerPrefs.SetInt("CoinQuantity", currentCoin);
         PlayerPrefs.Save();
         CoinText.text = currentCoin.ToString();
-      
+
     }
 
     private void OnClickRedeem()
@@ -202,6 +211,7 @@ public class NewShopManager : MonoBehaviour
                     resistancePotionQuantity = 2;
                     PlayerPrefs.SetInt("hpPotionQuantity", hpPotionQuantity);
                     PlayerPrefs.SetInt("resistancePotionQuantity", resistancePotionQuantity);
+                    PlayerPrefs.SetInt("bonus1Bought", 1);
                     PlayerPrefs.SetInt("bonus2Bought", 1);
                     break;
                 case 2:
@@ -209,6 +219,8 @@ public class NewShopManager : MonoBehaviour
                     resistancePotionQuantity = 3;
                     PlayerPrefs.SetInt("hpPotionQuantity", hpPotionQuantity);
                     PlayerPrefs.SetInt("resistancePotionQuantity", resistancePotionQuantity);
+                    PlayerPrefs.SetInt("bonus1Bought", 1);
+                    PlayerPrefs.SetInt("bonus2Bought", 1);
                     PlayerPrefs.SetInt("bonus3Bought", 1);
                     break;
                 case 3:
@@ -218,6 +230,9 @@ public class NewShopManager : MonoBehaviour
                     PlayerPrefs.SetInt("hpPotionQuantity", hpPotionQuantity);
                     PlayerPrefs.SetInt("resistancePotionQuantity", resistancePotionQuantity);
                     PlayerPrefs.SetInt("keyQuantity", keyQuantity);
+                    PlayerPrefs.SetInt("bonus1Bought", 1);
+                    PlayerPrefs.SetInt("bonus2Bought", 1);
+                    PlayerPrefs.SetInt("bonus3Bought", 1);
                     PlayerPrefs.SetInt("bonus4Bought", 1);
                     break;
                 case 4:
@@ -226,6 +241,12 @@ public class NewShopManager : MonoBehaviour
                     keyQuantity = 5;
                     PlayerPrefs.SetInt("hpPotionQuantity", hpPotionQuantity);
                     PlayerPrefs.SetInt("resistancePotionQuantity", resistancePotionQuantity);
+
+                    PlayerPrefs.SetInt("keyQuantity", keyQuantity);
+                    PlayerPrefs.SetInt("bonus1Bought", 1);
+                    PlayerPrefs.SetInt("bonus2Bought", 1);
+                    PlayerPrefs.SetInt("bonus3Bought", 1);
+                    PlayerPrefs.SetInt("bonus4Bought", 1);
                     PlayerPrefs.SetInt("bonus5Bought", 1);
                     PlayerPrefs.SetInt("skinBought", 1);
                     break;
@@ -235,10 +256,18 @@ public class NewShopManager : MonoBehaviour
                     keyQuantity = 10;
                     PlayerPrefs.SetInt("hpPotionQuantity", hpPotionQuantity);
                     PlayerPrefs.SetInt("resistancePotionQuantity", resistancePotionQuantity);
+                    PlayerPrefs.SetInt("skinBought", 1);
+                    PlayerPrefs.SetInt("keyQuantity", keyQuantity);
+                    PlayerPrefs.SetInt("bonus1Bought", 1);
+                    PlayerPrefs.SetInt("bonus2Bought", 1);
+                    PlayerPrefs.SetInt("bonus3Bought", 1);
+                    PlayerPrefs.SetInt("bonus4Bought", 1);
+                    PlayerPrefs.SetInt("bonus5Bought", 1);
                     PlayerPrefs.SetInt("bonus6Bought", 1);
                     break;
             }
             PlayerPrefs.Save();
+            SceneManager.LoadScene("ShopScene");
         }
         else
         {
@@ -272,7 +301,7 @@ public class NewShopManager : MonoBehaviour
         return intValue != 0;
     }
 
-    public void SaveList(List<string> saveList,string SaveName)
+    public void SaveList(List<string> saveList, string SaveName)
     {
         string jsonData = JsonUtility.ToJson(new StringListWrapper(saveList));
         Debug.Log(saveList[0]);
