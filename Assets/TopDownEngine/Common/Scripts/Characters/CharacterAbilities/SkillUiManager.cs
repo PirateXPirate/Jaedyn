@@ -29,6 +29,7 @@ public class SkillUiManager : MonoBehaviour
         isSkillCountdown = true;
         skillCoolDown = cooldown;
         countingSkillNumber = cooldown;
+        SetActionCooldown(1);
 
 
     }
