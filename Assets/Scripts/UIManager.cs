@@ -172,6 +172,7 @@ public class UIManager : MonoBehaviour
    
     public void SetUpUi()
     {
+        LevelData.LoadLevelStateData();
         //setup UI according to data
         for (int i = 0; i < LevelData.easyModeState.Length; i++)
         {

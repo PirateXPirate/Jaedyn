@@ -11,7 +11,6 @@ public class UnlockMapsManager : MonoBehaviour
 
     public int levelIndex;
     public string mode;
-    [SerializeField] Button unlockButton;
     int keyQuantity = 0;
 
     private void Awake()
@@ -20,33 +19,28 @@ public class UnlockMapsManager : MonoBehaviour
         buttonFeedbacks = GetComponent<ButtonFeedbacks>();
         popupManager = GetComponent<PopupManager>();
         keyQuantity = PlayerPrefs.GetInt("keyQuantity", keyQuantity);
-        
-        unlockButton.onClick.AddListener(OnClickUnlockButton);
     }
 
-    void OnClickUnlockButton()
+    public void OnClickLevelLockedButton()
     {
-        if (keyQuantity <= 0) 
+        if (levelIndex == getCurrentUnlockedMap())
         {
-            print("player has no key");
-            //TODO popup player has no key
-            return; 
-        }
+            if (keyQuantity <= 0)
+            {
+                popupManager.OpenPopUp(popupManager.levelLockedPopUp);
+                uiManager.SetUpUi();
+                return;
+            }
 
-        if (levelIndex > CurrentUnlockedMap())
-        {
-            return;
+            LevelData.UnlockLevelStateData(levelIndex, mode);
+            keyQuantity -= 1;
+            PlayerPrefs.SetInt("keyQuantity", keyQuantity);
+            popupManager.OpenPopUp(popupManager.levelUnlockedPopup);
+            buttonFeedbacks.ResetAllSize();
+            uiManager.SetUpUi();
         }
-
-        LevelData.UnlockLevelStateData(levelIndex,mode);
-        keyQuantity -= 1;
-        PlayerPrefs.SetInt("keyQuantity", keyQuantity);
-        LevelData.LoadLevelStateData();
-        buttonFeedbacks.ResetAllSize();
-        uiManager.SetUpUi();
-        popupManager.CloseAllPopup();
     }
-    int CurrentUnlockedMap()
+    int getCurrentUnlockedMap()
     {
         var count = 1;
 
@@ -72,11 +66,7 @@ public class UnlockMapsManager : MonoBehaviour
                 }
             }
         }
+        Debug.Log("Count == " + count);
         return count;
-    }
-
-    private void OnDestroy()
-    {
-        unlockButton.onClick.RemoveAllListeners();
     }
 }

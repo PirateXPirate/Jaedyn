@@ -7,11 +7,11 @@ public class PopupManager : MonoBehaviour
 {
     public GameObject hardModeLockedPopUp;
     public GameObject levelLockedPopUp;
-    public GameObject unLockedPopup;
+    public GameObject levelUnlockedPopup;
 
     [SerializeField] Button closeHardModeLockedButton;
-    [SerializeField] Button closeLevelLockedButton;
-    [SerializeField] Button[] closeUnLockedButtons;
+    [SerializeField] Button[] closeLevelLockedButtons;
+    [SerializeField] Button[] closeLevelUnLockedButtons;
 
     private void Start()
     {
@@ -21,21 +21,23 @@ public class PopupManager : MonoBehaviour
     void SetListenner()
     {
         closeHardModeLockedButton.onClick.AddListener(CloseAllPopup);
-        closeLevelLockedButton.onClick.AddListener(CloseAllPopup);
-        closeUnLockedButtons[0].onClick.AddListener(CloseAllPopup);
-
-        //waiting for no key popup
-        /*foreach (var button in closeUnLockedButtons)
+        
+        foreach (var button in closeLevelLockedButtons)
         {
             button.onClick.AddListener(CloseAllPopup);
-        }*/
+        }
+
+        foreach (var button in closeLevelUnLockedButtons)
+        {
+            button.onClick.AddListener(CloseAllPopup);
+        }
     }
 
     public void CloseAllPopup()
     {
         hardModeLockedPopUp.SetActive(false);
         levelLockedPopUp.SetActive(false);
-        unLockedPopup.SetActive(false);
+        levelUnlockedPopup.SetActive(false);
     }
 
     public void OpenPopUp(GameObject popup)
@@ -47,9 +49,12 @@ public class PopupManager : MonoBehaviour
     private void OnDestroy()
     {
         closeHardModeLockedButton.onClick.RemoveAllListeners();
-        closeLevelLockedButton.onClick.RemoveAllListeners();
+        foreach (var button in closeLevelLockedButtons)
+        {
+            button.onClick.RemoveAllListeners();
+        }
 
-        foreach (var button in closeUnLockedButtons)
+        foreach (var button in closeLevelUnLockedButtons)
         {
             button.onClick.RemoveAllListeners();
         }

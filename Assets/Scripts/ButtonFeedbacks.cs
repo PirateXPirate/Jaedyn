@@ -47,8 +47,9 @@ public class ButtonFeedbacks : MonoBehaviour
                 ResetAllSize();
                 SizeExpand(easyLevelButtons[index]);
                 StateChecker(easyLevelButtons[index]);
-                UnlockMapsManager.levelIndex = index+1;
+                UnlockMapsManager.levelIndex = index + 1;
                 UnlockMapsManager.mode = "easy";
+                UnlockMapsManager.OnClickLevelLockedButton();
             });
 
             hardLevelButtons[index].onClick.AddListener(() =>
@@ -56,8 +57,9 @@ public class ButtonFeedbacks : MonoBehaviour
                 ResetAllSize();
                 SizeExpand(hardLevelButtons[index]);
                 StateChecker(hardLevelButtons[index]);
-                UnlockMapsManager.levelIndex = index+1;
+                UnlockMapsManager.levelIndex = index + 1;
                 UnlockMapsManager.mode = "hard";
+                UnlockMapsManager.OnClickLevelLockedButton();
             });
         }
 
@@ -69,12 +71,6 @@ public class ButtonFeedbacks : MonoBehaviour
     public void OnClickBlockPlayButton()
     {
         PopupManager.OpenPopUp(PopupManager.levelLockedPopUp);
-    }
- 
-    public void OnClickLockedMapsButton()
-    {
-        PopupManager.OpenPopUp(PopupManager.unLockedPopup);
-        ResetAllSize();
     }
 
     void OnClickTutorialButton()
@@ -109,7 +105,6 @@ public class ButtonFeedbacks : MonoBehaviour
         {
             blockPlayButton.gameObject.SetActive(true);
             playButton.gameObject.SetActive(false);
-            OnClickLockedMapsButton();
         }
         else
         {
