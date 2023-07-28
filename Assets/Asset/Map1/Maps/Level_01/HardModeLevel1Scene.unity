@@ -8,8 +8,9 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 023edf7517aa0244e907e8b125e2fdad
+  m_OcclusionCullingData: {fileID: 36300000, guid: e0e60832c16c9b141ad0d3ea995cc184,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -2230,7 +2231,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &78648276
 Transform:
@@ -3141,6 +3142,10 @@ PrefabInstance:
     - target: {fileID: 1571364859958586, guid: c351e2e44bc2b5646aa41cb699e80146, type: 3}
       propertyPath: m_Name
       value: ZMOBA_Prop_Stone_A_6 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571364859958586, guid: c351e2e44bc2b5646aa41cb699e80146, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4555471520405078, guid: c351e2e44bc2b5646aa41cb699e80146, type: 3}
       propertyPath: m_RootOrder
@@ -7067,6 +7072,10 @@ PrefabInstance:
     - target: {fileID: 1991800757512256, guid: b9f4dc5b51591f54bb72f2af08a3dbf7, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991800757512256, guid: b9f4dc5b51591f54bb72f2af08a3dbf7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4833596872686158, guid: b9f4dc5b51591f54bb72f2af08a3dbf7, type: 3}
       propertyPath: m_RootOrder
@@ -14052,6 +14061,10 @@ PrefabInstance:
     - target: {fileID: 1176342255537468, guid: 755ed45d696e24240a912de7b4255ed2, type: 3}
       propertyPath: m_Name
       value: ZMOBA_Prop_Railing_A_3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176342255537468, guid: 755ed45d696e24240a912de7b4255ed2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4104931838073616, guid: 755ed45d696e24240a912de7b4255ed2, type: 3}
       propertyPath: m_RootOrder
@@ -22821,6 +22834,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZMOBA_Prop_Railing_A_3
       objectReference: {fileID: 0}
+    - target: {fileID: 1176342255537468, guid: 755ed45d696e24240a912de7b4255ed2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4104931838073616, guid: 755ed45d696e24240a912de7b4255ed2, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -23319,6 +23336,10 @@ PrefabInstance:
     - target: {fileID: 1939960412695108, guid: 47a925bd1f4a96443b9539c71ce732e4, type: 3}
       propertyPath: m_Name
       value: ZMOBA_Prop_Stone_A_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939960412695108, guid: 47a925bd1f4a96443b9539c71ce732e4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4967716167654068, guid: 47a925bd1f4a96443b9539c71ce732e4, type: 3}
       propertyPath: m_RootOrder
@@ -25044,6 +25065,10 @@ PrefabInstance:
     - target: {fileID: 1571364859958586, guid: c351e2e44bc2b5646aa41cb699e80146, type: 3}
       propertyPath: m_Name
       value: ZMOBA_Prop_Stone_A_6 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571364859958586, guid: c351e2e44bc2b5646aa41cb699e80146, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4555471520405078, guid: c351e2e44bc2b5646aa41cb699e80146, type: 3}
       propertyPath: m_RootOrder
@@ -40838,6 +40863,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZMOBA_Prop_Railing_A_3 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1176342255537468, guid: 755ed45d696e24240a912de7b4255ed2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4104931838073616, guid: 755ed45d696e24240a912de7b4255ed2, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -46774,6 +46803,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZMOBA_Prop_Railing_A_1
       objectReference: {fileID: 0}
+    - target: {fileID: 1310931858199838, guid: 785090ee535617b44af22a4e6a55f67c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4095582538101974, guid: 785090ee535617b44af22a4e6a55f67c, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -47866,6 +47899,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZMOBA_Prop_Stone_A_6
       objectReference: {fileID: 0}
+    - target: {fileID: 1571364859958586, guid: c351e2e44bc2b5646aa41cb699e80146, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4555471520405078, guid: c351e2e44bc2b5646aa41cb699e80146, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -48126,6 +48163,10 @@ PrefabInstance:
     - target: {fileID: 1176342255537468, guid: 755ed45d696e24240a912de7b4255ed2, type: 3}
       propertyPath: m_Name
       value: ZMOBA_Prop_Railing_A_3 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176342255537468, guid: 755ed45d696e24240a912de7b4255ed2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4104931838073616, guid: 755ed45d696e24240a912de7b4255ed2, type: 3}
       propertyPath: m_RootOrder
