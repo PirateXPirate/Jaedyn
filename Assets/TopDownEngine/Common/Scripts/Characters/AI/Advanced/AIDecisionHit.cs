@@ -18,6 +18,7 @@ namespace MoreMountains.TopDownEngine
 
 		protected int _hitCounter;
 		protected Health _health;
+		public List<Health> otherHealth;
 
 		/// <summary>
 		/// On init we grab our Health component
@@ -87,6 +88,11 @@ namespace MoreMountains.TopDownEngine
 			{
 				_health.OnHit += OnHit;
 			}
+
+			foreach (var helathObj in otherHealth)
+			{
+				helathObj.OnHit += OnHit;
+			}
 		}
 
 		/// <summary>
@@ -97,6 +103,11 @@ namespace MoreMountains.TopDownEngine
 			if (_health != null)
 			{
 				_health.OnHit -= OnHit;
+			}
+
+			foreach (var helathObj in otherHealth)
+			{
+				helathObj.OnHit -= OnHit;
 			}
 		}
 	}

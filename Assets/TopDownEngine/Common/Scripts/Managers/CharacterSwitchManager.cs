@@ -209,16 +209,18 @@ namespace MoreMountains.TopDownEngine
 
 			// we disable the old main character, and enable the new one
 			LevelManager.Instance.Players[0].gameObject.SetActive(false);
-			_instantiatedCharacters[CurrentIndex].gameObject.SetActive(true);
+			
 
 			// we move the new one at the old one's position
 			_instantiatedCharacters[CurrentIndex].transform.position = LevelManager.Instance.Players[0].transform.position;
 			_instantiatedCharacters[CurrentIndex].transform.rotation = LevelManager.Instance.Players[0].transform.rotation;
 
+			_instantiatedCharacters[CurrentIndex].gameObject.SetActive(true);
+
 			// we keep the health if needed
 			//if (CommonHealth)
 			//{
-				_instantiatedCharacters[CurrentIndex].gameObject.MMGetComponentNoAlloc<Health>().SetHealth(LevelManager.Instance.Players[0].gameObject.MMGetComponentNoAlloc<Health>().MasterHealth.CurrentHealth);
+			_instantiatedCharacters[CurrentIndex].gameObject.MMGetComponentNoAlloc<Health>().SetHealth(LevelManager.Instance.Players[0].gameObject.MMGetComponentNoAlloc<Health>().MasterHealth.CurrentHealth);
 			//}
 
 			// we put it in the same state the old one was in
