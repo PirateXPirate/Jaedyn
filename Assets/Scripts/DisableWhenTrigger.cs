@@ -6,6 +6,7 @@ public class DisableWhenTrigger : MonoBehaviour
 {
     public GameObject[] obj;
     public bool KeepCollider = false;
+    public Collider[] Enablecol;
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag.Equals("Player"))
@@ -14,6 +15,11 @@ public class DisableWhenTrigger : MonoBehaviour
             foreach (var a in obj)
             {
                 a.SetActive(false);
+            }
+
+            foreach (var b in Enablecol)
+            {
+                b.enabled = true;
             }
 
         }
