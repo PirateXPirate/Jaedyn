@@ -1785,6 +1785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: 
   NumberOfHits: 1
+  otherHealth: []
 --- !u!114 &62496887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41799,7 +41800,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1621129800}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d5ad9aba18b7eb040b2e3ba6a1b6bd06, type: 3}
@@ -46869,7 +46870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c1dcb26bc218ae7489816bcfae7e903a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9381685
+      value: -2.19
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c1dcb26bc218ae7489816bcfae7e903a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -57644,6 +57645,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 528004719}
     m_Modifications:
+    - target: {fileID: 2929853239844736049, guid: 1cafc110f8688bd44bcaea179ba7291b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.65
+      objectReference: {fileID: 0}
     - target: {fileID: 2929853241065741720, guid: 1cafc110f8688bd44bcaea179ba7291b,
         type: 3}
       propertyPath: m_RootOrder

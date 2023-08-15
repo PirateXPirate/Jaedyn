@@ -9620,6 +9620,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3166520077471576270, guid: 9f3fe61d7f987fb48878a528a4043c78,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.53
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f3fe61d7f987fb48878a528a4043c78, type: 3}
 --- !u!4 &354861135 stripped
@@ -15096,6 +15101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: 
   NumberOfHits: 1
+  otherHealth: []
 --- !u!1001 &543616868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19909,7 +19915,7 @@ PrefabInstance:
     - target: {fileID: 448819489424763562, guid: 97cd220dd757bd140bb41e548f31931f,
         type: 3}
       propertyPath: HealthBarOffset.y
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 448819489424763576, guid: 97cd220dd757bd140bb41e548f31931f,
         type: 3}
@@ -54533,7 +54539,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839095611}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d5ad9aba18b7eb040b2e3ba6a1b6bd06, type: 3}
@@ -64203,7 +64209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 401590, guid: d2b779bf1c301b546b3edf5d3388e645, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.301064
+      value: 41.31
       objectReference: {fileID: 0}
     - target: {fileID: 401590, guid: d2b779bf1c301b546b3edf5d3388e645, type: 3}
       propertyPath: m_LocalPosition.y
@@ -64211,7 +64217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 401590, guid: d2b779bf1c301b546b3edf5d3388e645, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 67.67574
+      value: 67.29
       objectReference: {fileID: 0}
     - target: {fileID: 401590, guid: d2b779bf1c301b546b3edf5d3388e645, type: 3}
       propertyPath: m_LocalRotation.w

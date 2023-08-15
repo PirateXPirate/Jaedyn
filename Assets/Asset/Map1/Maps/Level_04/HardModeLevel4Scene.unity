@@ -9815,6 +9815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: 
   NumberOfHits: 1
+  otherHealth: []
 --- !u!4 &338073321 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5676686983994365558, guid: 94a52a907ee99b3408a8af716ddb225c,
@@ -30067,7 +30068,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055788378}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d5ad9aba18b7eb040b2e3ba6a1b6bd06, type: 3}
@@ -55970,6 +55971,7 @@ MonoBehaviour:
   obj:
   - {fileID: 1036162821}
   KeepCollider: 1
+  Enablecol: []
 --- !u!4 &1959189290 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4823874436023973524, guid: d72db45a64746e14394ae0221fec26a2,
