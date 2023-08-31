@@ -71,6 +71,7 @@ namespace MoreMountains.TopDownEngine
 		/// <param name="duration"></param>
 		public virtual void StunFor(float duration)
 		{
+			if (!gameObject.activeSelf) return;
 			if (_stunCoroutine != null)
 			{
 				StopCoroutine(_stunCoroutine);

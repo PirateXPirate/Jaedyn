@@ -14,6 +14,7 @@ public class ChekcCollide : MonoBehaviour
     public string tagName;
 
     public GameObject activeObject;
+    public MoveBoxManager moveBoxManager;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.CompareTag("Trunk") || collision.transform.CompareTag("Destroyable"))
@@ -32,7 +33,7 @@ public class ChekcCollide : MonoBehaviour
                 // col.enabled = true;
             }
         }
-       
+        Debug.Log(collision.transform.tag +" " + collision.transform);
         if (!string.IsNullOrEmpty(tagName))
         {
             if (collision.transform.CompareTag(tagName))
@@ -41,11 +42,12 @@ public class ChekcCollide : MonoBehaviour
                 {
                     gameObject.SetActive(false);
                     Instantiate(particle, transform.position, Quaternion.identity);
-
-
                 }
                 if (activeObject)
                     activeObject.SetActive(true);
+
+                if (moveBoxManager)
+                    moveBoxManager.OnMoveComplete();
                 if (sound)
                     Utils.soundManager.PlayFX(sound);
             }

@@ -9,6 +9,7 @@ public class LeoSkill : SkillActivator
     Transform targetObject;
     Transform targetPosition;
     ActivateObject activateObject;
+    MoveBoxManager manager;
     CharacterOrientation3D rotation;
     TutorialMarker marker;
     bool isDrop = true;
@@ -16,6 +17,7 @@ public class LeoSkill : SkillActivator
     protected override void Perform()
     {
         skillUiManager.SetSkillCooldown(coolDown);
+       
         if (inPoint)
         {
             if (marker)
@@ -52,6 +54,9 @@ public class LeoSkill : SkillActivator
         if (activateObject)
             activateObject.Activate();
 
+        if (manager)
+            manager.OnMoveComplete();
+
         if (targetObject.GetComponent<Rigidbody>())
         {
 
@@ -75,6 +80,7 @@ public class LeoSkill : SkillActivator
             targetObject = other.GetComponent<MoveObject>().Target;
             targetPosition = other.GetComponent<MoveObject>().TargetPosition;
             activateObject = other.GetComponent<MoveObject>().TargetActivateObject;
+            manager  = other.GetComponent<MoveObject>().moveManager; 
             isDrop = other.GetComponent<MoveObject>().isDrop;
             //  other.GetComponent<Collider>().enabled = false;
         }
