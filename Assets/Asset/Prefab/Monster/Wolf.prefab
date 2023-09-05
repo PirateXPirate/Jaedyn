@@ -92,13 +92,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 18.92
-  m_Radius: 1.42
+  m_Height: 8.32
+  m_Radius: 0.59
   m_SlopeLimit: 45
   m_StepOffset: 0
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 9.09, z: 0}
+  m_Center: {x: 0, y: 3.82, z: 0}
 --- !u!54 &2937549640230559040
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -490,7 +490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitializationMode: 0
   Label: 
-  TargetHandleWeaponAbility: {fileID: 0}
+  TargetHandleWeaponAbility: {fileID: 2937549640230559047}
   AimAtTarget: 1
   AimOrigin: 0
   ShootOffset: {x: 0, y: 0, z: 0}
@@ -800,7 +800,7 @@ MonoBehaviour:
   CycleOption: 1
   LoopInitialMovementDirection: 0
   PathElements:
-  - PathElementPosition: {x: 3.4911613, y: -0.43019962, z: 0.19229126}
+  - PathElementPosition: {x: 3.4911613, y: 0, z: 0.19229126}
     Delay: 2
   - PathElementPosition: {x: 3, y: 0, z: 3}
     Delay: 2
@@ -808,9 +808,9 @@ MonoBehaviour:
     Delay: 2
   - PathElementPosition: {x: -4.26, y: 0, z: 1.97}
     Delay: 2
-  - PathElementPosition: {x: -2.2305222, y: -0.14275074, z: -3.528183}
+  - PathElementPosition: {x: -2.2305222, y: 0, z: -3.528183}
     Delay: 2
-  - PathElementPosition: {x: 3.4602928, y: 0.6119118, z: -2.771515}
+  - PathElementPosition: {x: 3.4602928, y: 0, z: -2.771515}
     Delay: 2
   ReferenceMMPath: {fileID: 6488171992800892464}
   AbsoluteReferencePath: 0

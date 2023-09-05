@@ -46,7 +46,7 @@ public class KeyManager : MonoBehaviour
 
     private void CheckKey()
     {
-        if (gotKey && gotLock)
+        if (gotKey && gotLock && endGateParticle)
         {
             endGateParticle.SetActive(true);
         }

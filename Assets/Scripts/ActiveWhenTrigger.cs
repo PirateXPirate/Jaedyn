@@ -13,6 +13,7 @@ public class ActiveWhenTrigger : MonoBehaviour
             GetComponent<Collider>().enabled = false;
             foreach (var a in obj)
             {
+                Debug.Log("DEstroy"  +a);
                 a.SetActive(true);
             }
           

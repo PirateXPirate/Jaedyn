@@ -1092,12 +1092,11 @@ namespace MoreMountains.TopDownEngine
 		
 			for (int i = 0; i < Animators.Count; i++)
 			{
-				
+			
 				UpdateAnimator(Animators[i], _animatorParameters[i]);
 			}
 			if ((_ownerAnimator != null) && (WeaponState != null) && (_ownerAnimatorParameters != null))
 			{
-				
 				UpdateAnimator(_ownerAnimator, _ownerAnimatorParameters);
 			}
 		}

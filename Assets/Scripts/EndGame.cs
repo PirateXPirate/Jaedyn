@@ -19,7 +19,7 @@ public class EndGame : MonoBehaviour
     [SerializeField] Mode mode;
     [SerializeField] private int levelIndex = 0;
     private bool isPictureTaken = false;
-
+    public bool Allend = false;
     void Awake()
     {
         PrepareData();
@@ -37,10 +37,16 @@ public class EndGame : MonoBehaviour
             Utils.soundManager.loop.volume = PlayerPrefs.GetFloat("loop", .5f);
         }
         SaveDataToPlayerPrefs();
+        if(Allend)
+        Invoke("WaitClipEnd", 4.7f);
+    }
+    void WaitClipEnd()
+    {
+        SceneManager.LoadScene("EndScene");
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !Allend)
         {
             gameObject.SetActive(false);
             SceneManager.LoadScene("MapScene");

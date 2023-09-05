@@ -780,23 +780,23 @@ MonoBehaviour:
   CycleOption: 1
   LoopInitialMovementDirection: 0
   PathElements:
-  - PathElementPosition: {x: 1.9975395, y: 0.9872017, z: -0.55342865}
+  - PathElementPosition: {x: 1.9975395, y: 0, z: -0.55342865}
     Delay: 2
-  - PathElementPosition: {x: 2.288517, y: 0.9016533, z: 2.5874786}
+  - PathElementPosition: {x: 2.288517, y: 0, z: 2.5874786}
     Delay: 2
-  - PathElementPosition: {x: -0.37734222, y: 0.92435646, z: 2.9431686}
+  - PathElementPosition: {x: -0.37734222, y: 0, z: 2.9431686}
     Delay: 2
-  - PathElementPosition: {x: -2.4367752, y: -0.5702572, z: 1.2328415}
+  - PathElementPosition: {x: -2.4367752, y: 0, z: 1.2328415}
     Delay: 2
-  - PathElementPosition: {x: -1.8992348, y: -0.19846916, z: -1.6556015}
+  - PathElementPosition: {x: -1.8992348, y: 0, z: -1.6556015}
     Delay: 2
-  - PathElementPosition: {x: 1.2575378, y: 0.49998283, z: -2.6292877}
+  - PathElementPosition: {x: 1.2575378, y: 0, z: -2.6292877}
     Delay: 2
   ReferenceMMPath: {fileID: 448819489424763479}
   AbsoluteReferencePath: 0
   MinDistanceToGoal: 1
   LockHandlesOnXAxis: 0
-  LockHandlesOnYAxis: 0
+  LockHandlesOnYAxis: 1
   LockHandlesOnZAxis: 0
 --- !u!114 &448819489424763576
 MonoBehaviour:
