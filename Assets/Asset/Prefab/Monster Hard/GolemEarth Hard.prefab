@@ -770,6 +770,8 @@ GameObject:
   - component: {fileID: 5896022354027123041}
   - component: {fileID: 5896022354027123042}
   - component: {fileID: 5896022354027123085}
+  - component: {fileID: 8260371776450341819}
+  - component: {fileID: 6161853537655099432}
   m_Layer: 13
   m_Name: GolemEarth Hard
   m_TagString: Untagged
@@ -1019,11 +1021,11 @@ MonoBehaviour:
   Model: {fileID: 0}
   CurrentHealth: 100
   Invulnerable: 0
-  InitialHealth: 50
+  InitialHealth: 300
   isRandomHealth: 1
-  minInitialHealth: 80
-  maxInitialHealth: 130
-  MaximumHealth: 50
+  minInitialHealth: 300
+  maxInitialHealth: 300
+  MaximumHealth: 300
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
   DamageMMFeedbacks: {fileID: 0}
@@ -1098,6 +1100,9 @@ MonoBehaviour:
       - Decision: {fileID: 5896022354027123100}
         TrueState: 
         FalseState: Moving
+      - Decision: {fileID: 8260371776450341819}
+        TrueState: 
+        FalseState: Rotate
   - StateName: Wait
     Actions:
       array:
@@ -1109,6 +1114,16 @@ MonoBehaviour:
         FalseState: 
       - Decision: {fileID: 5896022354027123100}
         TrueState: 
+        FalseState: Moving
+  - StateName: Rotate
+    Actions:
+      array:
+      - {fileID: 6161853537655099432}
+      - {fileID: 5896022354027123099}
+    Transitions:
+      array:
+      - Decision: {fileID: 5896022354027123100}
+        TrueState: Detecting
         FalseState: Moving
   TimeInThisState: 0
   Target: {fileID: 0}
@@ -1552,6 +1567,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: 
   zoneCollider: {fileID: 0}
+--- !u!114 &8260371776450341819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5896022354027123043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942563b8434660a4f86cb7a72a5c570e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  DetectMethod: 1
+  RayWidth: 1
+  DetectionDistance: 10
+  DetectionOriginOffset: {x: 0, y: 0, z: 0}
+  TargetLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  ObstaclesLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  ReferenceTransform: {fileID: 0}
+  ForceAimToDetectionDirection: 0
+  SetTargetToNullIfNoneIsFound: 0
+--- !u!114 &6161853537655099432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5896022354027123043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad888dc2bbe117441bde19ec878ff32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationMode: 0
+  Label: 
+  LockRotationX: 0
 --- !u!1 &6266324938404153241
 GameObject:
   m_ObjectHideFlags: 0

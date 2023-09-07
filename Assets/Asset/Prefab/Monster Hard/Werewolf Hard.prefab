@@ -31,6 +31,8 @@ GameObject:
   - component: {fileID: 7748609508462858600}
   - component: {fileID: 9183914911740955203}
   - component: {fileID: 4495047652178645966}
+  - component: {fileID: 1182148411160998721}
+  - component: {fileID: -5544640356906253535}
   m_Layer: 13
   m_Name: Werewolf Hard
   m_TagString: Untagged
@@ -280,11 +282,11 @@ MonoBehaviour:
   Model: {fileID: 0}
   CurrentHealth: 100
   Invulnerable: 0
-  InitialHealth: 100
+  InitialHealth: 350
   isRandomHealth: 1
-  minInitialHealth: 100
-  maxInitialHealth: 150
-  MaximumHealth: 100
+  minInitialHealth: 350
+  maxInitialHealth: 350
+  MaximumHealth: 350
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
   DamageMMFeedbacks: {fileID: 0}
@@ -359,6 +361,9 @@ MonoBehaviour:
       - Decision: {fileID: 7629490427227888742}
         TrueState: 
         FalseState: Moving
+      - Decision: {fileID: 1182148411160998721}
+        TrueState: 
+        FalseState: Rotate
   - StateName: Wait
     Actions:
       array:
@@ -368,6 +373,16 @@ MonoBehaviour:
       - Decision: {fileID: 7629490427227888743}
         TrueState: Detecting
         FalseState: 
+      - Decision: {fileID: 7629490427227888742}
+        TrueState: 
+        FalseState: Moving
+  - StateName: Rotate
+    Actions:
+      array:
+      - {fileID: -5544640356906253535}
+      - {fileID: 7629490427227888741}
+    Transitions:
+      array:
       - Decision: {fileID: 7629490427227888742}
         TrueState: 
         FalseState: Moving
@@ -832,6 +847,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: 
   zoneCollider: {fileID: 0}
+--- !u!114 &1182148411160998721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7629490427227888747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942563b8434660a4f86cb7a72a5c570e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  DetectMethod: 1
+  RayWidth: 1
+  DetectionDistance: 10
+  DetectionOriginOffset: {x: 0, y: 0, z: 0}
+  TargetLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  ObstaclesLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  ReferenceTransform: {fileID: 0}
+  ForceAimToDetectionDirection: 0
+  SetTargetToNullIfNoneIsFound: 0
+--- !u!114 &-5544640356906253535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7629490427227888747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad888dc2bbe117441bde19ec878ff32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationMode: 0
+  Label: 
+  LockRotationX: 0
 --- !u!1001 &1873432088921477731
 PrefabInstance:
   m_ObjectHideFlags: 0

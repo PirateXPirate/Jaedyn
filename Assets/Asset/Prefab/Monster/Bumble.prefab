@@ -30,6 +30,8 @@ GameObject:
   - component: {fileID: 448819489424763479}
   - component: {fileID: 448819489424763576}
   - component: {fileID: 448819489424763477}
+  - component: {fileID: 2248470266916262748}
+  - component: {fileID: 9122151599276157372}
   m_Layer: 13
   m_Name: Bumble
   m_TagString: Untagged
@@ -358,6 +360,9 @@ MonoBehaviour:
       - Decision: {fileID: 448819489424763561}
         TrueState: 
         FalseState: Moving
+      - Decision: {fileID: 2248470266916262748}
+        TrueState: 
+        FalseState: Rotate
   - StateName: Wait
     Actions:
       array:
@@ -367,6 +372,16 @@ MonoBehaviour:
       - Decision: {fileID: 448819489424763560}
         TrueState: Detecting
         FalseState: 
+      - Decision: {fileID: 448819489424763561}
+        TrueState: 
+        FalseState: Moving
+  - StateName: Rotate
+    Actions:
+      array:
+      - {fileID: 9122151599276157372}
+      - {fileID: 448819489424763566}
+    Transitions:
+      array:
       - Decision: {fileID: 448819489424763561}
         TrueState: 
         FalseState: Moving
@@ -812,6 +827,47 @@ MonoBehaviour:
   StunButton: 0
   ExitStunButton: 0
   StunParticleObject: {fileID: 7706826564506717108}
+--- !u!114 &2248470266916262748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448819489424763478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942563b8434660a4f86cb7a72a5c570e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  DetectMethod: 1
+  RayWidth: 1
+  DetectionDistance: 10
+  DetectionOriginOffset: {x: 0, y: 0, z: 0}
+  TargetLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  ObstaclesLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  ReferenceTransform: {fileID: 0}
+  ForceAimToDetectionDirection: 0
+  SetTargetToNullIfNoneIsFound: 0
+--- !u!114 &9122151599276157372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448819489424763478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad888dc2bbe117441bde19ec878ff32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationMode: 0
+  Label: 
+  LockRotationX: 0
 --- !u!1 &7706826564506717108
 GameObject:
   m_ObjectHideFlags: 0

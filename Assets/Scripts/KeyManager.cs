@@ -1,3 +1,4 @@
+using MoreMountains.TopDownEngine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,6 +20,20 @@ public class KeyManager : MonoBehaviour
     [SerializeField] private GameObject noKeyPopUp;
     [SerializeField] private GameObject LockPopUp;
 
+    public bool isBoos = false;
+    public Health bossHealth;
+    private void Start()
+    {
+        if (isBoos)
+        {
+            bossHealth.OnDeath += OnObjDead;
+        }
+    }
+    private void OnObjDead()
+    {
+        CheckKey();
+
+    }
     public void AddKey(int quantity)
     {
         keyQuantity += quantity;
@@ -44,11 +59,23 @@ public class KeyManager : MonoBehaviour
 
     }
 
-    private void CheckKey()
+    public void CheckKey()
     {
-        if (gotKey && gotLock && endGateParticle)
+        if (!isBoos)
         {
-            endGateParticle.SetActive(true);
+            if (gotKey && gotLock && endGateParticle)
+            {
+                endGateParticle.SetActive(true);
+            }
         }
+        else
+        {
+            if (gotKey && gotLock && endGateParticle && bossHealth.CurrentHealth <= 0)
+            {
+                endGateParticle.SetActive(true);
+            }
+           
+        }
+        
     }
 }

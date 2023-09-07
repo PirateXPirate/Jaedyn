@@ -754,6 +754,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   tagName: 
   activeObject: {fileID: 0}
+  moveBoxManager: {fileID: 0}
 --- !u!54 &10655262
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6232,6 +6233,7 @@ MonoBehaviour:
   isTutorialLevel: 0
   mode: 1
   levelIndex: 3
+  Allend: 0
 --- !u!114 &144208581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17269,6 +17271,7 @@ MonoBehaviour:
   Target: {fileID: 10655260}
   TargetPosition: {fileID: 1811350062}
   TargetActivateObject: {fileID: 2031985114}
+  moveManager: {fileID: 0}
   isDrop: 0
 --- !u!65 &540491071
 BoxCollider:
@@ -21322,6 +21325,7 @@ MonoBehaviour:
   Target: {fileID: 1010917916}
   TargetPosition: {fileID: 171848564}
   TargetActivateObject: {fileID: 2064558515}
+  moveManager: {fileID: 0}
   isDrop: 0
 --- !u!65 &712932148
 BoxCollider:
@@ -29269,6 +29273,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   tagName: 
   activeObject: {fileID: 0}
+  moveBoxManager: {fileID: 0}
 --- !u!54 &1010917918
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -63582,6 +63587,7 @@ MonoBehaviour:
   Target: {fileID: 1974241632}
   TargetPosition: {fileID: 1671426183}
   TargetActivateObject: {fileID: 2031985114}
+  moveManager: {fileID: 0}
   isDrop: 0
 --- !u!65 &1821754065
 BoxCollider:
@@ -67837,6 +67843,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   tagName: 
   activeObject: {fileID: 0}
+  moveBoxManager: {fileID: 0}
 --- !u!54 &1974241628
 Rigidbody:
   m_ObjectHideFlags: 0

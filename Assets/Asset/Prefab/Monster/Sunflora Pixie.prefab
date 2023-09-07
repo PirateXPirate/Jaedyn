@@ -30,6 +30,8 @@ GameObject:
   - component: {fileID: 849501727690942840}
   - component: {fileID: 555616125436513667}
   - component: {fileID: 5832372659704419671}
+  - component: {fileID: -3260675650028757631}
+  - component: {fileID: 656735834329698219}
   m_Layer: 13
   m_Name: Sunflora Pixie
   m_TagString: Untagged
@@ -278,10 +280,10 @@ MonoBehaviour:
   Model: {fileID: 0}
   CurrentHealth: 100
   Invulnerable: 0
-  InitialHealth: 50
+  InitialHealth: 250
   isRandomHealth: 1
-  minInitialHealth: 50
-  maxInitialHealth: 100
+  minInitialHealth: 250
+  maxInitialHealth: 250
   MaximumHealth: 50
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
@@ -357,6 +359,9 @@ MonoBehaviour:
       - Decision: {fileID: 5676686983994365562}
         TrueState: 
         FalseState: Moving
+      - Decision: {fileID: -3260675650028757631}
+        TrueState: 
+        FalseState: Rotate
   - StateName: Wait
     Actions:
       array:
@@ -366,6 +371,16 @@ MonoBehaviour:
       - Decision: {fileID: 5676686983994365563}
         TrueState: Detecting
         FalseState: 
+      - Decision: {fileID: 5676686983994365562}
+        TrueState: 
+        FalseState: Moving
+  - StateName: Rotate
+    Actions:
+      array:
+      - {fileID: 656735834329698219}
+      - {fileID: 5676686983994365561}
+    Transitions:
+      array:
       - Decision: {fileID: 5676686983994365562}
         TrueState: 
         FalseState: Moving
@@ -710,7 +725,7 @@ MonoBehaviour:
   Billboard: 1
   InstantiatedOnDeath: {fileID: 100002, guid: 646ed295d7110f448b5bef03394520bf, type: 3}
   DeathSound: {fileID: 8300000, guid: 23eb736482b5a5e4aa2ab8dd494502ed, type: 3}
-  HealthBarOffset: {x: 0, y: 1.5, z: 0}
+  HealthBarOffset: {x: 0, y: 2.5, z: 0}
   AlwaysVisible: 1
   DisplayDurationOnHit: 1
   HideBarAtZero: 1
@@ -811,6 +826,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: 
   zoneCollider: {fileID: 0}
+--- !u!114 &-3260675650028757631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5676686983994365559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942563b8434660a4f86cb7a72a5c570e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  DetectMethod: 1
+  RayWidth: 1
+  DetectionDistance: 10
+  DetectionOriginOffset: {x: 0, y: 0, z: 0}
+  TargetLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  ObstaclesLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  ReferenceTransform: {fileID: 0}
+  ForceAimToDetectionDirection: 0
+  SetTargetToNullIfNoneIsFound: 0
+--- !u!114 &656735834329698219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5676686983994365559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad888dc2bbe117441bde19ec878ff32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationMode: 0
+  Label: 
+  LockRotationX: 0
 --- !u!1001 &7037698947511330726
 PrefabInstance:
   m_ObjectHideFlags: 0
