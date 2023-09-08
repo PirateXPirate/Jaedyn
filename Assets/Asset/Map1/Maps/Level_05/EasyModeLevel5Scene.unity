@@ -6745,6 +6745,7 @@ MonoBehaviour:
   isTutorialLevel: 0
   mode: 0
   levelIndex: 5
+  Allend: 0
 --- !u!114 &88670184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7325,6 +7326,7 @@ MonoBehaviour:
   Target: {fileID: 1970581076}
   TargetPosition: {fileID: 613606176}
   TargetActivateObject: {fileID: 0}
+  moveManager: {fileID: 0}
   isDrop: 0
 --- !u!65 &103139823
 BoxCollider:
@@ -14955,17 +14957,17 @@ PrefabInstance:
     - target: {fileID: 2675772815540303801, guid: cee18cf5504f6d54fbb05a043cb1dbb2,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.3333299
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2675772815540303801, guid: cee18cf5504f6d54fbb05a043cb1dbb2,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.3333299
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2675772815540303801, guid: cee18cf5504f6d54fbb05a043cb1dbb2,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.3333299
+      value: 1.333133
       objectReference: {fileID: 0}
     - target: {fileID: 2675772815540303801, guid: cee18cf5504f6d54fbb05a043cb1dbb2,
         type: 3}
@@ -17903,9 +17905,9 @@ PrefabInstance:
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
       propertyPath: detailText
-      value: "\u0E14\u0E2D\u0E01\u0E44\u0E21\u0E49\u0E40\u0E23\u0E37\u0E48\u0E2D\u0E07\u0E41\u0E2A\u0E07
+      value: "\u0E14\u0E2D\u0E01\u0E44\u0E21\u0E49\u0E40\u0E23\u0E37\u0E2D\u0E07\u0E41\u0E2A\u0E07
         \u0E2A\u0E32\u0E21\u0E32\u0E23\u0E16\u0E40\u0E1B\u0E34\u0E14\u0E1B\u0E23\u0E30\u0E15\u0E39\u0E2B\u0E34\u0E19\u0E44\u0E14\u0E49
-        \u0E41\u0E15\u0E48\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E0A\u0E49\u0E1E\u0E25\u0E31\u0E07\u0E07\u0E32\u0E19\u0E08\u0E32\u0E01\u0E2B\u0E34\u0E48\u0E07\u0E2B\u0E49\u0E2D\u0E22\u0E27\u0E34\u0E1B\u0E27\u0E31\u0E1A\u0E16\u0E36\u0E07
+        \u0E41\u0E15\u0E48\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E0A\u0E49\u0E1E\u0E25\u0E31\u0E07\u0E07\u0E32\u0E19\u0E08\u0E32\u0E01\u0E2B\u0E34\u0E48\u0E07\u0E2B\u0E49\u0E2D\u0E22\u0E27\u0E34\u0E1A\u0E27\u0E31\u0E1A\u0E16\u0E36\u0E07
         3 \u0E2A\u0E35 \u0E1A\u0E32\u0E07\u0E17\u0E35\u0E2D\u0E32\u0E08\u0E08\u0E30\u0E2D\u0E22\u0E39\u0E48\u0E43\u0E19\u0E01\u0E25\u0E48\u0E2D\u0E07\u0E44\u0E21\u0E49
         \u0E1A\u0E32\u0E07\u0E17\u0E35\u0E2D\u0E32\u0E08\u0E08\u0E30\u0E2D\u0E22\u0E39\u0E48\u0E43\u0E19\u0E1E\u0E38\u0E48\u0E21\u0E44\u0E21\u0E49
         \u0E25\u0E2D\u0E07\u0E1E\u0E22\u0E32\u0E22\u0E32\u0E21\u0E04\u0E49\u0E19\u0E2B\u0E32\u0E14\u0E39\u0E01\u0E48\u0E2D\u0E19  "
@@ -29779,7 +29781,7 @@ PrefabInstance:
         type: 3}
       propertyPath: detailText
       value: "\u0E2A\u0E30\u0E1E\u0E32\u0E19\u0E44\u0E21\u0E49\u0E2D\u0E32\u0E08\u0E08\u0E30\u0E21\u0E35\u0E1E\u0E37\u0E49\u0E19\u0E17\u0E35\u0E48\u0E41\u0E04\u0E1A
-        \u0E23\u0E30\u0E27\u0E31\u0E07\u0E40\u0E14\u0E34\u0E19\u0E15\u0E01\u0E19\u0E49\u0E33\u0E40\u0E1E\u0E23\u0E32\u0E30\u0E1E\u0E25\u0E31\u0E07\u0E0A\u0E35\u0E27\u0E34\u0E15\u0E08\u0E30\u0E25\u0E14\u0E25\u0E07 "
+        \u0E23\u0E30\u0E27\u0E31\u0E07\u0E40\u0E14\u0E34\u0E19\u0E15\u0E01\u0E19\u0E33\u0E49\u0E40\u0E1E\u0E23\u0E32\u0E30\u0E1E\u0E25\u0E31\u0E07\u0E0A\u0E35\u0E27\u0E34\u0E15\u0E08\u0E30\u0E25\u0E14\u0E25\u0E07 "
       objectReference: {fileID: 0}
     - target: {fileID: 4056979733671604545, guid: cf43a7dd258b42b41a217fc2f452aeda,
         type: 3}
@@ -40041,6 +40043,8 @@ MonoBehaviour:
   ketText: {fileID: 1493285440}
   noKeyPopUp: {fileID: 778490985}
   LockPopUp: {fileID: 391185722}
+  isBoos: 0
+  bossHealth: {fileID: 0}
 --- !u!114 &1255433887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63849,6 +63853,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   tagName: 
   activeObject: {fileID: 0}
+  moveBoxManager: {fileID: 0}
 --- !u!54 &1970581078
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class ActionSkill : MonoBehaviour
 {
     protected bool inPoint = false;
     protected bool inTower = false;
+    protected bool inSlide = false;
     protected bool inChest = false;
     protected bool inFirefly = false;
     protected CharacterMovement movement;
@@ -15,6 +16,7 @@ public class ActionSkill : MonoBehaviour
     private TutorialMarker currentMaker;
 
     private Tower currentTower;
+    private ActivateSlide currentSlide;
 
     private ChestBox currentChest;
 
@@ -76,6 +78,12 @@ public class ActionSkill : MonoBehaviour
             currentChest.Perform();
 
         }
+        if (inSlide)
+        {
+            if (currentSlide)
+                currentSlide.Perform();
+
+        }
     }
     protected virtual void OnTriggerEnter(Collider other)
     {
@@ -114,6 +122,12 @@ public class ActionSkill : MonoBehaviour
             inFirefly = true;
             currentFirefly = other.GetComponent<FireflyManager>();
         }
+        if (other.tag.Equals("Slide"))
+        {
+            inSlide = true;
+            currentSlide = other.GetComponent<ActivateSlide>();
+        }
+
     }
     private void OnTriggerExit(Collider other)
     {
@@ -137,6 +151,11 @@ public class ActionSkill : MonoBehaviour
         {
             inFirefly = false;
             currentFirefly = null;
+        }
+        if (other.tag.Equals("Slide"))
+        {
+            inSlide = false;
+            currentSlide = null;
         }
     }
 }
