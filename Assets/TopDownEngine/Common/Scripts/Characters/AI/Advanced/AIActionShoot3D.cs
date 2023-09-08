@@ -109,11 +109,12 @@ namespace MoreMountains.TopDownEngine
 		/// </summary>
 		protected virtual void TestAimAtTarget()
 		{
+			
 			if (!AimAtTarget || (_brain.Target == null))
 			{
 				return;
 			}
-
+			
 			if (TargetHandleWeaponAbility.CurrentWeapon != null)
 			{
 				if (_weaponAim == null)

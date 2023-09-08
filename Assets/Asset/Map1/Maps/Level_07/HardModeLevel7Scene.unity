@@ -1990,6 +1990,7 @@ MonoBehaviour:
   Target: {fileID: 1963024181}
   TargetPosition: {fileID: 1080733235}
   TargetActivateObject: {fileID: 2065806510}
+  moveManager: {fileID: 0}
   isDrop: 1
 --- !u!65 &70277783
 BoxCollider:
@@ -22227,6 +22228,7 @@ MonoBehaviour:
   isTutorialLevel: 0
   mode: 0
   levelIndex: 6
+  Allend: 0
 --- !u!114 &843091557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48527,31 +48529,6 @@ PrefabInstance:
       propertyPath: PathElements.Array.data[5].PathElementPosition.z
       value: -0.17206573
       objectReference: {fileID: 0}
-    - target: {fileID: 448819489424763555, guid: bd12018b8e32a76429f74ad8ad4ecb0f,
-        type: 3}
-      propertyPath: States.Array.data[1].Transitions.array.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 448819489424763555, guid: bd12018b8e32a76429f74ad8ad4ecb0f,
-        type: 3}
-      propertyPath: States.Array.data[1].Transitions.array.Array.data[1].Decision
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 448819489424763555, guid: bd12018b8e32a76429f74ad8ad4ecb0f,
-        type: 3}
-      propertyPath: States.Array.data[0].Transitions.array.Array.data[0].FalseState
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 448819489424763555, guid: bd12018b8e32a76429f74ad8ad4ecb0f,
-        type: 3}
-      propertyPath: States.Array.data[1].Transitions.array.Array.data[0].FalseState
-      value: Moving
-      objectReference: {fileID: 0}
-    - target: {fileID: 448819489424763555, guid: bd12018b8e32a76429f74ad8ad4ecb0f,
-        type: 3}
-      propertyPath: States.Array.data[2].Transitions.array.Array.data[0].FalseState
-      value: Detecting
-      objectReference: {fileID: 0}
     - target: {fileID: 448819489424763576, guid: bd12018b8e32a76429f74ad8ad4ecb0f,
         type: 3}
       propertyPath: zoneCollider
@@ -58223,6 +58200,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   tagName: 
   activeObject: {fileID: 0}
+  moveBoxManager: {fileID: 0}
 --- !u!54 &1963024183
 Rigidbody:
   m_ObjectHideFlags: 0

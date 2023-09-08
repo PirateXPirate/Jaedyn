@@ -30,6 +30,8 @@ GameObject:
   - component: {fileID: 849501727690942840}
   - component: {fileID: 555616125436513667}
   - component: {fileID: 5832372659704419671}
+  - component: {fileID: -5054956454701713701}
+  - component: {fileID: -4187275830523907643}
   m_Layer: 13
   m_Name: Grim Reaper Hard
   m_TagString: Untagged
@@ -358,16 +360,30 @@ MonoBehaviour:
       - Decision: {fileID: 5676686983994365562}
         TrueState: 
         FalseState: Moving
+      - Decision: {fileID: -5054956454701713701}
+        TrueState: 
+        FalseState: Rotate
   - StateName: Wait
     Actions:
       array:
       - {fileID: 5676686983994365447}
     Transitions:
       array:
-      - Decision: {fileID: 5676686983994365563}
+      - Decision: {fileID: 5676686983994365562}
         TrueState: Detecting
         FalseState: 
       - Decision: {fileID: 5676686983994365562}
+        TrueState: 
+        FalseState: Moving
+  - StateName: Rotate
+    Actions:
+      array:
+      - {fileID: 5545357930637454837, guid: 954b81a2d38a5844f871dd8ef5b784ce, type: 3}
+      - {fileID: 448819489424763566, guid: 954b81a2d38a5844f871dd8ef5b784ce, type: 3}
+    Transitions:
+      array:
+      - Decision: {fileID: 448819489424763561, guid: 954b81a2d38a5844f871dd8ef5b784ce,
+          type: 3}
         TrueState: 
         FalseState: Moving
   TimeInThisState: 0
@@ -812,6 +828,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: 
   zoneCollider: {fileID: 0}
+--- !u!114 &-5054956454701713701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5676686983994365559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942563b8434660a4f86cb7a72a5c570e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  DetectMethod: 1
+  RayWidth: 1
+  DetectionDistance: 10
+  DetectionOriginOffset: {x: 0, y: 0, z: 0}
+  TargetLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  ObstaclesLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  ReferenceTransform: {fileID: 0}
+  ForceAimToDetectionDirection: 0
+  SetTargetToNullIfNoneIsFound: 0
+--- !u!114 &-4187275830523907643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5676686983994365559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad888dc2bbe117441bde19ec878ff32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationMode: 0
+  Label: 
+  LockRotationX: 0
 --- !u!1001 &8381304471175703757
 PrefabInstance:
   m_ObjectHideFlags: 0

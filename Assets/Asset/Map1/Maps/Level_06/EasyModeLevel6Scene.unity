@@ -5113,6 +5113,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   tagName: 
   activeObject: {fileID: 0}
+  moveBoxManager: {fileID: 0}
 --- !u!54 &189911213
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14050,7 +14051,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4c0cddb26af1b86449a76368aaaf8ee0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aae1b8202c509094da15c2a44ddff1f0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -34126,6 +34127,7 @@ MonoBehaviour:
   Target: {fileID: 189911211}
   TargetPosition: {fileID: 1776918704}
   TargetActivateObject: {fileID: 1767440281}
+  moveManager: {fileID: 0}
   isDrop: 0
 --- !u!65 &1238652932
 BoxCollider:
@@ -53529,12 +53531,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controllerUi: {fileID: 1068681414}
-  picture: {fileID: 0}
+  picture: {fileID: 550061807}
   settingBut: {fileID: 74239875}
   homeBut: {fileID: 601843428}
   isTutorialLevel: 0
   mode: 0
   levelIndex: 6
+  Allend: 0
 --- !u!114 &1816826538
 MonoBehaviour:
   m_ObjectHideFlags: 0

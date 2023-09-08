@@ -7505,6 +7505,7 @@ MonoBehaviour:
   Target: {fileID: 2109368671}
   TargetPosition: {fileID: 763666200}
   TargetActivateObject: {fileID: 1703845840}
+  moveManager: {fileID: 0}
   isDrop: 1
 --- !u!65 &267687284
 BoxCollider:
@@ -16469,6 +16470,7 @@ MonoBehaviour:
   Target: {fileID: 445432858}
   TargetPosition: {fileID: 470070325}
   TargetActivateObject: {fileID: 1703845840}
+  moveManager: {fileID: 0}
   isDrop: 0
 --- !u!65 &527038393
 BoxCollider:
@@ -61918,6 +61920,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   tagName: 
   activeObject: {fileID: 0}
+  moveBoxManager: {fileID: 0}
 --- !u!54 &1845064909
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -68802,6 +68805,7 @@ MonoBehaviour:
   isTutorialLevel: 0
   mode: 0
   levelIndex: 2
+  Allend: 0
 --- !u!114 &2055044594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75732,6 +75736,7 @@ MonoBehaviour:
   sound: {fileID: 8300000, guid: d058404d881f2554c84be3cd74da06df, type: 3}
   tagName: Chest
   activeObject: {fileID: 6188415390593654992}
+  moveBoxManager: {fileID: 0}
 --- !u!54 &2109368673
 Rigidbody:
   m_ObjectHideFlags: 0

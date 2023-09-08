@@ -11125,6 +11125,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   tagName: 
   activeObject: {fileID: 0}
+  moveBoxManager: {fileID: 0}
 --- !u!54 &281934726
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11292,7 +11293,7 @@ PrefabInstance:
     - target: {fileID: 902865746261261631, guid: 3cc8229a7629bdb4dae7cdba9a1c5663,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 902865746261261631, guid: 3cc8229a7629bdb4dae7cdba9a1c5663,
         type: 3}
@@ -35943,7 +35944,7 @@ PrefabInstance:
     - target: {fileID: 4724452976815085774, guid: 00119076336e1ec439b65266e99d4762,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4724452976815085774, guid: 00119076336e1ec439b65266e99d4762,
         type: 3}
@@ -36259,6 +36260,7 @@ MonoBehaviour:
   Target: {fileID: 281934723}
   TargetPosition: {fileID: 1068594707}
   TargetActivateObject: {fileID: 0}
+  moveManager: {fileID: 0}
   isDrop: 0
 --- !u!65 &1080371526
 BoxCollider:
@@ -51697,6 +51699,7 @@ MonoBehaviour:
   isTutorialLevel: 0
   mode: 0
   levelIndex: 5
+  Allend: 0
 --- !u!114 &1568320767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55201,7 +55204,7 @@ PrefabInstance:
     - target: {fileID: 4724452976815085774, guid: 50f28f7c6dfa8314881d3400952cbc04,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4724452976815085774, guid: 50f28f7c6dfa8314881d3400952cbc04,
         type: 3}
@@ -55595,7 +55598,7 @@ PrefabInstance:
     - target: {fileID: 515102574327505933, guid: a91aa502d56b99547b509489478c427a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 515102574327505933, guid: a91aa502d56b99547b509489478c427a,
         type: 3}

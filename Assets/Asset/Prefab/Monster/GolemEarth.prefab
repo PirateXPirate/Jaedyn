@@ -802,6 +802,8 @@ GameObject:
   - component: {fileID: 5896022354027123042}
   - component: {fileID: 5896022354027123085}
   - component: {fileID: 5896022354027123040}
+  - component: {fileID: 2185171879449935718}
+  - component: {fileID: 5119143421943789005}
   m_Layer: 13
   m_Name: GolemEarth
   m_TagString: Untagged
@@ -1051,11 +1053,11 @@ MonoBehaviour:
   Model: {fileID: 0}
   CurrentHealth: 100
   Invulnerable: 0
-  InitialHealth: 50
+  InitialHealth: 250
   isRandomHealth: 1
-  minInitialHealth: 50
-  maxInitialHealth: 100
-  MaximumHealth: 50
+  minInitialHealth: 250
+  maxInitialHealth: 250
+  MaximumHealth: 250
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
   DamageMMFeedbacks: {fileID: 0}
@@ -1130,6 +1132,9 @@ MonoBehaviour:
       - Decision: {fileID: 5896022354027123100}
         TrueState: 
         FalseState: Moving
+      - Decision: {fileID: 2185171879449935718}
+        TrueState: 
+        FalseState: Rotate
   - StateName: Wait
     Actions:
       array:
@@ -1139,6 +1144,16 @@ MonoBehaviour:
       - Decision: {fileID: 5896022354027123101}
         TrueState: Detecting
         FalseState: 
+      - Decision: {fileID: 5896022354027123100}
+        TrueState: 
+        FalseState: Moving
+  - StateName: Rotate
+    Actions:
+      array:
+      - {fileID: 5119143421943789005}
+      - {fileID: 5896022354027123099}
+    Transitions:
+      array:
       - Decision: {fileID: 5896022354027123100}
         TrueState: 
         FalseState: Moving
@@ -1584,6 +1599,47 @@ MonoBehaviour:
   StunButton: 0
   ExitStunButton: 0
   StunParticleObject: {fileID: 2832131453548926553}
+--- !u!114 &2185171879449935718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5896022354027123043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942563b8434660a4f86cb7a72a5c570e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  DetectMethod: 1
+  RayWidth: 1
+  DetectionDistance: 10
+  DetectionOriginOffset: {x: 0, y: 0, z: 0}
+  TargetLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  ObstaclesLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  ReferenceTransform: {fileID: 0}
+  ForceAimToDetectionDirection: 0
+  SetTargetToNullIfNoneIsFound: 0
+--- !u!114 &5119143421943789005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5896022354027123043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad888dc2bbe117441bde19ec878ff32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationMode: 0
+  Label: 
+  LockRotationX: 0
 --- !u!1 &6266324938404153241
 GameObject:
   m_ObjectHideFlags: 0

@@ -2230,6 +2230,7 @@ MonoBehaviour:
   Target: {fileID: 2090906676}
   TargetPosition: {fileID: 2056749400}
   TargetActivateObject: {fileID: 1243174853}
+  moveManager: {fileID: 0}
   isDrop: 1
 --- !u!65 &88517233
 BoxCollider:
@@ -6226,6 +6227,7 @@ MonoBehaviour:
   isTutorialLevel: 0
   mode: 0
   levelIndex: 6
+  Allend: 0
 --- !u!114 &298353826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56077,6 +56079,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   tagName: 
   activeObject: {fileID: 0}
+  moveBoxManager: {fileID: 0}
 --- !u!54 &2090906678
 Rigidbody:
   m_ObjectHideFlags: 0

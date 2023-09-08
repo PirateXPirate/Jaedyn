@@ -29425,7 +29425,7 @@ PrefabInstance:
     - target: {fileID: 5676686983994365558, guid: 8f9a9d0bdeab3d540b8079fc041a9ea7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5676686983994365558, guid: 8f9a9d0bdeab3d540b8079fc041a9ea7,
         type: 3}
@@ -51943,6 +51943,8 @@ MonoBehaviour:
   ketText: {fileID: 409643372}
   noKeyPopUp: {fileID: 375280611}
   LockPopUp: {fileID: 5100737}
+  isBoos: 0
+  bossHealth: {fileID: 0}
 --- !u!114 &1947060535
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -62,6 +62,8 @@ GameObject:
   - component: {fileID: 9007576433767223105}
   - component: {fileID: 5633692875634616202}
   - component: {fileID: 5762342858745822882}
+  - component: {fileID: 1181553412486408263}
+  - component: {fileID: 7169928474469241878}
   m_Layer: 13
   m_Name: SunflowerFairy
   m_TagString: Untagged
@@ -311,11 +313,11 @@ MonoBehaviour:
   Model: {fileID: 0}
   CurrentHealth: 100
   Invulnerable: 0
-  InitialHealth: 30
+  InitialHealth: 150
   isRandomHealth: 1
-  minInitialHealth: 30
-  maxInitialHealth: 80
-  MaximumHealth: 30
+  minInitialHealth: 150
+  maxInitialHealth: 150
+  MaximumHealth: 150
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
   DamageMMFeedbacks: {fileID: 0}
@@ -390,6 +392,9 @@ MonoBehaviour:
       - Decision: {fileID: 1915158798050616140}
         TrueState: 
         FalseState: Moving
+      - Decision: {fileID: 1181553412486408263}
+        TrueState: 
+        FalseState: Rotate
   - StateName: Wait
     Actions:
       array:
@@ -399,6 +404,16 @@ MonoBehaviour:
       - Decision: {fileID: 1915158798050616141}
         TrueState: Detecting
         FalseState: 
+      - Decision: {fileID: 1915158798050616140}
+        TrueState: 
+        FalseState: Moving
+  - StateName: Rotate
+    Actions:
+      array:
+      - {fileID: 7169928474469241878}
+      - {fileID: 1915158798050616143}
+    Transitions:
+      array:
       - Decision: {fileID: 1915158798050616140}
         TrueState: 
         FalseState: Moving
@@ -743,7 +758,7 @@ MonoBehaviour:
   Billboard: 1
   InstantiatedOnDeath: {fileID: 100002, guid: 646ed295d7110f448b5bef03394520bf, type: 3}
   DeathSound: {fileID: 8300000, guid: 91d37bde673efda46897964c80853d2b, type: 3}
-  HealthBarOffset: {x: 0, y: 1.5, z: 0}
+  HealthBarOffset: {x: 0, y: 3, z: 0}
   AlwaysVisible: 1
   DisplayDurationOnHit: 1
   HideBarAtZero: 1
@@ -844,6 +859,47 @@ MonoBehaviour:
   StunButton: 0
   ExitStunButton: 0
   StunParticleObject: {fileID: 914192160108755139}
+--- !u!114 &1181553412486408263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915158798050616129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942563b8434660a4f86cb7a72a5c570e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  DetectMethod: 1
+  RayWidth: 1
+  DetectionDistance: 10
+  DetectionOriginOffset: {x: 0, y: 0, z: 0}
+  TargetLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  ObstaclesLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  ReferenceTransform: {fileID: 0}
+  ForceAimToDetectionDirection: 0
+  SetTargetToNullIfNoneIsFound: 0
+--- !u!114 &7169928474469241878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915158798050616129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad888dc2bbe117441bde19ec878ff32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationMode: 0
+  Label: 
+  LockRotationX: 0
 --- !u!1001 &711827638604873401
 PrefabInstance:
   m_ObjectHideFlags: 0

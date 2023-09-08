@@ -62,6 +62,8 @@ GameObject:
   - component: {fileID: 4136339813292148071}
   - component: {fileID: 3826022954183139740}
   - component: {fileID: 7088088017737169224}
+  - component: {fileID: 2539408928235308383}
+  - component: {fileID: 173889131696789773}
   m_Layer: 13
   m_Name: Snakelet
   m_TagString: Untagged
@@ -311,11 +313,11 @@ MonoBehaviour:
   Model: {fileID: 0}
   CurrentHealth: 100
   Invulnerable: 0
-  InitialHealth: 20
+  InitialHealth: 100
   isRandomHealth: 1
-  minInitialHealth: 20
-  maxInitialHealth: 70
-  MaximumHealth: 20
+  minInitialHealth: 100
+  maxInitialHealth: 100
+  MaximumHealth: 100
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
   DamageMMFeedbacks: {fileID: 0}
@@ -390,6 +392,9 @@ MonoBehaviour:
       - Decision: {fileID: 8965143808410761829}
         TrueState: 
         FalseState: Moving
+      - Decision: {fileID: 2539408928235308383}
+        TrueState: 
+        FalseState: Rotate
   - StateName: Wait
     Actions:
       array:
@@ -399,6 +404,16 @@ MonoBehaviour:
       - Decision: {fileID: 8965143808410761828}
         TrueState: Detecting
         FalseState: 
+      - Decision: {fileID: 8965143808410761829}
+        TrueState: 
+        FalseState: Moving
+  - StateName: Rotate
+    Actions:
+      array:
+      - {fileID: 173889131696789773}
+      - {fileID: 8965143808410761830}
+    Transitions:
+      array:
       - Decision: {fileID: 8965143808410761829}
         TrueState: 
         FalseState: Moving
@@ -844,6 +859,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Label: 
   zoneCollider: {fileID: 0}
+--- !u!114 &2539408928235308383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8965143808410761832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 942563b8434660a4f86cb7a72a5c570e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  DetectMethod: 1
+  RayWidth: 1
+  DetectionDistance: 10
+  DetectionOriginOffset: {x: 0, y: 0, z: 0}
+  TargetLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  ObstaclesLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  ReferenceTransform: {fileID: 0}
+  ForceAimToDetectionDirection: 0
+  SetTargetToNullIfNoneIsFound: 0
+--- !u!114 &173889131696789773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8965143808410761832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad888dc2bbe117441bde19ec878ff32c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationMode: 0
+  Label: 
+  LockRotationX: 0
 --- !u!1001 &1493244650059396187
 PrefabInstance:
   m_ObjectHideFlags: 0
