@@ -40543,6 +40543,8 @@ MonoBehaviour:
   ketText: {fileID: 814488233}
   noKeyPopUp: {fileID: 329715916}
   LockPopUp: {fileID: 1254200264}
+  isBoos: 0
+  bossHealth: {fileID: 0}
 --- !u!1001 &1173261538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58930,7 +58932,7 @@ PrefabInstance:
     - target: {fileID: 2675772814500596735, guid: cee18cf5504f6d54fbb05a043cb1dbb2,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -100
+      value: -35
       objectReference: {fileID: 0}
     - target: {fileID: 2675772814768741856, guid: cee18cf5504f6d54fbb05a043cb1dbb2,
         type: 3}
@@ -58945,7 +58947,7 @@ PrefabInstance:
     - target: {fileID: 2675772814768741856, guid: cee18cf5504f6d54fbb05a043cb1dbb2,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 110
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2675772814768741857, guid: cee18cf5504f6d54fbb05a043cb1dbb2,
         type: 3}
@@ -59022,17 +59024,17 @@ PrefabInstance:
     - target: {fileID: 2675772815540303801, guid: cee18cf5504f6d54fbb05a043cb1dbb2,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.3333299
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2675772815540303801, guid: cee18cf5504f6d54fbb05a043cb1dbb2,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.3333299
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2675772815540303801, guid: cee18cf5504f6d54fbb05a043cb1dbb2,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.3333299
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2675772815540303801, guid: cee18cf5504f6d54fbb05a043cb1dbb2,
         type: 3}
