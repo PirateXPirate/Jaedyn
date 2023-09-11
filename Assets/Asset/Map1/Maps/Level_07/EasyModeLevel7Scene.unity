@@ -2117,8 +2117,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 2090906676}
     m_Modifications:
     - target: {fileID: 116404, guid: c82022460ac6d274cb9e2aefc6da9dc9, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 116404, guid: c82022460ac6d274cb9e2aefc6da9dc9, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 170308, guid: c82022460ac6d274cb9e2aefc6da9dc9, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 170308, guid: c82022460ac6d274cb9e2aefc6da9dc9, type: 3}
       propertyPath: m_IsActive
@@ -2127,6 +2135,10 @@ PrefabInstance:
     - target: {fileID: 197318, guid: c82022460ac6d274cb9e2aefc6da9dc9, type: 3}
       propertyPath: m_Name
       value: MoveBoxZone (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 197318, guid: c82022460ac6d274cb9e2aefc6da9dc9, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 197318, guid: c82022460ac6d274cb9e2aefc6da9dc9, type: 3}
       propertyPath: m_TagString
@@ -2233,6 +2245,7 @@ MonoBehaviour:
   TargetActivateObject: {fileID: 1243174853}
   moveManager: {fileID: 0}
   isDrop: 1
+  isReset: 1
 --- !u!65 &88517233
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5915,6 +5928,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 72694132}
     m_Modifications:
+    - target: {fileID: 4546386798160065411, guid: e430308d7bef10644a461d909df844ec,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 24.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4546386798751783444, guid: e430308d7bef10644a461d909df844ec,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 11.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4546386799473342114, guid: e430308d7bef10644a461d909df844ec,
         type: 3}
       propertyPath: m_Name
@@ -6441,8 +6464,9 @@ MonoBehaviour:
   homeBut: {fileID: 70799701}
   isTutorialLevel: 0
   mode: 0
-  levelIndex: 6
+  levelIndex: 7
   Allend: 0
+  isHard: 0
 --- !u!114 &298353826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45593,7 +45617,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -219, y: -82}
-  m_SizeDelta: {x: 238.3, y: 50}
+  m_SizeDelta: {x: 280, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1533542905
 PrefabInstance:
@@ -60714,7 +60738,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2056749400}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MoveBoxTarget (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61525,6 +61549,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MoveBox (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5815154419813681405, guid: 447014c64af03634f8be0a425a0ad2b9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6627122228783338055, guid: 447014c64af03634f8be0a425a0ad2b9,
         type: 3}

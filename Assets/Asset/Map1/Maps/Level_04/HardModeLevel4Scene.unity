@@ -10164,7 +10164,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -219, y: -82}
-  m_SizeDelta: {x: 238.3, y: 50}
+  m_SizeDelta: {x: 280, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &345649474
 GameObject:
@@ -49552,6 +49552,7 @@ MonoBehaviour:
   mode: 1
   levelIndex: 4
   Allend: 0
+  isHard: 0
 --- !u!114 &1555328853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51177,7 +51178,7 @@ PrefabInstance:
     - target: {fileID: 224674173061577030, guid: d4529f47989526241929319abfdfc29d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -27.999512
+      value: -27.999496
       objectReference: {fileID: 0}
     - target: {fileID: 224681683108154520, guid: d4529f47989526241929319abfdfc29d,
         type: 3}

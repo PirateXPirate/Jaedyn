@@ -1876,8 +1876,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 1963024181}
     m_Modifications:
     - target: {fileID: 116404, guid: c82022460ac6d274cb9e2aefc6da9dc9, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 116404, guid: c82022460ac6d274cb9e2aefc6da9dc9, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 170308, guid: c82022460ac6d274cb9e2aefc6da9dc9, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 170308, guid: c82022460ac6d274cb9e2aefc6da9dc9, type: 3}
       propertyPath: m_IsActive
@@ -1886,6 +1894,10 @@ PrefabInstance:
     - target: {fileID: 197318, guid: c82022460ac6d274cb9e2aefc6da9dc9, type: 3}
       propertyPath: m_Name
       value: MoveBoxZone (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 197318, guid: c82022460ac6d274cb9e2aefc6da9dc9, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 197318, guid: c82022460ac6d274cb9e2aefc6da9dc9, type: 3}
       propertyPath: m_TagString
@@ -27333,8 +27345,8 @@ MonoBehaviour:
   settingBut: {fileID: 407979890}
   homeBut: {fileID: 1888804761}
   isTutorialLevel: 0
-  mode: 0
-  levelIndex: 6
+  mode: 1
+  levelIndex: 7
   Allend: 0
   isHard: 0
 --- !u!114 &843091557
@@ -32037,7 +32049,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1080733235}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MoveBoxTarget (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61772,12 +61784,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9685c3722034e0048ad003b442b8892b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.59
+      value: 9.16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9685c3722034e0048ad003b442b8892b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 75.33
+      value: 75.17
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9685c3722034e0048ad003b442b8892b,
         type: 3}
@@ -63882,7 +63894,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -219, y: -82}
-  m_SizeDelta: {x: 238.3, y: 50}
+  m_SizeDelta: {x: 280, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1962285630
 GameObject:
@@ -64095,6 +64107,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MoveBox (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5815154419813681405, guid: 447014c64af03634f8be0a425a0ad2b9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6627122228783338055, guid: 447014c64af03634f8be0a425a0ad2b9,
         type: 3}

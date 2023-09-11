@@ -16118,7 +16118,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -219, y: -82}
-  m_SizeDelta: {x: 238.3, y: 50}
+  m_SizeDelta: {x: 280, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &582239982
 PrefabInstance:
@@ -39025,7 +39025,7 @@ PrefabInstance:
     - target: {fileID: 224674173061577030, guid: d4529f47989526241929319abfdfc29d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -27.999512
+      value: -27.999496
       objectReference: {fileID: 0}
     - target: {fileID: 224681683108154520, guid: d4529f47989526241929319abfdfc29d,
         type: 3}
@@ -44180,6 +44180,7 @@ MonoBehaviour:
   TargetActivateObject: {fileID: 644683376}
   moveManager: {fileID: 0}
   isDrop: 0
+  isReset: 0
 --- !u!65 &1315470871
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56595,6 +56596,7 @@ MonoBehaviour:
   TargetActivateObject: {fileID: 722881227}
   moveManager: {fileID: 0}
   isDrop: 0
+  isReset: 0
 --- !u!65 &1567350565
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70397,6 +70399,7 @@ MonoBehaviour:
   mode: 0
   levelIndex: 3
   Allend: 0
+  isHard: 0
 --- !u!114 &2016725326
 MonoBehaviour:
   m_ObjectHideFlags: 0
