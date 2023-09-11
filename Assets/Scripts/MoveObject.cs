@@ -9,4 +9,5 @@ public class MoveObject : MonoBehaviour
     public ActivateObject TargetActivateObject;
     public MoveBoxManager moveManager;
     public bool isDrop = true;
+    public bool isReset = false;
 }

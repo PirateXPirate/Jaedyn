@@ -9,7 +9,7 @@ public class ActivateObject : MonoBehaviour
     public float time;
 
     public int targetPuzzleValue = 1;
-   protected int currentValue = 0;
+    protected int currentValue = 0;
     public GameObject activateParticleObject;
     public AudioClip activateSound;
 
@@ -25,15 +25,21 @@ public class ActivateObject : MonoBehaviour
             {
                 if (GetComponent<Collider>())
                     GetComponent<Collider>().enabled = false;
-            }
-          
+                foreach (Transform child in transform)
+                {
+                    if (child.GetComponent<Collider>())
+                        child.GetComponent<Collider>().enabled = false;
+                }
 
-            if(activateParticleObject)
-            activateParticleObject.SetActive(true);
+            }
+
+
+            if (activateParticleObject)
+                activateParticleObject.SetActive(true);
             if (activateSound)
                 Utils.soundManager.PlayFX(activateSound);
         }
     }
-   
+
 
 }

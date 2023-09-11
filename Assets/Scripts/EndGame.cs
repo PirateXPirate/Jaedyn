@@ -20,6 +20,7 @@ public class EndGame : MonoBehaviour
     [SerializeField] private int levelIndex = 0;
     private bool isPictureTaken = false;
     public bool Allend = false;
+    public bool isHard = false;
     void Awake()
     {
         PrepareData();
@@ -42,7 +43,10 @@ public class EndGame : MonoBehaviour
     }
     void WaitClipEnd()
     {
+        if(!isHard)
         SceneManager.LoadScene("EndScene");
+        else
+            SceneManager.LoadScene("EndScene2");
     }
     void Update()
     {

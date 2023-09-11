@@ -23,6 +23,7 @@ public class CoinManager : MonoBehaviour
         CoinText.text = currentCoin.ToString();
         PlayerPrefs.SetInt("CoinQuantity", currentCoin);
         PlayerPrefs.Save();
-        CoinPopupText.text = "ได้รับเหรียญจำนวน " + num.ToString() + " เหรียญสำหรับแลกไอเท็มต่างๆในหน้าห้องไอเทมได้ ";
+     
+        CoinPopupText.text = "ได้รับเหรียญจำนวน " + num.ToString() + "เหรียญสำหรับแลกไอเท็มต่างๆในหน้าห้องไอเทมได้";
     }
 }

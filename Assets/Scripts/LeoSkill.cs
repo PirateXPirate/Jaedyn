@@ -13,6 +13,8 @@ public class LeoSkill : SkillActivator
     CharacterOrientation3D rotation;
     TutorialMarker marker;
     bool isDrop = true;
+    bool isReset = false;
+
 
     protected override void Perform()
     {
@@ -61,6 +63,12 @@ public class LeoSkill : SkillActivator
         {
 
             targetObject.GetComponent<Rigidbody>().isKinematic = !isDrop;
+
+            if (isReset)
+            {
+                Destroy(targetObject.GetComponent<Collider>());
+                targetObject.gameObject.AddComponent<BoxCollider>();
+            }
         }
         movement.ScriptDrivenInput = false;
         LevelManager.Instance.Players[0].LinkedInputManager.InputDetectionActive = true;
@@ -82,6 +90,7 @@ public class LeoSkill : SkillActivator
             activateObject = other.GetComponent<MoveObject>().TargetActivateObject;
             manager  = other.GetComponent<MoveObject>().moveManager; 
             isDrop = other.GetComponent<MoveObject>().isDrop;
+            isReset = other.GetComponent<MoveObject>().isReset;
             //  other.GetComponent<Collider>().enabled = false;
         }
 
