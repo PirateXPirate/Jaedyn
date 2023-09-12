@@ -230,7 +230,6 @@ public class UIManager : MonoBehaviour
     void LoadingKey()
     {
         keyQuantity = PlayerPrefs.GetInt("keyQuantity", 0);
-        print($"========================={keyQuantity}");
         keyQuantityText.text = $"{keyQuantity} Key";
     }
 
@@ -275,6 +274,9 @@ public class UIManager : MonoBehaviour
     public void SetCompleteTutorial()
     {
         var map = easyModeUi.transform.Find($"LevelTutorial");
+        CloseAllSymbol(map);
+        map.transform.Find("BG_Brown")?.gameObject.SetActive(true);
+        map.transform.Find("Star")?.gameObject.SetActive(true);
 
         if (LevelData.isTutorialComplete)
         {

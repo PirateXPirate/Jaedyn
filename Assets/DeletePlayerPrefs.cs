@@ -19,8 +19,6 @@ public class DeletePlayerPrefs : MonoBehaviour
         unlockedMapsButton.onClick.RemoveAllListeners();
         unlockedMapsButton.onClick.AddListener(OnClickUnlockedAllMaps);
 
-        LevelData.TutorialComplete(true);
-
         for (int i = 0; i < testUnlockMapEasy.Length; i++)
         {
             var index = 0;
