@@ -39,12 +39,13 @@ public class EndGame : MonoBehaviour
         }
         SaveDataToPlayerPrefs();
         if(Allend)
-        Invoke("WaitClipEnd", 4.7f);
+            Invoke("WaitClipEnd", 4.7f);
     }
     void WaitClipEnd()
     {
+        Debug.Log(isHard);
         if(!isHard)
-        SceneManager.LoadScene("EndScene");
+            SceneManager.LoadScene("EndScene");
         else
             SceneManager.LoadScene("EndScene2");
     }
