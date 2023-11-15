@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using Suriyun.MCS;
 using System.Collections;
 using DG.Tweening;
-
+using System;
 
 namespace MoreMountains.TopDownEngine
 {
@@ -75,6 +75,8 @@ namespace MoreMountains.TopDownEngine
 		[SerializeField] private Transform button2TopPosition;
 
 		[SerializeField] private AudioClip switchSound;
+
+		public static event Action SwitchCharEvent;
 		/// <summary>
 		/// On Awake we grab our input manager and instantiate our characters and VFX
 		/// </summary>
@@ -250,6 +252,7 @@ namespace MoreMountains.TopDownEngine
 			// we trigger a switch event (for the camera to know, mostly)
 			_switchEvent.OriginCharacter = LevelManager.Instance.Players[0];
 			MMEventManager.TriggerEvent(_switchEvent);
+			SwitchCharEvent?.Invoke();
 			MMCameraEvent.Trigger(MMCameraEventTypes.RefreshAutoFocus, LevelManager.Instance.Players[0], null);
 		}
 

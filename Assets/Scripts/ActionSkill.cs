@@ -1,3 +1,4 @@
+using MoreMountains.Tools;
 using MoreMountains.TopDownEngine;
 using System;
 using System.Collections;
@@ -26,8 +27,21 @@ public class ActionSkill : MonoBehaviour
     void Start()
     {
         movement = GetComponent<CharacterMovement>();
+
+        CharacterSwitchManager.SwitchCharEvent += OnSwitchChar;
     }
 
+    private void OnSwitchChar()
+    {
+        inSlide = false;
+        currentSlide = null;
+    }
+
+    private void OnDestroy()
+    {
+        CharacterSwitchManager.SwitchCharEvent -= OnSwitchChar;
+
+    }
     // Update is called once per frame
     void Update()
     {
