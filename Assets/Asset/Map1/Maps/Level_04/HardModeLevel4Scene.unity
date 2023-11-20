@@ -2803,7 +2803,7 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
-  deathSound: {fileID: 8300000, guid: 29cf72b97b1b07c438e98485c2c6902f, type: 3}
+  deathSound: {fileID: 0}
   damageFx: {fileID: 0}
 --- !u!65 &115090980
 BoxCollider:
@@ -10608,6 +10608,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FireFliesYellow (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 149586, guid: 8037fe7b24f996d479136145f1acfaf0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 440724, guid: 8037fe7b24f996d479136145f1acfaf0, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -10670,8 +10674,16 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 765091727}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 19813910, guid: 8037fe7b24f996d479136145f1acfaf0, type: 3}
+    - {fileID: 19907764, guid: 8037fe7b24f996d479136145f1acfaf0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8037fe7b24f996d479136145f1acfaf0, type: 3}
+--- !u!4 &360898575 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 440724, guid: 8037fe7b24f996d479136145f1acfaf0,
+    type: 3}
+  m_PrefabInstance: {fileID: 360898574}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &364046009
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16300,6 +16312,71 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.262297, y: 7.8152485, z: 4.8654246}
   m_Center: {x: 0.0000035762787, y: 0.00000035762787, z: -0.0000023841858}
+--- !u!1001 &546261128
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 360898575}
+    m_Modifications:
+    - target: {fileID: 143440, guid: cc4f7a4898cba4043bf4cf64fc79f7ee, type: 3}
+      propertyPath: m_Name
+      value: FireFliesRed
+      objectReference: {fileID: 0}
+    - target: {fileID: 422718, guid: cc4f7a4898cba4043bf4cf64fc79f7ee, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 422718, guid: cc4f7a4898cba4043bf4cf64fc79f7ee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 422718, guid: cc4f7a4898cba4043bf4cf64fc79f7ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 422718, guid: cc4f7a4898cba4043bf4cf64fc79f7ee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 422718, guid: cc4f7a4898cba4043bf4cf64fc79f7ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 422718, guid: cc4f7a4898cba4043bf4cf64fc79f7ee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 422718, guid: cc4f7a4898cba4043bf4cf64fc79f7ee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 422718, guid: cc4f7a4898cba4043bf4cf64fc79f7ee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 422718, guid: cc4f7a4898cba4043bf4cf64fc79f7ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 422718, guid: cc4f7a4898cba4043bf4cf64fc79f7ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 422718, guid: cc4f7a4898cba4043bf4cf64fc79f7ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19901990, guid: cc4f7a4898cba4043bf4cf64fc79f7ee, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19908088, guid: cc4f7a4898cba4043bf4cf64fc79f7ee, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc4f7a4898cba4043bf4cf64fc79f7ee, type: 3}
 --- !u!4 &548349120 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000012672599322, guid: 8f2d67d094ef11d47b72bef4da0be98e,
@@ -39903,7 +39980,7 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
-  deathSound: {fileID: 8300000, guid: 29cf72b97b1b07c438e98485c2c6902f, type: 3}
+  deathSound: {fileID: 0}
   damageFx: {fileID: 0}
 --- !u!65 &1339549104
 BoxCollider:
@@ -56398,7 +56475,7 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
-  deathSound: {fileID: 8300000, guid: 29cf72b97b1b07c438e98485c2c6902f, type: 3}
+  deathSound: {fileID: 0}
   damageFx: {fileID: 0}
 --- !u!65 &1730441974
 BoxCollider:

@@ -33,6 +33,7 @@ public class ActionSkill : MonoBehaviour
 
     private void OnSwitchChar()
     {
+        Debug.Log("DDD");
         inSlide = false;
         currentSlide = null;
     }

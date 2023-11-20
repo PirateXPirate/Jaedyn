@@ -14843,7 +14843,7 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
-  deathSound: {fileID: 8300000, guid: 29cf72b97b1b07c438e98485c2c6902f, type: 3}
+  deathSound: {fileID: 0}
   damageFx: {fileID: 0}
 --- !u!65 &533526883
 BoxCollider:
@@ -20948,7 +20948,7 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
-  deathSound: {fileID: 8300000, guid: 29cf72b97b1b07c438e98485c2c6902f, type: 3}
+  deathSound: {fileID: 0}
   damageFx: {fileID: 0}
 --- !u!65 &731490993
 BoxCollider:
@@ -27731,7 +27731,7 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
-  deathSound: {fileID: 8300000, guid: 29cf72b97b1b07c438e98485c2c6902f, type: 3}
+  deathSound: {fileID: 0}
   damageFx: {fileID: 0}
 --- !u!65 &1014020004
 BoxCollider:
@@ -48313,7 +48313,7 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
-  deathSound: {fileID: 8300000, guid: 29cf72b97b1b07c438e98485c2c6902f, type: 3}
+  deathSound: {fileID: 0}
   damageFx: {fileID: 0}
 --- !u!65 &1599177348
 BoxCollider:
@@ -56000,25 +56000,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1843296042}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1843296045 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9192464227161798038, guid: 86a5485b1fede1c4b9cc30c2e3f9d9f4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1843296042}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1843296047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1843296045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93321afbfe37ea647a79a54eaee85b23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settingManager: {fileID: 0}
 --- !u!1001 &1845677561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66801,7 +66782,7 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
-  deathSound: {fileID: 8300000, guid: 29cf72b97b1b07c438e98485c2c6902f, type: 3}
+  deathSound: {fileID: 0}
   damageFx: {fileID: 0}
 --- !u!65 &2083807817
 BoxCollider:

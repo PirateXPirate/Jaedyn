@@ -334,8 +334,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.96, y: 1.34, z: 1.16}
-  m_Center: {x: 0, y: 0.69, z: 0}
+  m_Size: {x: 1.96, y: 6.4, z: 1.16}
+  m_Center: {x: 0, y: 2.92, z: 0}
 --- !u!65 &9099304176415015071
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -368,6 +368,7 @@ MonoBehaviour:
   canOpen: 0
   coinManager: {fileID: 0}
   keyManager: {fileID: 0}
+  activeObjs: []
 --- !u!114 &6242598801898461198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,6 +384,8 @@ MonoBehaviour:
   powerUpManager: {fileID: 0}
   numPotion: 0
   numResistance: 0
+  isRandom: 0
+  isRandomResitance: 0
 --- !u!114 &626497633313129339
 MonoBehaviour:
   m_ObjectHideFlags: 0

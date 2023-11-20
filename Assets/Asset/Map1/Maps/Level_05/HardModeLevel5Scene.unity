@@ -8062,15 +8062,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 122354, guid: 6d5a616533624dd47bb2083454658a7a, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 157074, guid: 6d5a616533624dd47bb2083454658a7a, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 173820, guid: 6d5a616533624dd47bb2083454658a7a, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 458704, guid: 6d5a616533624dd47bb2083454658a7a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21041,7 +21041,7 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
-  deathSound: {fileID: 8300000, guid: 29cf72b97b1b07c438e98485c2c6902f, type: 3}
+  deathSound: {fileID: 0}
   damageFx: {fileID: 0}
 --- !u!65 &731706269
 BoxCollider:
@@ -30191,7 +30191,7 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
-  deathSound: {fileID: 8300000, guid: 29cf72b97b1b07c438e98485c2c6902f, type: 3}
+  deathSound: {fileID: 0}
   damageFx: {fileID: 0}
 --- !u!65 &877904316
 BoxCollider:
@@ -44851,15 +44851,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 122354, guid: 6d5a616533624dd47bb2083454658a7a, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 157074, guid: 6d5a616533624dd47bb2083454658a7a, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 173820, guid: 6d5a616533624dd47bb2083454658a7a, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 465258, guid: 6d5a616533624dd47bb2083454658a7a, type: 3}
       propertyPath: m_RootOrder
@@ -52693,7 +52693,7 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
-  deathSound: {fileID: 8300000, guid: 29cf72b97b1b07c438e98485c2c6902f, type: 3}
+  deathSound: {fileID: 0}
   damageFx: {fileID: 0}
 --- !u!65 &1581172013
 BoxCollider:
@@ -68622,12 +68622,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2112291049}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2112291052 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9192464227161798038, guid: 86a5485b1fede1c4b9cc30c2e3f9d9f4,
-    type: 3}
-  m_PrefabInstance: {fileID: 2112291049}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2112291053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68644,19 +68638,6 @@ MonoBehaviour:
   - {fileID: 262916443}
   KeepCollider: 1
   Enablecol: []
---- !u!114 &2112291054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2112291052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93321afbfe37ea647a79a54eaee85b23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settingManager: {fileID: 0}
 --- !u!1001 &2112731247
 PrefabInstance:
   m_ObjectHideFlags: 0

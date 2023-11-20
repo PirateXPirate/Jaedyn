@@ -13,7 +13,7 @@ public class Setvolume : MonoBehaviour
         settingManager.OnSaveSoundSetting += OnSaveSetting;
         if (Utils.soundManager)
         {
-            currentVolume = Utils.soundManager.loop.volume;
+            currentVolume = Utils.soundManager.fx.volume;
             GetComponent<AudioSource>().volume = currentVolume;
         }
     }

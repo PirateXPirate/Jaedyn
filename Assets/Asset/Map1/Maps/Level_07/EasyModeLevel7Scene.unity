@@ -56596,7 +56596,7 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
-  deathSound: {fileID: 8300000, guid: 29cf72b97b1b07c438e98485c2c6902f, type: 3}
+  deathSound: {fileID: 0}
   damageFx: {fileID: 0}
 --- !u!65 &1865774938
 BoxCollider:
@@ -56899,6 +56899,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1878634680}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1878634682 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000011973581890, guid: 5399afc8074ef9d44b4b9b9c44fcca95,
+    type: 3}
+  m_PrefabInstance: {fileID: 1878634680}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1878634683
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878634682}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 7c28c941599ddb14c8929ce24bac85e1, type: 3}
 --- !u!1 &1880218146
 GameObject:
   m_ObjectHideFlags: 0

@@ -1398,25 +1398,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 43658237}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &43658239 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9192464227161798038, guid: 86a5485b1fede1c4b9cc30c2e3f9d9f4,
-    type: 3}
-  m_PrefabInstance: {fileID: 43658237}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &43658240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 43658239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93321afbfe37ea647a79a54eaee85b23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settingManager: {fileID: 0}
 --- !u!114 &47266775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8411,7 +8392,7 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
-  deathSound: {fileID: 8300000, guid: 29cf72b97b1b07c438e98485c2c6902f, type: 3}
+  deathSound: {fileID: 0}
   damageFx: {fileID: 0}
 --- !u!65 &202432557
 BoxCollider:
@@ -14918,7 +14899,7 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
-  deathSound: {fileID: 8300000, guid: 29cf72b97b1b07c438e98485c2c6902f, type: 3}
+  deathSound: {fileID: 0}
   damageFx: {fileID: 0}
 --- !u!65 &451239436
 BoxCollider:
@@ -16329,7 +16310,7 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
-  deathSound: {fileID: 8300000, guid: 29cf72b97b1b07c438e98485c2c6902f, type: 3}
+  deathSound: {fileID: 0}
   damageFx: {fileID: 0}
 --- !u!65 &502611035
 BoxCollider:
@@ -21198,7 +21179,7 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
-  deathSound: {fileID: 8300000, guid: 29cf72b97b1b07c438e98485c2c6902f, type: 3}
+  deathSound: {fileID: 0}
   damageFx: {fileID: 0}
 --- !u!65 &704549875
 BoxCollider:
@@ -36351,7 +36332,7 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
-  deathSound: {fileID: 8300000, guid: 29cf72b97b1b07c438e98485c2c6902f, type: 3}
+  deathSound: {fileID: 0}
   damageFx: {fileID: 0}
 --- !u!65 &1204996190
 BoxCollider:
@@ -44660,7 +44641,7 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
-  deathSound: {fileID: 8300000, guid: 29cf72b97b1b07c438e98485c2c6902f, type: 3}
+  deathSound: {fileID: 0}
   damageFx: {fileID: 0}
 --- !u!65 &1317067364
 BoxCollider:
@@ -62085,7 +62066,7 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
-  deathSound: {fileID: 8300000, guid: 29cf72b97b1b07c438e98485c2c6902f, type: 3}
+  deathSound: {fileID: 0}
   damageFx: {fileID: 0}
 --- !u!65 &1777033779
 BoxCollider:
@@ -64660,11 +64641,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 429692, guid: 2c82f34c3f0b270458c7c61a551cd1ee, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.87
+      value: 21.63
       objectReference: {fileID: 0}
     - target: {fileID: 429692, guid: 2c82f34c3f0b270458c7c61a551cd1ee, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 32.08
+      value: 32.32
       objectReference: {fileID: 0}
     - target: {fileID: 429692, guid: 2c82f34c3f0b270458c7c61a551cd1ee, type: 3}
       propertyPath: m_LocalRotation.w
@@ -66042,7 +66023,7 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
-  deathSound: {fileID: 8300000, guid: 29cf72b97b1b07c438e98485c2c6902f, type: 3}
+  deathSound: {fileID: 0}
   damageFx: {fileID: 0}
 --- !u!65 &1843219425
 BoxCollider:

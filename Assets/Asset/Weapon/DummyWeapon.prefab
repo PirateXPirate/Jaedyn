@@ -115,8 +115,9 @@ MonoBehaviour:
     m_Bits: 1024
   MinDamageCaused: 10
   MaxDamageCaused: 10
-  Knockback: 1
+  Knockback: 0
   KnockbackForce: {x: 10, y: 2, z: 0}
   InvincibilityDuration: 0.5
   CanDamageOwner: 0
+  stunZone: {fileID: 0}
   fxParticle: {fileID: 0}

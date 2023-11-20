@@ -32,7 +32,7 @@ public class ChestBox : MonoBehaviour
     private void Start()
     {
         audi = GetComponent<AudioSource>();
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         addItem = GetComponent<AddItem>();
     }
     public void Perform()

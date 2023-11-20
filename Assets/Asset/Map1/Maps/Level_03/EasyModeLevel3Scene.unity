@@ -7948,7 +7948,7 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
-  deathSound: {fileID: 8300000, guid: 29cf72b97b1b07c438e98485c2c6902f, type: 3}
+  deathSound: {fileID: 0}
   damageFx: {fileID: 0}
 --- !u!65 &233512045
 BoxCollider:
@@ -34472,6 +34472,10 @@ PrefabInstance:
       value: ZMOBA_Grass_B_1
       objectReference: {fileID: 0}
     - target: {fileID: 1118294475775238, guid: 4dfe6a8d9a4bfe14ca2969b37dfefa0a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118294475775238, guid: 4dfe6a8d9a4bfe14ca2969b37dfefa0a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -39629,6 +39633,10 @@ PrefabInstance:
       value: ZMOBA_Grass_F_1 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1501119309759662, guid: 21d080e8adc6a984095f644eec49a664, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501119309759662, guid: 21d080e8adc6a984095f644eec49a664, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -39642,7 +39650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4500350556715440, guid: 21d080e8adc6a984095f644eec49a664, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.6400003
+      value: -7.39
       objectReference: {fileID: 0}
     - target: {fileID: 4500350556715440, guid: 21d080e8adc6a984095f644eec49a664, type: 3}
       propertyPath: m_LocalPosition.z
@@ -54526,7 +54534,7 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
-  deathSound: {fileID: 8300000, guid: 29cf72b97b1b07c438e98485c2c6902f, type: 3}
+  deathSound: {fileID: 0}
   damageFx: {fileID: 0}
 --- !u!65 &1486239736
 BoxCollider:
@@ -60726,6 +60734,71 @@ PrefabInstance:
       propertyPath: activeObjs.Array.data[3]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 9192464227161357192, guid: 86a5485b1fede1c4b9cc30c2e3f9d9f4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192464227161357192, guid: 86a5485b1fede1c4b9cc30c2e3f9d9f4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0020302662
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192464227161357192, guid: 86a5485b1fede1c4b9cc30c2e3f9d9f4,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192464227161357192, guid: 86a5485b1fede1c4b9cc30c2e3f9d9f4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.23265152
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192464227161357192, guid: 86a5485b1fede1c4b9cc30c2e3f9d9f4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192464227161357192, guid: 86a5485b1fede1c4b9cc30c2e3f9d9f4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192464227161408080, guid: 86a5485b1fede1c4b9cc30c2e3f9d9f4,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9378069
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192464227161408080, guid: 86a5485b1fede1c4b9cc30c2e3f9d9f4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.71768194
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192464227161408080, guid: 86a5485b1fede1c4b9cc30c2e3f9d9f4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.696371
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192464227161408080, guid: 86a5485b1fede1c4b9cc30c2e3f9d9f4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -88.27307
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192464227161408080, guid: 86a5485b1fede1c4b9cc30c2e3f9d9f4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192464227161408080, guid: 86a5485b1fede1c4b9cc30c2e3f9d9f4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9192464227161798038, guid: 86a5485b1fede1c4b9cc30c2e3f9d9f4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86a5485b1fede1c4b9cc30c2e3f9d9f4, type: 3}
 --- !u!4 &1705691859 stripped
@@ -60734,25 +60807,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1705691858}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1705691860 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9192464227161798038, guid: 86a5485b1fede1c4b9cc30c2e3f9d9f4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1705691858}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1705691861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1705691860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93321afbfe37ea647a79a54eaee85b23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settingManager: {fileID: 0}
 --- !u!1001 &1708089582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60886,7 +60940,7 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
-  deathSound: {fileID: 8300000, guid: 29cf72b97b1b07c438e98485c2c6902f, type: 3}
+  deathSound: {fileID: 0}
   damageFx: {fileID: 0}
 --- !u!65 &1708089585
 BoxCollider:
@@ -73735,7 +73789,7 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
-  deathSound: {fileID: 8300000, guid: 29cf72b97b1b07c438e98485c2c6902f, type: 3}
+  deathSound: {fileID: 0}
   damageFx: {fileID: 0}
 --- !u!65 &2122729455
 BoxCollider:
