@@ -44917,6 +44917,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2338484, guid: 6d5a616533624dd47bb2083454658a7a, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d5a616533624dd47bb2083454658a7a, type: 3}
 --- !u!4 &1347553627 stripped
@@ -61826,7 +61830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93321afbfe37ea647a79a54eaee85b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settingManager: {fileID: 0}
+  settingManager: {fileID: 131151576}
 --- !u!82 &1920223377
 AudioSource:
   m_ObjectHideFlags: 0

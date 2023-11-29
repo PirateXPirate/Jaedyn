@@ -34238,6 +34238,10 @@ PrefabInstance:
       value: ZMOBA_Grass_F_1 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1501119309759662, guid: 21d080e8adc6a984095f644eec49a664, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501119309759662, guid: 21d080e8adc6a984095f644eec49a664, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -58964,7 +58968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93321afbfe37ea647a79a54eaee85b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settingManager: {fileID: 0}
+  settingManager: {fileID: 1289200746}
 --- !u!82 &1650289196
 AudioSource:
   m_ObjectHideFlags: 0

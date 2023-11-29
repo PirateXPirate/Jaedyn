@@ -1097,6 +1097,7 @@ GameObject:
   m_Component:
   - component: {fileID: 47094515}
   - component: {fileID: 47094516}
+  - component: {fileID: 47094517}
   m_Layer: 0
   m_Name: AMbsound2
   m_TagString: Untagged
@@ -1133,7 +1134,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1175,7 +1176,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1215,6 +1216,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &47094517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47094514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93321afbfe37ea647a79a54eaee85b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingManager: {fileID: 1351612188}
 --- !u!1 &49154605
 GameObject:
   m_ObjectHideFlags: 0
@@ -11449,6 +11463,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Map8_easy_colider
       objectReference: {fileID: 0}
+    - target: {fileID: 2897849337976491556, guid: 8f00628dfbe377548b27542bf8caa166,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 50.12
+      objectReference: {fileID: 0}
     - target: {fileID: 2897849339312063430, guid: 8f00628dfbe377548b27542bf8caa166,
         type: 3}
       propertyPath: m_IsActive
@@ -20049,6 +20068,7 @@ GameObject:
   m_Component:
   - component: {fileID: 608976864}
   - component: {fileID: 608976865}
+  - component: {fileID: 608976866}
   m_Layer: 0
   m_Name: AMbsound1
   m_TagString: Untagged
@@ -20085,7 +20105,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -20127,7 +20147,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -20167,6 +20187,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &608976866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608976863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93321afbfe37ea647a79a54eaee85b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingManager: {fileID: 1351612188}
 --- !u!1001 &610069848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32703,7 +32736,7 @@ PrefabInstance:
     - target: {fileID: 4158559901214226855, guid: 1d1d1e8643de8e84f9413a417bdc2f02,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.4000244
+      value: 5.05
       objectReference: {fileID: 0}
     - target: {fileID: 4158559901214226855, guid: 1d1d1e8643de8e84f9413a417bdc2f02,
         type: 3}
@@ -46987,7 +47020,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 70365e4f6f93bf741bc93503588f2705, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.772
   m_Pitch: 1
   Loop: 1
   Mute: 0
