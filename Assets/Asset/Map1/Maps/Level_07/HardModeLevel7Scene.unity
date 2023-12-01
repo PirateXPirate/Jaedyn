@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028486, g: 0.22571546, b: 0.30692413, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028486, g: 0.22571546, b: 0.30692416, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -29413,8 +29413,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71bac960249489647afba720f3bf4715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetWarpPoint: {fileID: 0}
-  warpPosition: {fileID: 0}
+  targetWarpPoint: {fileID: 1254137429}
+  warpPosition: {fileID: 1254137425}
   warpSound: {fileID: 0}
   directionAfterWarp: 1
   CanEnter: 1
@@ -31323,6 +31323,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5868318463858114027, guid: 75d5fbb21f80d144587c644af4f5de82,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 43.64
       objectReference: {fileID: 0}
     - target: {fileID: 5868318464396917294, guid: 75d5fbb21f80d144587c644af4f5de82,
         type: 3}
