@@ -8,8 +8,9 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 9d9afa41fc1fa0247a02fa1a4fd27290
+  m_OcclusionCullingData: {fileID: 36300000, guid: 54628512e1e9aa141b8d33f04e39e214,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -34155,7 +34156,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356635496}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71bac960249489647afba720f3bf4715, type: 3}
   m_Name: 
@@ -54992,7 +54993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controllerUi: {fileID: 646088425}
   startAudioClip: {fileID: 8300000, guid: b0500289836481e4fa83a519ce8693ce, type: 3}
-  mapBgAudio: {fileID: 8300000, guid: 450d93660894cc047968212ab6fa48bd, type: 3}
+  mapBgAudio: {fileID: 8300000, guid: d81e3defad476524a8d6d70600b4abdb, type: 3}
   startWalkAudioClip: {fileID: 8300000, guid: d8ab973583c494137b312e78058ca0c9, type: 3}
   SettingBut: {fileID: 1691260221}
   DisableObject: {fileID: 1897087968}

@@ -23,6 +23,8 @@ public class MenuManager : MonoBehaviour
     [SerializeField] CanvasGroup dialogFaderGroup;
 
     [SerializeField] SettingManager settingManager;
+    [SerializeField] Image LoadingBg;
+    [SerializeField] Sprite[] LoadingImg;
     private void Awake()
     {
 
@@ -30,6 +32,9 @@ public class MenuManager : MonoBehaviour
         LevelData.LoadLevelStateData();
         dummyLoader = dummyLoaderPrefab.GetComponent<DummyLoader>();
         SetListenner();
+
+        int randomValue = Random.Range(0, 4);
+        LoadingBg.sprite = LoadingImg[randomValue];
     }
 
     void SetListenner()

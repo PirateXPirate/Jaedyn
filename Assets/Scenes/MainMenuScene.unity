@@ -1418,6 +1418,12 @@ MonoBehaviour:
   dialogPanel: {fileID: 0}
   dialogFaderGroup: {fileID: 0}
   settingManager: {fileID: 1180105171}
+  LoadingBg: {fileID: 2575424340848777395}
+  LoadingImg:
+  - {fileID: 21300000, guid: 0db8dc559064cf54fa2d7bf96932a0df, type: 3}
+  - {fileID: 21300000, guid: cb67bb179aee584429011de7573b3fa3, type: 3}
+  - {fileID: 21300000, guid: 8d36baa5b0c2e0042ba0db656577eab3, type: 3}
+  - {fileID: 21300000, guid: 36eb734ec53a9e2469493d7e3606f87d, type: 3}
 --- !u!114 &1180105171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1845,7 +1851,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 11541b61fdff9a3468a25980b93945b5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d1e42f5031b18a64ab7d0f364ad33a17, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.47
   m_Pitch: 1
@@ -2602,5 +2608,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6946105974854887810, guid: 67f4aa2fd78f94d4da6aad2ba85557cb,
         type: 2}
+    - target: {fileID: 2575424341003181108, guid: b52c404827df17449a74f05ce4ed5403,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b52c404827df17449a74f05ce4ed5403, type: 3}
+--- !u!114 &2575424340848777395 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2575424339670178670, guid: b52c404827df17449a74f05ce4ed5403,
+    type: 3}
+  m_PrefabInstance: {fileID: 2575424340848777394}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

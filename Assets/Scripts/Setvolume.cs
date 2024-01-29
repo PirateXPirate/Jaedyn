@@ -14,17 +14,25 @@ public class Setvolume : MonoBehaviour
         if (Utils.soundManager)
         {
             currentVolume = Utils.soundManager.fx.volume;
-            GetComponent<AudioSource>().volume = currentVolume;
+            Debug.Log(currentVolume);
+            Debug.Log(Utils.soundManager.loop.volume);
+
+           // GetComponent<AudioSource>().volume = currentVolume;
+            Debug.Log(GetComponent<AudioSource>().gameObject);
+            Debug.Log(GetComponent<AudioSource>().GetInstanceID());
+           
         }
     }
     private void OnDisable()
     {
         if (!settingManager) return;
+       
         settingManager.OnSaveSoundSetting -= OnSaveSetting;
     }
     private void OnSaveSetting()
     {
         currentVolume = Utils.soundManager.loop.volume;
+        Debug.Log("DDDD");
         GetComponent<AudioSource>().volume = Utils.soundManager.fx.volume;
     }
 }

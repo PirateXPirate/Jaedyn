@@ -38,9 +38,9 @@ public class ClickToCloseScript : MonoBehaviour
         {
             currentVolume = Utils.soundManager.loop.volume;
             if (IgnoreSound) return;
-            var audi = GetComponent<AudioSource>();
-            if (audi)
-                audi.volume = currentVolume;
+            //var audi = GetComponent<AudioSource>();
+            //if (audi)
+              //  audi.volume = currentVolume;
             Utils.soundManager.loop.volume *= 0.25f;
         }
     }

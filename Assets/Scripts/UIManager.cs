@@ -53,7 +53,7 @@ public class UIManager : MonoBehaviour
         {
 
             UnlockHardmodeCodeList.Add(dataUnlockHardmode[i]["code"].ToString());
-            Debug.Log(dataUnlockHardmode[i]["code"]);
+         //   Debug.Log(dataUnlockHardmode[i]["code"]);
         }
         unlcokCodeButton.onClick.AddListener(OnClickUnlockHard);
     }

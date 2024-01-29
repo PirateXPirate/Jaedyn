@@ -17992,7 +17992,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controllerUi: {fileID: 911323998}
   startAudioClip: {fileID: 8300000, guid: f821c6e68db28494bbebd13fc67b6d97, type: 3}
-  mapBgAudio: {fileID: 8300000, guid: 450d93660894cc047968212ab6fa48bd, type: 3}
+  mapBgAudio: {fileID: 8300000, guid: 087e966ea9ba8d14088c472fe6b87e0e, type: 3}
   startWalkAudioClip: {fileID: 8300000, guid: d8ab973583c494137b312e78058ca0c9, type: 3}
   SettingBut: {fileID: 958946290}
   DisableObject: {fileID: 567011126}
@@ -40257,7 +40257,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   ActivateObject: {fileID: 0}
   controllerUi: {fileID: 911323998}
-  IgnoreSound: 0
+  IgnoreSound: 1
 --- !u!82 &1256025742
 AudioSource:
   m_ObjectHideFlags: 0
@@ -44234,7 +44234,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 11541b61fdff9a3468a25980b93945b5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.47
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0

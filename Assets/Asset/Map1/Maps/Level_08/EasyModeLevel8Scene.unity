@@ -8,8 +8,9 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 459398eeb1acd4e48b7e33f7191437c5
+  m_OcclusionCullingData: {fileID: 36300000, guid: 16870119249da5840831ec3269b5eb97,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -33792,7 +33793,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controllerUi: {fileID: 310255464}
   startAudioClip: {fileID: 8300000, guid: b0500289836481e4fa83a519ce8693ce, type: 3}
-  mapBgAudio: {fileID: 8300000, guid: 450d93660894cc047968212ab6fa48bd, type: 3}
+  mapBgAudio: {fileID: 8300000, guid: d81e3defad476524a8d6d70600b4abdb, type: 3}
   startWalkAudioClip: {fileID: 8300000, guid: d8ab973583c494137b312e78058ca0c9, type: 3}
   SettingBut: {fileID: 28500883}
   DisableObject: {fileID: 1660385390}
