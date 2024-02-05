@@ -18,8 +18,8 @@ public class SoundManager : MonoBehaviour
         {
             Instance = this;
             Utils.soundManager = this;
-            Utils.soundManager.loop.volume = PlayerPrefs.GetFloat("loop",.5f);
-            Utils.soundManager.fx.volume = PlayerPrefs.GetFloat("fx", .5f);
+            Utils.soundManager.loop.volume = PlayerPrefs.GetFloat("loop",.25f);
+            Utils.soundManager.fx.volume = PlayerPrefs.GetFloat("fx", 1f);
         }
         DontDestroyOnLoad(this);
 

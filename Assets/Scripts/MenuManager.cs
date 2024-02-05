@@ -25,9 +25,12 @@ public class MenuManager : MonoBehaviour
     [SerializeField] SettingManager settingManager;
     [SerializeField] Image LoadingBg;
     [SerializeField] Sprite[] LoadingImg;
+
+    [SerializeField] AudioClip MenuSound;
     private void Awake()
     {
-
+        if (Utils.soundManager)
+            Utils.soundManager.PlayLoop(MenuSound);
 
         LevelData.LoadLevelStateData();
         dummyLoader = dummyLoaderPrefab.GetComponent<DummyLoader>();

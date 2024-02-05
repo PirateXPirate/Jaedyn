@@ -23,6 +23,12 @@ public class GalleryManager : MonoBehaviour
     [SerializeField] Button pictureButton;
     [SerializeField] Button exitPopupButton;
 
+    [SerializeField] AudioClip GalleryBgSound;
+
+    [SerializeField] AudioClip[] MusicSound;
+
+    [SerializeField] Button endCreditButton;
+
     private void Awake()
     {
         LevelData.LoadLevelStateData();
@@ -58,8 +64,20 @@ public class GalleryManager : MonoBehaviour
         homeButton.onClick.RemoveAllListeners();
         homeButton.onClick.AddListener(HomeButton);
 
-        musicButton.onClick.RemoveAllListeners();
-        musicButton.onClick.AddListener(MusicModeButton);
+
+        if (PlayerPrefs.GetInt("CanEnterMusic")==1)
+        {
+            musicButton.onClick.RemoveAllListeners();
+            musicButton.onClick.AddListener(MusicModeButton);
+
+            endCreditButton.onClick.RemoveAllListeners();
+            endCreditButton.onClick.AddListener(OnClickEndCredit);
+        }
+        else
+        {
+            musicButton.gameObject.SetActive(false);
+        }
+    
 
         pictureButton.onClick.RemoveAllListeners();
         pictureButton.onClick.AddListener(PictureModeButton);
@@ -68,8 +86,20 @@ public class GalleryManager : MonoBehaviour
         exitPopupButton.onClick.AddListener(ExitPopupButton);
     }
 
+    private void OnClickEndCredit()
+    {
+        SceneManager.LoadScene("EndScene3");
+    }
+
+    public void PlayMusic(int index)
+    {
+        if (Utils.soundManager)
+            Utils.soundManager.PlayLoop(MusicSound[index]);
+    }
     void PictureButton()
     {
+        if (Utils.soundManager) 
+        Utils.soundManager.PlayLoop(GalleryBgSound);
         for (int i = 0; i < picture.Length; i++)
         {
             var index = i;

@@ -18,20 +18,35 @@ public class EndgameManager : MonoBehaviour
 
     IEnumerator ShowPopupWhenTrigger()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(30);
         popup1.SetActive(false);
         popup2.SetActive(true);
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(30);
         if (popup3)
         {
             popup2.SetActive(false);
             popup3.SetActive(true);
-            yield return new WaitForSeconds(10);
-            SceneManager.LoadScene("MapScene");
+            yield return new WaitForSeconds(30);
+            if (SceneManager.GetActiveScene().name == "EndScene3")
+            {
+                SceneManager.LoadScene("GalleryScene");
+            }
+            else
+            {
+                SceneManager.LoadScene("MapScene");
+            }
+           
         }
         else
         {
-            SceneManager.LoadScene("MapScene");
+            if (SceneManager.GetActiveScene().name == "EndScene3")
+            {
+                SceneManager.LoadScene("GalleryScene");
+            }
+            else
+            {
+                SceneManager.LoadScene("MapScene");
+            }
         }
       
     }
@@ -39,6 +54,16 @@ public class EndgameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetMouseButtonDown(0))
+        {
+            if (SceneManager.GetActiveScene().name == "EndScene3")
+            {
+                SceneManager.LoadScene("GalleryScene");
+            }
+            else
+            {
+                SceneManager.LoadScene("MapScene");
+            }
+        }
     }
 }

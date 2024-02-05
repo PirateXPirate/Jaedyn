@@ -22,6 +22,7 @@ public class PlaySoundWhenDestroy : MonoBehaviour
 
     private void OnObjDead()
     {
+        Debug.Log("SSSSSSS");
         canPlay = true;
         foreach (var obj in revelantObjs)
         {
@@ -32,8 +33,8 @@ public class PlaySoundWhenDestroy : MonoBehaviour
         }
         if (canPlay)
         {
-            if(soundClip)
-            Utils.soundManager.PlayFX(soundClip,true);
+            if (soundClip)
+                Utils.soundManager.PlayFX(soundClip, true);
             if (activateObj)
                 activateObj.Activate();
 
@@ -41,16 +42,16 @@ public class PlaySoundWhenDestroy : MonoBehaviour
 
             if (activateChest)
                 activateChest.canOpen = true;
-
+            Debug.Log(setActiveObject.Length);
             if (setActiveObject.Length > 0)
             {
                 foreach (var obj in setActiveObject)
                     obj.SetActive(true);
             }
-            
+
 
         }
-         
+
     }
 
 }

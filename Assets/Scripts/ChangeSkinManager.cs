@@ -16,7 +16,7 @@ public class ChangeSkinManager : MonoBehaviour
 
     [SerializeField] ParticleSystem skinFx;
     [SerializeField] AudioClip skinSound;
-
+    [SerializeField] Sprite changeSkinNotAvailableSprite;
     protected ParticleSystem _instantiatedVFX;
     bool canChange = true;
 
@@ -30,7 +30,9 @@ public class ChangeSkinManager : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("skinBought") == 0)
         {
-            changeSkinBut.gameObject.SetActive(false);
+            changeSkinImg.sprite = changeSkinNotAvailableSprite;
+            changeSkinBut.enabled = false;
+          //  changeSkinBut.gameObject.SetActive(false);
         }
     }
 

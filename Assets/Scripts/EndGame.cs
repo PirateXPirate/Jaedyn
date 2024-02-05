@@ -30,13 +30,22 @@ public class EndGame : MonoBehaviour
         homeBut.enabled = false;
         LevelManager.Instance.Players[0].GetComponent<Health>().ImmuneToDamage = true;
     }
-
+    public int LevelIndex
+    {
+        get { return levelIndex; }
+    }
     void Start()
     {
         if (Utils.soundManager)
         {
             Utils.soundManager.loop.volume = PlayerPrefs.GetFloat("loop", .5f);
         }
+
+        if(levelIndex == 9 && isHard)
+        {
+            PlayerPrefs.SetInt("CanEnterMusic", 1);
+        }
+
         SaveDataToPlayerPrefs();
         if(Allend)
             Invoke("WaitClipEnd", 4.7f);
