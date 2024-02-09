@@ -131,6 +131,7 @@ namespace MoreMountains.TopDownEngine
 
 			if (_inputManager.SwitchCharacterButton.State.CurrentState == MMInput.ButtonStates.ButtonDown)
 			{
+				Debug.Log("Switch");
 				blockerTime = 0;
 				SetCharacterSelectorPosition();
 				SwitchCharacter();

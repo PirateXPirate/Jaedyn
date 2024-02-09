@@ -134,7 +134,9 @@ namespace MoreMountains.TopDownEngine
 		protected override void Awake()
 		{
 			base.Awake();
+			Debug.Log("PRe");
 			PreInitialization();
+			
 		}
 
 		/// <summary>
@@ -200,6 +202,7 @@ namespace MoreMountains.TopDownEngine
 		/// </summary>
 		protected virtual void InitializeButtons()
 		{
+			Debug.Log("InitializeButtons");
 			ButtonList = new List<MMInput.IMButton> ();
 			ButtonList.Add(JumpButton = new MMInput.IMButton (PlayerID, "Jump", JumpButtonDown, JumpButtonPressed, JumpButtonUp));
 			ButtonList.Add(RunButton  = new MMInput.IMButton (PlayerID, "Run", RunButtonDown, RunButtonPressed, RunButtonUp));
@@ -281,6 +284,7 @@ namespace MoreMountains.TopDownEngine
 				}
 				if (Input.GetButtonDown(button.ButtonID))
 				{
+					Debug.Log("button.ButtonID" + button.ButtonID);
 					button.TriggerButtonDown ();
 				}
 				if (Input.GetButtonUp(button.ButtonID))
